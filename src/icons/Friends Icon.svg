@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #afb0c0;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Friends_Icon" data-name="Friends Icon" class="cls-1" d="M1607,30a10,10,0,1,0,10,10A10,10,0,0,0,1607,30Zm0,18a8,8,0,1,1,8-8A8,8,0,0,1,1607,48Zm2.82-7a2.988,2.988,0,0,1-5.64,0h-2.08a5,5,0,0,0,9.8,0h-2.08ZM1602,37v2h2V37h-2Zm8,0v2h2V37h-2Z" transform="translate(-1597 -30)"/>
+</svg>

@@ -1,0 +1,162 @@
+.cntrbar {
+  width: 120px;
+  height: 4px;
+  background-color: #5538b5;
+  border-radius: 5px;
+}
+
+.probar {
+  width: 70%;
+  height: 4px;
+  background-color: #85e659;
+  border-radius: 5px;
+}
+
+.passiveShp {
+  position: absolute;
+  z-index: 9999;
+  top: 64px;
+  right: 120px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0px, -40px);
+  transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s,
+    visibility 0.4s ease-in-out 0s;
+}
+
+.activeShp {
+  position: absolute;
+  z-index: 9999;
+  top: 64px;
+  right: 120px;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0px, 0px);
+  transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s,
+    visibility 0.4s ease-in-out 0s;
+}
+
+.passiveFri {
+  position: absolute;
+  z-index: 9999;
+  top: 64px;
+  right: 80px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0px, -40px);
+  transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s,
+    visibility 0.4s ease-in-out 0s;
+}
+
+.activeFri {
+  position: absolute;
+  z-index: 9999;
+  top: 64px;
+  right: 80px;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0px, 0px);
+  transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s,
+    visibility 0.4s ease-in-out 0s;
+}
+
+.passiveNot {
+  position: absolute;
+  z-index: 9999;
+  top: 64px;
+  right: 30px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0px, -40px);
+  transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s,
+    visibility 0.4s ease-in-out 0s;
+}
+
+.activeNot {
+  position: absolute;
+  z-index: 9999;
+  top: 64px;
+  right: 30px;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0px, 0px);
+  transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s,
+    visibility 0.4s ease-in-out 0s;
+}
+
+.passiveSet {
+  position: absolute;
+  z-index: 9999;
+  top: 64px;
+  right: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0px, -40px);
+  transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s,
+    visibility 0.4s ease-in-out 0s;
+}
+
+.activeSet {
+  position: absolute;
+  z-index: 9999;
+  top: 64px;
+  right: 10px;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0px, 0px);
+  transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s,
+    visibility 0.4s ease-in-out 0s;
+}
+
+.menu-item-link-icon path {
+  fill: #616a82;
+}
+
+.activeSrcdrp {
+  z-index: 9999;
+  margin-top: 430px;
+  position: relative;
+  width: 100% !important;
+  margin-left: -100%;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0px, 0px);
+  transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s,
+    visibility 0.4s ease-in-out 0s;
+}
+
+.passiveSrcdrp {
+  z-index: 9999;
+  margin-top: 430px;
+  position: relative;
+  width: 100% !important;
+  margin-left: -100%;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0px, -40px);
+  transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s,
+    visibility 0.4s ease-in-out 0s;
+}
+// DOTSETTING
+.passivePostsetting {
+  position: absolute;
+  z-index: 9999;
+  top: 30px;
+  right: 9px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0px, -20px);
+  transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s,
+    visibility 0.3s ease-in-out 0s;
+}
+.activePostsetting {
+  position: absolute;
+  z-index: 9999;
+  top: 30px;
+  right: 9px;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0px, 0px);
+  transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s,
+    visibility 0.3s ease-in-out 0s;
+}

@@ -1,0 +1,155 @@
+.icon-facebook,
+.icon-twitter,
+.icon-twitch,
+.icon-youtube,
+.icon-instagram,
+.icon-patreon,
+.icon-discord,
+.icon-google,
+.icon-behance,
+.icon-deviantart,
+.icon-artstation,
+.icon-dribbble,
+.icon-cross path{
+  fill: $white;
+  width: 12px;
+  height: 12px;
+}
+.icon-logo-vikinger path{
+  fill: $white;
+  width: 42px;
+  height: 60px;
+  &.small {
+    width: 28px;
+    height: 40px;
+  }
+}
+.icon-dots path{
+  fill: $white;
+  width: 10px;
+  height: 2px;
+}
+.icon-public,
+.icon-private path{
+  fill: $black;
+  width: 20px;
+  height: 20px;
+}
+.icon-comment,
+.icon-thumbs-up,
+.icon-friend,
+.icon-info,
+.icon-group,
+.icon-marketplace,
+.icon-add-friend,
+.icon-remove-friend,
+.icon-delete,
+.icon-send-message,
+.icon-settings,
+.icon-cross-thin,
+.icon-newsfeed,
+.icon-overview,
+.icon-members,
+.icon-badges,
+.icon-quests,
+.icon-streams,
+.icon-events,
+.icon-events-monthly,
+.icon-events-weekly,
+.icon-events-daily,
+.icon-pin,
+.icon-ticket,
+.icon-forums,
+.icon-profile,
+.icon-timeline,
+.icon-photos,
+.icon-videos,
+.icon-blog-posts,
+.icon-forum,
+.icon-store,
+.icon-share,
+.icon-pinned,
+.icon-status,
+.icon-big-grid-view,
+.icon-small-grid-view,
+.icon-list-grid-view,
+.icon-blog-post,
+.icon-poll,
+.icon-camera,
+.icon-gif,
+.icon-tags,
+.icon-trophy,
+.icon-return,
+.icon-clock,
+.icon-earnings,
+.icon-wallet,
+.icon-item,
+.icon-revenue path{
+  fill: $color-icon;
+  width: 20px;
+  height: 20px;
+}
+.icon-grid,
+.icon-magnifying-glass,
+.icon-messages,
+.icon-shopping-bag,
+.icon-notification,
+.icon-join-group,
+.icon-leave-group,
+.icon-plus,
+.icon-login path{
+  fill: $white;
+  width: 20px;
+  height: 20px;
+}
+.icon-back-arrow {
+  width: 14px;
+  height: 10px;
+}
+.icon-small-arrow path{
+  fill: $color-icon;
+  width: 6px;
+  height: 8px;
+}
+.icon-big-arrow path{
+  fill: $black;
+  width: 8px;
+  height: 12px;
+}
+.icon-more-dots path{
+  fill: $white;
+  width: 22px;
+  height: 6px;
+}
+.icon-star path{
+  fill: $gray-lighter;
+  width: 9px;
+  height: 8px;
+  &.medium {
+    width: 13px;
+    height: 12px;
+  }
+}
+.icon-play path{
+  fill: $white;
+  width: 12px;
+  height: 14px;
+}
+.icon-plus-small,
+.icon-minus-small path{
+  fill: $black;
+  width: 8px;
+  height: 8px;
+}
+.icon-quote path{
+  fill: $black;
+  width: 32px;
+  height: 22px;
+}
+.icon-check {
+  width: 12px;
+  height: 9px;
+}
+.demo-icon path{
+  fill: $color-icon-bold;
+}

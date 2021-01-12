@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #afb0c0;
+        fill-rule: evenodd;
+        opacity: 0.4;
+      }
+    </style>
+  </defs>
+  <path id="Comment_Icon" data-name="Comment Icon" class="cls-1" d="M1813,181a2.912,2.912,0,0,1,3,2.8v6.405a2.913,2.913,0,0,1-3,2.8h-7.49l-0.42.211-5.09,2.543V183.8a2.912,2.912,0,0,1,3-2.8h10m0-2h-10a4.906,4.906,0,0,0-5,4.8V199l7.98-3.99H1813a4.9,4.9,0,0,0,5-4.8V183.8a4.906,4.906,0,0,0-5-4.8h0Zm-1,5h-8a1,1,0,1,0,0,2h8A1,1,0,1,0,1812,184Zm-4,4h-4a1,1,0,0,0,0,2h4A1,1,0,0,0,1808,188Z" transform="translate(-1798 -179)"/>
+</svg>

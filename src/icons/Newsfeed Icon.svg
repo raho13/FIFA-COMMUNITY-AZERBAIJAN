@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Newsfeed_Icon" data-name="Newsfeed Icon" class="cls-1" d="M55,122H43a4,4,0,0,0-4,4v8a4,4,0,0,0,4,4H55a4,4,0,0,0,4-4v-8A4,4,0,0,0,55,122Zm2,12a2,2,0,0,1-2,2H43a2,2,0,0,1-2-2v-8a2,2,0,0,1,2-2H55a2,2,0,0,1,2,2v8Zm-18-2v2H59v-2H39Zm5,8v2H54v-2H44Z" transform="translate(-39 -122)"/>
+</svg>

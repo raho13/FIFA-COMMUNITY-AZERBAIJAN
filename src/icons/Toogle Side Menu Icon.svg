@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"  viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #afb0c0;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Toogle_Side_Menu_Icon" data-name="Toogle Side Menu Icon" class="cls-1" d="M272,30h5a2,2,0,0,1,2,2v5a2,2,0,0,1-2,2h-5a2,2,0,0,1-2-2V32A2,2,0,0,1,272,30Zm0,2h5v5h-5V32Zm11-2h5a2,2,0,0,1,2,2v5a2,2,0,0,1-2,2h-5a2,2,0,0,1-2-2V32A2,2,0,0,1,283,30Zm0,2h5v5h-5V32Zm-11,9h5a2,2,0,0,1,2,2v5a2,2,0,0,1-2,2h-5a2,2,0,0,1-2-2V43A2,2,0,0,1,272,41Zm0,2h5v5h-5V43Zm11-2h5a2,2,0,0,1,2,2v5a2,2,0,0,1-2,2h-5a2,2,0,0,1-2-2V43A2,2,0,0,1,283,41Zm0,2h5v5h-5V43Z" transform="translate(-270 -30)"/>
+</svg>
