@@ -4,6 +4,26 @@
 .container {
   margin-left: auto;
   margin-right: auto;
+  transform: translate(0px, 0px);
+  transition: transform 0.4s ease-in-out 0s;
+  z-index: 9999;
+}
+.container1 {
+ 
+  transform: translate(110px, 0px);
+  transition: transform 0.4s ease-in-out 0s;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 9999;
+
+}
+.container2 {
+  z-index: 9999;
+
+  transform: translate(-110px, 0px);
+  transition: transform 0.4s ease-in-out 0s;
+  margin-left: auto;
+  margin-right: auto;
 }
 .passivePostop {
   position: absolute;

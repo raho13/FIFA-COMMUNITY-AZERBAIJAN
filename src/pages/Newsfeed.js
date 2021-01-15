@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import bannerpromo from "../img/banner/banner-promo.jpg";
+import { menuContext } from "../context";
 import bannerimg from "../img/banner/newsfeed-icon.png";
 import Banner from "../component/Banner";
 import Members from "../component/newsfeed/Members";
@@ -7,8 +8,23 @@ import PostBanner from "../component/newsfeed/PostBanner";
 import Model2 from "../component/Postmodels/Model2";
 import Model1 from "../component/Postmodels/Model1";
 export default function Newsfeed() {
+  const { menuVisible, msgWidget } = useContext(menuContext);
+  const gridPosition = () => {
+    if (
+      (menuVisible === false && msgWidget === false) ||
+      (menuVisible === true && msgWidget === true)
+    ) {
+      return "content-grid container";
+    }
+    if (menuVisible === true) {
+      return "content-grid container1";
+    }
+    if (msgWidget === true) {
+      return "content-grid container2";
+    }
+  };
   return (
-    <div className="content-grid container">
+    <div className={gridPosition()}>
       <Banner
         header="Newsfeed"
         img={bannerimg}
@@ -35,22 +51,18 @@ export default function Newsfeed() {
                   id="newsfeed-filter-category"
                   name="newsfeed_filter_category"
                 >
-                  <option value={0}>All Updates</option>
-                  <option value={1}>Mentions</option>
-                  <option value={2}>Friends</option>
-                  <option value={3}>Groups</option>
-                  <option value={4}>Blog Posts</option>
+                  <option value={0}>Bütün paylaşımlar</option>
+                  <option value={1}>FİFA Community Azerbaijan</option>
+                  <option value={2}>İzlədiklərim</option>
                 </select>{" "}
                 <svg className="form-select-icon icon-small-arrow">
                   <use xlinkHref="#svg-small-arrow" />
                 </svg>{" "}
               </div>
             </form>
-            <p className="simple-tab-item active">All Updates</p>
-            <p className="simple-tab-item">Mentions</p>
-            <p className="simple-tab-item">Friends</p>
-            <p className="simple-tab-item">Groups</p>
-            <p className="simple-tab-item">Blog Posts</p>
+            <p className="simple-tab-item active">Bütün paylaşımlar</p>
+            <p className="simple-tab-item">FİFA Community Azerbaijan</p>
+            <p className="simple-tab-item">İzlədiklərim</p>
           </div>
           <Model1 />
           <Model1 />
@@ -75,16 +87,14 @@ export default function Newsfeed() {
                 className="slider-controls"
               >
                 <div className="slider-control left">
-                  {" "}
                   <svg className="slider-control-icon icon-small-arrow">
                     <use xlinkHref="#svg-small-arrow" />
-                  </svg>{" "}
+                  </svg>
                 </div>
                 <div className="slider-control right">
-                  {" "}
                   <svg className="slider-control-icon icon-small-arrow">
                     <use xlinkHref="#svg-small-arrow" />
-                  </svg>{" "}
+                  </svg>
                 </div>
               </div>
             </div>

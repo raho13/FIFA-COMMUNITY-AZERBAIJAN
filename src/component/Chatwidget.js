@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
+import { menuContext } from "../context";
 import { Scrollbars } from "react-custom-scrollbars";
 export default function Chatwidget() {
-  const [msgWidget, setmsgWidget] = useState(false);
+  const { msgWidget, setmsgWidget } = useContext(menuContext);
   const handleWidget = () => {
     if (msgWidget === false) {
       return "chat-widget sidebar right closed";
@@ -113,25 +114,12 @@ export default function Chatwidget() {
             </div>
           </div>
         </Scrollbars>
-      </div>    
+      </div>
       <form className="chat-widget-form">
         <div className="interactive-input small">
-          <input
-            type="text"
-            id="chat-widget-search"
-            name="chat_widget_search"
-            placeholder="Search Messages..."
-          />
-          <div className="interactive-input-icon-wrap">
-            <svg className="interactive-input-icon icon-magnifying-glass">
-              <use xlinkHref="#svg-magnifying-glass" />
-            </svg>
-          </div>
-          <div className="interactive-input-action">
-            <svg className="interactive-input-action-icon icon-cross-thin">
-              <use xlinkHref="#svg-cross-thin" />
-            </svg>
-          </div>
+          <button className="button small secondary" style={{ width: "250px" }}>
+            Share
+          </button>
         </div>
       </form>
       <div

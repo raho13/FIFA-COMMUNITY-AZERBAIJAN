@@ -107,7 +107,7 @@ export default function Header() {
           <div className="logo">
             <img src={avatar} alt="" className="icon-logo-vikinger small" />
           </div>
-          <h1 className="header-brand-text">FIFA Community Azerbaijan</h1>
+          {/* <h1 className="header-brand-text">FIFA Community Azerbaijan</h1> */}
         </div>
       </div>
 
