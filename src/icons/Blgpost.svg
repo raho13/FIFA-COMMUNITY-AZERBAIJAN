@@ -1,0 +1,6 @@
+<svg id="svg-blog-posts" viewBox="0 0 20 20" preserveAspectRatio="xMinYMin meet">
+      <path d="M15,0H5C2.791,0,1,1.791,1,4v3v2v7c0,2.209,1.791,4,4,4h10c2.209,0,4-1.791,4-4V9V7V4C19,1.791,17.209,0,15,0z M17,16c0,1.103-0.897,2-2,2H5c-1.103,0-2-0.897-2-2V9h14V16z M3,7V4c0-1.103,0.897-2,2-2h10c1.103,0,2,0.897,2,2v3H3z"></path>
+      <rect x="5" y="11" width="10" height="2"></rect>
+      <rect x="13" y="14" width="2" height="2"></rect>
+      <rect x="5" y="14" width="6" height="2"></rect>
+    </svg>

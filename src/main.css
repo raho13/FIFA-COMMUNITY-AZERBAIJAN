@@ -3056,7 +3056,7 @@
     .action-request.with-text .action-request-text {
       display: none; } }
 
-.header {
+.header1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -3067,58 +3067,58 @@
   top: 0;
   left: 0;
   z-index: 10000; }
-  .header .header-actions {
+  .header1 .header-actions {
     display: flex;
     align-items: center; }
-    .header .header-actions.search-bar {
+    .header1 .header-actions.search-bar {
       width: 30%; }
-      .header .header-actions.search-bar .header-search-dropdown {
+      .header1 .header-actions.search-bar .header-search-dropdown {
         width: 100%; }
-    .header .header-actions .progress-stat {
+    .header1 .header-actions .progress-stat {
       width: 110px; }
-    .header .header-actions .register-button {
+    .header1 .header-actions .register-button {
       padding: 0 26px;
       margin: 0 30px; }
-    .header .header-actions .login-form {
+    .header1 .header-actions .login-form {
       margin: 0 14px 0 12px; }
-      .header .header-actions .login-form .button {
+      .header1 .header-actions .login-form .button {
         width: 52px;
         height: 52px;
         flex-shrink: 0; }
-  .header .header-brand {
+  .header1 .header-brand {
     display: flex;
     align-items: center; }
-    .header .header-brand .logo {
+    .header1 .header-brand .logo {
       margin-left: 26px; }
-    .header .header-brand .header-brand-text {
+    .header1 .header-brand .header-brand-text {
       margin-left: 26px;
       color: #fff;
       font-family: "Titillium Web", sans-serif;
       font-size: 1.25rem;
       font-weight: 900;
       text-transform: uppercase; }
-  .header .sidemenu-trigger,
-  .header .mobilemenu-trigger {
+  .header1 .sidemenu-trigger,
+  .header1 .mobilemenu-trigger {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 80px;
     height: 80px;
     cursor: pointer; }
-  .header .sidemenu-trigger.active .icon-grid, .header .sidemenu-trigger:hover .icon-grid {
+  .header1 .sidemenu-trigger.active .icon-grid, .header1 .sidemenu-trigger:hover .icon-grid {
     fill: #fff; }
-  .header .sidemenu-trigger .icon-grid {
+  .header1 .sidemenu-trigger .icon-grid {
     pointer-events: none;
     transition: fill 0.3s ease-in-out; }
-  .header .mobilemenu-trigger {
+  .header1 .mobilemenu-trigger {
     display: none; }
-  .header .input-search {
+  .header1 .input-search {
     width: 100%; }
-  .header .action-list {
+  .header1 .action-list {
     height: 80px; }
-    .header .action-list::before, .header .action-list::after {
+    .header1 .action-list::before, .header1 .action-list::after {
       top: 24px; }
-  .header .action-item {
+  .header1 .action-item {
     width: 80px;
     height: 80px; }
 
@@ -15800,6 +15800,7 @@ textarea {
 
 .passiveSrcdrp {
   z-index: 9999;
+  display: none;
   margin-top: 430px;
   position: relative;
   width: 100% !important;
@@ -15828,6 +15829,15 @@ textarea {
   visibility: visible;
   transform: translate(0px, 0px);
   transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s; }
+
+.d {
+  margin-left: 16px; }
+
+.wgtbtn {
+  width: 100%; }
+
+.wgtfrm {
+  width: 100%; }
 
 .widget-box {
   padding: 32px 28px;
@@ -16415,18 +16425,15 @@ textarea {
   margin-left: auto;
   margin-right: auto;
   transform: translate(0px, 0px);
-  transition: transform 0.4s ease-in-out 0s;
-  z-index: 9999; }
+  transition: transform 0.4s ease-in-out 0s; }
 
 .container1 {
   transform: translate(110px, 0px);
   transition: transform 0.4s ease-in-out 0s;
   margin-left: auto;
-  margin-right: auto;
-  z-index: 9999; }
+  margin-right: auto; }
 
 .container2 {
-  z-index: 9999;
   transform: translate(-110px, 0px);
   transition: transform 0.4s ease-in-out 0s;
   margin-left: auto;
@@ -16451,3 +16458,6 @@ textarea {
   visibility: visible;
   transform: translate(0px, 0px);
   transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s; }
+
+.sf {
+  z-index: 9999 !important; }

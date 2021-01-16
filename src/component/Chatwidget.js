@@ -115,10 +115,10 @@ export default function Chatwidget() {
           </div>
         </Scrollbars>
       </div>
-      <form className="chat-widget-form">
+      <form className="chat-widget-form wgtfrm">
         <div className="interactive-input small">
-          <button className="button small secondary" style={{ width: "250px" }}>
-            Share
+          <button className="button small secondary wgtbtn">
+            Share your Story
           </button>
         </div>
       </form>

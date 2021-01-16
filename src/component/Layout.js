@@ -8,10 +8,10 @@ import MobileNavbar from './MobileNavbar'
 export default function Layout() {
     return (
         <div>
+              <Newsfeed/>
            <Navbar/>
            <Header/>
            <Chatwidget/>
-           <Newsfeed/>
            <FloatyBar/>
            <MobileNavbar/>
         </div>

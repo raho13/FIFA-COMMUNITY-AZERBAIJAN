@@ -1,0 +1,7 @@
+<svg id="svg-status" viewBox="0 0 20 20" preserveAspectRatio="xMinYMin meet">
+      <path d="M16,1H4C1.791,1,0,2.791,0,5v4v2v4c0,2.209,1.791,4,4,4h12c2.209,0,4-1.791,4-4v-4V9V5C20,2.791,18.209,1,16,1z M18,15c0,1.103-0.897,2-2,2H4c-1.103,0-2-0.897-2-2v-4h16V15z M18,9H2V5c0-1.103,0.897-2,2-2h12c1.103,0,2,0.897,2,2V9z"></path>
+      <rect x="13" y="13" width="2" height="2"></rect>
+      <rect x="9" y="13" width="2" height="2"></rect>
+      <rect x="5" y="5" width="10" height="2"></rect>
+      <rect x="5" y="13" width="2" height="2"></rect>
+    </svg>

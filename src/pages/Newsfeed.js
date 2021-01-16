@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import bannerpromo from "../img/banner/banner-promo.jpg";
 import { menuContext } from "../context";
 import bannerimg from "../img/banner/newsfeed-icon.png";
@@ -9,6 +9,26 @@ import Model2 from "../component/Postmodels/Model2";
 import Model1 from "../component/Postmodels/Model1";
 export default function Newsfeed() {
   const { menuVisible, msgWidget } = useContext(menuContext);
+  const [tab1, settab1] = useState("simple-tab-item active");
+  const [tab2, settab2] = useState("simple-tab-item");
+  const [tab3, settab3] = useState("simple-tab-item");
+  const handleTabs = (i) => {
+    if (i === 1) {
+      settab1("simple-tab-item active");
+      settab2("simple-tab-item");
+      settab3("simple-tab-item");
+    }
+    if (i === 2) {
+      settab1("simple-tab-item");
+      settab2("simple-tab-item active");
+      settab3("simple-tab-item");
+    }
+    if (i === 3) {
+      settab1("simple-tab-item");
+      settab2("simple-tab-item");
+      settab3("simple-tab-item active");
+    }
+  };
   const gridPosition = () => {
     if (
       (menuVisible === false && msgWidget === false) ||
@@ -46,7 +66,6 @@ export default function Newsfeed() {
           <div className="simple-tab-items">
             <form className="form">
               <div className="form-select">
-                {" "}
                 <select
                   id="newsfeed-filter-category"
                   name="newsfeed_filter_category"
@@ -57,12 +76,18 @@ export default function Newsfeed() {
                 </select>{" "}
                 <svg className="form-select-icon icon-small-arrow">
                   <use xlinkHref="#svg-small-arrow" />
-                </svg>{" "}
+                </svg>
               </div>
             </form>
-            <p className="simple-tab-item active">Bütün paylaşımlar</p>
-            <p className="simple-tab-item">FİFA Community Azerbaijan</p>
-            <p className="simple-tab-item">İzlədiklərim</p>
+            <p onClick={()=>{handleTabs(1)}} className={tab1}>
+              Bütün paylaşımlar
+            </p>
+            <p onClick={()=>{handleTabs(2)}} className={tab2}>
+              FİFA Community Azerbaijan
+            </p>
+            <p onClick={()=>{handleTabs(3)}} className={tab3}>
+              İzlədiklərim
+            </p>
           </div>
           <Model1 />
           <Model1 />

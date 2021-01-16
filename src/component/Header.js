@@ -4,6 +4,8 @@ import { menuContext } from "../context";
 import { ReactComponent as Toogle } from "../icons/Toogle Side Menu Icon.svg";
 import { ReactComponent as Setting } from "../icons/Setting.svg";
 import { ReactComponent as Shopping } from "../icons/Shopping.svg";
+import { ReactComponent as Addfriend } from "../icons/Add-friend.svg";
+import { ReactComponent as Removefriend } from "../icons/Removefriend.svg";
 import { ReactComponent as Searcicon } from "../icons/Searcicon.svg";
 import { ReactComponent as SearchX } from "../icons/searcX.svg";
 import { ReactComponent as Notification } from "../icons/Notifications Icon.svg";
@@ -11,7 +13,12 @@ import { ReactComponent as Friend } from "../icons/Friends Icon.svg";
 import avatar from "../icons/logo.png";
 
 export default function Header() {
-  const { menuVisible, setmenuVisible,MmenuVisible, setMmenuVisible } = useContext(menuContext);
+  const {
+    menuVisible,
+    setmenuVisible,
+    MmenuVisible,
+    setMmenuVisible,
+  } = useContext(menuContext);
   const [srchEvent, setsrchEvent] = useState(false);
   const [index, setIndex] = useState(0);
   const [inputValue, setinputValue] = useState("");
@@ -101,13 +108,12 @@ export default function Header() {
     }
   };
   return (
-    <div className="header">
+    <div className="header1">
       <div className="header-actions">
         <div className="header-brand">
           <div className="logo">
             <img src={avatar} alt="" className="icon-logo-vikinger small" />
           </div>
-          {/* <h1 className="header-brand-text">FIFA Community Azerbaijan</h1> */}
         </div>
       </div>
 
@@ -120,11 +126,12 @@ export default function Header() {
         >
           <Toogle className="icon-grid" />
         </div>
-        <div 
-        onClick={()=>{
-          setMmenuVisible(!MmenuVisible)
-        }}
-        className="mobilemenu-trigger navigation-widget-mobile-trigger">
+        <div
+          onClick={() => {
+            setMmenuVisible(!MmenuVisible);
+          }}
+          className="mobilemenu-trigger navigation-widget-mobile-trigger"
+        >
           <div className="burger-icon inverted">
             <div className="burger-icon-bar" />
             <div className="burger-icon-bar" />
@@ -145,14 +152,14 @@ export default function Header() {
               name="search_main"
               placeholder="Search here for people or groups"
             />
-            <div className="interactive-input-action">
-              <SearchX
-                onClick={() => {
-                  setinputValue("");
-                  setsrchEvent(false);
-                }}
-                className="interactive-input-action-icon icon-cross-thin"
-              />
+            <div
+              onClick={() => {
+                setinputValue("");
+                setsrchEvent(false);
+              }}
+              className="interactive-input-action"
+            >
+              <SearchX className="interactive-input-action-icon icon-cross-thin" />
             </div>
           </div>
         ) : (
@@ -176,7 +183,6 @@ export default function Header() {
             <p className="dropdown-box-category-title">Members</p>
           </div>
           <div className="dropdown-box-list small no-scroll">
-            {" "}
             <a className="dropdown-box-list-item" href="profile-timeline.html">
               <div className="user-status notification">
                 <div className="user-status-avatar">
@@ -564,102 +570,10 @@ export default function Header() {
                     <p className="user-status-text">6 friends in common</p>
                     <div className="action-request-list">
                       <div className="action-request accept">
-                        <svg className="action-request-icon icon-add-friend" />
+                        <Addfriend className="action-request-icon icon-add-friend" />
                       </div>
                       <div className="action-request decline">
-                        <svg className="action-request-icon icon-remove-friend" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="dropdown-box-list-item">
-                  <div className="user-status request">
-                    <a
-                      className="user-status-avatar"
-                      href="profile-timeline.html"
-                    >
-                      <div className="user-avatar small no-outline">
-                        <div className="user-avatar-content">
-                          <div
-                            className="hexagon-image-30-32"
-                            data-src="img/avatar/14.jpg"
-                          />
-                        </div>
-                        <div className="user-avatar-progress">
-                          <div className="hexagon-progress-40-44" />
-                        </div>
-                        <div className="user-avatar-progress-border">
-                          <div className="hexagon-border-40-44" />
-                        </div>
-                        <div className="user-avatar-badge">
-                          <div className="user-avatar-badge-border">
-                            <div className="hexagon-22-24" />
-                          </div>
-                          <div className="user-avatar-badge-content">
-                            <div className="hexagon-dark-16-18" />
-                          </div>
-                          <p className="user-avatar-badge-text">3</p>
-                        </div>
-                      </div>
-                    </a>
-                    <p className="user-status-title">
-                      <a className="bold" href="profile-timeline.html">
-                        Paul Lang
-                      </a>
-                    </p>
-                    <p className="user-status-text">2 friends in common</p>
-                    <div className="action-request-list">
-                      <div className="action-request accept">
-                        <svg className="action-request-icon icon-add-friend" />
-                      </div>
-                      <div className="action-request decline">
-                        <svg className="action-request-icon icon-remove-friend" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="dropdown-box-list-item">
-                  <div className="user-status request">
-                    <a
-                      className="user-status-avatar"
-                      href="profile-timeline.html"
-                    >
-                      <div className="user-avatar small no-outline">
-                        <div className="user-avatar-content">
-                          <div
-                            className="hexagon-image-30-32"
-                            data-src="img/avatar/11.jpg"
-                          />
-                        </div>
-                        <div className="user-avatar-progress">
-                          <div className="hexagon-progress-40-44" />
-                        </div>
-                        <div className="user-avatar-progress-border">
-                          <div className="hexagon-border-40-44" />
-                        </div>
-                        <div className="user-avatar-badge">
-                          <div className="user-avatar-badge-border">
-                            <div className="hexagon-22-24" />
-                          </div>
-                          <div className="user-avatar-badge-content">
-                            <div className="hexagon-dark-16-18" />
-                          </div>
-                          <p className="user-avatar-badge-text">9</p>
-                        </div>
-                      </div>
-                    </a>
-                    <p className="user-status-title">
-                      <a className="bold" href="profile-timeline.html">
-                        Cassie May
-                      </a>
-                    </p>
-                    <p className="user-status-text">4 friends in common</p>
-                    <div className="action-request-list">
-                      <div className="action-request accept">
-                        <svg className="action-request-icon icon-add-friend" />
-                      </div>
-                      <div className="action-request decline">
-                        <svg className="action-request-icon icon-remove-friend" />
+                        <Removefriend className="action-request-icon icon-remove-friend" />
                       </div>
                     </div>
                   </div>

@@ -127,6 +127,7 @@
 
 .passiveSrcdrp {
   z-index: 9999;
+  display: none;
   margin-top: 430px;
   position: relative;
   width: 100% !important;
@@ -159,4 +160,13 @@
   transform: translate(0px, 0px);
   transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s,
     visibility 0.3s ease-in-out 0s;
+}
+.d {
+  margin-left: 16px;
+}
+.wgtbtn {
+  width: 100%;
+}
+.wgtfrm {
+  width: 100%;
 }
