@@ -108,7 +108,7 @@ export default function Header() {
     }
   };
   return (
-    <div className="header1">
+    <div className="header">
       <div className="header-actions">
         <div className="header-brand">
           <div className="logo">

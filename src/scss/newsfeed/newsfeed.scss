@@ -42,6 +42,35 @@
   transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s,
     visibility 0.3s ease-in-out 0s;
 }
-.sf{
-  z-index: 9999 !important;
+.bnnrinp {
+  width: 90% !important;
+  margin: 20px;
+}
+.postBtns {
+  display: flex;
+  justify-content: space-evenly;
+}
+.postBtn {
+  background-color: #21283b !important;
+  box-shadow: none !important;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 2px;
+  margin-bottom: 10px;
+}
+.postBtn:hover {
+  background-color: #40d04f !important;
+  color: black !important;
+}
+#psticn path {
+  fill: #616a82;
+  stroke-width: 200px;
+}
+#psticn path:hover {
+  fill: white;
+  stroke-width: 200px;
+}
+.psticncontainer{
+  display: flex;
+  justify-content: space-evenly;
 }
