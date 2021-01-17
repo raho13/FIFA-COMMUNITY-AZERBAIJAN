@@ -254,19 +254,17 @@ export default function Header() {
                 </p>
                 <p className="user-status-text">4 friends in common</p>
                 <div className="user-status-icon">
-                  {" "}
                   <svg className="icon-friend">
                     <use xlinkHref="#svg-friend" />
-                  </svg>{" "}
+                  </svg>
                 </div>
               </div>
-            </a>{" "}
+            </a>
           </div>
           <div className="dropdown-box-category">
             <p className="dropdown-box-category-title">Groups</p>
           </div>
           <div className="dropdown-box-list small no-scroll">
-            {" "}
             <a className="dropdown-box-list-item" href="group-timeline.html">
               <div className="user-status notification">
                 <div className="user-status-avatar">
@@ -284,19 +282,17 @@ export default function Header() {
                 </p>
                 <p className="user-status-text">139 members</p>
                 <div className="user-status-icon">
-                  {" "}
                   <svg className="icon-group">
                     <use xlinkHref="#svg-group" />
-                  </svg>{" "}
+                  </svg>
                 </div>
               </div>
-            </a>{" "}
+            </a>
           </div>
           <div className="dropdown-box-category">
             <p className="dropdown-box-category-title">Marketplace</p>
           </div>
           <div className="dropdown-box-list small no-scroll">
-            {" "}
             <a
               className="dropdown-box-list-item"
               href="marketplace-product.html"
@@ -304,7 +300,6 @@ export default function Header() {
               <div className="user-status no-padding-top">
                 <div className="user-status-avatar">
                   <figure className="picture small round liquid">
-                    {" "}
                     <img src="img/marketplace/items/07.jpg" alt="item-07" />
                   </figure>
                 </div>
@@ -313,13 +308,12 @@ export default function Header() {
                 </p>
                 <p className="user-status-text">By Neko Bebop</p>
                 <div className="user-status-icon">
-                  {" "}
                   <svg className="icon-marketplace">
                     <use xlinkHref="#svg-marketplace" />
-                  </svg>{" "}
+                  </svg>
                 </div>
               </div>
-            </a>{" "}
+            </a>
           </div>
         </div>
       </div>
@@ -361,13 +355,11 @@ export default function Header() {
                 <Scrollbars>
                   <div className="dropdown-box-list-item">
                     <div className="cart-item-preview">
-                      {" "}
                       <a
                         className="cart-item-preview-image"
                         href="marketplace-product.html"
                       >
                         <figure className="picture medium round liquid">
-                          {" "}
                           <img
                             src="img/marketplace/items/01.jpg"
                             alt="item-01"
@@ -384,22 +376,19 @@ export default function Header() {
                         <span className="highlighted">$</span> 12.00 x 1
                       </p>
                       <div className="cart-item-preview-action">
-                        {" "}
                         <svg className="icon-delete">
                           <use xlinkHref="#svg-delete" />
-                        </svg>{" "}
+                        </svg>
                       </div>
                     </div>
                   </div>
                   <div className="dropdown-box-list-item">
                     <div className="cart-item-preview">
-                      {" "}
                       <a
                         className="cart-item-preview-image"
                         href="marketplace-product.html"
                       >
                         <figure className="picture medium round liquid">
-                          {" "}
                           <img
                             src="img/marketplace/items/11.jpg"
                             alt="item-11"
@@ -416,22 +405,19 @@ export default function Header() {
                         <span className="highlighted">$</span> 6.00 x 1
                       </p>
                       <div className="cart-item-preview-action">
-                        {" "}
                         <svg className="icon-delete">
                           <use xlinkHref="#svg-delete" />
-                        </svg>{" "}
+                        </svg>
                       </div>
                     </div>
                   </div>
                   <div className="dropdown-box-list-item">
                     <div className="cart-item-preview">
-                      {" "}
                       <a
                         className="cart-item-preview-image"
                         href="marketplace-product.html"
                       >
                         <figure className="picture medium round liquid">
-                          {" "}
                           <img
                             src="img/marketplace/items/10.jpg"
                             alt="item-10"
@@ -448,16 +434,14 @@ export default function Header() {
                         <span className="highlighted">$</span> 26.00 x 1
                       </p>
                       <div className="cart-item-preview-action">
-                        {" "}
                         <svg className="icon-delete">
                           <use xlinkHref="#svg-delete" />
-                        </svg>{" "}
+                        </svg>
                       </div>
                     </div>
                   </div>
                   <div className="dropdown-box-list-item">
                     <div className="cart-item-preview">
-                      {" "}
                       <a
                         className="cart-item-preview-image"
                         href="marketplace-product.html"
@@ -497,19 +481,17 @@ export default function Header() {
               </div>
               <div className="dropdown-box-actions">
                 <div className="dropdown-box-action">
-                  {" "}
                   <a className="button secondary" href="marketplace-cart.html">
                     Shopping Cart
-                  </a>{" "}
+                  </a>
                 </div>
                 <div className="dropdown-box-action">
-                  {" "}
                   <a
                     className="button primary"
                     href="marketplace-checkout.html"
                   >
                     Go to Checkout
-                  </a>{" "}
+                  </a>
                 </div>
               </div>
             </div>

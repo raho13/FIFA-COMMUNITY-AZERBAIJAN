@@ -3547,7 +3547,7 @@ textarea::placeholder {
   height: 160px; }
 
 .form-input.active label {
-  background-color: #1d2333;
+  background-color: #21283b !important;
   padding: 0 6px;
   font-size: .75rem;
   top: -6px;
@@ -15121,7 +15121,7 @@ input[type="text"],
 input[type="password"],
 textarea,
 select {
-  background-color: #1d2333;
+  background-color: #21283b;
   border: 1px solid #3f485f;
   color: #fff;
   transition: border-color .2s ease-in-out; }
@@ -16460,33 +16460,66 @@ textarea {
   transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s; }
 
 .bnnrinp {
-  width: 90% !important;
-  margin: 20px; }
+  width: 80% !important;
+  margin-left: 20px;
+  margin-top: 20px; }
 
 .postBtns {
   display: flex;
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+  margin-top: 20px; }
 
 .postBtn {
-  background-color: #21283b !important;
+  background-color: #2f3749 !important;
   box-shadow: none !important;
   padding-left: 5%;
   padding-right: 5%;
-  padding-top: 2px;
   margin-bottom: 10px; }
 
 .postBtn:hover {
   background-color: #40d04f !important;
   color: black !important; }
 
-#psticn path {
-  fill: #616a82;
-  stroke-width: 200px; }
-
-#psticn path:hover {
-  fill: white;
-  stroke-width: 200px; }
-
 .psticncontainer {
   display: flex;
   justify-content: space-evenly; }
+
+#inpcontainer {
+  height: 200px;
+  overflow: auto; }
+
+.inplist {
+  display: flex; }
+
+.inplsticn {
+  margin-top: 35px;
+  margin-left: 40px;
+  cursor: pointer; }
+
+.inplsticn:hover path {
+  fill: #40d04f; }
+
+.fileExp {
+  z-index: 9999;
+  margin-left: -30px;
+  position: absolute;
+  width: 30px;
+  opacity: 0; }
+
+.p {
+  display: flex;
+  justify-content: space-between; }
+
+.browsebtn {
+  height: 100% !important;
+  background-color: #40d04f !important; }
+
+#brwsinp {
+  height: 50px;
+  background-color: red;
+  z-index: 1;
+  position: relative;
+  width: 80px;
+  border-radius: 10px;
+  opacity: 0;
+  cursor: pointer; }
