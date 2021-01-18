@@ -45,19 +45,23 @@
 .bnnrinp {
   width: 80% !important;
   margin-left: 20px;
-  margin-top: 20px;
 }
+
 .postBtns {
   display: flex;
-  justify-content: space-evenly;
-  margin-top: 20px;
+  margin-left: 20px;
+  width: 80%;
+  justify-content: space-between;
 }
 .postBtn {
   background-color: #2f3749 !important;
   box-shadow: none !important;
-  padding-left: 5%;
-  padding-right: 5%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  height: 40px;
+  width: 30%;
+}
+.prmtxt {
+ padding-top: 15px;
 }
 .postBtn:hover {
   background-color: #40d04f !important;
@@ -73,13 +77,25 @@
 }
 .inplist {
   display: flex;
+  align-items: center;
 }
+.inplist2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  bottom: 20px;
+}
+
 .inplsticn {
-  margin-top: 35px;
   margin-left: 40px;
   cursor: pointer;
 }
 .inplsticn:hover path {
+  fill: #40d04f;
+}
+.inplsticn2:hover path {
   fill: #40d04f;
 }
 .fileExp {
@@ -92,18 +108,48 @@
 .p {
   display: flex;
   justify-content: space-between;
+  height: 50px !important;
 }
 .browsebtn {
-  height: 100% !important;
+  height: 50px !important;
   background-color: #40d04f !important ;
 }
 #brwsinp {
   height: 50px;
   background-color: red;
-  z-index: 1;
+  z-index: 9999;
   position: relative;
   width: 80px;
   border-radius: 10px;
-  opacity: 0;
+  left: 72%;
+  top: -50px;
   cursor: pointer;
+  opacity: 0;
+}
+.t {
+  height: 160px;
+}
+#inpctrl {
+  margin-top: 10px;
+  height: 50px;
+}
+.parms {
+  position: relative;
+  top: 10px;
+  background-color: #2f3749;
+  z-index: 9999;
+  border-radius: 10px;
+}
+.parmsitem {
+  margin-top: 10px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.prmsnone{
+  display: none;
+}
+.chktxt {
+  padding-right: 10px;
 }

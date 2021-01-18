@@ -1,5 +1,7 @@
 import React, { useContext, useState } from "react";
 import bannerpromo from "../img/banner/banner-promo.jpg";
+import promo from "../img/test/A4-1024x1024.jpg";
+import promo1 from "../img/test/kompaniya-sayt-ucun (1).jpg";
 import { menuContext } from "../context";
 import bannerimg from "../img/banner/newsfeed-icon.png";
 import Banner from "../component/Banner";
@@ -51,7 +53,7 @@ export default function Newsfeed() {
         des=" Check what your friends have been up to!"
       />
       <div className="grid grid-3-6-3 mobile-prefer-content">
-        <div className="grid-column">
+        <div className="grid-column sticky">
           <Members />
           <a
             className="banner-promo"
@@ -79,20 +81,35 @@ export default function Newsfeed() {
                 </svg>
               </div>
             </form>
-            <p onClick={()=>{handleTabs(1)}} className={tab1}>
+            <p
+              onClick={() => {
+                handleTabs(1);
+              }}
+              className={tab1}
+            >
               Bütün paylaşımlar
             </p>
-            <p onClick={()=>{handleTabs(2)}} className={tab2}>
+            <p
+              onClick={() => {
+                handleTabs(2);
+              }}
+              className={tab2}
+            >
               FİFA Community Azerbaijan
             </p>
-            <p onClick={()=>{handleTabs(3)}} className={tab3}>
+            <p
+              onClick={() => {
+                handleTabs(3);
+              }}
+              className={tab3}
+            >
               İzlədiklərim
             </p>
           </div>
           <Model1 />
           <Model1 />
           <Model1 />
-          {/* <Model2 /> */}
+          <Model2 />
           <div className="loader-bars">
             <div className="loader-bar" />
             <div className="loader-bar" />
@@ -104,26 +121,13 @@ export default function Newsfeed() {
             <div className="loader-bar" />
           </div>
         </div>
-        <div className="grid-column">
+        <div className="grid-column sticky">
           <div className="widget-box">
-            <div className="widget-box-controls">
-              <div
-                id="reaction-stat-slider-controls"
-                className="slider-controls"
-              >
-                <div className="slider-control left">
-                  <svg className="slider-control-icon icon-small-arrow">
-                    <use xlinkHref="#svg-small-arrow" />
-                  </svg>
-                </div>
-                <div className="slider-control right">
-                  <svg className="slider-control-icon icon-small-arrow">
-                    <use xlinkHref="#svg-small-arrow" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <p className="widget-box-title">Reklam paneli</p>
+            <img className="promoimg" src={promo} />
+            <img className="promoimg" src={promo1} />
+            <img className="promoimg" src={promo} />
+            <img className="promoimg" src={promo1} />
+           
           </div>
         </div>
       </div>
