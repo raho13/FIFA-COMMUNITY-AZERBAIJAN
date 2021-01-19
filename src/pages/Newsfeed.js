@@ -7,8 +7,9 @@ import bannerimg from "../img/banner/newsfeed-icon.png";
 import Banner from "../component/Banner";
 import Members from "../component/newsfeed/Members";
 import PostBanner from "../component/newsfeed/PostBanner";
-import Model2 from "../component/Postmodels/Model2";
-import Model1 from "../component/Postmodels/Model1";
+import Pollmodel from "../component/Postmodels/Pollmodel";
+import Videopost from "../component/Postmodels/Videopost";
+import Simpletxtmodel from "../component/Postmodels/Simpletxtmodel";
 export default function Newsfeed() {
   const { menuVisible, msgWidget } = useContext(menuContext);
   const [tab1, settab1] = useState("simple-tab-item active");
@@ -106,10 +107,9 @@ export default function Newsfeed() {
               İzlədiklərim
             </p>
           </div>
-          <Model1 />
-          <Model1 />
-          <Model1 />
-          <Model2 />
+         <Simpletxtmodel/>
+         <Pollmodel/>
+         <Videopost/>
           <div className="loader-bars">
             <div className="loader-bar" />
             <div className="loader-bar" />

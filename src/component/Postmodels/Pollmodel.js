@@ -1,5 +1,4 @@
 import React from "react";
-import { ReactComponent as MoresettingDot } from "../../icons/MoresettingDot.svg";
 import Postoption from "./Postoption";
 
 export default function Model1() {
@@ -7,22 +6,11 @@ export default function Model1() {
     <div className="widget-box no-padding">
       <div className="widget-box-settings">
         <div className="post-settings-wrap">
-          <div className="post-settings widget-box-post-settings-dropdown-trigger">
-            <MoresettingDot className="post-settings-icon icon-more-dots setdots" />
-          </div>
-          <div className="simple-dropdown widget-box-post-settings-dropdown passivePostsetting">
-            <p className="simple-dropdown-link">Edit Post</p>
-            <p className="simple-dropdown-link">Delete Post</p>
-            <p className="simple-dropdown-link">Make it Featured</p>
-            <p className="simple-dropdown-link">Report Post</p>
-            <p className="simple-dropdown-link">Report Author</p>
-          </div>
         </div>
       </div>
       <div className="widget-box-status">
         <div className="widget-box-status-content">
           <div className="user-status">
-            {" "}
             <a className="user-status-avatar" href="profile-timeline.html">
               <div className="user-avatar small no-outline">
                 <div className="user-avatar-content">
@@ -70,7 +58,6 @@ export default function Model1() {
               <div className="form-row">
                 <div className="form-item">
                   <div className="checkbox-wrap">
-                    {" "}
                     <input
                       type="radio"
                       id="poll-option-1"
@@ -85,7 +72,6 @@ export default function Model1() {
               <div className="form-row">
                 <div className="form-item">
                   <div className="checkbox-wrap">
-                    {" "}
                     <input
                       type="radio"
                       id="poll-option-2"
@@ -101,7 +87,6 @@ export default function Model1() {
               <div className="form-row">
                 <div className="form-item">
                   <div className="checkbox-wrap">
-                    {" "}
                     <input
                       type="radio"
                       id="poll-option-3"
@@ -116,7 +101,6 @@ export default function Model1() {
             </form>
             <div className="poll-box-actions">
               <p className="button small secondary">Vote Now!</p>
-              <p className="button small white">See Results</p>
             </div>
           </div>
           <div className="content-actions">
@@ -142,10 +126,10 @@ export default function Model1() {
                       <p className="simple-dropdown-text">Destroy Dex</p>
                       <p className="simple-dropdown-text">The Green Goo</p>
                     </div> */}
-                
+
                   </div>
                   <div className="reaction-item">
-                 
+
                     {/* <img
                       className="reaction-image reaction-item-dropdown-trigger"
                       src="img/reaction/like.png"
@@ -165,7 +149,7 @@ export default function Model1() {
                     </div> */}
                   </div>
                   <div className="reaction-item">
-                   
+
                     {/* <img
                       className="reaction-image reaction-item-dropdown-trigger"
                       src="img/reaction/love.png"

@@ -50,18 +50,23 @@
 .postBtns {
   display: flex;
   margin-left: 20px;
-  width: 80%;
+  width: 90%;
+  margin-top: 20px;
   justify-content: space-between;
 }
 .postBtn {
-  background-color: #2f3749 !important;
+  background-color: #1d2333 !important;
   box-shadow: none !important;
-  margin-bottom: 20px;
-  height: 40px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px !important;
   width: 30%;
+  margin-bottom: 20px;
 }
 .prmtxt {
- padding-top: 15px;
+  padding-top: 15px;
 }
 .postBtn:hover {
   background-color: #40d04f !important;
@@ -85,11 +90,11 @@
   justify-content: center;
   flex-direction: row;
   align-items: center;
-  bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .inplsticn {
-  margin-left: 40px;
+  margin-left: 20px;
   cursor: pointer;
 }
 .inplsticn:hover path {
@@ -126,30 +131,35 @@
   cursor: pointer;
   opacity: 0;
 }
-.t {
-  height: 160px;
-}
+
 #inpctrl {
   margin-top: 10px;
   height: 50px;
 }
 .parms {
-  position: relative;
-  top: 10px;
-  background-color: #2f3749;
-  z-index: 9999;
-  border-radius: 10px;
+  width: auto !important;
+  cursor: auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: none !important;
+  justify-content: space-evenly;
+}
+.parms:hover{
+  background-color: #7750f8 !important;
+  box-shadow: none !important;
 }
 .parmsitem {
-  margin-top: 10px;
-  margin-right: 10px;
   display: flex;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer !important;
   flex-direction: row-reverse;
   justify-content: space-between;
 }
-.prmsnone{
+.prmsnone {
   display: none;
 }
 .chktxt {
   padding-right: 10px;
+  cursor: pointer;
 }
