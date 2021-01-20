@@ -10,6 +10,10 @@ import PostBanner from "../component/newsfeed/PostBanner";
 import Pollmodel from "../component/Postmodels/Pollmodel";
 import Videopost from "../component/Postmodels/Videopost";
 import Simpletxtmodel from "../component/Postmodels/Simpletxtmodel";
+import Imagespost from "../component/Postmodels/Imagespost";
+import Sharepost from "../component/Postmodels/Sharepost";
+import Gifpost from "../component/Postmodels/Gifpost";
+import Votepost from "../component/Postmodels/Votepost";
 export default function Newsfeed() {
   const { menuVisible, msgWidget } = useContext(menuContext);
   const [tab1, settab1] = useState("simple-tab-item active");
@@ -55,7 +59,6 @@ export default function Newsfeed() {
       />
       <div className="grid grid-3-6-3 mobile-prefer-content">
         <div className="grid-column sticky">
-          <Members />
           <a
             className="banner-promo"
             href="https://themeforest.net/user/odin_design"
@@ -63,8 +66,9 @@ export default function Newsfeed() {
           >
             <img src={bannerpromo} alt="banner-promo" />
           </a>
+          <Members />
         </div>
-        <div className="grid-column">
+        <div className="grid-column ">
           <PostBanner />
           <div className="simple-tab-items">
             <form className="form">
@@ -107,9 +111,13 @@ export default function Newsfeed() {
               İzlədiklərim
             </p>
           </div>
-         <Simpletxtmodel/>
-         <Pollmodel/>
-         <Videopost/>
+          <Gifpost />
+          <Votepost />
+          <Sharepost />
+          <Simpletxtmodel />
+          <Pollmodel />
+          <Videopost />
+          <Imagespost />
           <div className="loader-bars">
             <div className="loader-bar" />
             <div className="loader-bar" />
@@ -122,13 +130,10 @@ export default function Newsfeed() {
           </div>
         </div>
         <div className="grid-column sticky">
-          <div className="widget-box">
             <img className="promoimg" src={promo} />
             <img className="promoimg" src={promo1} />
             <img className="promoimg" src={promo} />
             <img className="promoimg" src={promo1} />
-           
-          </div>
         </div>
       </div>
     </div>

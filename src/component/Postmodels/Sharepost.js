@@ -1,21 +1,17 @@
-import React from 'react';
+import React from "react";
 import Postoption from "./Postoption";
 import Postoptionsdot from "./Postoptionsdot";
-
-export default function Videopost() {
+import img1 from "../../img/cover/51.jpg"
+export default function Sharepost() {
     return (
         <div className="widget-box no-padding">
             <Postoptionsdot/>
-            <div className="widget-box-settings">
-                <div className="post-settings-wrap">
-                </div>
-            </div>
             <div className="widget-box-status">
                 <div className="widget-box-status-content">
                     <div className="user-status"> <a className="user-status-avatar" href="profile-timeline.html">
                         <div className="user-avatar small no-outline">
                             <div className="user-avatar-content">
-                                <div className="hexagon-image-30-32" data-src="img/avatar/05.jpg" />
+                                <div className="hexagon-image-30-32" data-src="img/avatar/03.jpg" />
                             </div>
                             <div className="user-avatar-progress">
                                 <div className="hexagon-progress-40-44" />
@@ -30,52 +26,61 @@ export default function Videopost() {
                                 <div className="user-avatar-badge-content">
                                     <div className="hexagon-dark-16-18" />
                                 </div>
-                                <p className="user-avatar-badge-text">12</p>
+                                <p className="user-avatar-badge-text">16</p>
                             </div>
                         </div>
                     </a>
-                        <p className="user-status-title medium"><a className="bold" href="profile-timeline.html">Neko Bebop</a> uploaded
-                a <span className="bold">video</span></p>
-                        <p className="user-status-text small">2 minutes ago</p>
+                        <p className="user-status-title medium"><a className="bold" href="profile-timeline.html">Nick Grissom</a> shared
+                          a <span className="bold">post</span></p>
+                        <p className="user-status-text small">40 minutes ago</p>
                     </div>
-                    <p className="widget-box-status-text">Hi to everyone! Check out my latest video of the outlaws expansion for
-              Court Striker GO. I'm really excited because my last video had almost 50.000 views.</p>
-                </div>
-                <div className="iframe-wrap"> <iframe src="https://www.youtube.com/embed/rk-wIgg9fNk" allowFullScreen />
-                </div>
-                <div className="widget-box-status-content">
-                    <div className="tag-list"> <a className="tag-item secondary" href="newsfeed.html">Stream</a> <a className="tag-item secondary" href="newsfeed.html">StrikerGO</a> <a className="tag-item secondary" href="newsfeed.html">Outlaws</a> <a className="tag-item secondary" href="newsfeed.html">Gaming</a> </div>
+                    <p className="widget-box-status-text">Keep an eye out for <a href="#">@DestroyDex</a> surprise streams for
+                        awesome givaways!</p>
+                    <div className="widget-box no-padding">
+                        <div className="widget-box-status">
+                            <div className="widget-box-status-content">
+                                <div className="user-status"> <a className="user-status-avatar" href="profile-timeline.html">
+                                    <div className="user-avatar small no-outline">
+                                        <div className="user-avatar-content">
+                                            <div className="hexagon-image-30-32" data-src="img/avatar/02.jpg" />
+                                        </div>
+                                        <div className="user-avatar-progress">
+                                            <div className="hexagon-progress-40-44" />
+                                        </div>
+                                        <div className="user-avatar-progress-border">
+                                            <div className="hexagon-border-40-44" />
+                                        </div>
+                                        <div className="user-avatar-badge">
+                                            <div className="user-avatar-badge-border">
+                                                <div className="hexagon-22-24" />
+                                            </div>
+                                            <div className="user-avatar-badge-content">
+                                                <div className="hexagon-dark-16-18" />
+                                            </div>
+                                            <p className="user-avatar-badge-text">19</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                    <p className="user-status-title medium"><a className="bold" href="profile-timeline.html">Destroy Dex</a>
+                                    </p>
+                                    <p className="user-status-text small">6 hours ago</p>
+                                </div>
+                                <p className="widget-box-status-text">Attention everyone! From now on and through all the holydays
+                                season I'll be giving free season passes for a bunch of different games. Be on the lookout for
+                              these special streams to participate and win awesome prizes!</p><a className="video-status" href="https://www.twitch.tv/" target="_blank"> <img className="video-status-image" src={img1} alt="cover-51" />
+                                    <div className="video-status-info">
+                                        <p className="video-status-meta">twitch.tv</p>
+                                        <p className="video-status-title"><span className="bold">Destroy Dex</span> on <span className="highlighted">Twitch</span></p>
+                                        <p className="video-status-text">Tune in every Sunday for awesome givaways!</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                     <div className="content-actions">
                         <div className="content-action">
                             <div className="meta-line">
                                 <div className="meta-line-list reaction-item-list">
-                                    {/* <div className="reaction-item"> <img className="reaction-image reaction-item-dropdown-trigger" src="img/reaction/love.png" alt="reaction-love" />
-                                        <div className="simple-dropdown padded reaction-item-dropdown">
-                                            <p className="simple-dropdown-text"><img className="reaction" src="img/reaction/love.png" alt="reaction-love" /> <span className="bold">Love</span></p>
-                                            <p className="simple-dropdown-text">Matt Parker</p>
-                                            <p className="simple-dropdown-text">Destroy Dex</p>
-                                            <p className="simple-dropdown-text">The Green Goo</p>
-                                        </div>
-                                    </div>
-                                    <div className="reaction-item"> <img className="reaction-image reaction-item-dropdown-trigger" src="img/reaction/happy.png" alt="reaction-happy" />
-                                        <div className="simple-dropdown padded reaction-item-dropdown">
-                                            <p className="simple-dropdown-text"><img className="reaction" src="img/reaction/happy.png" alt="reaction-happy" /> <span className="bold">Happy</span></p>
-                                            <p className="simple-dropdown-text">Sandra Strange</p>
-                                            <p className="simple-dropdown-text">Jane Rodgers</p>
-                                        </div>
-                                    </div>
-                                    <div className="reaction-item"> <img className="reaction-image reaction-item-dropdown-trigger" src="img/reaction/like.png" alt="reaction-like" />
-                                        <div className="simple-dropdown padded reaction-item-dropdown">
-                                            <p className="simple-dropdown-text"><img className="reaction" src="img/reaction/like.png" alt="reaction-like" /> <span className="bold">Like</span></p>
-                                            <p className="simple-dropdown-text">Neko Bebop</p>
-                                            <p className="simple-dropdown-text">Nick Grissom</p>
-                                            <p className="simple-dropdown-text">Sarah Diamond</p>
-                                            <p className="simple-dropdown-text">Jett Spiegel</p>
-                                            <p className="simple-dropdown-text">Marcus Jhonson</p>
-                                            <p className="simple-dropdown-text"><span className="bold">and 6 more...</span></p>
-                                        </div>
-                                    </div>
-                                */}
                                 </div>
                                 <p className="meta-line-text">16</p>
                             </div>
@@ -137,6 +142,7 @@ export default function Videopost() {
                 </div>
             </div>
             <Postoption />
+
         </div>
     )
 }

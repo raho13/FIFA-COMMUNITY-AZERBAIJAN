@@ -25,7 +25,9 @@ export default function Navbar() {
   const [bigmenu, setbigmenu] = useState(
     "navigation-widget navigation-widget-desktop sidebar left hidden"
   );
+  
   useEffect(() => {
+   
     if (menuVisible === true) {
       setsmallmenu(
         "navigation-widget navigation-widget-desktop closed sidebar left hidden"
@@ -51,19 +53,33 @@ export default function Navbar() {
             <img src={cover} alt="cover-01" />
           </figure>
           <div className="user-short-description">
-            <a className="user-short-description-avatar user-avatar medium">
-              <div id="hextop"></div>
-              <div id="hexbottom"></div>
+            <a className="user-short-description-avatar user-avatar medium" href="profile-timeline.html">
+              <div className="user-avatar-border">
+
+              </div>
+              <div className="user-avatar-content">
+                <div className="hexagon-image-82-90" data-src="img/avatar/01.jpg" style={{ width: 82, height: 90, position: 'relative' }}><canvas width={82} height={90} style={{ position: 'absolute', top: 0, left: 0 }} /></div>
+              </div>
+              <div className="user-avatar-progress">
+                <div className="hexagon-progress-100-110" style={{ width: 100, height: 110, position: 'relative' }}><div className="hexagon"></div></div>
+              </div>
+              <div className="user-avatar-progress-border">
+
+                <div className="hexagon-border-100-110" style={{ width: 100, height: 110, position: 'relative' }}><canvas width={100} height={110} style={{ position: 'absolute', top: 0, left: 0 }} /></div>
+
+              </div>
+
               <div className="user-avatar-badge">
                 <div className="user-avatar-badge-border">
-                  <div className="hexagon-32-36"></div>
+                  <div className="hexagon-32-36" style={{ width: 32, height: 36, position: 'relative' }}><canvas width={32} height={36} style={{ position: 'absolute', top: 0, left: 0 }} /></div>
                 </div>
                 <div className="user-avatar-badge-content">
-                  <div className="hexagon-dark-26-28"></div>
+                  <div className="hexagon-dark-26-28" style={{ width: 26, height: 28, position: 'relative' }}><canvas width={26} height={28} style={{ position: 'absolute', top: 0, left: 0 }} /></div>
                 </div>
                 <p className="user-avatar-badge-text">24</p>
               </div>
             </a>
+
             <p className="user-short-description-title">
               <a href="profile-timeline.html">Marina Valentine</a>
             </p>

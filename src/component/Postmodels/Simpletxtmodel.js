@@ -1,10 +1,12 @@
 import React from "react";
 import { ReactComponent as MoresettingDot } from "../../icons/MoresettingDot.svg";
+import Postoptionsdot from "./Postoptionsdot";
 import Postoption from "./Postoption";
 
 export default function Model2() {
   return (
     <div id className="widget-box no-padding">
+      <Postoptionsdot/>
       <div className="widget-box-settings">
         <div className="post-settings-wrap">
           <div className="post-settings widget-box-post-settings-dropdown-trigger">

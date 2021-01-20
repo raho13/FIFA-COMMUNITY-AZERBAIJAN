@@ -2,6 +2,26 @@
 @import url("https://fonts.googleapis.com/css?family=Rajdhani:400,500,600,700&display=swap");
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,900&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Rajdhani:400,500,600,700&display=swap);
+@font-face {
+  font-family: Medium;
+  src: url("Fonts/FF DIN Round Pro Medium.otf"); }
+
+@font-face {
+  font-family: Bold;
+  src: url("Fonts/FF DIN Round Pro Bold.otf"); }
+
+@font-face {
+  font-family: Black;
+  src: url("Fonts/FF DIN Round Pro Black.otf"); }
+
+@font-face {
+  font-family: Light;
+  src: url("Fonts//FF DIN Round Pro Light.otf"); }
+
+@font-face {
+  font-family: Regular;
+  src: url("Fonts//FF DIN Round Pro Regular.otf"); }
+
 .icon-facebook,
 .icon-twitter,
 .icon-twitch,
@@ -1397,7 +1417,7 @@
     text-align: center; }
   .page-loader .page-loader-info .page-loader-info-title {
     margin-top: 24px;
-    font-family: "Titillium Web", sans-serif;
+    font-family: black;
     font-size: 1.75rem;
     font-weight: 900; }
   .page-loader .page-loader-info .page-loader-info-text {
@@ -3093,7 +3113,7 @@
     .header .header-brand .header-brand-text {
       margin-left: 26px;
       color: #fff;
-      font-family: "Titillium Web", sans-serif;
+      font-family: "Light";
       font-size: 1.25rem;
       font-weight: 900;
       text-transform: uppercase; }
@@ -3300,7 +3320,7 @@ select {
   margin: 0; }
 
 button, input[type=password], input[type=text], label, select, textarea {
-  font-family: Rajdhani,sans-serif; }
+  font-family: Light; }
 
 label {
   display: block;
@@ -3915,7 +3935,7 @@ textarea::placeholder {
 .form-counter.with-currency::before {
   content: "$";
   color: #4ff461;
-  font-family: Rajdhani,sans-serif;
+  font-family: Bold;
   font-size: .875rem;
   font-weight: 700;
   position: absolute;
@@ -4442,7 +4462,7 @@ body {
 
 a, h1, h2, h3, h4, h5, h6, p {
   color: #fff;
-  font-family: Rajdhani,sans-serif;
+  font-family: Light;
   line-height: 1em; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -6230,7 +6250,7 @@ figure > img {
 
 .page-loader .page-loader-info .page-loader-info-title {
   margin-top: 24px;
-  font-family: "Titillium Web",sans-serif;
+  font-family: Black;
   font-size: 1.75rem;
   font-weight: 900; }
 
@@ -8971,7 +8991,7 @@ figure > img {
   padding: 0 28px; }
 
 .widget-box .widget-box-status .widget-box-status-content .user-status {
-  font-family: Rajdhani,sans-serif;
+  font-family: Light;
   padding-right: 70px; }
 
 .widget-box .widget-box-status .widget-box-status-content .user-status .user-status-title .user-avatar {
@@ -9124,7 +9144,7 @@ figure > img {
 
 .error-section .error-section-title {
   color: #fff;
-  font-family: "Titillium Web",sans-serif;
+  font-family: Black;
   font-size: 15.8125rem;
   font-weight: 900;
   position: absolute;
@@ -10045,7 +10065,7 @@ figure > img {
   font-weight: 500; }
 
 .landing-info .landing-info-title {
-  font-family: "Titillium Web",sans-serif;
+  font-family: Black;
   font-size: 6.5rem;
   font-weight: 900;
   position: relative;
@@ -13886,7 +13906,7 @@ figure > img {
 .header .header-brand .header-brand-text {
   margin-left: 26px;
   color: #fff;
-  font-family: "Titillium Web",sans-serif;
+  font-family: Black;
   font-size: 1.25rem;
   font-weight: 900;
   text-transform: uppercase; }
@@ -14521,7 +14541,7 @@ figure > img {
   display: flex;
   -ms-flex-align: center;
   align-items: center;
-  font-family: Rajdhani,sans-serif;
+  font-family: Medium;
   color: #9aa4bf;
   font-size: .875rem;
   font-weight: 500; }
@@ -15096,7 +15116,7 @@ input[type="password"],
 textarea,
 select,
 button {
-  font-family: "Rajdhani", sans-serif; }
+  font-family: 'Light'; }
 
 label {
   display: block;
@@ -15600,7 +15620,7 @@ textarea {
     .form-counter.with-currency::before {
       content: '$';
       color: #4ff461;
-      font-family: "Rajdhani", sans-serif;
+      font-family: "Light";
       font-size: 0.875rem;
       font-weight: 700;
       position: absolute;
@@ -15837,11 +15857,65 @@ textarea {
   width: 100%; }
 
 .promoimg {
-  width: 100%; }
+  width: 100%;
+  border-radius: 10px; }
 
 .sticky {
-  position: sticky;
-  top: 100px; }
+  top: 100px;
+  position: sticky; }
+
+.hexagon {
+  width: 64.5px;
+  height: 100px;
+  background-image: linear-gradient(90deg, red, red);
+  border-radius: 10px;
+  transform: rotate(30deg); }
+  .hexagon:before, .hexagon:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-image: inherit;
+    border-radius: inherit; }
+  .hexagon:before {
+    transform: rotate(60deg); }
+  .hexagon:after {
+    transform: rotate(-60deg); }
+
+.pstdots path {
+  fill: #616a82 !important; }
+
+.pstdots {
+  position: absolute !important;
+  right: 0 !important;
+  cursor: pointer !important; }
+
+.pstdotsAct path {
+  fill: white !important; }
+
+.pstdotsAct {
+  cursor: pointer !important; }
+
+.actdodsset {
+  position: absolute;
+  z-index: 9999;
+  top: 30px;
+  right: 9px;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0px, 0px);
+  transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s; }
+
+.pssdodsset {
+  position: absolute;
+  z-index: 9999;
+  top: 30px;
+  right: 9px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0px, -20px);
+  transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s; }
 
 .widget-box {
   padding: 32px 28px;
@@ -15954,7 +16028,7 @@ textarea {
     .widget-box .widget-box-status .widget-box-status-content {
       padding: 0 28px; }
       .widget-box .widget-box-status .widget-box-status-content .user-status {
-        font-family: "Rajdhani", sans-serif;
+        font-family: "Light";
         padding-right: 70px; }
         .widget-box .widget-box-status .widget-box-status-content .user-status .user-status-title .user-avatar {
           display: inline;
@@ -16540,7 +16614,6 @@ textarea {
 
 #brwsinp {
   height: 50px;
-  background-color: red;
   z-index: 9999;
   position: relative;
   width: 80px;
@@ -16580,3 +16653,15 @@ textarea {
 .chktxt {
   padding-right: 10px;
   cursor: pointer; }
+
+.progress-stat-bar {
+  width: 100%;
+  height: 5px;
+  border-radius: 10px;
+  background-color: #6c757d; }
+
+.prgbar {
+  background-color: #40d04f;
+  width: 68%;
+  border-radius: 10px;
+  height: 5px; }

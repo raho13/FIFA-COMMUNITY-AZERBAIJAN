@@ -170,10 +170,78 @@
 .wgtfrm {
   width: 100%;
 }
-.promoimg{
+.promoimg {
   width: 100%;
+  border-radius: 10px;
 }
-.sticky{
-  position: sticky;
+.sticky {
   top: 100px;
+  position: sticky;
+}
+.hexagon {
+  $hexagon-size: 100px;
+  $hexagon-color-1: red;
+  $hexagon-color-2: red;
+  width: ($hexagon-size * 0.645);
+  height: $hexagon-size;
+  background-image: linear-gradient(90deg, $hexagon-color-1, $hexagon-color-2);
+  border-radius: ($hexagon-size / 10);
+
+  transform: rotate(30deg);
+
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-image: inherit;
+    border-radius: inherit;
+  }
+
+  &:before {
+    transform: rotate(60deg);
+  }
+
+  &:after {
+    transform: rotate(-60deg);
+  }
+}
+.pstdots path {
+  fill: #616a82 !important;
+}
+.pstdots {
+  position: absolute !important;
+  right: 0 !important;
+  cursor: pointer !important;
+}
+
+.pstdotsAct path {
+  fill: white !important;
+}
+.pstdotsAct {
+  cursor: pointer !important;
+}
+.actdodsset {
+  position: absolute;
+  z-index: 9999;
+  top: 30px;
+  right: 9px;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0px, 0px);
+  transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s,
+    visibility 0.3s ease-in-out 0s;
+}
+.pssdodsset {
+  position: absolute;
+  z-index: 9999;
+  top: 30px;
+  right: 9px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0px, -20px);
+  transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s,
+    visibility 0.3s ease-in-out 0s;
 }
