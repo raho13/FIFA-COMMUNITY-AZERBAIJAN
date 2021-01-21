@@ -16665,3 +16665,63 @@ textarea {
   width: 68%;
   border-radius: 10px;
   height: 5px; }
+
+.streamer-box {
+  background-color: #1d2333;
+  border-radius: 12px;
+  box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.06); }
+  .streamer-box.small .streamer-box-cover {
+    height: 48px; }
+  .streamer-box.small .streamer-box-info .streamer-box-image {
+    top: -26px; }
+  .streamer-box.small .streamer-box-info .streamer-box-title {
+    font-size: 1rem; }
+  .streamer-box.small .streamer-box-info .button {
+    margin-top: 28px; }
+    .streamer-box.small .streamer-box-info .button + .button {
+      margin-top: 12px; }
+  .streamer-box .streamer-box-cover {
+    width: 100%;
+    height: 70px;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px; }
+  .streamer-box .streamer-box-info {
+    padding: 50px 28px 32px;
+    text-align: center;
+    position: relative; }
+    .streamer-box .streamer-box-info .streamer-box-image {
+      width: 72px;
+      height: 72px;
+      border: 6px solid #1d2333;
+      border-radius: 50%;
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      margin-left: -36px; }
+    .streamer-box .streamer-box-info .streamer-box-title {
+      font-size: 1.125rem;
+      font-weight: 700; }
+    .streamer-box .streamer-box-info .streamer-box-text {
+      margin-top: 4px;
+      color: #9aa4bf;
+      font-size: 0.75rem;
+      font-weight: 500; }
+    .streamer-box .streamer-box-info .streamer-box-status {
+      margin-top: 10px;
+      display: inline-block;
+      height: 18px;
+      padding: 0 6px;
+      border-radius: 4px;
+      background-color: #9aa4bf;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      line-height: 18px;
+      text-transform: uppercase; }
+      .streamer-box .streamer-box-info .streamer-box-status.active {
+        background-color: #f1315e; }
+    .streamer-box .streamer-box-info .user-stats {
+      margin-top: 38px; }
+    .streamer-box .streamer-box-info .button {
+      margin-top: 40px;
+      width: 100%; }

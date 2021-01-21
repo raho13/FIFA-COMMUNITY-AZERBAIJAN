@@ -10,7 +10,9 @@ import { ReactComponent as Searcicon } from "../icons/Searcicon.svg";
 import { ReactComponent as SearchX } from "../icons/searcX.svg";
 import { ReactComponent as Notification } from "../icons/Notifications Icon.svg";
 import { ReactComponent as Friend } from "../icons/Friends Icon.svg";
+import Streams from '../pages/Streams'
 import avatar from "../icons/logo.png";
+
 
 export default function Header() {
   const {
@@ -108,6 +110,7 @@ export default function Header() {
     }
   };
   return (
+
     <div className="header">
       <div className="header-actions">
         <div className="header-brand">
@@ -163,21 +166,21 @@ export default function Header() {
             </div>
           </div>
         ) : (
-          <div className="interactive-input dark">
-            <input
-              autoComplete="off"
-              onChange={inputHandle}
-              value={inputValue}
-              type="text"
-              id="search-main"
-              name="search_main"
-              placeholder="Search here for people or groups"
-            />
-            <div className="interactive-input-icon-wrap">
-              <Searcicon className="interactive-input-icon icon-magnifying-glass" />
+            <div className="interactive-input dark">
+              <input
+                autoComplete="off"
+                onChange={inputHandle}
+                value={inputValue}
+                type="text"
+                id="search-main"
+                name="search_main"
+                placeholder="Search here for people or groups"
+              />
+              <div className="interactive-input-icon-wrap">
+                <Searcicon className="interactive-input-icon icon-magnifying-glass" />
+              </div>
             </div>
-          </div>
-        )}
+          )}
         <div className={srcdrpClass()}>
           <div className="dropdown-box-category">
             <p className="dropdown-box-category-title">Members</p>

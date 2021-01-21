@@ -8,18 +8,7 @@ export default function Model2() {
     <div id className="widget-box no-padding">
       <Postoptionsdot/>
       <div className="widget-box-settings">
-        <div className="post-settings-wrap">
-          <div className="post-settings widget-box-post-settings-dropdown-trigger">
-            <MoresettingDot className="post-settings-icon icon-more-dots"/>
-          </div>
-          <div className="simple-dropdown widget-box-post-settings-dropdown passivePostsetting">
-            <p className="simple-dropdown-link">Edit Post</p>
-            <p className="simple-dropdown-link">Delete Post</p>
-            <p className="simple-dropdown-link">Make it Featured</p>
-            <p className="simple-dropdown-link">Report Post</p>
-            <p className="simple-dropdown-link">Report Author</p>
-          </div>
-        </div>
+       
       </div>
       <div className="widget-box-status">
         <div className="widget-box-status-content">

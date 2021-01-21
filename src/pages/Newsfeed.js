@@ -68,7 +68,7 @@ export default function Newsfeed() {
           </a>
           <Members />
         </div>
-        <div className="grid-column ">
+        <div className="grid-column">
           <PostBanner />
           <div className="simple-tab-items">
             <form className="form">
@@ -130,10 +130,10 @@ export default function Newsfeed() {
           </div>
         </div>
         <div className="grid-column sticky">
-            <img className="promoimg" src={promo} />
-            <img className="promoimg" src={promo1} />
-            <img className="promoimg" src={promo} />
-            <img className="promoimg" src={promo1} />
+          <img className="promoimg" src={promo} />
+          <img className="promoimg" src={promo1} />
+          <img className="promoimg" src={promo} />
+          <img className="promoimg" src={promo1} />
         </div>
       </div>
     </div>
