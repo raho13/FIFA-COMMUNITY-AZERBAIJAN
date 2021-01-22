@@ -9,13 +9,13 @@ import {
 } from "react-router-dom";
 export default function Navigation() {
     return (
-        <Router>
+        <div>
             <Switch>
                 <Route path='/' exact component={Newsfeed} />
             </Switch>
             <Switch>
                 <Route path='/streams' exact component={Streams} />
             </Switch>
-        </Router>
+        </div>
     )
 }

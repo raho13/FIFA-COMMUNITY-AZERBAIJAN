@@ -5,16 +5,19 @@ import Chatwidget from './Chatwidget'
 import FloatyBar from './FloatyBar'
 import MobileNavbar from './MobileNavbar'
 import Navigation from './Navigation'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
 export default function Layout() {
     return (
-        <div>
-            <Navigation />
-            <Navbar />
-            <Header />
-            <Chatwidget />
-            <FloatyBar />
-            <MobileNavbar />
-        </div>
+        <Router>
+            <div>
+                <Navigation />
+                <Navbar />
+                <Header />
+                <Chatwidget />
+                <FloatyBar />
+                <MobileNavbar />
+            </div>
+        </Router>
     )
 }

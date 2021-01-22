@@ -1,95 +1,228 @@
-
+@media only screen and (max-width: 500px) {
+  .card {
+    width: 150px;
+    height: 300px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 30px;
+  }
+  .bnm1 {
+    width: 100%;
+    margin-top: 10%;
+    height: 10%;
+  }
+  .bnm {
+    width: 100%;
+    height: 10%;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: 1px solid #afb0c0;
+    margin-top: 5px;
+  }
+}
 .streamer-box {
-    background-color: $color-box-background;
-    border-radius: 12px;
-    box-shadow: $shadow-light;
-  
-    &.small {
-      .streamer-box-cover {
-        height: 48px;
+  background-color: $color-box-background;
+  border-radius: 12px;
+  box-shadow: $shadow-light;
+
+  &.small {
+    .streamer-box-cover {
+      height: 48px;
+    }
+
+    .streamer-box-info {
+      .streamer-box-image {
+        top: -26px;
       }
-  
-      .streamer-box-info {
-        .streamer-box-image {
-          top: -26px;
-        }
-  
-        .streamer-box-title {
-          font-size: $fs-16;
-        }
-  
-        .button {
-          margin-top: 28px;
-  
-          & + {
-            .button {
-              margin-top: 12px;
-            }
+
+      .streamer-box-title {
+        font-size: $fs-16;
+      }
+
+      .button {
+        margin-top: 28px;
+
+        & + {
+          .button {
+            margin-top: 12px;
           }
         }
       }
     }
-  
-    .streamer-box-cover {
+  }
+
+  .streamer-box-cover {
+    width: 100%;
+    height: 70px;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+  }
+
+  .streamer-box-info {
+    padding: 50px 28px 32px;
+    text-align: center;
+    position: relative;
+
+    .streamer-box-image {
+      width: 72px;
+      height: 72px;
+      border: 6px solid $color-box-background;
+      border-radius: 50%;
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      margin-left: -36px;
+    }
+
+    .streamer-box-title {
+      font-size: $fs-18;
+      font-weight: $weight-bold;
+    }
+
+    .streamer-box-text {
+      margin-top: 4px;
+      color: $color-text-2;
+      font-size: $fs-12;
+      font-weight: $weight-medium;
+    }
+
+    .streamer-box-status {
+      margin-top: 10px;
+      display: inline-block;
+      height: 18px;
+      padding: 0 6px;
+      border-radius: 4px;
+      background-color: $color-text-alt-2;
+      color: $white;
+      font-size: $fs-12;
+      font-weight: $weight-bold;
+      line-height: 18px;
+      text-transform: uppercase;
+
+      &.active {
+        background-color: $color-stream-live;
+      }
+    }
+
+    .user-stats {
+      margin-top: 38px;
+    }
+
+    .button {
+      margin-top: 40px;
       width: 100%;
-      height: 70px;
-      border-top-right-radius: 12px;
-      border-top-left-radius: 12px;
     }
-  
-    .streamer-box-info {
-      padding: 50px 28px 32px;
-      text-align: center;
-      position: relative;
-  
-      .streamer-box-image {
-        width: 72px;
-        height: 72px;
-        border: 6px solid $color-box-background;
-        border-radius: 50%;
-        position: absolute;
-        top: -30px;
-        left: 50%;
-        margin-left: -36px;
-      }
-  
-      .streamer-box-title {
-        font-size: $fs-18;
-        font-weight: $weight-bold;
-      }
-  
-      .streamer-box-text {
-        margin-top: 4px;
-        color: $color-text-2;
-        font-size: $fs-12;
-        font-weight: $weight-medium;
-      }
-  
-      .streamer-box-status {
-        margin-top: 10px;
-        display: inline-block;
-        height: 18px;
-        padding: 0 6px;
-        border-radius: 4px;
-        background-color: $color-text-alt-2;
-        color: $white;
-        font-size: $fs-12;
-        font-weight: $weight-bold;
-        line-height: 18px;
-        text-transform: uppercase;
-  
-        &.active {
-          background-color: $color-stream-live;
-        }
-      }
-  
-      .user-stats {
-        margin-top: 38px;
-      }
-  
-      .button {
-        margin-top: 40px;
-        width: 100%;
-      }
-    }
-  }5pP7hH3dD
+  }
+}
+.card:hover .card-info {
+  width: 100%;
+  transform: translate(0px, -50px);
+  transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s;
+  height: 250px;
+  z-index: 9999;
+  opacity: 1;
+  visibility: visible;
+  background-color: #161b28;
+  position: relative;
+  border-radius: 20px;
+  // border: 0.1px solid #afb0c0;
+}
+.card-info {
+  width: 100%;
+  transform: translate(0px, 0px);
+  transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s;
+  height: 10px;
+  z-index: 9999;
+  top: -200px;
+  opacity: 0;
+  visibility: hidden;
+  position: relative;
+}
+.card {
+  width: 170px;
+  height: 300px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 30px;
+  font-family: Medium;
+  cursor: pointer;
+}
+#stream-slider {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.card-img {
+  width: 100%;
+  height: 100% !important;
+  border-radius: 20px;
+}
+
+.cardheader {
+  padding-top: 5px;
+}
+.cardname {
+  font-size: 20px;
+  text-align: center;
+  color: white;
+}
+.cardpoint {
+  text-align: center;
+  color: #afb0c0;
+}
+.cardlang {
+  display: flex;
+  margin-top: 5px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+#cardlngtxt {
+  height: 20px;
+  padding: 2px 5px 0 5px;
+  background-color: #7750f8;
+  border-radius: 5px;
+  font-family: Light;
+}
+.cardbody {
+  margin-right: 10%;
+  margin-left: 10%;
+  width: 80%;
+}
+.cardflag {
+  height: 25px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+#cardcaptxt {
+  height: 20px;
+  padding: 2px 5px 0 5px;
+  background-color: #40d04f;
+  border-radius: 5px;
+  font-family: Light;
+}
+.bnm1 {
+  width: 100%;
+  margin-top: 10%;
+  height: 20%;
+  box-shadow: none !important;
+}
+.bnm {
+  width: 100%;
+  height: 20%;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: 1px solid #afb0c0;
+  margin-top: 5px;
+}
+.bnm:hover {
+  background-color: #afb0c0 !important;
+  color: #161b28;
+}
+.cardstart {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10%;
+  margin-left: 10%;
+  width: 80%;
+}
