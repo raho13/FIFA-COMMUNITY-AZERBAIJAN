@@ -51,7 +51,7 @@ export default function Imagespost() {
               <div className="picture-collage-item popup-picture-trigger">
                 <div className="photo-preview">
                   <figure className="photo-preview-image liquid">
-                    <img src={img1} alt="photo-preview-10" />
+                    <img className="pstimg" src={img1} alt="photo-preview-10" />
                   </figure>
                   <div className="photo-preview-info">
                     <div className="reaction-count-list">
@@ -74,7 +74,7 @@ export default function Imagespost() {
               <div className="picture-collage-item popup-picture-trigger">
                 <div className="photo-preview">
                   <figure className="photo-preview-image liquid">
-                    <img src={img1} alt="photo-preview-10" />
+                    <img src={img1} alt="photo-preview-10" className="pstimg" />
                   </figure>
                   <div className="photo-preview-info">
                     <div className="reaction-count-list">
@@ -99,7 +99,7 @@ export default function Imagespost() {
               <div className="picture-collage-item popup-picture-trigger">
                 <div className="photo-preview">
                   <figure className="photo-preview-image liquid">
-                    <img src={img2} alt="photo-preview-16" />
+                    <img src={img2} alt="photo-preview-16" className="pstimg"/>
                   </figure>
                   <div className="photo-preview-info">
                     <div className="reaction-count-list">
@@ -122,7 +122,7 @@ export default function Imagespost() {
               <div className="picture-collage-item popup-picture-trigger">
                 <div className="photo-preview">
                   <figure className="photo-preview-image liquid">
-                    <img src={img2} alt="photo-preview-16" />
+                    <img className="pstimg" src={img2} alt="photo-preview-16" />
                   </figure>
                   <div className="photo-preview-info">
                     <div className="reaction-count-list">
@@ -142,16 +142,16 @@ export default function Imagespost() {
                   </div>
                 </div>
               </div>
-              <div className="picture-collage-item">
+              <div className="picture-collage-item pstoverlay">
                 <a
-                  className="picture-collage-item-overlay"
-                  href="profile-photos.html"
+                  className="picture-collage-item-overlay "
+                  
                 >
                   <p className="picture-collage-item-overlay-text">+22</p>
                 </a>
                 <div className="photo-preview">
                   <figure className="photo-preview-image liquid">
-                    <img src="img/cover/14.jpg" alt="photo-preview-14" />
+                    <img className="pstimg" src="img/cover/14.jpg" alt="photo-preview-14" />
                   </figure>
                   <div className="photo-preview-info">
                     <div className="reaction-count-list">
@@ -172,17 +172,6 @@ export default function Imagespost() {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="tag-list">
-            <a className="tag-item secondary" href="newsfeed.html">
-              Photos
-            </a>
-            <a className="tag-item secondary" href="newsfeed.html">
-              StreamCon
-            </a>
-            <a className="tag-item secondary" href="newsfeed.html">
-              StarGirl
-            </a>
           </div>
           <div className="content-actions">
             <div className="content-action">

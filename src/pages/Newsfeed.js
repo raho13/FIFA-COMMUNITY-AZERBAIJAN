@@ -2,7 +2,6 @@ import React, { useContext, useState } from "react";
 import bannerpromo from "../img/banner/banner-promo.jpg";
 import promo from "../img/test/A4-1024x1024.jpg";
 import promo1 from "../img/test/kompaniya-sayt-ucun (1).jpg";
-import { menuContext } from "../context";
 import bannerimg from "../img/banner/newsfeed-icon.png";
 import Banner from "../component/Banner";
 import Members from "../component/newsfeed/Members";
@@ -15,7 +14,6 @@ import Sharepost from "../component/Postmodels/Sharepost";
 import Gifpost from "../component/Postmodels/Gifpost";
 import Votepost from "../component/Postmodels/Votepost";
 export default function Newsfeed() {
-  const { menuVisible, msgWidget } = useContext(menuContext);
   const [tab1, settab1] = useState("simple-tab-item active");
   const [tab2, settab2] = useState("simple-tab-item");
   const [tab3, settab3] = useState("simple-tab-item");
@@ -36,22 +34,9 @@ export default function Newsfeed() {
       settab3("simple-tab-item active");
     }
   };
-  const gridPosition = () => {
-    if (
-      (menuVisible === false && msgWidget === false) ||
-      (menuVisible === true && msgWidget === true)
-    ) {
-      return "content-grid container";
-    }
-    if (menuVisible === true) {
-      return "content-grid container1";
-    }
-    if (msgWidget === true) {
-      return "content-grid container2";
-    }
-  };
+
   return (
-    <div className={gridPosition()}>
+    <>
       <Banner
         header="Newsfeed"
         img={bannerimg}
@@ -136,6 +121,6 @@ export default function Newsfeed() {
           <img className="promoimg" src={promo1} />
         </div>
       </div>
-    </div>
+    </>
   );
 }

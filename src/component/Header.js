@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Scrollbars } from "react-custom-scrollbars";
 import { menuContext } from "../context";
 import { ReactComponent as Toogle } from "../icons/Toogle Side Menu Icon.svg";
@@ -15,6 +15,7 @@ import avatar from "../icons/logo.png";
 
 
 export default function Header() {
+
   const {
     menuVisible,
     setmenuVisible,
@@ -36,6 +37,9 @@ export default function Header() {
   const [setclass, setSetclass] = useState(
     "dropdown-navigation header-settings-dropdown passiveSet"
   );
+  // const diplaynone = () => {
+  //   console.log('ok')
+  // }
   const inputHandle = (e) => {
     setinputValue(e.target.value);
     if (e.target.value.split(" ").join("").length > 0) {
@@ -109,6 +113,9 @@ export default function Header() {
       }
     }
   };
+  // useEffect(
+  //   diplaynone()
+  // )
   return (
 
     <div className="header">
@@ -218,13 +225,12 @@ export default function Header() {
                 </p>
                 <p className="user-status-text">1 friends in common</p>
                 <div className="user-status-icon">
-                  {" "}
                   <svg className="icon-friend">
                     <use xlinkHref="#svg-friend" />
-                  </svg>{" "}
+                  </svg>
                 </div>
               </div>
-            </a>{" "}
+            </a>
             <a className="dropdown-box-list-item" href="profile-timeline.html">
               <div className="user-status notification">
                 <div className="user-status-avatar">

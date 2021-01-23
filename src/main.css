@@ -15816,8 +15816,8 @@ textarea {
   transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s, visibility 0.4s ease-in-out 0s; }
 
 .passiveSrcdrp {
-  z-index: 9999;
   display: none;
+  z-index: -1;
   margin-top: 430px;
   position: relative;
   width: 100% !important;
@@ -15863,25 +15863,6 @@ textarea {
 .sticky {
   top: 100px;
   position: sticky; }
-
-.hexagon {
-  width: 64.5px;
-  height: 100px;
-  background-image: linear-gradient(90deg, red, red);
-  border-radius: 10px;
-  transform: rotate(30deg); }
-  .hexagon:before, .hexagon:after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: inherit;
-    height: inherit;
-    background-image: inherit;
-    border-radius: inherit; }
-  .hexagon:before {
-    transform: rotate(60deg); }
-  .hexagon:after {
-    transform: rotate(-60deg); }
 
 .pstdots path {
   fill: #616a82 !important; }
@@ -16665,6 +16646,12 @@ textarea {
   width: 68%;
   border-radius: 10px;
   height: 5px; }
+
+.pstimg {
+  border-radius: 20px; }
+
+.pstoverlay {
+  border-radius: 20px; }
 
 @media only screen and (max-width: 500px) {
   .card {

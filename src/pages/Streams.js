@@ -5,7 +5,7 @@ import bannerimg from '../img/banner/streams-icon.png'
 import { ReactComponent as Azerbaijan } from "../icons/azerbaijan.svg";
 export default function Streams() {
     return (
-        <div className="content-grid container">
+        <>
             <Banner img={bannerimg} header='Streams (98)' des='Check out all the members streams!' />
             <div className="section-header">
                 <div className="section-header-info">
@@ -14,7 +14,7 @@ export default function Streams() {
                 </div>
             </div>
             <div id="stream-slider" className="section-slider">
-               
+
                 <div className="sections-slider-item card">
                     <img src={img} alt="cover-01" className='card-img' />
                     <div className='card-info'>
@@ -38,37 +38,8 @@ export default function Streams() {
                             </div>
                         </div>
                         <div className='cardstart'>
-                        <p class="button small secondary bnm">Kursa başla</p>
-                        <p class="button small secondary bnm1">Önizləmə</p>
-                        </div>
-                    </div>
-                </div>
-               
-                <div className="sections-slider-item card">
-                    <img src={img} alt="cover-01" className='card-img' />
-                    <div className='card-info'>
-                        <div className='cardheader'>
-                            <div className='cardname'>Rahib</div>
-                            <div className='cardpoint'>7.34</div>
-                        </div>
-                        <div className='cardbody'>
-                            <div className='cardlang'>
-                                <p id='cardlngtxt'>Dil</p>
-                                <Azerbaijan className="cardflag" />
-                                <Azerbaijan className="cardflag" />
-                                <Azerbaijan className="cardflag" />
-
-                            </div>
-                            <div className='cardlang'>
-                                <p id='cardcaptxt'>ALTYAZI</p>
-                                <Azerbaijan className="cardflag" />
-                                <Azerbaijan className="cardflag" />
-                                <Azerbaijan className="cardflag" />
-                            </div>
-                        </div>
-                        <div className='cardstart'>
-                        <p class="button small secondary bnm">Kursa başla</p>
-                        <p class="button small secondary bnm1">Önizləmə</p>
+                            <p class="button small secondary bnm">Kursa başla</p>
+                            <p class="button small secondary bnm1">Önizləmə</p>
                         </div>
                     </div>
                 </div>
@@ -96,8 +67,8 @@ export default function Streams() {
                             </div>
                         </div>
                         <div className='cardstart'>
-                        <p class="button small secondary bnm">Kursa başla</p>
-                        <p class="button small secondary bnm1">Önizləmə</p>
+                            <p class="button small secondary bnm">Kursa başla</p>
+                            <p class="button small secondary bnm1">Önizləmə</p>
                         </div>
                     </div>
                 </div>
@@ -125,8 +96,8 @@ export default function Streams() {
                             </div>
                         </div>
                         <div className='cardstart'>
-                        <p class="button small secondary bnm">Kursa başla</p>
-                        <p class="button small secondary bnm1">Önizləmə</p>
+                            <p class="button small secondary bnm">Kursa başla</p>
+                            <p class="button small secondary bnm1">Önizləmə</p>
                         </div>
                     </div>
                 </div>
@@ -154,8 +125,8 @@ export default function Streams() {
                             </div>
                         </div>
                         <div className='cardstart'>
-                        <p class="button small secondary bnm">Kursa başla</p>
-                        <p class="button small secondary bnm1">Önizləmə</p>
+                            <p class="button small secondary bnm">Kursa başla</p>
+                            <p class="button small secondary bnm1">Önizləmə</p>
                         </div>
                     </div>
                 </div>
@@ -183,8 +154,8 @@ export default function Streams() {
                             </div>
                         </div>
                         <div className='cardstart'>
-                        <p class="button small secondary bnm">Kursa başla</p>
-                        <p class="button small secondary bnm1">Önizləmə</p>
+                            <p class="button small secondary bnm">Kursa başla</p>
+                            <p class="button small secondary bnm1">Önizləmə</p>
                         </div>
                     </div>
                 </div>
@@ -212,8 +183,8 @@ export default function Streams() {
                             </div>
                         </div>
                         <div className='cardstart'>
-                        <p class="button small secondary bnm">Kursa başla</p>
-                        <p class="button small secondary bnm1">Önizləmə</p>
+                            <p class="button small secondary bnm">Kursa başla</p>
+                            <p class="button small secondary bnm1">Önizləmə</p>
                         </div>
                     </div>
                 </div>
@@ -241,65 +212,8 @@ export default function Streams() {
                             </div>
                         </div>
                         <div className='cardstart'>
-                        <p class="button small secondary bnm">Kursa başla</p>
-                        <p class="button small secondary bnm1">Önizləmə</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="sections-slider-item card">
-                    <img src={img} alt="cover-01" className='card-img' />
-                    <div className='card-info'>
-                        <div className='cardheader'>
-                            <div className='cardname'>Rahib</div>
-                            <div className='cardpoint'>7.34</div>
-                        </div>
-                        <div className='cardbody'>
-                            <div className='cardlang'>
-                                <p id='cardlngtxt'>Dil</p>
-                                <Azerbaijan className="cardflag" />
-                                <Azerbaijan className="cardflag" />
-                                <Azerbaijan className="cardflag" />
-
-                            </div>
-                            <div className='cardlang'>
-                                <p id='cardcaptxt'>ALTYAZI</p>
-                                <Azerbaijan className="cardflag" />
-                                <Azerbaijan className="cardflag" />
-                                <Azerbaijan className="cardflag" />
-                            </div>
-                        </div>
-                        <div className='cardstart'>
-                        <p class="button small secondary bnm">Kursa başla</p>
-                        <p class="button small secondary bnm1">Önizləmə</p>
-                        </div>
-                    </div>
-                </div>
-               
-                <div className="sections-slider-item card">
-                    <img src={img} alt="cover-01" className='card-img' />
-                    <div className='card-info'>
-                        <div className='cardheader'>
-                            <div className='cardname'>Rahib</div>
-                            <div className='cardpoint'>7.34</div>
-                        </div>
-                        <div className='cardbody'>
-                            <div className='cardlang'>
-                                <p id='cardlngtxt'>Dil</p>
-                                <Azerbaijan className="cardflag" />
-                                <Azerbaijan className="cardflag" />
-                                <Azerbaijan className="cardflag" />
-
-                            </div>
-                            <div className='cardlang'>
-                                <p id='cardcaptxt'>ALTYAZI</p>
-                                <Azerbaijan className="cardflag" />
-                                <Azerbaijan className="cardflag" />
-                                <Azerbaijan className="cardflag" />
-                            </div>
-                        </div>
-                        <div className='cardstart'>
-                        <p class="button small secondary bnm">Kursa başla</p>
-                        <p class="button small secondary bnm1">Önizləmə</p>
+                            <p class="button small secondary bnm">Kursa başla</p>
+                            <p class="button small secondary bnm1">Önizləmə</p>
                         </div>
                     </div>
                 </div>
@@ -327,8 +241,36 @@ export default function Streams() {
                             </div>
                         </div>
                         <div className='cardstart'>
-                        <p class="button small secondary bnm">Kursa başla</p>
-                        <p class="button small secondary bnm1">Önizləmə</p>
+                            <p class="button small secondary bnm">Kursa başla</p>
+                            <p class="button small secondary bnm1">Önizləmə</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="sections-slider-item card">
+                    <img src={img} alt="cover-01" className='card-img' />
+                    <div className='card-info'>
+                        <div className='cardheader'>
+                            <div className='cardname'>Rahib</div>
+                            <div className='cardpoint'>7.34</div>
+                        </div>
+                        <div className='cardbody'>
+                            <div className='cardlang'>
+                                <p id='cardlngtxt'>Dil</p>
+                                <Azerbaijan className="cardflag" />
+                                <Azerbaijan className="cardflag" />
+                                <Azerbaijan className="cardflag" />
+
+                            </div>
+                            <div className='cardlang'>
+                                <p id='cardcaptxt'>ALTYAZI</p>
+                                <Azerbaijan className="cardflag" />
+                                <Azerbaijan className="cardflag" />
+                                <Azerbaijan className="cardflag" />
+                            </div>
+                        </div>
+                        <div className='cardstart'>
+                            <p class="button small secondary bnm">Kursa başla</p>
+                            <p class="button small secondary bnm1">Önizləmə</p>
                         </div>
                     </div>
                 </div>
@@ -356,8 +298,8 @@ export default function Streams() {
                             </div>
                         </div>
                         <div className='cardstart'>
-                        <p class="button small secondary bnm">Kursa başla</p>
-                        <p class="button small secondary bnm1">Önizləmə</p>
+                            <p class="button small secondary bnm">Kursa başla</p>
+                            <p class="button small secondary bnm1">Önizləmə</p>
                         </div>
                     </div>
                 </div>
@@ -385,8 +327,8 @@ export default function Streams() {
                             </div>
                         </div>
                         <div className='cardstart'>
-                        <p class="button small secondary bnm">Kursa başla</p>
-                        <p class="button small secondary bnm1">Önizləmə</p>
+                            <p class="button small secondary bnm">Kursa başla</p>
+                            <p class="button small secondary bnm1">Önizləmə</p>
                         </div>
                     </div>
                 </div>
@@ -414,8 +356,8 @@ export default function Streams() {
                             </div>
                         </div>
                         <div className='cardstart'>
-                        <p class="button small secondary bnm">Kursa başla</p>
-                        <p class="button small secondary bnm1">Önizləmə</p>
+                            <p class="button small secondary bnm">Kursa başla</p>
+                            <p class="button small secondary bnm1">Önizləmə</p>
                         </div>
                     </div>
                 </div>
@@ -443,8 +385,8 @@ export default function Streams() {
                             </div>
                         </div>
                         <div className='cardstart'>
-                        <p class="button small secondary bnm">Kursa başla</p>
-                        <p class="button small secondary bnm1">Önizləmə</p>
+                            <p class="button small secondary bnm">Kursa başla</p>
+                            <p class="button small secondary bnm1">Önizləmə</p>
                         </div>
                     </div>
                 </div>
@@ -472,14 +414,72 @@ export default function Streams() {
                             </div>
                         </div>
                         <div className='cardstart'>
-                        <p class="button small secondary bnm">Kursa başla</p>
-                        <p class="button small secondary bnm1">Önizləmə</p>
+                            <p class="button small secondary bnm">Kursa başla</p>
+                            <p class="button small secondary bnm1">Önizləmə</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="sections-slider-item card">
+                    <img src={img} alt="cover-01" className='card-img' />
+                    <div className='card-info'>
+                        <div className='cardheader'>
+                            <div className='cardname'>Rahib</div>
+                            <div className='cardpoint'>7.34</div>
+                        </div>
+                        <div className='cardbody'>
+                            <div className='cardlang'>
+                                <p id='cardlngtxt'>Dil</p>
+                                <Azerbaijan className="cardflag" />
+                                <Azerbaijan className="cardflag" />
+                                <Azerbaijan className="cardflag" />
+
+                            </div>
+                            <div className='cardlang'>
+                                <p id='cardcaptxt'>ALTYAZI</p>
+                                <Azerbaijan className="cardflag" />
+                                <Azerbaijan className="cardflag" />
+                                <Azerbaijan className="cardflag" />
+                            </div>
+                        </div>
+                        <div className='cardstart'>
+                            <p class="button small secondary bnm">Kursa başla</p>
+                            <p class="button small secondary bnm1">Önizləmə</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="sections-slider-item card">
+                    <img src={img} alt="cover-01" className='card-img' />
+                    <div className='card-info'>
+                        <div className='cardheader'>
+                            <div className='cardname'>Rahib</div>
+                            <div className='cardpoint'>7.34</div>
+                        </div>
+                        <div className='cardbody'>
+                            <div className='cardlang'>
+                                <p id='cardlngtxt'>Dil</p>
+                                <Azerbaijan className="cardflag" />
+                                <Azerbaijan className="cardflag" />
+                                <Azerbaijan className="cardflag" />
+
+                            </div>
+                            <div className='cardlang'>
+                                <p id='cardcaptxt'>ALTYAZI</p>
+                                <Azerbaijan className="cardflag" />
+                                <Azerbaijan className="cardflag" />
+                                <Azerbaijan className="cardflag" />
+                            </div>
+                        </div>
+                        <div className='cardstart'>
+                            <p class="button small secondary bnm">Kursa başla</p>
+                            <p class="button small secondary bnm1">Önizləmə</p>
                         </div>
                     </div>
                 </div>
 
             </div>
-        </div>
+        </>
 
     )
 }

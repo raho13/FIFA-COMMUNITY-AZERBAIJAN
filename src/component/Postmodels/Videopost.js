@@ -44,7 +44,6 @@ export default function Videopost() {
                 <div className="iframe-wrap"> <iframe src="https://www.youtube.com/embed/rk-wIgg9fNk" allowFullScreen />
                 </div>
                 <div className="widget-box-status-content">
-                    <div className="tag-list"> <a className="tag-item secondary" href="newsfeed.html">Stream</a> <a className="tag-item secondary" href="newsfeed.html">StrikerGO</a> <a className="tag-item secondary" href="newsfeed.html">Outlaws</a> <a className="tag-item secondary" href="newsfeed.html">Gaming</a> </div>
                     <div className="content-actions">
                         <div className="content-action">
                             <div className="meta-line">
