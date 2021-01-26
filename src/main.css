@@ -15898,6 +15898,17 @@ textarea {
   transform: translate(0px, -20px);
   transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s; }
 
+.mainav {
+  background-color: yellow; }
+
+#can1 {
+  left: 20px;
+  position: absolute; }
+
+#can {
+  margin-left: 20px;
+  background-color: blue; }
+
 .widget-box {
   padding: 32px 28px;
   border-radius: 12px;
@@ -16756,10 +16767,8 @@ textarea {
   position: relative; }
 
 .card {
-  width: 170px;
+  width: 180px;
   height: 300px;
-  margin-left: 10px;
-  margin-right: 10px;
   margin-top: 30px;
   font-family: Medium;
   cursor: pointer; }
@@ -16767,7 +16776,8 @@ textarea {
 #stream-slider {
   display: flex;
   flex-wrap: wrap;
-  width: 100%; }
+  justify-content: space-between;
+  width: 100% !important; }
 
 .card-img {
   width: 100%;

@@ -139,10 +139,8 @@
   position: relative;
 }
 .card {
-  width: 170px;
+  width: 180px;
   height: 300px;
-  margin-left: 10px;
-  margin-right: 10px;
   margin-top: 30px;
   font-family: Medium;
   cursor: pointer;
@@ -150,7 +148,8 @@
 #stream-slider {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  justify-content: space-between;
+  width: 100% !important;
 }
 .card-img {
   width: 100%;

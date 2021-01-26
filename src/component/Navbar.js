@@ -11,14 +11,13 @@ import { ReactComponent as Streams } from "../icons/Streams.svg";
 import { ReactComponent as Events } from "../icons/Events.svg";
 import { ReactComponent as Forums } from "../icons/Forums.svg";
 import { ReactComponent as Marketplace } from "../icons/Marketplace.svg";
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import cover from "../img/cover/01.jpg";
 import gold from "../img/badge/gold-s.png";
 import age from "../img/badge/age-s.png";
 import caffeinated from "../img/badge/caffeinated-s.png";
 import Avatar from './Avatar'
 import warrior from "../img/badge/warrior-s.png";
-import Navigation from './Navigation'
 import blank from "../img/badge/blank-s.png";
 export default function Navbar() {
   const { menuVisible } = useContext(menuContext);

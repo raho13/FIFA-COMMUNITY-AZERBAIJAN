@@ -126,7 +126,7 @@
 }
 
 .passiveSrcdrp {
-  display:none;
+  display: none;
   z-index: -1;
   margin-top: 430px;
   position: relative;
@@ -215,4 +215,15 @@
   transform: translate(0px, -20px);
   transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s,
     visibility 0.3s ease-in-out 0s;
+}
+.mainav {
+  background-color: yellow;
+}
+#can1 {
+  left: 20px;
+  position: absolute;
+}
+#can {
+  margin-left: 20px;
+  background-color: blue;
 }
