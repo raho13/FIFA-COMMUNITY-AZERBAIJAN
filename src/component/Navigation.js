@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { menuContext } from "../context";
 import Newsfeed from '../pages/Newsfeed'
 import Streams from '../pages/Streams'
+import Lessons from '../pages/Lessons'
 import {
     Switch,
     Route,
@@ -30,7 +31,10 @@ export default function Navigation() {
                 <Route path='/' exact component={Newsfeed} />
             </Switch>
             <Switch>
-                <Route path='/streams' exact component={Streams} />
+                <Route path='/streams'  component={Streams} />
+            </Switch>
+            <Switch>
+                <Route path='/Lessons'  component={Lessons} />
             </Switch>
         </div>
     )

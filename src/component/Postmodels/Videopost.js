@@ -5,7 +5,7 @@ import Postoptionsdot from "./Postoptionsdot";
 export default function Videopost() {
     return (
         <div className="widget-box no-padding">
-            <Postoptionsdot/>
+            <Postoptionsdot />
             <div className="widget-box-settings">
                 <div className="post-settings-wrap">
                 </div>
