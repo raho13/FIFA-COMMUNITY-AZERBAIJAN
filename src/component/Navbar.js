@@ -109,10 +109,10 @@ export default function Navbar() {
               </Link>
             </li>
             <li className="menu-item">
-              <a className="menu-item-link" href="groups.html">
+              <Link className="menu-item-link" to="/Fut-reyting">
                 <Group className="menu-item-link-icon icon-group" />
                 Groups
-              </a>
+              </Link>
             </li>
             <li className="menu-item">
               <a className="menu-item-link" href="members.html">
@@ -203,13 +203,13 @@ export default function Navbar() {
             </Link>
           </li>
           <li className="menu-item">
-            <a
+            <Link
               className="menu-item-link text-tooltip-tfr"
-              href="groups.html"
+              to="/Fut-reyting"
               data-title="Groups"
             >
               <Group className="menu-item-link-icon icon-group" />
-            </a>
+            </Link>
           </li>
           <li className="menu-item">
             <a

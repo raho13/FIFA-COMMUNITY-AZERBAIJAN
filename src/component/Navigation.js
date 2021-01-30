@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { menuContext } from "../context";
 import Newsfeed from '../pages/Newsfeed'
+import Futreyting from '../pages/Futreyting'
 import Streams from '../pages/Streams'
 import Lessons from '../pages/Lessons'
 import {
@@ -35,6 +36,9 @@ export default function Navigation() {
             </Switch>
             <Switch>
                 <Route path='/Lessons'  component={Lessons} />
+            </Switch>
+            <Switch>
+                <Route path='/Fut-reyting'  component={Futreyting} />
             </Switch>
         </div>
     )

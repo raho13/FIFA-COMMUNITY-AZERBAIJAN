@@ -16867,3 +16867,21 @@ textarea {
   display: flex !important;
   flex-direction: row !important;
   background-color: #fff; }
+
+@media only screen and (max-width: 460px) {
+  #reyicnmob {
+    margin-top: 20px; } }
+
+.Reyflacicn {
+  width: 25px;
+  position: relative;
+  top: 5px;
+  margin-right: 10px; }
+
+.srcic {
+  position: relative;
+  top: 5px; }
+
+.ftreycoverimg {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px; }
