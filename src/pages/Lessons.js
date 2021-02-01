@@ -31,7 +31,7 @@ export default function Lessons() {
     <>
       <Banner
         img={bannerimg}
-        header="Streams (98)"
+        header="Lessons"
         des="Check out all the members streams!"
       />
       <div className="section-header">
@@ -41,16 +41,14 @@ export default function Lessons() {
         </div>
       </div>
       <div className="grid grid-3-6-3 mobile-prefer-content">
-        <div className="grid-column sticky">
+        <div className="grid-column sticky lsscnt">
           <div className="sidebar-box no-padding">
             <div className="sidebar-menu">
               <div className="sidebar-menu-item">
-                <div
-                  className="sidebar-menu-header accordion-trigger-linked"
-                >
-                  <Man className="sidebar-menu-header-icon icon-profile" />
-                  <p className="sidebar-menu-header-title">Mündəricat</p>
-                  <p className="sidebar-menu-header-text">
+                <div className="sidebar-menu-header accordion-trigger-linked">
+                  <Man className="sidebar-menu-header-icon icon-profile sidbarhd" />
+                  <p className="sidebar-menu-header-title sidbarhd">Mündəricat</p>
+                  <p className="sidebar-menu-header-text sidbarhd">
                     Change your avatar &amp; cover, accept friends, read
                     messages and more!
                   </p>
@@ -86,7 +84,8 @@ export default function Lessons() {
             <div className="sidebar-box-footer"></div>
           </div>
         </div>
-        <div className="grid-column sticky">
+
+        <div className="grid-column sticky lsscnt">
           <div className="iframe-wrap">
             <iframe
               src="https://www.youtube.com/embed/rk-wIgg9fNk"
@@ -97,10 +96,16 @@ export default function Lessons() {
             <h2 className="section-title">Lorem, ipsum.</h2>
             <h2 className="section-title sdf">Lorem, ipsum dolor.</h2>
           </div>
+          <div id="smllbtncnt">
+            <p className="button white small-space">Əvvəlki dərs</p>
+            <p className="button white small-space">Sonrakı dərs</p>
+          </div>
         </div>
-        <div className="grid-column sticky">
-          <p className="button primary">Əvvəlki dərs</p>
-          <p className="button white small-space">Sonrakı dərs</p>
+
+        <div className="grid-column sticky lsscnt">
+          <p className="button white small-space smllbtn">Əvvəlki dərs</p>
+          <p className="button white small-space smllbtn">Sonrakı dərs</p>
+
           <div className="widget-box">
             <div className="progress-arc-summary">
               <div className="progress-arc-wrap">

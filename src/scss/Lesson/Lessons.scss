@@ -3,15 +3,38 @@
   justify-content: space-around !important;
   margin-left: -30%;
 }
-.sdf{
-   color: #40d04f;
-   padding-top: 5px;
+.sdf {
+  color: #40d04f;
+  padding-top: 5px;
 }
-.lssntitle{
+.lssntitle {
   text-align: center;
 }
-#llp{
+#llp {
   display: flex !important;
-flex-direction: row !important;
-background-color: #fff;
+  flex-direction: row !important;
+  background-color: #fff;
+}
+#smllbtncnt {
+  display: none;
+}
+@media screen and (max-width: 1070px) {
+  .lsscnt {
+    display: block !important;
+    position: static !important;
+  }
+  .smllbtn {
+    display: none;
+  }
+  #smllbtncnt {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+  }
+  #smllbtncnt p {
+    margin: 10px 0 10px 0;
+  }
+}
+.sidbarhd {
+  margin-left: -15px;
 }

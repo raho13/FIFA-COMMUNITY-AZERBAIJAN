@@ -23,7 +23,6 @@
   position: absolute;
   z-index: 9999;
   bottom: 54px;
-  left: -16px;
   opacity: 0;
   visibility: hidden;
   transform: translate(0px, 20px);
@@ -35,7 +34,6 @@
   position: absolute;
   z-index: 9999;
   bottom: 54px;
-  left: -16px;
   opacity: 1;
   visibility: visible;
   transform: translate(0px, 0px);
@@ -52,7 +50,7 @@
   margin-left: 20px;
   width: 90%;
   margin-top: 20px;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 .postBtn {
   background-color: #1d2333 !important;
@@ -64,6 +62,7 @@
   border-radius: 5px !important;
   width: 30%;
   margin-bottom: 20px;
+  margin-right: 20px;
 }
 .prmtxt {
   padding-top: 15px;
@@ -139,14 +138,19 @@
   width: auto !important;
   cursor: auto;
   display: flex;
+  bottom: -65px;
+  position: absolute;
+  border-radius: 5px;
+  z-index: 9999;
+  height: 50px;
+  width: 87% !important;
   flex-direction: column;
   box-shadow: none !important;
   justify-content: space-evenly;
-}
-.parms:hover{
   background-color: #7750f8 !important;
-  box-shadow: none !important;
+
 }
+
 .parmsitem {
   display: flex;
   margin-left: 10px;

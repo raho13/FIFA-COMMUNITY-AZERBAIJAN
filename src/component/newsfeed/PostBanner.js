@@ -23,11 +23,10 @@ export default function PostBanner() {
   };
   const setparmVisible = () => {
     if (parmsVisible && activeTab === 3) {
-      return "parms button small secondary";
+      return "parms";
     } else {
       return "prmsnone";
     }
-
   };
   const Addinput = () => {
     const copyList = [...lists];
@@ -190,80 +189,94 @@ export default function PostBanner() {
                       })}
                     </Scrollbars>
                   ) : (
-                      <div id="inpcontainer">
-                        <Scrollbars>
-                          <div id="inpctrl">
-                            <div className="form-input small bnnrinp">
-                              <label htmlFor="account-full-name">
-                                Anket sualı əlavə et
+                    <div id="inpcontainer">
+                      <Scrollbars>
+                        <div id="inpctrl">
+                          <div className="form-input small bnnrinp">
+                            <label htmlFor="account-full-name">
+                              Anket sualı əlavə et
                             </label>
-                              <input
-                                type="text"
-                                onFocus={(e) => {
-                                  inputFocus(e);
-                                }}
-                                onBlur={(e) => {
-                                  inputBlur(e);
-                                }}
-                              />
-                            </div>
-                          </div>
-                          <div id="inpctrl">
-                            <div className="form-input small bnnrinp p">
-                              <label htmlFor="account-full-name">Cavab</label>
-                              <input
-                                type="text"
-                                onFocus={(e) => {
-                                  inputFocus(e);
-                                }}
-                                onBlur={(e) => {
-                                  inputBlur(e);
-                                }}
-                              />
-                              <button
-                                className="browsebtn button small secondary"
-                                type="button"
-                              >
-                                Browse
-                            </button>
-                            </div>
                             <input
-                              id="brwsinp"
-                              type="file"
-                              placeholder="upload"
-                            ></input>
+                              type="text"
+                              onFocus={(e) => {
+                                inputFocus(e);
+                              }}
+                              onBlur={(e) => {
+                                inputBlur(e);
+                              }}
+                            />
                           </div>
+                        </div>
+                        <div id="inpctrl">
+                          <div className="form-input small bnnrinp p">
+                            <label htmlFor="account-full-name">Cavab</label>
+                            <input
+                              type="text"
+                              onFocus={(e) => {
+                                inputFocus(e);
+                              }}
+                              onBlur={(e) => {
+                                inputBlur(e);
+                              }}
+                            />
+                            <button
+                              className="browsebtn button small secondary"
+                              type="button"
+                            >
+                              Browse
+                            </button>
+                          </div>
+                          <input
+                            id="brwsinp"
+                            type="file"
+                            placeholder="upload"
+                          ></input>
+                        </div>
 
-                          <div id="inpctrl">
-                            <div className="form-input small bnnrinp p">
-                              <label htmlFor="account-full-name">Cavab</label>
-                              <input
-                                type="text"
-                                onFocus={(e) => {
-                                  inputFocus(e);
-                                }}
-                                onBlur={(e) => {
-                                  inputBlur(e);
-                                }}
-                              />
-                              <button
-                                className="browsebtn button small secondary"
-                                type="button"
-                              >
-                                Browse
-                            </button>
-                            </div>
+                        <div id="inpctrl">
+                          <div className="form-input small bnnrinp p">
+                            <label htmlFor="account-full-name">Cavab</label>
                             <input
-                              id="brwsinp"
-                              type="file"
-                              placeholder="upload"
-                            ></input>
+                              type="text"
+                              onFocus={(e) => {
+                                inputFocus(e);
+                              }}
+                              onBlur={(e) => {
+                                inputBlur(e);
+                              }}
+                            />
+                            <button
+                              className="browsebtn button small secondary"
+                              type="button"
+                            >
+                              Browse
+                            </button>
                           </div>
-                        </Scrollbars>
-                      </div>
-                    )}
+                          <input
+                            id="brwsinp"
+                            type="file"
+                            placeholder="upload"
+                          ></input>
+                        </div>
+                      </Scrollbars>
+                    </div>
+                  )}
                 </div>
                 <div className="postBtns">
+                  <div className={setparmVisible()}>
+                    <div className="parmsitem">
+                      <input type="checkbox" id="1" />
+                      <label htmlFor="1" className="section-banner-text chktxt">
+                        İnsanların birdən çox cavab əlavə etmsinnə icazə ver
+                      </label>
+                    </div>
+                    <div className="parmsitem">
+                      <input type="checkbox" id="2" />
+                      <label htmlFor="2" className="section-banner-text chktxt">
+                        Hərkəsin şık əlavə etməsinə icazə ver
+                      </label>
+                    </div>
+                  </div>
                   {Videoposttype ? (
                     <p
                       onClick={() => {
@@ -285,19 +298,23 @@ export default function PostBanner() {
                       Şəkil anketi
                     </p>
                   ) : (
-                      <p
-                        onClick={() => {
-                          setVideoposttype(!Videoposttype);
-                        }}
-                        className="button primary postBtn"
-                      >
-                        Sual anketi
-                      </p>
-                    )}
-                  <p className="button primary postBtn" onClick={() => {
-                    setparmsVisible(!parmsVisible)
-                  }} >Parametrlər</p>
-
+                    <p
+                      onClick={() => {
+                        setVideoposttype(!Videoposttype);
+                      }}
+                      className="button primary postBtn"
+                    >
+                      Sual anketi
+                    </p>
+                  )}
+                  <p
+                    className="button primary postBtn"
+                    onClick={() => {
+                      setparmsVisible(!parmsVisible);
+                    }}
+                  >
+                    Parametrlər
+                  </p>
                 </div>
               </div>
             </div>
@@ -360,21 +377,6 @@ export default function PostBanner() {
       <div className="quick-post-body">{ActiveTab()}</div>
       <div className="quick-post-footer">
         <div className="quick-post-footer-actions">
-          <div className={setparmVisible()}>
-            <div className="parmsitem">
-              <input type="checkbox" id="1" />
-              <label htmlFor="1" className="section-banner-text chktxt">
-                İnsanların birdən çox cavab əlavə etmsinnə icazə ver
-                        </label>
-            </div>
-            <div className="parmsitem">
-              <input type="checkbox" id='2' />
-              <label htmlFor="2" className="section-banner-text chktxt">
-                Hərkəsin şık əlavə etməsinə icazə ver
-                        </label>
-
-            </div>
-          </div>
           {activeTab === 1 ? (
             <div
               className="quick-post-footer-action text-tooltip-tft-medium"

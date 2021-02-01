@@ -15815,6 +15815,9 @@ textarea {
   transform: translate(0px, 0px);
   transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s, visibility 0.4s ease-in-out 0s; }
 
+.disnone {
+  display: none; }
+
 .passiveSrcdrp {
   display: none;
   z-index: -1;
@@ -15826,6 +15829,29 @@ textarea {
   visibility: hidden;
   transform: translate(0px, -40px);
   transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s, visibility 0.4s ease-in-out 0s; }
+
+@media only screen and (max-width: 460px) {
+  .passiveSrcdrp {
+    display: none;
+    z-index: -1;
+    margin-top: 440px;
+    position: relative;
+    width: 100% !important;
+    margin-left: -125%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(0px, -40px);
+    transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s, visibility 0.4s ease-in-out 0s; }
+  .activeSrcdrp {
+    z-index: 9999;
+    margin-top: 440px;
+    position: relative;
+    width: 100% !important;
+    margin-left: -125%;
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0px, 0px);
+    transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s, visibility 0.4s ease-in-out 0s; } }
 
 .passivePostsetting {
   position: absolute;
@@ -16513,7 +16539,6 @@ textarea {
   position: absolute;
   z-index: 9999;
   bottom: 54px;
-  left: -16px;
   opacity: 0;
   visibility: hidden;
   transform: translate(0px, 20px);
@@ -16523,7 +16548,6 @@ textarea {
   position: absolute;
   z-index: 9999;
   bottom: 54px;
-  left: -16px;
   opacity: 1;
   visibility: visible;
   transform: translate(0px, 0px);
@@ -16538,7 +16562,7 @@ textarea {
   margin-left: 20px;
   width: 90%;
   margin-top: 20px;
-  justify-content: space-between; }
+  justify-content: flex-start; }
 
 .postBtn {
   background-color: #1d2333 !important;
@@ -16549,7 +16573,8 @@ textarea {
   align-items: center;
   border-radius: 5px !important;
   width: 30%;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  margin-right: 20px; }
 
 .prmtxt {
   padding-top: 15px; }
@@ -16623,13 +16648,16 @@ textarea {
   width: auto !important;
   cursor: auto;
   display: flex;
+  bottom: -65px;
+  position: absolute;
+  border-radius: 5px;
+  z-index: 9999;
+  height: 50px;
+  width: 87% !important;
   flex-direction: column;
   box-shadow: none !important;
-  justify-content: space-evenly; }
-
-.parms:hover {
-  background-color: #7750f8 !important;
-  box-shadow: none !important; }
+  justify-content: space-evenly;
+  background-color: #7750f8 !important; }
 
 .parmsitem {
   display: flex;
@@ -16744,34 +16772,46 @@ textarea {
       width: 100%; }
 
 .card:hover .card-info {
-  width: 100%;
-  transform: translate(0px, -50px);
-  transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s;
-  height: 250px;
-  z-index: 9999;
+  transition: height 0.4s;
+  height: 250px; }
+
+.card:hover .cardheader {
   opacity: 1;
   visibility: visible;
-  background-color: #161b28;
-  position: relative;
-  border-radius: 20px; }
+  transition: all 1.5s; }
+
+.card:hover .cardstart {
+  opacity: 1;
+  visibility: visible;
+  transition: all 1.5s; }
+
+.card:hover .cardbody {
+  opacity: 1;
+  visibility: visible;
+  transition: all 1.5s; }
 
 .card-info {
+  width: 180px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  bottom: 0;
+  height: 0;
+  background-color: #1d2333;
+  position: absolute; }
+
+#fgh {
   width: 100%;
-  transform: translate(0px, 0px);
-  transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s;
-  height: 10px;
-  z-index: 9999;
-  top: -200px;
-  opacity: 0;
-  visibility: hidden;
-  position: relative; }
+  height: 100%;
+  position: relative;
+  top: -300px; }
 
 .card {
   width: 180px;
   height: 300px;
   margin-top: 30px;
   font-family: Medium;
-  cursor: pointer; }
+  cursor: pointer;
+  background-color: red; }
 
 #stream-slider {
   display: flex;
@@ -16785,7 +16825,9 @@ textarea {
   border-radius: 20px; }
 
 .cardheader {
-  padding-top: 5px; }
+  padding-top: 5px;
+  opacity: 0;
+  visibility: hidden; }
 
 .cardname {
   font-size: 20px;
@@ -16807,16 +16849,19 @@ textarea {
   padding: 2px 5px 0 5px;
   background-color: #7750f8;
   border-radius: 5px;
+  margin-right: 5px;
   font-family: Light; }
 
 .cardbody {
   margin-right: 10%;
   margin-left: 10%;
-  width: 80%; }
+  width: 80%;
+  opacity: 0;
+  visibility: hidden; }
 
 .cardflag {
   height: 25px;
-  margin-left: 5px;
+  margin-right: 10px;
   cursor: pointer; }
 
 #cardcaptxt {
@@ -16824,6 +16869,7 @@ textarea {
   padding: 2px 5px 0 5px;
   background-color: #40d04f;
   border-radius: 5px;
+  margin-right: 5px;
   font-family: Light; }
 
 .bnm1 {
@@ -16849,7 +16895,9 @@ textarea {
   flex-direction: column;
   margin-right: 10%;
   margin-left: 10%;
-  width: 80%; }
+  width: 80%;
+  opacity: 0;
+  visibility: hidden; }
 
 .lessonitem {
   display: flex !important;
@@ -16868,20 +16916,45 @@ textarea {
   flex-direction: row !important;
   background-color: #fff; }
 
+#smllbtncnt {
+  display: none; }
+
+@media screen and (max-width: 1070px) {
+  .lsscnt {
+    display: block !important;
+    position: static !important; }
+  .smllbtn {
+    display: none; }
+  #smllbtncnt {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px; }
+  #smllbtncnt p {
+    margin: 10px 0 10px 0; } }
+
+.sidbarhd {
+  margin-left: -15px; }
+
 @media only screen and (max-width: 460px) {
   #reyicnmob {
     margin-top: 20px; } }
 
 .Reyflacicn {
   width: 25px;
-  position: relative;
-  top: 5px;
   margin-right: 10px; }
 
 .srcic {
   position: relative;
   top: 5px; }
 
+#usrdetp2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
 .ftreycoverimg {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px; }
+
+#nopdng {
+  padding-top: 0 !important; }

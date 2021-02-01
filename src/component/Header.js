@@ -10,12 +10,12 @@ import { ReactComponent as Searcicon } from "../icons/Searcicon.svg";
 import { ReactComponent as SearchX } from "../icons/searcX.svg";
 import { ReactComponent as Notification } from "../icons/Notifications Icon.svg";
 import { ReactComponent as Friend } from "../icons/Friends Icon.svg";
-import Streams from '../pages/Streams'
 import avatar from "../icons/logo.png";
 
-
 export default function Header() {
-
+  useEffect(() => {
+    // diplaynone();
+  });
   const {
     menuVisible,
     setmenuVisible,
@@ -37,9 +37,18 @@ export default function Header() {
   const [setclass, setSetclass] = useState(
     "dropdown-navigation header-settings-dropdown passiveSet"
   );
-  // const diplaynone = () => {
-  //   console.log('ok')
-  // }
+  const diplaynone = () => {
+    if (!srchEvent) {
+      setTimeout(() => {
+        const a = document.getElementById("drp");
+        a.setAttribute(
+          "class",
+          "disnone dropdown-box padding-bottom-small header-search-dropdown passiveSrcdrp"
+        );
+      }, 400);
+    } else {
+    }
+  };
   const inputHandle = (e) => {
     setinputValue(e.target.value);
     if (e.target.value.split(" ").join("").length > 0) {
@@ -113,11 +122,7 @@ export default function Header() {
       }
     }
   };
-  // useEffect(
-  //   diplaynone()
-  // )
   return (
-
     <div className="header">
       <div className="header-actions">
         <div className="header-brand">
@@ -173,22 +178,22 @@ export default function Header() {
             </div>
           </div>
         ) : (
-            <div className="interactive-input dark">
-              <input
-                autoComplete="off"
-                onChange={inputHandle}
-                value={inputValue}
-                type="text"
-                id="search-main"
-                name="search_main"
-                placeholder="Search here for people or groups"
-              />
-              <div className="interactive-input-icon-wrap">
-                <Searcicon className="interactive-input-icon icon-magnifying-glass" />
-              </div>
+          <div className="interactive-input dark">
+            <input
+              autoComplete="off"
+              onChange={inputHandle}
+              value={inputValue}
+              type="text"
+              id="search-main"
+              name="search_main"
+              placeholder="Search here for people or groups"
+            />
+            <div className="interactive-input-icon-wrap">
+              <Searcicon className="interactive-input-icon icon-magnifying-glass" />
             </div>
-          )}
-        <div className={srcdrpClass()}>
+          </div>
+        )}
+        <div className={srcdrpClass()} id="drp">
           <div className="dropdown-box-category">
             <p className="dropdown-box-category-title">Members</p>
           </div>

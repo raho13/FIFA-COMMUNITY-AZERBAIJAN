@@ -55,7 +55,7 @@ export default function Navbar() {
             <img src={cover} alt="cover-01" />
           </figure>
           <div className="user-short-description">
-            <Avatar />
+            {/* <Avatar /> */}
             <p className="user-short-description-title">
               <a href="profile-timeline.html">Marina Valentine</a>
             </p>

@@ -13,23 +13,34 @@ import { ReactComponent as Share } from "../../icons/Share.svg";
 
 export default function Postoption() {
   const [reactions, setreactions] = useState(false);
-  const handlereaction = () => {
-    if (reactions === false) {
-      return "reaction-options reaction-options-dropdown passivePostop";
+  const handlereaction = (i) => {
+    if (i === 1) {
+      if (reactions === false) {
+        return "reaction-options reaction-options-dropdown passivePostop";
+      } else {
+        return "reaction-options reaction-options-dropdown activePostop";
+      }
     } else {
-      return "reaction-options reaction-options-dropdown activePostop";
+      if (reactions === false) {
+        return "post-option reaction-options-dropdown-trigger";
+      } else {
+        return "post-option reaction-options-dropdown-trigger active";
+      }
     }
   };
   return (
     <div className="post-options">
       <div className="post-option-wrap">
         <div
-        onClick={()=>{setreactions(!reactions)}}
-        className="post-option reaction-options-dropdown-trigger">
+          onClick={() => {
+            setreactions(!reactions);
+          }}
+          className={handlereaction(2)}
+        >
           <Reaction className="post-option-icon icon-thumbs-up" />
           <p className="post-option-text">React!</p>
         </div>
-        <div className={handlereaction()}>
+        <div className={handlereaction(1)}>
           <div className="reaction-option text-tooltip-tft" data-title="Like">
             <img
               className="reaction-option-image"
