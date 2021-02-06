@@ -1,0 +1,105 @@
+.ActiveMenuitem {
+  overflow: hidden;
+  height: 160px;
+  transition: all 0.3s ease-in-out 0s;
+}
+.ActiveMenuitem2 {
+  overflow: hidden;
+  height: 90px;
+  transition: all 0.3s ease-in-out 0s;
+}
+.PassiveMenuitem {
+  overflow: hidden;
+  height: 0px;
+  transition: all 0.3s ease-in-out 0s;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.account-head {
+  margin-top: 0px !important;
+  margin-bottom: 10%;
+}
+.account-logo {
+  width: 24.2%;
+  height: 110px;
+  border-radius: 1.5rem;
+  text-align: center;
+  background-color: #1d2332;
+  float: left;
+}
+.log-first {
+  background: linear-gradient(
+    to bottom,
+    #28c229 0%,
+    #28c229 50%,
+    #1d2332 0%,
+    #1d2332 50%
+  );
+}
+.account-avatar {
+  transform: translate(85px, 35px);
+}
+.user-icon {
+  width: 20px;
+  height: 20px;
+  filter: invert(100%);
+  transform: translate(0px, 20px);
+}
+.account-text {
+  margin-top: 20%;
+}
+.account-text p {
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: #949eb8;
+}
+.account-text h1 {
+  font-size: 15px;
+  margin-bottom: 2%;
+  color: #fff;
+  transition: all linear 0.2s;
+}
+.account-balance {
+  margin-top: 12%;
+}
+.account-balance p {
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: #949eb8;
+}
+.account-balance h1 {
+  font-size: 15px;
+  margin-bottom: 2%;
+  color: #fff;
+  margin-top: 5%;
+  transition: all linear 0.2s;
+}
+.account-balance h2 {
+  margin-bottom: 4%;
+  text-shadow: 2px 3px 4px #40d04f;
+  transition: all linear 0.5s;
+}
+.account-balance h2:hover {
+  text-shadow: 2px 3px 20px #28c229;
+  cursor: pointer;
+}
+.account-balance h1:hover,
+.account-text h1:hover {
+  cursor: pointer;
+  text-shadow: 2px 3px 5px #28c229;
+}
+.content-main {
+  margin-top: 9%;
+}
+.birth-input input {
+  border: 1px solid #3f485f;
+  background-color: #1d2333;
+  border-radius: 0.7rem;
+  padding: 1rem 1.5rem;
+  width: 100%;
+  color: #f3f4f5;
+  font-weight: bold;
+}
