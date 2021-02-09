@@ -193,7 +193,7 @@ export default function Futreyting() {
                 <img src={Mnbadge} />
               </div>
               <div className="user-preview-actions" id="reyicnmob">
-                <p className="button secondary">
+                <p className="button secondary pnntpstbtn1">
                   <Adf className="button-icon icon-add-friend" />
                 </p>
               </div>

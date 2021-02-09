@@ -420,7 +420,7 @@ export default function PostBanner() {
           ) : null}
         </div>
         <div className="quick-post-footer-actions">
-          <p className="button small secondary">Post</p>
+          <p className="button small secondary pnntpstbtn">Post</p>
         </div>
       </div>
     </div>

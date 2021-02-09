@@ -16885,8 +16885,11 @@ textarea {
   height: 50px !important; }
 
 .browsebtn {
-  height: 50px !important;
-  background-color: #40d04f !important; }
+  height: 49px !important;
+  width: 100%;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: 1px solid #afb0c0; }
 
 #brwsinp {
   height: 50px;
@@ -16951,6 +16954,18 @@ textarea {
 .pstoverlay {
   border-radius: 20px; }
 
+.pnntpstbtn {
+  width: 100%;
+  height: 20%;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: 1px solid #afb0c0;
+  margin-top: 8px; }
+
+.pnntpstbtn:hover {
+  background-color: #40d04f !important;
+  border: 1px solid #40d04f; }
+
 @media only screen and (max-width: 500px) {
   .card {
     width: 150px;
@@ -16958,10 +16973,6 @@ textarea {
     margin-left: 5px;
     margin-right: 5px;
     margin-top: 30px; }
-  .bnm1 {
-    width: 100%;
-    margin-top: 10%;
-    height: 10%; }
   .bnm {
     width: 100%;
     height: 10%;
@@ -17091,11 +17102,15 @@ textarea {
 .cardname {
   font-size: 20px;
   text-align: center;
-  color: white; }
+  color: white;
+  font-family: Bold;
+  margin-top: 10px; }
 
 .cardpoint {
   text-align: center;
-  color: #afb0c0; }
+  color: #afb0c0;
+  padding-top: 2px;
+  font-size: 12px; }
 
 .cardlang {
   display: flex;
@@ -17105,31 +17120,34 @@ textarea {
 
 #cardlngtxt {
   height: 20px;
-  padding: 2px 5px 0 5px;
-  background-color: #7750f8;
+  padding: 4px 5px 0 5px;
+  background-color: #f0335f;
   border-radius: 5px;
   margin-right: 5px;
-  font-family: Light; }
+  font-family: Bold;
+  font-size: 12px; }
 
 .cardbody {
   margin-right: 10%;
   margin-left: 10%;
   width: 80%;
   opacity: 0;
+  margin-top: 5px;
   visibility: hidden; }
 
 .cardflag {
-  height: 25px;
+  height: 22px;
   margin-right: 10px;
   cursor: pointer; }
 
 #cardcaptxt {
   height: 20px;
-  padding: 2px 5px 0 5px;
-  background-color: #40d04f;
+  padding: 4px 5px 0 5px;
+  background-color: #adafbe;
   border-radius: 5px;
   margin-right: 5px;
-  font-family: Light; }
+  font-family: Bold;
+  font-size: 12px; }
 
 .bnm1 {
   width: 100%;
@@ -17146,8 +17164,7 @@ textarea {
   margin-top: 5px; }
 
 .bnm:hover {
-  background-color: #afb0c0 !important;
-  color: #161b28; }
+  background-color: #40d04f !important; }
 
 .cardstart {
   display: flex;
@@ -17217,6 +17234,17 @@ textarea {
 
 #nopdng {
   padding-top: 0 !important; }
+
+.pnntpstbtn1 {
+  width: 100%;
+  height: 20%;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: 1px solid #afb0c0; }
+
+.pnntpstbtn1:hover {
+  background-color: #40d04f !important;
+  border: 1px solid #40d04f; }
 
 .ActiveMenuitem {
   overflow: hidden;
