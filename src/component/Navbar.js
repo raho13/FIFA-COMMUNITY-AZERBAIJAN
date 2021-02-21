@@ -214,20 +214,20 @@ export default function Navbar() {
           <li className="menu-item">
             <Link
               className="menu-item-link text-tooltip-tfr"
-              to="/Accounthub"
+              to="/Members"
               data-title="Members"
             >
               <Members className="menu-item-link-icon icon-members" />
             </Link>
           </li>
           <li className="menu-item">
-            <a
+            <Link
               className="menu-item-link text-tooltip-tfr"
-              href="badges.html"
+              to="/Accounthub"
               data-title="Badges"
             >
               <Badges className="menu-item-link-icon icon-badges" />
-            </a>
+            </Link>
           </li>
           <li className="menu-item">
             <a
