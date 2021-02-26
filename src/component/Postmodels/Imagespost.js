@@ -6,7 +6,15 @@ import img2 from "../../img/cover/16.jpg"
 export default function Imagespost() {
   return (
     <div className="widget-box no-padding">
-        <Postoptionsdot/>
+         <Postoptionsdot
+        parms={[
+          "Edit Post",
+          "Delete Post",
+          "Make it Featured",
+          "Report Post",
+          "Report Author",
+        ]}
+      />
       <div className="widget-box-status">
         <div className="widget-box-status-content">
           <div className="user-status">

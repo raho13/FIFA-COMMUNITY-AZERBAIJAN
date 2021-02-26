@@ -5,8 +5,9 @@ import Futreyting from "../pages/Futreyting";
 import Streams from "../pages/Streams";
 import AccountHub from "../pages/AccountHub";
 import Lessons from "../pages/Lessons";
-import Members from '../pages/Members'
-import { Switch, Route, Link } from "react-router-dom";
+ import Members from '../pages/Members'
+import Profil from '../pages/Profil'
+import { Switch, Route } from "react-router-dom";
 export default function Navigation() {
   const { menuVisible, msgWidget } = useContext(menuContext);
 
@@ -40,6 +41,9 @@ export default function Navigation() {
       </Switch>
       <Switch>
         <Route path="/Accounthub" component={AccountHub} />
+      </Switch>
+      <Switch>
+        <Route path="/Profil" component={Profil} />
       </Switch>
       <Switch>
         <Route path="/Members" component={Members} />

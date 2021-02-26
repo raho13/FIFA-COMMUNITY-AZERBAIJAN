@@ -21,10 +21,10 @@ export default function AccountHub() {
       />
       <div className="grid grid-3-9 medium-space">
         <div className="account-hub-sidebar">
-          <div class="section-header account-head">
-            <div class="section-header-info">
-              <p class="section-pretitle">FİFA COMMUNITY AZERBAIJAN</p>
-              <h2 class="section-title">ŞƏXSİ OTAQ</h2>
+          <div className="section-header account-head">
+            <div className="section-header-info">
+              <p className="section-pretitle">FİFA COMMUNITY AZERBAIJAN</p>
+              <h2 className="section-title">ŞƏXSİ OTAQ</h2>
             </div>
           </div>
           <ProflinInfo />

@@ -6,10 +6,16 @@ import Postoption from "./Postoption";
 export default function Model2() {
   return (
     <div id className="widget-box no-padding">
-      <Postoptionsdot/>
-      <div className="widget-box-settings">
-       
-      </div>
+      <Postoptionsdot
+        parms={[
+          "Edit Post",
+          "Delete Post",
+          "Make it Featured",
+          "Report Post",
+          "Report Author",
+        ]}
+      />
+      <div className="widget-box-settings"></div>
       <div className="widget-box-status">
         <div className="widget-box-status-content">
           <div className="user-status">
@@ -194,7 +200,7 @@ export default function Model2() {
           </div>
         </div>
       </div>
-      <Postoption/>
+      <Postoption />
     </div>
   );
 }

@@ -160,9 +160,9 @@ export default function Navbar() {
         </Scrollbars>
       </nav>
       <nav id="navigation-widget-small" className={smallmenu}>
-        <a
+        <Link
           className="user-avatar small no-outline online"
-          href="profile-timeline.html"
+          to="/"
         >
           <div className="user-avatar-content">
             <div className="hexagon-image-30-32" data-src="img/avatar/01.jpg" />
@@ -182,7 +182,7 @@ export default function Navbar() {
             </div>
             <p className="user-avatar-badge-text">24</p>
           </div>
-        </a>
+        </Link>
         <ul className="menu small">
           <li className="menu-item">
             <Link

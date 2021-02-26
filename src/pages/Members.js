@@ -1,6 +1,7 @@
 import React from "react";
 import Banner from "../component/Banner";
 import bannerimg from "../img/banner/members-icon.png";
+import { Link } from 'react-router-dom'
 import Srcbanner from "../component/Srcbanner";
 import { ReactComponent as Twitter } from "../icons/Twitter.svg";
 import { ReactComponent as Flag } from "../icons/azerbaijan.svg";
@@ -42,9 +43,9 @@ export default function Members() {
           <div className="user-preview-info">
             <div className="user-short-description">
               {" "}
-              <a
+              <Link
                 className="user-short-description-avatar user-avatar medium"
-                href="profile-timeline.html"
+                to="/profil"
               >
                 <div className="user-avatar-border">
                   <div
@@ -121,10 +122,10 @@ export default function Members() {
                     </div>
                   </div>
                   <p className="user-avatar-badge-text">12</p>
-                </div>{" "}
-              </a>
+                </div>
+              </Link>
               <p className="user-short-description-title">
-                <a href="profile-timeline.html">NekoBebop</a>
+                <Link to="/profil">NekoBebop</Link>
               </p>
               <p className="user-short-description-text"  id="wsx">
               <Flag className="Reyflacicn" /> Azerbaijan

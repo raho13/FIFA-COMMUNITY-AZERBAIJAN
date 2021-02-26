@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { ReactComponent as MoresettingDot } from "../../icons/MoresettingDot.svg";
 import { ReactComponent as Addfriend } from "../../icons/Add-friend.svg";
-
+import Postoptionsdot from "../../component/Postmodels/Postoptionsdot";
 export default function Members() {
   const [tap1, settap1] = useState("filter active");
   const [tap2, settap2] = useState("filter");
@@ -20,13 +19,8 @@ export default function Members() {
   };
   return (
     <div className="widget-box">
-      <div className="widget-box-settings">
-        <div className="post-settings-wrap">
-          <div className="post-settings widget-box-post-settings-dropdown-trigger">
-            <MoresettingDot className="post-settings-icon icon-more-dots" />
-          </div>
-        </div>
-      </div>
+      <Postoptionsdot parms={["Widget Settings"]} />
+
       <p className="widget-box-title">TOP 5 FIFAÇI</p>
       <div className="widget-box-content">
         <div className="filters">

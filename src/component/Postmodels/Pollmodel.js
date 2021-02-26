@@ -5,7 +5,15 @@ import Postoptionsdot from "./Postoptionsdot";
 export default function Model1() {
   return (
     <div className="widget-box no-padding">
-      <Postoptionsdot/>
+       <Postoptionsdot
+        parms={[
+          "Edit Post",
+          "Delete Post",
+          "Make it Featured",
+          "Report Post",
+          "Report Author",
+        ]}
+      />
       <div className="widget-box-settings">
         <div className="post-settings-wrap">
         </div>

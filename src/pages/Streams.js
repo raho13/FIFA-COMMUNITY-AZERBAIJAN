@@ -47,9 +47,9 @@ export default function Streams() {
             </div>
             <div className="cardstart">
               <Link className="menu-item-link" to="/Lessons">
-                <p class="button small secondary bnm">Kursa başla</p>
+                <p className="button small secondary bnm">Kursa başla</p>
               </Link>
-              <p class="button small secondary bnm">Önizləmə</p>
+              <p className="button small secondary bnm">Önizləmə</p>
             </div>
           </div>
           </div>
