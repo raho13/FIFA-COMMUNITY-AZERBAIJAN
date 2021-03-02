@@ -164,7 +164,9 @@ export default function Navbar() {
           className="user-avatar small no-outline online"
           to="/"
         >
-          <div className="user-avatar-content">
+                {/* <Avatar/> */}
+
+          {/* <div className="user-avatar-content">
             <div className="hexagon-image-30-32" data-src="img/avatar/01.jpg" />
           </div>
           <div className="user-avatar-progress">
@@ -181,7 +183,7 @@ export default function Navbar() {
               <div className="hexagon-dark-16-18" />
             </div>
             <p className="user-avatar-badge-text">24</p>
-          </div>
+          </div> */}
         </Link>
         <ul className="menu small">
           <li className="menu-item">
@@ -223,20 +225,20 @@ export default function Navbar() {
           <li className="menu-item">
             <Link
               className="menu-item-link text-tooltip-tfr"
-              to="/Accounthub"
+              to="/Badges"
               data-title="Badges"
             >
               <Badges className="menu-item-link-icon icon-badges" />
             </Link>
           </li>
           <li className="menu-item">
-            <a
+            <Link
               className="menu-item-link text-tooltip-tfr"
-              href="quests.html"
+              to="/Accounthub"
               data-title="Quests"
             >
               <Quests className="menu-item-link-icon icon-quests" />
-            </a>
+            </Link>
           </li>
 
           <li className="menu-item">

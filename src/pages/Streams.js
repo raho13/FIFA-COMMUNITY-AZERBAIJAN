@@ -22,7 +22,6 @@ export default function Streams() {
         <div className="sections-slider-item card">
           <img src={img} alt="cover-01" className="card-img" />
         <div id="fgh">
-
           <div className="card-info">
             <div className="cardheader">
               <Link className="menu-item-link" to="/Lessons">

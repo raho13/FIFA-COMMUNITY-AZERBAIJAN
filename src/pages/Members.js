@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import Banner from "../component/Banner";
 import bannerimg from "../img/banner/members-icon.png";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 import Srcbanner from "../component/Srcbanner";
 import { ReactComponent as Twitter } from "../icons/Twitter.svg";
 import { ReactComponent as Flag } from "../icons/azerbaijan.svg";
@@ -11,6 +11,23 @@ import gold from "../img/badge/gold-s.png";
 import age from "../img/badge/age-s.png";
 import caffeinated from "../img/badge/caffeinated-s.png";
 export default function Members() {
+  const [activeField, setactiveField] = useState(1);
+  const dotHandler = (i) => {
+    if (i == 1) {
+      if (activeField === 1) {
+        return "slider-roster-item tns-nav-active";
+      } else {
+        return "slider-roster-item";
+      }
+    }
+    if (i == 2) {
+      if (activeField === 2) {
+        return "slider-roster-item tns-nav-active";
+      } else {
+        return "slider-roster-item";
+      }
+    }
+  };
   return (
     <>
       <Banner
@@ -127,8 +144,8 @@ export default function Members() {
               <p className="user-short-description-title">
                 <Link to="/profil">NekoBebop</Link>
               </p>
-              <p className="user-short-description-text"  id="wsx">
-              <Flag className="Reyflacicn" /> Azerbaijan
+              <p className="user-short-description-text" id="wsx">
+                <Flag className="Reyflacicn" /> Azerbaijan
               </p>
             </div>
             <div className="badge-list small">
@@ -154,43 +171,40 @@ export default function Members() {
                 <div className="tns-inner" id="user-preview-stats-slides-01-iw">
                   <div
                     id="user-preview-stats-slides-01"
-                    className="user-preview-stats-slides tns-slider tns-carousel tns-subpixel tns-calc tns-horizontal"
-                    style={{
-                      transitionDuration: "0s",
-                      transform: "translate3d(0%, 0px, 0px)",
-                    }}
+                    className="wer user-preview-stats-slides tns-slider tns-carousel tns-subpixel tns-calc tns-horizontal"
                   >
-                    <div
-                      className="user-preview-stats-slide tns-item tns-slide-active"
-                      id="user-preview-stats-slides-01-item0"
-                    >
-                      <div className="user-stats">
-                        <div className="user-stat">
-                          <p className="user-stat-title">874</p>
-                          <p className="user-stat-text">posts</p>
-                        </div>
-                        <div className="user-stat">
-                          <p className="user-stat-title">60</p>
-                          <p className="user-stat-text">friends</p>
-                        </div>
-                        <div className="user-stat">
-                          <p className="user-stat-title">3.9k</p>
-                          <p className="user-stat-text">visits</p>
+                    {activeField === 1 ? (
+                      <div
+                        className="user-preview-stats-slide tns-item tns-slide-active"
+                        id="user-preview-stats-slides-01-item0"
+                      >
+                        <div className="user-stats">
+                          <div className="user-stat">
+                            <p className="user-stat-title">874</p>
+                            <p className="user-stat-text">posts</p>
+                          </div>
+                          <div className="user-stat">
+                            <p className="user-stat-title">60</p>
+                            <p className="user-stat-text">friends</p>
+                          </div>
+                          <div className="user-stat">
+                            <p className="user-stat-title">3.9k</p>
+                            <p className="user-stat-text">visits</p>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    {/* <div
-                      className="user-preview-stats-slide tns-item"
-                      id="user-preview-stats-slides-01-item1"
-                      aria-hidden="true"
-                      tabIndex={-1}
-                    >
-                      <p className="user-preview-text">
-                        Hello! I'm James Hart, but I go by the name of Destroy
-                        Dex on my stream channel. Come to check out the latest
-                        gaming news!
-                      </p>
-                    </div> */}
+                    ) : (
+                      <div
+                        className="user-preview-stats-slide tns-item"
+                        id="user-preview-stats-slides-01-item1"
+                      >
+                        <p className="user-preview-text">
+                          Hello! I'm James Hart, but I go by the name of Destroy
+                          Dex on my stream channel. Come to check out the latest
+                          gaming news!
+                        </p>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -201,17 +215,16 @@ export default function Members() {
               aria-label="Carousel Pagination"
             >
               <div
-                className="slider-roster-item tns-nav-active"
-                data-nav={0}
-                aria-label="Carousel Page 1 (Current Slide)"
-                aria-controls="user-preview-stats-slides-01"
+                onClick={() => {
+                  setactiveField(1);
+                }}
+                className={dotHandler(1)}
               />
               <div
-                className="slider-roster-item"
-                data-nav={1}
-                tabIndex={-1}
-                aria-label="Carousel Page 2"
-                aria-controls="user-preview-stats-slides-01"
+                onClick={() => {
+                  setactiveField(2);
+                }}
+                className={dotHandler(2)}
               />
             </div>
             <div className="social-links small">

@@ -41,35 +41,35 @@
     visibility 0.3s ease-in-out 0s;
 }
 .bnnrinp {
-  width: 80% !important;
+  width: 85% !important;
   margin-left: 20px;
 }
 
 .postBtns {
   display: flex;
+  width: 94%;
+  margin-top: 10px;
+  margin-right: 20px;
   margin-left: 20px;
-  width: 90%;
-  margin-top: 20px;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 .postBtn {
   background-color: #1d2333 !important;
   box-shadow: none !important;
-  height: 30px;
+  height: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 5px !important;
-  width: 30%;
+  width: 32.5%;
   margin-bottom: 20px;
-  margin-right: 20px;
 }
 .prmtxt {
   padding-top: 15px;
 }
 .postBtn:hover {
   background-color: #40d04f !important;
-  color: black !important;
+  color: white !important;
 }
 .psticncontainer {
   display: flex;
@@ -79,6 +79,7 @@
   height: 200px;
   overflow: auto;
 }
+
 .inplist {
   display: flex;
   align-items: center;
@@ -117,9 +118,8 @@
 .browsebtn {
   height: 49px !important;
   width: 100%;
-  background-color: transparent !important;
+  background-color: #40d04f !important;
   box-shadow: none !important;
-  border: 1px solid #afb0c0;
 }
 #brwsinp {
   height: 50px;
@@ -138,25 +138,24 @@
   height: 50px;
 }
 .parms {
-  width: auto !important;
   cursor: auto;
   display: flex;
-  bottom: -65px;
+  bottom: -75px;
   position: absolute;
   border-radius: 5px;
+  right: 25px;
   z-index: 9999;
-  height: 50px;
-  width: 87% !important;
+  height: 90px;
   flex-direction: column;
   box-shadow: none !important;
   justify-content: space-evenly;
-  background-color: #7750f8 !important;
+  background-color: #1d2333 !important;
 }
 
 .parmsitem {
   display: flex;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
   cursor: pointer !important;
   flex-direction: row-reverse;
   justify-content: space-between;
@@ -198,4 +197,15 @@
 .pnntpstbtn:hover {
   background-color: #40d04f !important;
   border: 1px solid #40d04f;
+}
+.visiblehid {
+  visibility: hidden;
+  box-shadow: none !important;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px !important;
+  width: 32.5%;
+  margin-bottom: 20px;
 }

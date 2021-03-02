@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Scrollbars } from "react-custom-scrollbars";
 import { ReactComponent as Poll } from "../../icons/Poll.svg";
 import { ReactComponent as Blogpost } from "../../icons/Blgpost.svg";
@@ -8,6 +8,7 @@ import { ReactComponent as Closeicn } from "../../icons/times-circle-solid.svg";
 import { ReactComponent as PostSts } from "../../icons/PostSts.svg";
 import { ReactComponent as Cameraicn } from "../../icons/Cameraicn.svg";
 export default function PostBanner() {
+  const div = useRef(null);
   const [tab1, settab1] = useState("option-item active");
   const [Videoposttype, setVideoposttype] = useState(true);
   const [embedinp, setembedinp] = useState(false);
@@ -17,6 +18,18 @@ export default function PostBanner() {
   const [activeTab, setactiveTab] = useState(1);
   const [lists, setLists] = useState([]);
   const [rndm, setrndm] = useState(0);
+
+  const executeScroll = () => {
+    document.getElementById("inpcontainer").scrollTop += 5;
+  };
+
+  const itemvis = () => {
+    if (Videoposttype) {
+      return "button primary postBtn";
+    } else {
+      return "visiblehid";
+    }
+  };
   const deleteinput = (inp) => {
     var delele = lists.filter((item) => item != inp);
     setLists(delele);
@@ -130,7 +143,6 @@ export default function PostBanner() {
                           />
                         </div>
                       </div>
-
                       <div id="inpctrl">
                         <div className="form-input small bnnrinp">
                           <label htmlFor="account-full-name">Cavab</label>
@@ -270,6 +282,7 @@ export default function PostBanner() {
                         İnsanların birdən çox cavab əlavə etmsinnə icazə ver
                       </label>
                     </div>
+
                     <div className="parmsitem">
                       <input type="checkbox" id="2" />
                       <label htmlFor="2" className="section-banner-text chktxt">
@@ -277,16 +290,15 @@ export default function PostBanner() {
                       </label>
                     </div>
                   </div>
-                  {Videoposttype ? (
-                    <p
-                      onClick={() => {
-                        Addinput();
-                      }}
-                      className="button primary postBtn"
-                    >
-                      Cavab əlavə et
-                    </p>
-                  ) : null}
+
+                  <p
+                    onClick={() => {
+                      Addinput();
+                    }}
+                    className={itemvis()}
+                  >
+                    Cavab əlavə et
+                  </p>
 
                   {Videoposttype ? (
                     <p
@@ -310,6 +322,7 @@ export default function PostBanner() {
                   <p
                     className="button primary postBtn"
                     onClick={() => {
+                      executeScroll();
                       setparmsVisible(!parmsVisible);
                     }}
                   >
@@ -420,7 +433,7 @@ export default function PostBanner() {
           ) : null}
         </div>
         <div className="quick-post-footer-actions">
-          <p className="button small secondary pnntpstbtn">Post</p>
+          <p className="button small secondary">Post</p>
         </div>
       </div>
     </div>

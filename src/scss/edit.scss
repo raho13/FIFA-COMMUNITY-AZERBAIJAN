@@ -859,6 +859,28 @@ $col-6_9: ($col-6-width / $grid-width_9) * 100%;
 .asd {
   cursor: pointer;
 }
-#ptfnavcnt {
-  // overflow: auto;
+// #ptfnavcnt {
+//    overflow: auto;
+// }
+#ookl {
+  margin-top: 30px;
+}
+.mrg {
+  margin-top: 30px;
+}
+#inpcnt2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+#inpwidt {
+  width: 23%;
+}
+.bdginpbtn {
+  margin-top: 0 !important;
+}
+.wer {
+  margin-left: 10%;
+  
 }

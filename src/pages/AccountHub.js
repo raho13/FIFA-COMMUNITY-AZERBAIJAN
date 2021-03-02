@@ -31,7 +31,7 @@ export default function AccountHub() {
         </div>
         <div className="account-hub-content">
           <div className="grid-column content-main">
-            <div className="account-info-set">
+            <div id="jjk" className="account-info-set">
               <div className="account-logo log-first">
                 <a className="user-avatar small no-outline online account-avatar">
                   <div className="user-avatar-content">
@@ -102,7 +102,7 @@ export default function AccountHub() {
                     </div>
                     <div className="form-item">
                       <div className="form-input small">
-                        <label htmlFor="account-full-name">Soyad</label>{" "}
+                        <label htmlFor="account-full-name">Soyad</label>
                         <input
                           onFocus={(e) => {
                             activeInp(e);
@@ -118,7 +118,7 @@ export default function AccountHub() {
                     </div>
                     <div className="form-item">
                       <div className="form-input small">
-                        <label htmlFor="account-full-name">Ata adı</label>{" "}
+                        <label htmlFor="account-full-name">Ata adı</label>
                         <input
                           onFocus={(e) => {
                             activeInp(e);
@@ -133,6 +133,7 @@ export default function AccountHub() {
                       </div>
                     </div>
                   </div>
+
                   <div className="form-row split">
                     <div className="form-item">
                       <div className="form-input small">
@@ -151,72 +152,79 @@ export default function AccountHub() {
                         />
                       </div>
                     </div>
-                    <div className="form-item">
-                      <div className="form-select">
-                        <label htmlFor="account-country">Ölkə</label>{" "}
-                        <select id="account-country" name="account_country">
-                          <option value={0}>Yaşadığınız ölkəni seçin</option>
-                          <option value={1} selected>
-                            Azərbaycan
-                          </option>
-                        </select>
-                        <svg className="form-select-icon icon-small-arrow">
-                          <use xlinkHref="#svg-small-arrow" />
-                        </svg>
+
+                    <div className="form-item inpitems1">
+                      <div className="form-item">
+                        <div className="form-select">
+                          <label htmlFor="account-country">Ölkə</label>
+                          <select id="account-country" name="account_country">
+                            <option value={0}>Yaşadığınız ölkəni seçin</option>
+                            <option value={1} selected>
+                              Azərbaycan
+                            </option>
+                          </select>
+                          <svg className="form-select-icon icon-small-arrow">
+                            <use xlinkHref="#svg-small-arrow" />
+                          </svg>
+                        </div>
+                      </div>
+                      <div className="form-item birth-input">
+                        <div className="form-input small">
+                          <input
+                            onFocus={(e) => {
+                              activeInp(e);
+                            }}
+                            onBlur={(e) => {
+                              passiveInp(e);
+                            }}
+                            type="date"
+                            id="account-full-name"
+                            name="account_full_name"
+                          />
+                        </div>
                       </div>
                     </div>
-                    <div className="form-item birth-input">
-                      <div className="form-input small">
-                        <input
-                          onFocus={(e) => {
-                            activeInp(e);
-                          }}
-                          onBlur={(e) => {
-                            passiveInp(e);
-                          }}
-                          type="date"
-                          id="account-full-name"
-                          name="account_full_name"
-                        />
+
+                    <div className="form-item inpitems1">
+                      <div className="form-item">
+                        <div className="form-select">
+                          <label htmlFor="account-region">Şəhər</label>
+                          <select id="account-region" name="account_region">
+                            <option value={0}>Yaşadığınız şəhəri seçin</option>
+                            <option value={1} selected>
+                              Bakı
+                            </option>
+                            <option value={1} selected>
+                              Masallı
+                            </option>
+                          </select>
+                          <svg className="form-select-icon icon-small-arrow">
+                            <use xlinkHref="#svg-small-arrow" />
+                          </svg>
+                        </div>
+                      </div>
+                      <div className="form-item">
+                        <div className="form-input small">
+                          <label htmlFor="account-full-name">
+                            Şəxsiyyət vəsiqəsinin fin kodu
+                          </label>
+                          <input
+                            onFocus={(e) => {
+                              activeInp(e);
+                            }}
+                            onBlur={(e) => {
+                              passiveInp(e);
+                            }}
+                            type="text"
+                            id="account-full-name"
+                            name="account_full_name"
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
+
                   <div className="form-row split">
-                    <div className="form-item">
-                      <div className="form-select">
-                        <label htmlFor="account-region">Şəhər</label>{" "}
-                        <select id="account-region" name="account_region">
-                          <option value={0}>Yaşadığınız şəhəri seçin</option>
-                          <option value={1} selected>
-                            Bakı
-                          </option>
-                          <option value={1} selected>
-                            Masallı
-                          </option>
-                        </select>
-                        <svg className="form-select-icon icon-small-arrow">
-                          <use xlinkHref="#svg-small-arrow" />
-                        </svg>
-                      </div>
-                    </div>
-                    <div className="form-item">
-                      <div className="form-input small">
-                        <label htmlFor="account-full-name">
-                          Şəxsiyyət vəsiqəsinin fin kodu
-                        </label>
-                        <input
-                          onFocus={(e) => {
-                            activeInp(e);
-                          }}
-                          onBlur={(e) => {
-                            passiveInp(e);
-                          }}
-                          type="text"
-                          id="account-full-name"
-                          name="account_full_name"
-                        />
-                      </div>
-                    </div>
                     <div className="form-item">
                       <div className="form-input small">
                         <label htmlFor="account-full-name">PSN ID</label>
@@ -233,8 +241,6 @@ export default function AccountHub() {
                         />
                       </div>
                     </div>
-                  </div>
-                  <div className="form-row split">
                     <div className="form-item">
                       <div className="form-input small">
                         <label htmlFor="account-full-name">XBOX ID</label>{" "}
@@ -273,6 +279,7 @@ export default function AccountHub() {
                 </form>
               </div>
             </div>
+
             <div className="widget-box">
               <p className="widget-box-title">Əlaqə məlumatlarınız</p>
               <div className="widget-box-content">
