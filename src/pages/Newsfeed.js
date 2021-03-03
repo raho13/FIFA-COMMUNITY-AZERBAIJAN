@@ -5,7 +5,7 @@ import promo1 from "../img/test/kompaniya-sayt-ucun (1).jpg";
 import bannerimg from "../img/banner/newsfeed-icon.png";
 import Banner from "../component/Banner";
 import Members from "../component/newsfeed/Members";
- import PostBanner from "../component/newsfeed/PostBanner";
+import PostBanner from "../component/newsfeed/PostBanner";
 import Pollmodel from "../component/Postmodels/Pollmodel";
 import Videopost from "../component/Postmodels/Videopost";
 import Simpletxtmodel from "../component/Postmodels/Simpletxtmodel";

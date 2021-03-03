@@ -127,7 +127,7 @@ export default function Header() {
       <div className="header-actions">
         <div className="header-brand">
           <div className="logo">
-            <img src={avatar} alt="" className="icon-logo-vikinger small" />
+            <img src={avatar} alt="Logo" className="icon-logo-vikinger small" />
           </div>
         </div>
       </div>

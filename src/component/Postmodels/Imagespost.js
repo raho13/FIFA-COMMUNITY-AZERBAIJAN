@@ -1,12 +1,13 @@
 import React from "react";
 import Postoption from "./Postoption";
 import Postoptionsdot from "./Postoptionsdot";
-import img1 from "../../img/cover/10.jpg" 
-import img2 from "../../img/cover/16.jpg" 
+import img1 from "../../img/cover/10.jpg";
+import img2 from "../../img/cover/16.jpg";
+import Imagepopup from "../newsfeed/Imagepopup";
 export default function Imagespost() {
   return (
     <div className="widget-box no-padding">
-         <Postoptionsdot
+      <Postoptionsdot
         parms={[
           "Edit Post",
           "Delete Post",
@@ -107,7 +108,7 @@ export default function Imagespost() {
               <div className="picture-collage-item popup-picture-trigger">
                 <div className="photo-preview">
                   <figure className="photo-preview-image liquid">
-                    <img src={img2} alt="photo-preview-16" className="pstimg"/>
+                    <img src={img2} alt="photo-preview-16" className="pstimg" />
                   </figure>
                   <div className="photo-preview-info">
                     <div className="reaction-count-list">
@@ -151,15 +152,16 @@ export default function Imagespost() {
                 </div>
               </div>
               <div className="picture-collage-item pstoverlay">
-                <a
-                  className="picture-collage-item-overlay "
-                  
-                >
+                <a className="picture-collage-item-overlay ">
                   <p className="picture-collage-item-overlay-text">+22</p>
                 </a>
                 <div className="photo-preview">
                   <figure className="photo-preview-image liquid">
-                    <img className="pstimg" src="img/cover/14.jpg" alt="photo-preview-14" />
+                    <img
+                      className="pstimg"
+                      src="img/cover/14.jpg"
+                      alt="photo-preview-14"
+                    />
                   </figure>
                   <div className="photo-preview-info">
                     <div className="reaction-count-list">

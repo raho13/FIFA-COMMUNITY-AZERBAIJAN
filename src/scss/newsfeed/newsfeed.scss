@@ -209,3 +209,28 @@
   width: 32.5%;
   margin-bottom: 20px;
 }
+#popupcnt {
+  width: 90%;
+  height: 90vh;
+}
+#popup-picture {
+  opacity: 1;
+  visibility: visible;
+  margin: 20px;
+}
+#popupmain {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 90000;
+  background-color: rgb(25, 23, 39);
+  height: 100%;
+}
+#imgwarp {
+  height: 120% !important;
+}
+#popup-close-button {
+  right: 90px;
+  top: 50px;
+}
