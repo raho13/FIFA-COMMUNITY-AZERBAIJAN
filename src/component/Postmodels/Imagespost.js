@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import Postoption from "./Postoption";
+import { menuContext } from "../../context";
 import Postoptionsdot from "./Postoptionsdot";
 import img1 from "../../img/cover/10.jpg";
 import img2 from "../../img/cover/16.jpg";
-import Imagepopup from "../newsfeed/Imagepopup";
 export default function Imagespost() {
+  const { setpopup } = useContext(menuContext);
   return (
     <div className="widget-box no-padding">
       <Postoptionsdot
@@ -57,7 +58,12 @@ export default function Imagespost() {
           </p>
           <div className="picture-collage">
             <div className="picture-collage-row medium">
-              <div className="picture-collage-item popup-picture-trigger">
+              <div
+                onClick={() => {
+                  setpopup({ vis: true });
+                }}
+                className="picture-collage-item popup-picture-trigger"
+              >
                 <div className="photo-preview">
                   <figure className="photo-preview-image liquid">
                     <img className="pstimg" src={img1} alt="photo-preview-10" />
@@ -80,7 +86,12 @@ export default function Imagespost() {
                   </div>
                 </div>
               </div>
-              <div className="picture-collage-item popup-picture-trigger">
+              <div
+                onClick={() => {
+                  setpopup({ vis: true });
+                }}
+                className="picture-collage-item popup-picture-trigger"
+              >
                 <div className="photo-preview">
                   <figure className="photo-preview-image liquid">
                     <img src={img1} alt="photo-preview-10" className="pstimg" />
@@ -105,7 +116,12 @@ export default function Imagespost() {
               </div>
             </div>
             <div className="picture-collage-row">
-              <div className="picture-collage-item popup-picture-trigger">
+              <div
+                onClick={() => {
+                  setpopup({ vis: true });
+                }}
+                className="picture-collage-item popup-picture-trigger"
+              >
                 <div className="photo-preview">
                   <figure className="photo-preview-image liquid">
                     <img src={img2} alt="photo-preview-16" className="pstimg" />
@@ -128,7 +144,12 @@ export default function Imagespost() {
                   </div>
                 </div>
               </div>
-              <div className="picture-collage-item popup-picture-trigger">
+              <div
+                onClick={() => {
+                  setpopup({ vis: true });
+                }}
+                className="picture-collage-item popup-picture-trigger"
+              >
                 <div className="photo-preview">
                   <figure className="photo-preview-image liquid">
                     <img className="pstimg" src={img2} alt="photo-preview-16" />

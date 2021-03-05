@@ -5,6 +5,7 @@ const Menuprovider = (props) => {
   const [menuVisible, setmenuVisible] = useState(false);
   const [MmenuVisible, setMmenuVisible] = useState(false);
   const [msgWidget, setmsgWidget] = useState(false);
+  const [popup, setpopup] = useState({ vis: false });
   return (
     <menuContext.Provider
       value={{
@@ -14,6 +15,8 @@ const Menuprovider = (props) => {
         setMmenuVisible,
         msgWidget,
         setmsgWidget,
+        popup,
+        setpopup,
       }}
     >
       {props.children}

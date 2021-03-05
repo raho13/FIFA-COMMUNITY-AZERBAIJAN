@@ -96,13 +96,14 @@ export default function Newsfeed() {
               İzlədiklərim
             </p>
           </div>
+          <Imagespost />
           <Gifpost />
           <Votepost />
           <Sharepost />
           <Simpletxtmodel />
           <Pollmodel />
           <Videopost />
-          <Imagespost />
+  
           <div className="loader-bars">
             <div className="loader-bar" />
             <div className="loader-bar" />

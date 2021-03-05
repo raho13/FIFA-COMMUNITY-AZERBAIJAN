@@ -17179,12 +17179,65 @@ textarea {
   background-color: #191727;
   height: 100%; }
 
-#imgwarp {
-  height: 120% !important; }
-
 #popup-close-button {
   right: 90px;
   top: 50px; }
+
+#cmmnt {
+  position: relative;
+  bottom: 0px; }
+
+#reactionopsact {
+  position: absolute;
+  z-index: 9999;
+  bottom: 54px;
+  left: -16px;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0px, 0px);
+  transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s; }
+
+#reactionopspsv {
+  position: absolute;
+  z-index: 9999;
+  bottom: 54px;
+  left: -16px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0px, 20px);
+  transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s; }
+
+#reacsicn {
+  white-space: nowrap;
+  position: absolute;
+  z-index: 99999;
+  top: -28px;
+  left: 50%;
+  margin-left: -22px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0px, 10px);
+  transition: all 0.3s ease-in-out 0s; }
+
+#minireacticnsact {
+  position: absolute;
+  z-index: 9999;
+  bottom: 30px;
+  left: -80px;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0px, 0px);
+  transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s; }
+
+#minireacticnspsv {
+  position: absolute;
+  z-index: 9999;
+  bottom: 30px;
+  left: -80px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0px, 16px);
+  transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s; }
 
 @media only screen and (max-width: 500px) {
   .card {
