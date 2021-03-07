@@ -7,6 +7,7 @@ import AccountHub from "../pages/AccountHub";
 import Lessons from "../pages/Lessons";
 import Members from "../pages/Members";
 import Badges from "../pages/Badges";
+import FutTournaments from "../pages/FutTournaments";
 import Profil from "../pages/Profil";
 import { Switch, Route } from "react-router-dom";
 export default function Navigation() {
@@ -51,6 +52,9 @@ export default function Navigation() {
       </Switch>
       <Switch>
         <Route path="/Badges" component={Badges} />
+      </Switch>
+      <Switch>
+        <Route path="/FutTournaments" component={FutTournaments} />
       </Switch>
     </div>
   );

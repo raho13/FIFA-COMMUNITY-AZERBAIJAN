@@ -11,12 +11,12 @@ import { ReactComponent as Streams } from "../icons/Streams.svg";
 import { ReactComponent as Events } from "../icons/Events.svg";
 import { ReactComponent as Forums } from "../icons/Forums.svg";
 import { ReactComponent as Marketplace } from "../icons/Marketplace.svg";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 import cover from "../img/cover/01.jpg";
 import gold from "../img/badge/gold-s.png";
 import age from "../img/badge/age-s.png";
 import caffeinated from "../img/badge/caffeinated-s.png";
-import Avatar from './Avatar'
+import Avatar from "./Avatar";
 import warrior from "../img/badge/warrior-s.png";
 import blank from "../img/badge/blank-s.png";
 export default function Navbar() {
@@ -29,7 +29,6 @@ export default function Navbar() {
   );
 
   useEffect(() => {
-
     if (menuVisible === true) {
       setsmallmenu(
         "navigation-widget navigation-widget-desktop closed sidebar left hidden"
@@ -54,10 +53,10 @@ export default function Navbar() {
           <figure className="navigation-widget-cover liquid">
             <img src={cover} alt="cover-01" />
           </figure>
+          <Avatar />
           <div className="user-short-description">
-            {/* <Avatar /> */}
             <p className="user-short-description-title">
-              <a href="profile-timeline.html">Marina Valentine</a>
+              <a href="profile-timeline.html">Rahib Rzayev</a>
             </p>
             <p className="user-short-description-text">
               <a href="#">www.gamehuntress.com</a>
@@ -97,7 +96,7 @@ export default function Navbar() {
           </div>
           <ul className="menu">
             <li className="menu-item">
-              <Link className="menu-item-link" to='/'>
+              <Link className="menu-item-link" to="/">
                 <Newsfeed className="menu-item-link-icon icon-newsfeed" />
                 Newsfeed
               </Link>
@@ -121,10 +120,10 @@ export default function Navbar() {
               </Link>
             </li>
             <li className="menu-item">
-              <a className="menu-item-link" href="badges.html">
+              <Link className="menu-item-link" to="/FutTournaments">
                 <Badges className="menu-item-link-icon icon-badges" />
                 Badges
-              </a>
+              </Link>
             </li>
             <li className="menu-item">
               <a className="menu-item-link" href="quests.html">
@@ -160,12 +159,7 @@ export default function Navbar() {
         </Scrollbars>
       </nav>
       <nav id="navigation-widget-small" className={smallmenu}>
-        <Link
-          className="user-avatar small no-outline online"
-          to="/"
-        >
-                {/* <Avatar/> */}
-
+        <Link className="user-avatar small no-outline online" to="/">
           {/* <div className="user-avatar-content">
             <div className="hexagon-image-30-32" data-src="img/avatar/01.jpg" />
           </div>
@@ -242,58 +236,13 @@ export default function Navbar() {
           </li>
 
           <li className="menu-item">
-            <a
+            <Link
               className="menu-item-link text-tooltip-tfr"
-              href="newsfeed.html"
+              to="/FutTournaments"
               data-title="Newsfeed"
             >
               <Newsfeed className="menu-item-link-icon icon-newsfeed" />
-            </a>
-          </li>
-          <li className="menu-item">
-            <a
-              className="menu-item-link text-tooltip-tfr"
-              href="overview.html"
-              data-title="Overview"
-            >
-              <Overview className="menu-item-link-icon icon-overview" />
-            </a>
-          </li>
-          <li className="menu-item">
-            <a
-              className="menu-item-link text-tooltip-tfr"
-              href="groups.html"
-              data-title="Groups"
-            >
-              <Group className="menu-item-link-icon icon-group" />
-            </a>
-          </li>
-          <li className="menu-item">
-            <a
-              className="menu-item-link text-tooltip-tfr"
-              href="members.html"
-              data-title="Members"
-            >
-              <Members className="menu-item-link-icon icon-members" />
-            </a>
-          </li>
-          <li className="menu-item">
-            <a
-              className="menu-item-link text-tooltip-tfr"
-              href="badges.html"
-              data-title="Badges"
-            >
-              <Badges className="menu-item-link-icon icon-badges" />
-            </a>
-          </li>
-          <li className="menu-item">
-            <a
-              className="menu-item-link text-tooltip-tfr"
-              href="quests.html"
-              data-title="Quests"
-            >
-              <Quests className="menu-item-link-icon icon-quests" />
-            </a>
+            </Link>
           </li>
 
           {/*         

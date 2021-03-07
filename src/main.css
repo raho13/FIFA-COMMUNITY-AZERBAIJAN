@@ -16064,17 +16064,6 @@ textarea {
   transform: translate(0px, -20px);
   transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s; }
 
-.mainav {
-  background-color: yellow; }
-
-#can1 {
-  left: 20px;
-  position: absolute; }
-
-#can {
-  margin-left: 20px;
-  background-color: blue; }
-
 .content-grid {
   max-width: 1184px;
   padding: 112px 0 100px; }
@@ -16379,6 +16368,35 @@ textarea {
 
 .wer {
   margin-left: 10%; }
+
+.mainav {
+  background-color: transparent();
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  top: -10px;
+  align-content: center; }
+
+#can1 {
+  position: absolute; }
+
+#imadiv {
+  z-index: -1;
+  width: 77px;
+  height: 77px;
+  clip-path: polygon(2% 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+  position: absolute;
+  margin-left: 61px;
+  margin-top: 49px;
+  display: flex;
+  justify-content: center;
+  background-image: url("/src/img/avatar/04.jpg");
+  background-size: cover; }
+
+#avatarcontainer {
+  width: 100%;
+  display: flex;
+  justify-content: center; }
 
 .widget-box {
   padding: 32px 28px;
