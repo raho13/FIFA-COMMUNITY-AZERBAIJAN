@@ -18,19 +18,14 @@ export default function Profil() {
     switch (tabindex) {
       case 1:
         return <Timelinetab />;
-        break;
       case 2:
         return <Friendtab />;
-        break;
       case 3:
         return <Phototab />;
-        break;
       case 4:
         return <Videotab />;
-        break;
       case 5:
         return <Badgetab />;
-        break;
     }
   };
   const handletabs = (e) => {
@@ -463,7 +458,7 @@ export default function Profil() {
           </div>
         </div>
       </div>
-      <nav className="section-navigation">
+      <nav className="section-navigation" id="profnav">
         <div className="tns-outer" id="section-navigation-slider-ow">
           <div
             className="tns-liveregion tns-visually-hidden"

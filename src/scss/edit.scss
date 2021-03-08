@@ -823,6 +823,12 @@ $col-6_9: ($col-6-width / $grid-width_9) * 100%;
     }
   }
 }
+@media screen and (min-width: 992px) {
+  #profnav {
+    width: 50%;
+    margin-left: 25%;
+  } 
+}
 .section-menu-item-icon {
   display: block;
   margin: 30px auto 0 auto;
@@ -848,9 +854,10 @@ $col-6_9: ($col-6-width / $grid-width_9) * 100%;
 .asd {
   cursor: pointer;
 }
-// #ptfnavcnt {
-//    overflow: auto;
-// }
+#ptfnavcnt {
+  display: flex;
+  justify-content: center;
+}
 #ookl {
   margin-top: 30px;
 }
@@ -901,5 +908,8 @@ $col-6_9: ($col-6-width / $grid-width_9) * 100%;
   width: 100%;
   display: flex;
   justify-content: center;
-  
+}
+.section-menu .section-menu-item.active {
+  border-bottom: 4px solid #4ff461;
+  fill: red;
 }

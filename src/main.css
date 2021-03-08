@@ -16323,6 +16323,11 @@ textarea {
   .grid.grid-4-4-4, .grid.grid-4-4, .grid.grid-3-3-3-3 {
     grid-template-columns: 100%; } }
 
+@media screen and (min-width: 992px) {
+  #profnav {
+    width: 50%;
+    margin-left: 25%; } }
+
 .section-menu-item-icon {
   display: block;
   margin: 30px auto 0 auto; }
@@ -16347,6 +16352,10 @@ textarea {
 
 .asd {
   cursor: pointer; }
+
+#ptfnavcnt {
+  display: flex;
+  justify-content: center; }
 
 #ookl {
   margin-top: 30px; }
@@ -16397,6 +16406,10 @@ textarea {
   width: 100%;
   display: flex;
   justify-content: center; }
+
+.section-menu .section-menu-item.active {
+  border-bottom: 4px solid #4ff461;
+  fill: red; }
 
 .widget-box {
   padding: 32px 28px;
@@ -17377,7 +17390,8 @@ textarea {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 100% !important; }
+  width: 100% !important;
+  overflow: hidden; }
 
 .card-img {
   width: 100%;
@@ -17626,6 +17640,9 @@ textarea {
 #jjk {
   display: flex;
   justify-content: space-between; }
+
+#jjk .ml-2 {
+  cursor: pointer; }
 
 .inpitems1 {
   display: flex;

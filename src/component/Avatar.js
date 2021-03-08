@@ -1,7 +1,10 @@
-import React, { useRef, useEffect } from "react";
+import React, { useEffect } from "react";
 
 export default function Avatar() {
   useEffect(() => {
+      Big()
+  });
+  const Big = () => {
     const canvas = document.querySelector("#can");
     const ctx = canvas.getContext("2d");
     ctx.beginPath();
@@ -32,21 +35,24 @@ export default function Avatar() {
     ctx1.lineTo(139, 65);
     ctx1.lineTo(139, 110);
     ctx1.lineTo(100, 127.5);
-    ctx1.lineTo(61, 110);
-    ctx1.lineTo(61, 65);
+    ctx1.lineTo(60, 110);
+    ctx1.lineTo(60, 65);
     ctx1.stroke();
+
     ctx1.beginPath();
     ctx1.lineJoin = "round";
     ctx1.strokeStyle = "#2f3749";
+    ctx1.lineWidth = 6;
+
     ctx1.moveTo(60, 75);
     ctx1.lineTo(60, 65);
     ctx1.lineTo(100, 47);
     ctx1.lineTo(106, 50);
     ctx1.stroke();
-  });
+  };
 
   return (
-    <div id='avatarcontainer'>
+    <div id="avatarcontainer">
       <div className="mainav">
         <div id="imadiv"></div>
         <canvas id="can" width="200" height="200"></canvas>

@@ -1,8 +1,6 @@
 import React from "react";
 import Banner from "../component/Banner";
 import bnrimg from "../img/banner/groups-icon.png";
-import { ReactComponent as Public } from "../icons/public.svg";
-import { ReactComponent as Private } from "../icons/private.svg";
 
 export default function FutTournaments() {
   return (
@@ -30,12 +28,7 @@ export default function FutTournaments() {
             />{" "}
           </figure>{" "}
           <div className="user-preview-info">
-            {" "}
-            <div className="tag-sticker">
-              <Public className="tag-sticker-icon icon-public" />
-            </div>
             <div className="user-short-description">
-              {" "}
               <a
                 className="user-short-description-avatar user-avatar medium no-stats"
                 href="group-timeline.html"
@@ -327,9 +320,6 @@ export default function FutTournaments() {
             />{" "}
           </figure>{" "}
           <div className="user-preview-info">
-            <div className="tag-sticker">
-              <Private className="tag-sticker-icon icon-private" />
-            </div>
             <div className="user-short-description">
               {" "}
               <a
