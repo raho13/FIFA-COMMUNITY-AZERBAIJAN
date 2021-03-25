@@ -11,9 +11,10 @@ import { ReactComponent as Reaction } from "../../icons/React.svg";
 import { ReactComponent as Comment } from "../../icons/comment.svg";
 import { ReactComponent as Share } from "../../icons/Share.svg";
 
-export default function Postoption() {
+export default function Postoption({ commentVis, handlecmmnt }) {
   const [reactions, setreactions] = useState(false);
   const handlereaction = (i) => {
+    // handlecmmnt;
     if (i === 1) {
       if (reactions === false) {
         return "reaction-options reaction-options-dropdown passivePostop";
@@ -102,9 +103,9 @@ export default function Postoption() {
           </div>
         </div>
       </div>
-      <div className="post-option">
+      <div className="post-option" onClick={handlecmmnt}>
         <Comment className="post-option-icon icon-comment" />
-        <p className="post-option-text">Comment</p>
+        <p className="post-option-text">{commentVis}</p>
       </div>
       <div className="post-option">
         <Share className="post-option-icon icon-share" />

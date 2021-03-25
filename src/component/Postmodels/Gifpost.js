@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Postoption from "./Postoption";
 import Postheader from "./Postheader";
 import Postoptionsdot from "./Postoptionsdot";
-import Avatar from "../Avatar";
+import Comments from "../Postmodels/Comments";
 export default function Gifpost() {
+  const [commentVis, setcommentVis] = useState(false);
+  const handlecmmnt = () => {
+    setcommentVis(!commentVis);
+  };
   return (
     <div className="widget-box no-padding">
       <Postoptionsdot
@@ -105,7 +109,8 @@ export default function Gifpost() {
           </div>
         </div>
       </div>
-      <Postoption />
+      <Postoption commentVis={commentVis} handlecmmnt={handlecmmnt} />
+      {commentVis ? <Comments /> : null}
     </div>
   );
 }
