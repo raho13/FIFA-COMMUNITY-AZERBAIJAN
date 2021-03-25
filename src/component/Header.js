@@ -11,6 +11,7 @@ import { ReactComponent as SearchX } from "../icons/searcX.svg";
 import { ReactComponent as Notification } from "../icons/Notifications Icon.svg";
 import { ReactComponent as Friend } from "../icons/Friends Icon.svg";
 import avatar from "../icons/logo.png";
+import Avatar from "./Avatar";
 
 export default function Header() {
   useEffect(() => {
@@ -874,27 +875,7 @@ export default function Header() {
               <div className="user-status">
                 <a className="user-status-avatar" href="profile-timeline.html">
                   <div className="user-avatar small no-outline">
-                    <div className="user-avatar-content">
-                      <div
-                        className="hexagon-image-30-32"
-                        data-src="img/avatar/01.jpg"
-                      />
-                    </div>
-                    <div className="user-avatar-progress">
-                      <div className="hexagon-progress-40-44" />
-                    </div>
-                    <div className="user-avatar-progress-border">
-                      <div className="hexagon-border-40-44" />
-                    </div>
-                    <div className="user-avatar-badge">
-                      <div className="user-avatar-badge-border">
-                        <div className="hexagon-22-24" />
-                      </div>
-                      <div className="user-avatar-badge-content">
-                        <div className="hexagon-dark-16-18" />
-                      </div>
-                      <p className="user-avatar-badge-text">24</p>
-                    </div>
+                 <Avatar size={1}/>
                   </div>
                 </a>
                 <p className="user-status-title">

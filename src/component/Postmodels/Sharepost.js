@@ -2,6 +2,8 @@ import React from "react";
 import Postoption from "./Postoption";
 import Postoptionsdot from "./Postoptionsdot";
 import img1 from "../../img/cover/51.jpg";
+import Avatar from "../Avatar";
+import Postheader from "./Postheader";
 export default function Sharepost() {
   return (
     <div className="widget-box no-padding">
@@ -16,41 +18,7 @@ export default function Sharepost() {
       />
       <div className="widget-box-status">
         <div className="widget-box-status-content">
-          <div className="user-status">
-            {" "}
-            <a className="user-status-avatar" href="profile-timeline.html">
-              <div className="user-avatar small no-outline">
-                <div className="user-avatar-content">
-                  <div
-                    className="hexagon-image-30-32"
-                    data-src="img/avatar/03.jpg"
-                  />
-                </div>
-                <div className="user-avatar-progress">
-                  <div className="hexagon-progress-40-44" />
-                </div>
-                <div className="user-avatar-progress-border">
-                  <div className="hexagon-border-40-44" />
-                </div>
-                <div className="user-avatar-badge">
-                  <div className="user-avatar-badge-border">
-                    <div className="hexagon-22-24" />
-                  </div>
-                  <div className="user-avatar-badge-content">
-                    <div className="hexagon-dark-16-18" />
-                  </div>
-                  <p className="user-avatar-badge-text">16</p>
-                </div>
-              </div>
-            </a>
-            <p className="user-status-title medium">
-              <a className="bold" href="profile-timeline.html">
-                Nick Grissom
-              </a>{" "}
-              shared a <span className="bold">post</span>
-            </p>
-            <p className="user-status-text small">40 minutes ago</p>
-          </div>
+          <Postheader />
           <p className="widget-box-status-text">
             Keep an eye out for <a href="#">@DestroyDex</a> surprise streams for
             awesome givaways!
@@ -59,33 +27,12 @@ export default function Sharepost() {
             <div className="widget-box-status">
               <div className="widget-box-status-content">
                 <div className="user-status">
-                  {" "}
                   <a
                     className="user-status-avatar"
                     href="profile-timeline.html"
                   >
                     <div className="user-avatar small no-outline">
-                      <div className="user-avatar-content">
-                        <div
-                          className="hexagon-image-30-32"
-                          data-src="img/avatar/02.jpg"
-                        />
-                      </div>
-                      <div className="user-avatar-progress">
-                        <div className="hexagon-progress-40-44" />
-                      </div>
-                      <div className="user-avatar-progress-border">
-                        <div className="hexagon-border-40-44" />
-                      </div>
-                      <div className="user-avatar-badge">
-                        <div className="user-avatar-badge-border">
-                          <div className="hexagon-22-24" />
-                        </div>
-                        <div className="user-avatar-badge-content">
-                          <div className="hexagon-dark-16-18" />
-                        </div>
-                        <p className="user-avatar-badge-text">19</p>
-                      </div>
+                      <Avatar size={1} />
                     </div>
                   </a>
                   <p className="user-status-title medium">

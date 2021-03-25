@@ -54,7 +54,7 @@ export default function ProflinInfo() {
               )}
             </div>
             <p className="sidebar-menu-header-title">Hesab məlumatları</p>
-            <p className="sidebar-menu-header-text">
+            <p className="sidebar-menu-header-text mnk">
               Change your avatar &amp; cover, accept friends, read messages and
               more!
             </p>
@@ -86,7 +86,7 @@ export default function ProflinInfo() {
               )}
             </div>
             <p className="sidebar-menu-header-title">Xüsusi məlumatlar</p>
-            <p className="sidebar-menu-header-text">
+            <p className="sidebar-menu-header-text mnk">
               Create new groups, manage the ones you created or accept invites!
             </p>
           </div>
@@ -115,7 +115,7 @@ export default function ProflinInfo() {
               )}
             </div>
             <p className="sidebar-menu-header-title">Mağaza məlumatları</p>
-            <p className="sidebar-menu-header-text">
+            <p className="sidebar-menu-header-text mnk">
               Review your account, manage products check stats and much more!
             </p>
           </div>
@@ -138,7 +138,7 @@ export default function ProflinInfo() {
         </div>
       </div>
       <div className="sidebar-box-footer">
-        <p className="button primary">Dəyişiklikləri yadda saxla</p>
+        <p className="button white small-space">Dəyişiklikləri yadda saxla</p>
         <p className="button white small-space">Dəyişikliklərdən imtina et</p>
       </div>
     </div>

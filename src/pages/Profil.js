@@ -12,6 +12,7 @@ import Phototab from "../component/Profil/Phototab";
 import Videotab from "../component/Profil/Videotab";
 import Badgetab from "../component/Profil/Badgetab";
 import Friendtab from "../component/Profil/Friendtab";
+import Avatar from "../component/Avatar";
 export default function Profil() {
   const [tabindex, settabindex] = useState(1);
   const menuhandler = () => {
@@ -73,167 +74,11 @@ export default function Profil() {
         </figure>
         <div className="profile-header-info">
           <div className="user-short-description big">
-            <a
-              className="user-short-description-avatar user-avatar big"
-              href="profile-timeline.html"
-            >
-              <div className="user-avatar-border">
-                <div
-                  className="hexagon-148-164"
-                  style={{ width: 148, height: 164, position: "relative" }}
-                >
-                  <canvas
-                    width={148}
-                    height={164}
-                    style={{ position: "absolute", top: 0, left: 0 }}
-                  />
-                </div>
-              </div>
-              <div className="user-avatar-content">
-                <div
-                  className="hexagon-image-100-110"
-                  data-src="img/avatar/01.jpg"
-                  style={{ width: 100, height: 110, position: "relative" }}
-                >
-                  <canvas
-                    width={100}
-                    height={110}
-                    style={{ position: "absolute", top: 0, left: 0 }}
-                  />
-                </div>
-              </div>
-              <div className="user-avatar-progress">
-                <div
-                  className="hexagon-progress-124-136"
-                  style={{ width: 124, height: 136, position: "relative" }}
-                >
-                  <canvas
-                    width={124}
-                    height={136}
-                    style={{ position: "absolute", top: 0, left: 0 }}
-                  />
-                </div>
-              </div>
-              <div className="user-avatar-progress-border">
-                <div
-                  className="hexagon-border-124-136"
-                  style={{ width: 124, height: 136, position: "relative" }}
-                >
-                  <canvas
-                    width={124}
-                    height={136}
-                    style={{ position: "absolute", top: 0, left: 0 }}
-                  />
-                </div>
-              </div>
-              <div className="user-avatar-badge">
-                <div className="user-avatar-badge-border">
-                  <div
-                    className="hexagon-40-44"
-                    style={{ width: 40, height: 44, position: "relative" }}
-                  >
-                    <canvas
-                      width={40}
-                      height={44}
-                      style={{ position: "absolute", top: 0, left: 0 }}
-                    />
-                  </div>
-                </div>
-                <div className="user-avatar-badge-content">
-                  <div
-                    className="hexagon-dark-32-34"
-                    style={{ width: 32, height: 34, position: "relative" }}
-                  >
-                    <canvas
-                      width={32}
-                      height={34}
-                      style={{ position: "absolute", top: 0, left: 0 }}
-                    />
-                  </div>
-                </div>
-                <p className="user-avatar-badge-text">24</p>
-              </div>
+            <a className="user-short-description-avatar user-avatar big">
+              <Avatar size={2} />
             </a>
-            <a
-              className="user-short-description-avatar user-short-description-avatar-mobile user-avatar medium"
-              href="profile-timeline.html"
-            >
-              <div className="user-avatar-border">
-                <div
-                  className="hexagon-120-132"
-                  style={{ width: 120, height: 132, position: "relative" }}
-                >
-                  <canvas
-                    width={120}
-                    height={132}
-                    style={{ position: "absolute", top: 0, left: 0 }}
-                  />
-                </div>
-              </div>
-              <div className="user-avatar-content">
-                <div
-                  className="hexagon-image-82-90"
-                  data-src="img/avatar/01.jpg"
-                  style={{ width: 82, height: 90, position: "relative" }}
-                >
-                  <canvas
-                    width={82}
-                    height={90}
-                    style={{ position: "absolute", top: 0, left: 0 }}
-                  />
-                </div>
-              </div>
-              <div className="user-avatar-progress">
-                <div
-                  className="hexagon-progress-100-110"
-                  style={{ width: 100, height: 110, position: "relative" }}
-                >
-                  <canvas
-                    width={100}
-                    height={110}
-                    style={{ position: "absolute", top: 0, left: 0 }}
-                  />
-                </div>
-              </div>
-              <div className="user-avatar-progress-border">
-                <div
-                  className="hexagon-border-100-110"
-                  style={{ width: 100, height: 110, position: "relative" }}
-                >
-                  <canvas
-                    width={100}
-                    height={110}
-                    style={{ position: "absolute", top: 0, left: 0 }}
-                  />
-                </div>
-              </div>
-              <div className="user-avatar-badge">
-                <div className="user-avatar-badge-border">
-                  <div
-                    className="hexagon-32-36"
-                    style={{ width: 32, height: 36, position: "relative" }}
-                  >
-                    <canvas
-                      width={32}
-                      height={36}
-                      style={{ position: "absolute", top: 0, left: 0 }}
-                    />
-                  </div>
-                </div>
-                <div className="user-avatar-badge-content">
-                  <div
-                    className="hexagon-dark-26-28"
-                    style={{ width: 26, height: 28, position: "relative" }}
-                  >
-                    <canvas
-                      width={26}
-                      height={28}
-                      style={{ position: "absolute", top: 0, left: 0 }}
-                    />
-                  </div>
-                </div>
-                <p className="user-avatar-badge-text">24</p>
-              </div>{" "}
+            <a className="user-short-description-avatar user-short-description-avatar-mobile user-avatar medium">
+              <Avatar size={2} />
             </a>
             <p className="user-short-description-title">
               <a href="profile-timeline.html">Marina Valentine</a>

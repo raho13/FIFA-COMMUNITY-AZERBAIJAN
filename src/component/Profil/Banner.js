@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Postoptionsdot from "../Postmodels/Postoptionsdot";
 import { ReactComponent as Addfri } from "../../icons/addfri.svg";
 import { ReactComponent as Discardfri } from "../../icons/discardfri.svg";
+import Avatar from "../Avatar";
 export default function Banner() {
   const [tabindex, settabindex] = useState(1);
   const [tap1, settap1] = useState("filter active");
@@ -76,23 +77,7 @@ export default function Banner() {
           <div className="user-status request-small">
             <a className="user-status-avatar" href="group-timeline.html">
               <div className="user-avatar small no-border">
-                <div className="user-avatar-content">
-                  <div
-                    className="hexagon-image-40-44"
-                    data-src="img/avatar/29.jpg"
-                    style={{
-                      width: 40,
-                      height: 44,
-                      position: "relative",
-                    }}
-                  >
-                    <canvas
-                      width={40}
-                      height={44}
-                      style={{ position: "absolute", top: 0, left: 0 }}
-                    />
-                  </div>
-                </div>
+                <Avatar size={1} />
               </div>{" "}
             </a>
             <p className="user-status-title">
@@ -110,24 +95,8 @@ export default function Banner() {
           <div className="user-status request-small">
             <a className="user-status-avatar" href="group-timeline.html">
               <div className="user-avatar small no-border">
-                <div className="user-avatar-content">
-                  <div
-                    className="hexagon-image-40-44"
-                    data-src="img/avatar/29.jpg"
-                    style={{
-                      width: 40,
-                      height: 44,
-                      position: "relative",
-                    }}
-                  >
-                    <canvas
-                      width={40}
-                      height={44}
-                      style={{ position: "absolute", top: 0, left: 0 }}
-                    />
-                  </div>
-                </div>
-              </div>{" "}
+                <Avatar size={1} />
+              </div>
             </a>
             <p className="user-status-title">
               <a className="bold" href="group-timeline.html">

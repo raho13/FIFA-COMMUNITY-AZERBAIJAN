@@ -7,11 +7,11 @@ import bdg1 from "../img/badge/fcultivator-s.png";
 import bdg2 from "../img/badge/scientist-s.png";
 import Mnbadge from "../icons/1250691951.png";
 import bdg3 from "../img/badge/blank-s.png";
-import Srcbanner from '../component/Srcbanner'
+import Srcbanner from "../component/Srcbanner";
 import cover from "../img/cover/04.jpg";
 import bannerimg from "../img/banner/streams-icon.png";
+import Avatar from "../component/Avatar";
 export default function Futreyting() {
-
   return (
     <>
       <Banner
@@ -26,7 +26,7 @@ export default function Futreyting() {
             <h2 className="section-title">Fut Reyting</h2>
           </div>
         </div>
-      <Srcbanner/>
+        <Srcbanner />
         <div className="grid">
           <div className="user-preview landscape">
             <figure className="user-preview-cover liquid">
@@ -34,34 +34,9 @@ export default function Futreyting() {
             </figure>
             <div className="user-preview-info">
               <div className="user-short-description landscape tiny">
-                <a
-                  className="user-short-description-avatar user-avatar small"
-                  href="profile-timeline.html"
-                >
-                  <div className="user-avatar-border">
-                    <div className="hexagon-50-56" />
-                  </div>
-                  <div className="user-avatar-content">
-                    <div
-                      className="hexagon-image-30-32"
-                      data-src="img/avatar/05.jpg"
-                    />
-                  </div>
-                  <div className="user-avatar-progress">
-                    <div className="hexagon-progress-40-44" />
-                  </div>
-                  <div className="user-avatar-progress-border">
-                    <div className="hexagon-border-40-44" />
-                  </div>
-                  <div className="user-avatar-badge">
-                    <div className="user-avatar-badge-border">
-                      <div className="hexagon-22-24" />
-                    </div>
-                    <div className="user-avatar-badge-content">
-                      <div className="hexagon-dark-16-18" />
-                    </div>
-                    <p className="user-avatar-badge-text">12</p>
-                  </div>
+                <a className="user-short-description-avatar user-avatar small"
+                href='lhjk'>
+                <Avatar size={1} />
                 </a>
                 <p className="user-short-description-title">
                   <a href="profile-timeline.html">Cavid Qurbanov</a>

@@ -4,6 +4,8 @@ import { menuContext } from "../../context";
 import Postoptionsdot from "./Postoptionsdot";
 import img1 from "../../img/cover/10.jpg";
 import img2 from "../../img/cover/16.jpg";
+import Avatar from "../Avatar";
+import Postheader from "./Postheader";
 export default function Imagespost() {
   const { setpopup } = useContext(menuContext);
   return (
@@ -19,40 +21,7 @@ export default function Imagespost() {
       />
       <div className="widget-box-status">
         <div className="widget-box-status-content">
-          <div className="user-status">
-            <a className="user-status-avatar" href="profile-timeline.html">
-              <div className="user-avatar small no-outline">
-                <div className="user-avatar-content">
-                  <div
-                    className="hexagon-image-30-32"
-                    data-src="img/avatar/02.jpg"
-                  />
-                </div>
-                <div className="user-avatar-progress">
-                  <div className="hexagon-progress-40-44" />
-                </div>
-                <div className="user-avatar-progress-border">
-                  <div className="hexagon-border-40-44" />
-                </div>
-                <div className="user-avatar-badge">
-                  <div className="user-avatar-badge-border">
-                    <div className="hexagon-22-24" />
-                  </div>
-                  <div className="user-avatar-badge-content">
-                    <div className="hexagon-dark-16-18" />
-                  </div>
-                  <p className="user-avatar-badge-text">19</p>
-                </div>
-              </div>
-            </a>
-            <p className="user-status-title medium">
-              <a className="bold" href="profile-timeline.html">
-                Destroy Dex
-              </a>
-              uploaded <span className="bold">26 new photos</span>
-            </p>
-            <p className="user-status-text small">17 minutes ago</p>
-          </div>
+        <Postheader/>
           <p className="widget-box-status-text">
             Here are some of the photos from my last visit to StreamCon 2019!!
           </p>

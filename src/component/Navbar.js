@@ -53,7 +53,7 @@ export default function Navbar() {
           <figure className="navigation-widget-cover liquid">
             <img src={cover} alt="cover-01" />
           </figure>
-          <Avatar />
+          <Avatar size={2} />
           <div className="user-short-description">
             <p className="user-short-description-title">
               <a href="profile-timeline.html">Rahib Rzayev</a>
@@ -160,6 +160,7 @@ export default function Navbar() {
       </nav>
       <nav id="navigation-widget-small" className={smallmenu}>
         <Link className="user-avatar small no-outline online" to="/">
+          <Avatar size={1} />
           {/* <div className="user-avatar-content">
             <div className="hexagon-image-30-32" data-src="img/avatar/01.jpg" />
           </div>
@@ -219,7 +220,7 @@ export default function Navbar() {
           <li className="menu-item">
             <Link
               className="menu-item-link text-tooltip-tfr"
-              to="/Badges"
+              to="/Futcoins"
               data-title="Badges"
             >
               <Badges className="menu-item-link-icon icon-badges" />

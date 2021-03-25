@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { menuContext } from "../context";
 import { Scrollbars } from "react-custom-scrollbars";
+import Avatar from "../component/Avatar";
 export default function Chatwidget() {
   const { msgWidget, setmsgWidget } = useContext(menuContext);
   const handleWidget = () => {
@@ -18,27 +19,7 @@ export default function Chatwidget() {
             <div className="user-status">
               <div className="user-status-avatar">
                 <div className="user-avatar small no-outline online">
-                  <div className="user-avatar-content">
-                    <div
-                      className="hexagon-image-30-32"
-                      data-src="img/avatar/20.jpg"
-                    />
-                  </div>
-                  <div className="user-avatar-progress">
-                    <div className="hexagon-progress-40-44" />
-                  </div>
-                  <div className="user-avatar-progress-border">
-                    <div className="hexagon-border-40-44" />
-                  </div>
-                  <div className="user-avatar-badge">
-                    <div className="user-avatar-badge-border">
-                      <div className="hexagon-22-24" />
-                    </div>
-                    <div className="user-avatar-badge-content">
-                      <div className="hexagon-dark-16-18" />
-                    </div>
-                    <p className="user-avatar-badge-text">9</p>
-                  </div>
+                  <Avatar size={1} />
                 </div>
               </div>
               <p className="user-status-title">
@@ -51,27 +32,7 @@ export default function Chatwidget() {
             <div className="user-status">
               <div className="user-status-avatar">
                 <div className="user-avatar small no-outline away">
-                  <div className="user-avatar-content">
-                    <div
-                      className="hexagon-image-30-32"
-                      data-src="img/avatar/05.jpg"
-                    />
-                  </div>
-                  <div className="user-avatar-progress">
-                    <div className="hexagon-progress-40-44" />
-                  </div>
-                  <div className="user-avatar-progress-border">
-                    <div className="hexagon-border-40-44" />
-                  </div>
-                  <div className="user-avatar-badge">
-                    <div className="user-avatar-badge-border">
-                      <div className="hexagon-22-24" />
-                    </div>
-                    <div className="user-avatar-badge-content">
-                      <div className="hexagon-dark-16-18" />
-                    </div>
-                    <p className="user-avatar-badge-text">12</p>
-                  </div>
+                  <Avatar size={1} />
                 </div>
               </div>
               <p className="user-status-title">
@@ -84,27 +45,7 @@ export default function Chatwidget() {
             <div className="user-status">
               <div className="user-status-avatar">
                 <div className="user-avatar small no-outline offline">
-                  <div className="user-avatar-content">
-                    <div
-                      className="hexagon-image-30-32"
-                      data-src="img/avatar/04.jpg"
-                    />
-                  </div>
-                  <div className="user-avatar-progress">
-                    <div className="hexagon-progress-40-44" />
-                  </div>
-                  <div className="user-avatar-progress-border">
-                    <div className="hexagon-border-40-44" />
-                  </div>
-                  <div className="user-avatar-badge">
-                    <div className="user-avatar-badge-border">
-                      <div className="hexagon-22-24" />
-                    </div>
-                    <div className="user-avatar-badge-content">
-                      <div className="hexagon-dark-16-18" />
-                    </div>
-                    <p className="user-avatar-badge-text">6</p>
-                  </div>
+                  <Avatar size={1} />
                 </div>
               </div>
               <p className="user-status-title">

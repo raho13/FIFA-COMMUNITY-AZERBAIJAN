@@ -3,7 +3,7 @@ import img from "../img/badge/bronze-b.png";
 import { ReactComponent as Plus } from "../icons/plus.svg";
 import Banner from "../component/Banner";
 import bnnrimg from "../img/banner/badges-icon.png";
-export default function Badges() {
+export default function Futcoins() {
   const activeInp = (e) => {
     e.target.parentNode.setAttribute("class", "form-input small active");
   };

@@ -11,9 +11,6 @@ import Imagepopup from "../component/newsfeed/Imagepopup";
 import { BrowserRouter as Router } from "react-router-dom";
 
 export default function Layout() {
-  useEffect(() => {
-    console.log(popup.vis);
-  });
   const { popup } = useContext(menuContext);
   const popuphandler = () => {
     if (popup.vis) {

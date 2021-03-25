@@ -6,7 +6,7 @@ import Streams from "../pages/Streams";
 import AccountHub from "../pages/AccountHub";
 import Lessons from "../pages/Lessons";
 import Members from "../pages/Members";
-import Badges from "../pages/Badges";
+import Futcoins from "../pages/Futcoins";
 import FutTournaments from "../pages/FutTournaments";
 import Profil from "../pages/Profil";
 import { Switch, Route } from "react-router-dom";
@@ -51,7 +51,7 @@ export default function Navigation() {
         <Route path="/Members" component={Members} />
       </Switch>
       <Switch>
-        <Route path="/Badges" component={Badges} />
+        <Route path="/Futcoins" component={Futcoins} />
       </Switch>
       <Switch>
         <Route path="/FutTournaments" component={FutTournaments} />

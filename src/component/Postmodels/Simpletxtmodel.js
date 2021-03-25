@@ -2,7 +2,8 @@ import React from "react";
 import { ReactComponent as MoresettingDot } from "../../icons/MoresettingDot.svg";
 import Postoptionsdot from "./Postoptionsdot";
 import Postoption from "./Postoption";
-
+import Avatar from "../Avatar";
+import Postheader from "./Postheader";
 export default function Model2() {
   return (
     <div id className="widget-box no-padding">
@@ -18,39 +19,7 @@ export default function Model2() {
       <div className="widget-box-settings"></div>
       <div className="widget-box-status">
         <div className="widget-box-status-content">
-          <div className="user-status">
-            <a className="user-status-avatar" href="profile-timeline.html">
-              <div className="user-avatar small no-outline">
-                <div className="user-avatar-content">
-                  <div
-                    className="hexagon-image-30-32"
-                    data-src="img/avatar/04.jpg"
-                  />
-                </div>
-                <div className="user-avatar-progress">
-                  <div className="hexagon-progress-40-44" />
-                </div>
-                <div className="user-avatar-progress-border">
-                  <div className="hexagon-border-40-44" />
-                </div>
-                <div className="user-avatar-badge">
-                  <div className="user-avatar-badge-border">
-                    <div className="hexagon-22-24" />
-                  </div>
-                  <div className="user-avatar-badge-content">
-                    <div className="hexagon-dark-16-18" />
-                  </div>
-                  <p className="user-avatar-badge-text">6</p>
-                </div>
-              </div>
-            </a>
-            <p className="user-status-title medium">
-              <a className="bold" href="profile-timeline.html">
-                Bearded Wonder
-              </a>
-            </p>
-            <p className="user-status-text small">39 minutes ago</p>
-          </div>
+       <Postheader/>
           <p className="widget-box-status-text">
             Sorry everyone, but from now on, I will only be able to edit and
             upload one design tutorial per month. This happens because I'm

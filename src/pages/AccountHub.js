@@ -4,6 +4,7 @@ import bannerimg from "../img/banner/streams-icon.png";
 import ProflinInfo from "../component/Accounthub/ProflinInfo";
 import Userimg from "../img/user-icon.png";
 import convert from "../img/cover-photo.png";
+import Avatar from "../component/Avatar";
 
 export default function AccountHub() {
   const activeInp = (e) => {
@@ -34,27 +35,7 @@ export default function AccountHub() {
             <div id="jjk" className="account-info-set">
               <div className="account-logo log-first">
                 <a className="user-avatar small no-outline online account-avatar">
-                  <div className="user-avatar-content">
-                    <div
-                      className="hexagon-image-30-32"
-                      data-src="img/avatar/01.jpg"
-                    />
-                  </div>
-                  <div className="user-avatar-progress">
-                    <div className="hexagon-progress-40-44" />
-                  </div>
-                  <div className="user-avatar-progress-border">
-                    <div className="hexagon-border-40-44" />
-                  </div>
-                  <div className="user-avatar-badge">
-                    <div className="user-avatar-badge-border">
-                      <div className="hexagon-22-24" />
-                    </div>
-                    <div className="user-avatar-badge-content">
-                      <div className="hexagon-dark-16-18" />
-                    </div>
-                    <p className="user-avatar-badge-text">44</p>
-                  </div>
+               <Avatar size={1}/>
                 </a>
               </div>
               <div className="account-logo ml-2">
@@ -73,7 +54,7 @@ export default function AccountHub() {
               </div>
               <div className="account-logo ml-2">
                 <div className="account-balance">
-                  <h2>1275 AZN</h2>
+                  <h2 id='ghj'>1275 AZN</h2>
                   <h1>Balansını artır</h1>
                   <p>FUT Community AZERBAIJAN balansı</p>
                 </div>

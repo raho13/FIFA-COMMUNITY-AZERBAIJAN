@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ReactComponent as Addfriend } from "../../icons/Add-friend.svg";
 import Postoptionsdot from "../../component/Postmodels/Postoptionsdot";
+import Avatar from '../Avatar'
 export default function Members() {
   const [tap1, settap1] = useState("filter active");
   const [tap2, settap2] = useState("filter");
@@ -44,29 +45,9 @@ export default function Members() {
         {activeTab == 1 ? (
           <div className="user-status-list 1">
             <div className="user-status request-small">
-              <a className="user-status-avatar" href="profile-timeline.html">
+              <a className="user-status-avatar" href="gerfe">
                 <div className="user-avatar small no-outline">
-                  <div className="user-avatar-content">
-                    <div
-                      className="hexagon-image-30-32"
-                      data-src="img/avatar/07.jpg"
-                    />
-                  </div>
-                  <div className="user-avatar-progress">
-                    <div className="hexagon-progress-40-44" />
-                  </div>
-                  <div className="user-avatar-progress-border">
-                    <div className="hexagon-border-40-44" />
-                  </div>
-                  <div className="user-avatar-badge">
-                    <div className="user-avatar-badge-border">
-                      <div className="hexagon-22-24" />
-                    </div>
-                    <div className="user-avatar-badge-content">
-                      <div className="hexagon-dark-16-18" />
-                    </div>
-                    <p className="user-avatar-badge-text">26</p>
-                  </div>
+                <Avatar size={1} />
                 </div>
               </a>
               <p className="user-status-title">
@@ -85,27 +66,7 @@ export default function Members() {
             <div className="user-status request-small">
               <a className="user-status-avatar" href="profile-timeline.html">
                 <div className="user-avatar small no-outline">
-                  <div className="user-avatar-content">
-                    <div
-                      className="hexagon-image-30-32"
-                      data-src="img/avatar/07.jpg"
-                    />
-                  </div>
-                  <div className="user-avatar-progress">
-                    <div className="hexagon-progress-40-44" />
-                  </div>
-                  <div className="user-avatar-progress-border">
-                    <div className="hexagon-border-40-44" />
-                  </div>
-                  <div className="user-avatar-badge">
-                    <div className="user-avatar-badge-border">
-                      <div className="hexagon-22-24" />
-                    </div>
-                    <div className="user-avatar-badge-content">
-                      <div className="hexagon-dark-16-18" />
-                    </div>
-                    <p className="user-avatar-badge-text">26</p>
-                  </div>
+                <Avatar size={1} />
                 </div>
               </a>
               <p className="user-status-title">
@@ -126,27 +87,7 @@ export default function Members() {
             <div className="user-status request-small">
               <a className="user-status-avatar" href="profile-timeline.html">
                 <div className="user-avatar small no-outline">
-                  <div className="user-avatar-content">
-                    <div
-                      className="hexagon-image-30-32"
-                      data-src="img/avatar/07.jpg"
-                    />
-                  </div>
-                  <div className="user-avatar-progress">
-                    <div className="hexagon-progress-40-44" />
-                  </div>
-                  <div className="user-avatar-progress-border">
-                    <div className="hexagon-border-40-44" />
-                  </div>
-                  <div className="user-avatar-badge">
-                    <div className="user-avatar-badge-border">
-                      <div className="hexagon-22-24" />
-                    </div>
-                    <div className="user-avatar-badge-content">
-                      <div className="hexagon-dark-16-18" />
-                    </div>
-                    <p className="user-avatar-badge-text">26</p>
-                  </div>
+                <Avatar size={1} />
                 </div>
               </a>
               <p className="user-status-title">

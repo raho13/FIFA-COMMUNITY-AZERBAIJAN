@@ -1,11 +1,12 @@
 import React from "react";
 import Postoption from "./Postoption";
 import Postoptionsdot from "./Postoptionsdot";
-
+import Avatar from "../Avatar";
+import Postheader from "./Postheader";
 export default function Model1() {
   return (
     <div className="widget-box no-padding">
-       <Postoptionsdot
+      <Postoptionsdot
         parms={[
           "Edit Post",
           "Delete Post",
@@ -15,45 +16,11 @@ export default function Model1() {
         ]}
       />
       <div className="widget-box-settings">
-        <div className="post-settings-wrap">
-        </div>
+        <div className="post-settings-wrap"></div>
       </div>
       <div className="widget-box-status">
         <div className="widget-box-status-content">
-          <div className="user-status">
-            <a className="user-status-avatar" href="profile-timeline.html">
-              <div className="user-avatar small no-outline">
-                <div className="user-avatar-content">
-                  <div
-                    className="hexagon-image-30-32"
-                    data-src="img/avatar/07.jpg"
-                  />
-                </div>
-                <div className="user-avatar-progress">
-                  <div className="hexagon-progress-40-44" />
-                </div>
-                <div className="user-avatar-progress-border">
-                  <div className="hexagon-border-40-44" />
-                </div>
-                <div className="user-avatar-badge">
-                  <div className="user-avatar-badge-border">
-                    <div className="hexagon-22-24" />
-                  </div>
-                  <div className="user-avatar-badge-content">
-                    <div className="hexagon-dark-16-18" />
-                  </div>
-                  <p className="user-avatar-badge-text">26</p>
-                </div>
-              </div>
-            </a>
-            <p className="user-status-title medium">
-              <a className="bold" href="profile-timeline.html">
-                Sarah Diamond
-              </a>
-              created a <span className="bold">poll</span>
-            </p>
-            <p className="user-status-text small">9 minutes ago</p>
-          </div>
+       <Postheader/>
           <p className="widget-box-status-text">
             I've created a poll to ask all of you what you would like to see
             more in my upcoming videos! It will only take a couple of
@@ -136,10 +103,8 @@ export default function Model1() {
                       <p className="simple-dropdown-text">Destroy Dex</p>
                       <p className="simple-dropdown-text">The Green Goo</p>
                     </div> */}
-
                   </div>
                   <div className="reaction-item">
-
                     {/* <img
                       className="reaction-image reaction-item-dropdown-trigger"
                       src="img/reaction/like.png"
@@ -159,7 +124,6 @@ export default function Model1() {
                     </div> */}
                   </div>
                   <div className="reaction-item">
-
                     {/* <img
                       className="reaction-image reaction-item-dropdown-trigger"
                       src="img/reaction/love.png"

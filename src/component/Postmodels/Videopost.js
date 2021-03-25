@@ -1,7 +1,8 @@
 import React from "react";
 import Postoption from "./Postoption";
 import Postoptionsdot from "./Postoptionsdot";
-
+import Avatar from "../Avatar";
+import Postheader from "./Postheader";
 export default function Videopost() {
   return (
     <div className="widget-box no-padding">
@@ -19,41 +20,7 @@ export default function Videopost() {
       </div>
       <div className="widget-box-status">
         <div className="widget-box-status-content">
-          <div className="user-status">
-            {" "}
-            <a className="user-status-avatar" href="profile-timeline.html">
-              <div className="user-avatar small no-outline">
-                <div className="user-avatar-content">
-                  <div
-                    className="hexagon-image-30-32"
-                    data-src="img/avatar/05.jpg"
-                  />
-                </div>
-                <div className="user-avatar-progress">
-                  <div className="hexagon-progress-40-44" />
-                </div>
-                <div className="user-avatar-progress-border">
-                  <div className="hexagon-border-40-44" />
-                </div>
-                <div className="user-avatar-badge">
-                  <div className="user-avatar-badge-border">
-                    <div className="hexagon-22-24" />
-                  </div>
-                  <div className="user-avatar-badge-content">
-                    <div className="hexagon-dark-16-18" />
-                  </div>
-                  <p className="user-avatar-badge-text">12</p>
-                </div>
-              </div>
-            </a>
-            <p className="user-status-title medium">
-              <a className="bold" href="profile-timeline.html">
-                Neko Bebop
-              </a>{" "}
-              uploaded a <span className="bold">video</span>
-            </p>
-            <p className="user-status-text small">2 minutes ago</p>
-          </div>
+       <Postheader/>
           <p className="widget-box-status-text">
             Hi to everyone! Check out my latest video of the outlaws expansion
             for Court Striker GO. I'm really excited because my last video had
