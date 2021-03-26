@@ -10,6 +10,7 @@ import { ReactComponent as Searcicon } from "../icons/Searcicon.svg";
 import { ReactComponent as SearchX } from "../icons/searcX.svg";
 import { ReactComponent as Notification } from "../icons/Notifications Icon.svg";
 import { ReactComponent as Friend } from "../icons/Friends Icon.svg";
+import img from "../img/marketplace/items/04.jpg";
 import avatar from "../icons/logo.png";
 import Avatar from "./Avatar";
 
@@ -375,10 +376,7 @@ export default function Header() {
                         href="marketplace-product.html"
                       >
                         <figure className="picture medium round liquid">
-                          <img
-                            src="img/marketplace/items/01.jpg"
-                            alt="item-01"
-                          />
+                          <img src={img} alt="item-01" />
                         </figure>
                       </a>
                       <p className="cart-item-preview-title">
@@ -404,10 +402,7 @@ export default function Header() {
                         href="marketplace-product.html"
                       >
                         <figure className="picture medium round liquid">
-                          <img
-                            src="img/marketplace/items/11.jpg"
-                            alt="item-11"
-                          />
+                          <img src={img} alt="item-11" />
                         </figure>
                       </a>
                       <p className="cart-item-preview-title">
@@ -433,10 +428,7 @@ export default function Header() {
                         href="marketplace-product.html"
                       >
                         <figure className="picture medium round liquid">
-                          <img
-                            src="img/marketplace/items/10.jpg"
-                            alt="item-10"
-                          />
+                          <img src={img} alt="item-10" />
                         </figure>
                       </a>
                       <p className="cart-item-preview-title">
@@ -462,11 +454,7 @@ export default function Header() {
                         href="marketplace-product.html"
                       >
                         <figure className="picture medium round liquid">
-                          {" "}
-                          <img
-                            src="img/marketplace/items/04.jpg"
-                            alt="item-04"
-                          />
+                          <img src={img} alt="item-04" />
                         </figure>
                       </a>
                       <p className="cart-item-preview-title">
@@ -536,27 +524,33 @@ export default function Header() {
                       href="profile-timeline.html"
                     >
                       <div className="user-avatar small no-outline">
-                        <div className="user-avatar-content">
-                          <div
-                            className="hexagon-image-30-32"
-                            data-src="img/avatar/16.jpg"
-                          />
-                        </div>
-                        <div className="user-avatar-progress">
-                          <div className="hexagon-progress-40-44" />
-                        </div>
-                        <div className="user-avatar-progress-border">
-                          <div className="hexagon-border-40-44" />
-                        </div>
-                        <div className="user-avatar-badge">
-                          <div className="user-avatar-badge-border">
-                            <div className="hexagon-22-24" />
-                          </div>
-                          <div className="user-avatar-badge-content">
-                            <div className="hexagon-dark-16-18" />
-                          </div>
-                          <p className="user-avatar-badge-text">14</p>
-                        </div>
+                        <Avatar size={1} />
+                      </div>
+                    </a>
+                    <p className="user-status-title">
+                      <a className="bold" href="profile-timeline.html">
+                        Ginny Danvers
+                      </a>
+                    </p>
+                    <p className="user-status-text">6 friends in common</p>
+                    <div className="action-request-list">
+                      <div className="action-request accept">
+                        <Addfriend className="action-request-icon icon-add-friend" />
+                      </div>
+                      <div className="action-request decline">
+                        <Removefriend className="action-request-icon icon-remove-friend" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="dropdown-box-list-item">
+                  <div className="user-status request">
+                    <a
+                      className="user-status-avatar"
+                      href="profile-timeline.html"
+                    >
+                      <div className="user-avatar small no-outline">
+                        <Avatar size={1} />
                       </div>
                     </a>
                     <p className="user-status-title">
@@ -610,27 +604,7 @@ export default function Header() {
                         href="profile-timeline.html"
                       >
                         <div className="user-avatar small no-outline">
-                          <div className="user-avatar-content">
-                            <div
-                              className="hexagon-image-30-32"
-                              data-src="img/avatar/03.jpg"
-                            />
-                          </div>
-                          <div className="user-avatar-progress">
-                            <div className="hexagon-progress-40-44" />
-                          </div>
-                          <div className="user-avatar-progress-border">
-                            <div className="hexagon-border-40-44" />
-                          </div>
-                          <div className="user-avatar-badge">
-                            <div className="user-avatar-badge-border">
-                              <div className="hexagon-22-24" />
-                            </div>
-                            <div className="user-avatar-badge-content">
-                              <div className="hexagon-dark-16-18" />
-                            </div>
-                            <p className="user-avatar-badge-text">16</p>
-                          </div>
+                          <Avatar size={1} />
                         </div>
                       </a>
                       <p className="user-status-title">
@@ -657,27 +631,7 @@ export default function Header() {
                         href="profile-timeline.html"
                       >
                         <div className="user-avatar small no-outline">
-                          <div className="user-avatar-content">
-                            <div
-                              className="hexagon-image-30-32"
-                              data-src="img/avatar/07.jpg"
-                            />
-                          </div>
-                          <div className="user-avatar-progress">
-                            <div className="hexagon-progress-40-44" />
-                          </div>
-                          <div className="user-avatar-progress-border">
-                            <div className="hexagon-border-40-44" />
-                          </div>
-                          <div className="user-avatar-badge">
-                            <div className="user-avatar-badge-border">
-                              <div className="hexagon-22-24" />
-                            </div>
-                            <div className="user-avatar-badge-content">
-                              <div className="hexagon-dark-16-18" />
-                            </div>
-                            <p className="user-avatar-badge-text">26</p>
-                          </div>
+                          <Avatar size={1} />
                         </div>
                       </a>
                       <p className="user-status-title">
@@ -710,27 +664,7 @@ export default function Header() {
                         href="profile-timeline.html"
                       >
                         <div className="user-avatar small no-outline">
-                          <div className="user-avatar-content">
-                            <div
-                              className="hexagon-image-30-32"
-                              data-src="img/avatar/02.jpg"
-                            />
-                          </div>
-                          <div className="user-avatar-progress">
-                            <div className="hexagon-progress-40-44" />
-                          </div>
-                          <div className="user-avatar-progress-border">
-                            <div className="hexagon-border-40-44" />
-                          </div>
-                          <div className="user-avatar-badge">
-                            <div className="user-avatar-badge-border">
-                              <div className="hexagon-22-24" />
-                            </div>
-                            <div className="user-avatar-badge-content">
-                              <div className="hexagon-dark-16-18" />
-                            </div>
-                            <p className="user-avatar-badge-text">13</p>
-                          </div>
+                          <Avatar size={1} />
                         </div>
                       </a>
                       <p className="user-status-title">
@@ -757,27 +691,7 @@ export default function Header() {
                         href="profile-timeline.html"
                       >
                         <div className="user-avatar small no-outline">
-                          <div className="user-avatar-content">
-                            <div
-                              className="hexagon-image-30-32"
-                              data-src="img/avatar/10.jpg"
-                            />
-                          </div>
-                          <div className="user-avatar-progress">
-                            <div className="hexagon-progress-40-44" />
-                          </div>
-                          <div className="user-avatar-progress-border">
-                            <div className="hexagon-border-40-44" />
-                          </div>
-                          <div className="user-avatar-badge">
-                            <div className="user-avatar-badge-border">
-                              <div className="hexagon-22-24" />
-                            </div>
-                            <div className="user-avatar-badge-content">
-                              <div className="hexagon-dark-16-18" />
-                            </div>
-                            <p className="user-avatar-badge-text">5</p>
-                          </div>
+                          <Avatar size={1} />
                         </div>
                       </a>
                       <p className="user-status-title">
@@ -810,27 +724,7 @@ export default function Header() {
                         href="profile-timeline.html"
                       >
                         <div className="user-avatar small no-outline">
-                          <div className="user-avatar-content">
-                            <div
-                              className="hexagon-image-30-32"
-                              data-src="img/avatar/05.jpg"
-                            />
-                          </div>
-                          <div className="user-avatar-progress">
-                            <div className="hexagon-progress-40-44" />
-                          </div>
-                          <div className="user-avatar-progress-border">
-                            <div className="hexagon-border-40-44" />
-                          </div>
-                          <div className="user-avatar-badge">
-                            <div className="user-avatar-badge-border">
-                              <div className="hexagon-22-24" />
-                            </div>
-                            <div className="user-avatar-badge-content">
-                              <div className="hexagon-dark-16-18" />
-                            </div>
-                            <p className="user-avatar-badge-text">12</p>
-                          </div>
+                          <Avatar size={1} />
                         </div>
                       </a>
                       <p className="user-status-title">
@@ -875,7 +769,7 @@ export default function Header() {
               <div className="user-status">
                 <a className="user-status-avatar" href="profile-timeline.html">
                   <div className="user-avatar small no-outline">
-                 <Avatar size={1}/>
+                    <Avatar size={1} />
                   </div>
                 </a>
                 <p className="user-status-title">

@@ -16491,6 +16491,12 @@ textarea {
   border-bottom: 4px solid #4ff461;
   fill: red; }
 
+.chckX {
+  width: 12px;
+  height: 12px;
+  margin-left: 0.5px;
+  margin-top: 0.5px; }
+
 .widget-box {
   padding: 32px 28px;
   border-radius: 12px;
@@ -17094,7 +17100,7 @@ textarea {
 .passivePostop {
   position: absolute;
   z-index: 9999;
-  bottom: 54px;
+  margin-top: -120px;
   opacity: 0;
   visibility: hidden;
   transform: translate(0px, 20px);
@@ -17103,8 +17109,8 @@ textarea {
 .activePostop {
   position: absolute;
   z-index: 9999;
-  bottom: 54px;
   opacity: 1;
+  margin-top: -120px;
   visibility: visible;
   transform: translate(0px, 0px);
   transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s; }
@@ -17201,6 +17207,9 @@ textarea {
 #inpctrl {
   margin-top: 10px;
   height: 50px; }
+
+.parms > div > label {
+  margin-right: 10px; }
 
 .parms {
   cursor: auto;

@@ -10,11 +10,19 @@ import sad from "../../img/reaction/sad.png";
 import { ReactComponent as Reaction } from "../../icons/React.svg";
 import { ReactComponent as Comment } from "../../icons/comment.svg";
 import { ReactComponent as Share } from "../../icons/Share.svg";
+import Comments from "../Postmodels/Comments";
 
-export default function Postoption({ commentVis, handlecmmnt }) {
+export default function Postoption() {
   const [reactions, setreactions] = useState(false);
+  const [cmmntVis, setcmmntVis] = useState(false);
+  const cmtsactClass = () => {
+    if (cmmntVis) {
+      return "post-option active";
+    } else {
+      return "post-option";
+    }
+  };
   const handlereaction = (i) => {
-    // handlecmmnt;
     if (i === 1) {
       if (reactions === false) {
         return "reaction-options reaction-options-dropdown passivePostop";
@@ -30,87 +38,104 @@ export default function Postoption({ commentVis, handlecmmnt }) {
     }
   };
   return (
-    <div className="post-options">
-      <div className="post-option-wrap">
-        <div
-          onClick={() => {
-            setreactions(!reactions);
-          }}
-          className={handlereaction(2)}
-        >
-          <Reaction className="post-option-icon icon-thumbs-up" />
-          <p className="post-option-text">React!</p>
-        </div>
-        <div className={handlereaction(1)}>
-          <div className="reaction-option text-tooltip-tft" data-title="Like">
-            <img
-              className="reaction-option-image"
-              src={like}
-              alt="reaction-like"
-            />
-          </div>
-          <div className="reaction-option text-tooltip-tft" data-title="Love">
-            <img
-              className="reaction-option-image"
-              src={love}
-              alt="reaction-love"
-            />
-          </div>
+    <>
+      <div className="post-options">
+        <div className="post-option-wrap">
           <div
-            className="reaction-option text-tooltip-tft"
-            data-title="Dislike"
+            onClick={() => {
+              setreactions(!reactions);
+            }}
+            className={handlereaction(2)}
           >
-            <img
-              className="reaction-option-image"
-              src={dislike}
-              alt="reaction-dislike"
-            />
+            <Reaction className="post-option-icon icon-thumbs-up" />
+            <p className="post-option-text">React!</p>
           </div>
-          <div className="reaction-option text-tooltip-tft" data-title="Happy">
-            <img
-              className="reaction-option-image"
-              src={happy}
-              alt="reaction-happy"
-            />
-          </div>
-          <div className="reaction-option text-tooltip-tft" data-title="Funny">
-            <img
-              className="reaction-option-image"
-              src={funny}
-              alt="reaction-funny"
-            />
-          </div>
-          <div className="reaction-option text-tooltip-tft" data-title="Wow">
-            <img
-              className="reaction-option-image"
-              src={wow}
-              alt="reaction-wow"
-            />
-          </div>
-          <div className="reaction-option text-tooltip-tft" data-title="Angry">
-            <img
-              className="reaction-option-image"
-              src={angry}
-              alt="reaction-angry"
-            />
-          </div>
-          <div className="reaction-option text-tooltip-tft" data-title="Sad">
-            <img
-              className="reaction-option-image"
-              src={sad}
-              alt="reaction-sad"
-            />
+          <div className={handlereaction(1)}>
+            <div className="reaction-option text-tooltip-tft" data-title="Like">
+              <img
+                className="reaction-option-image"
+                src={like}
+                alt="reaction-like"
+              />
+            </div>
+            <div className="reaction-option text-tooltip-tft" data-title="Love">
+              <img
+                className="reaction-option-image"
+                src={love}
+                alt="reaction-love"
+              />
+            </div>
+            <div
+              className="reaction-option text-tooltip-tft"
+              data-title="Dislike"
+            >
+              <img
+                className="reaction-option-image"
+                src={dislike}
+                alt="reaction-dislike"
+              />
+            </div>
+            <div
+              className="reaction-option text-tooltip-tft"
+              data-title="Happy"
+            >
+              <img
+                className="reaction-option-image"
+                src={happy}
+                alt="reaction-happy"
+              />
+            </div>
+            <div
+              className="reaction-option text-tooltip-tft"
+              data-title="Funny"
+            >
+              <img
+                className="reaction-option-image"
+                src={funny}
+                alt="reaction-funny"
+              />
+            </div>
+            <div className="reaction-option text-tooltip-tft" data-title="Wow">
+              <img
+                className="reaction-option-image"
+                src={wow}
+                alt="reaction-wow"
+              />
+            </div>
+            <div
+              className="reaction-option text-tooltip-tft"
+              data-title="Angry"
+            >
+              <img
+                className="reaction-option-image"
+                src={angry}
+                alt="reaction-angry"
+              />
+            </div>
+            <div className="reaction-option text-tooltip-tft" data-title="Sad">
+              <img
+                className="reaction-option-image"
+                src={sad}
+                alt="reaction-sad"
+              />
+            </div>
           </div>
         </div>
+        <div
+          className={cmtsactClass()}
+          onClick={() => {
+            setcmmntVis(!cmmntVis);
+          }}
+        >
+          <Comment className="post-option-icon icon-comment" />
+          <p className="post-option-text">Comments</p>
+        </div>
+        <div className="post-option">
+          <Share className="post-option-icon icon-share" />
+          <p className="post-option-text">Share</p>
+        </div>
       </div>
-      <div className="post-option" onClick={handlecmmnt}>
-        <Comment className="post-option-icon icon-comment" />
-        <p className="post-option-text">{commentVis}</p>
-      </div>
-      <div className="post-option">
-        <Share className="post-option-icon icon-share" />
-        <p className="post-option-text">Share</p>
-      </div>
-    </div>
+      {cmmntVis ? <Comments /> : null}
+    </>
   );
 }

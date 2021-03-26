@@ -185,121 +185,30 @@ export default function AccountHub() {
                 </form>
               </div>
             </div>
-            {/* BURDAN ASHAGIDA INPUTLAR QALIB ONLARI DUZELT !*/}
             <div className="widget-box">
               <p className="widget-box-title">Sosial Media Məlumatlarınız</p>
               <div className="widget-box-content">
                 <form className="form">
                   <div className="form-row split">
                     <div className="form-item">
-                      <div className="form-input small">
-                        <label htmlFor="account-recovery-email">
-                          Facebook linkiniz
-                        </label>
-                        <input
-                          onFocus={(e) => {
-                            activeInp(e);
-                          }}
-                          onBlur={(e) => {
-                            passiveInp(e);
-                          }}
-                          type="text"
-                          id="account-recovery-email"
-                          name="account_recovery_email"
-                        />
-                      </div>
+                      <Input label=" Facebook linkiniz" />
                     </div>
                     <div className="form-item">
-                      <div className="form-input small">
-                        <label htmlFor="account-recovery-phone">
-                          Instagram linkiniz
-                        </label>
-                        <input
-                          onFocus={(e) => {
-                            activeInp(e);
-                          }}
-                          onBlur={(e) => {
-                            passiveInp(e);
-                          }}
-                          type="text"
-                          id="account-recovery-phone"
-                          name="account_recovery_phone"
-                        />
-                      </div>
+                      <Input label=" Instagram linkiniz" />
                     </div>
                     <div className="form-item">
-                      <div className="form-input small">
-                        <label htmlFor="account-recovery-phone">
-                          Twitter linkiniz
-                        </label>
-                        <input
-                          onFocus={(e) => {
-                            activeInp(e);
-                          }}
-                          onBlur={(e) => {
-                            passiveInp(e);
-                          }}
-                          type="text"
-                          id="account-recovery-phone"
-                          name="account_recovery_phone"
-                        />
-                      </div>
+                      <Input label="Twitter linkiniz" />
                     </div>
                   </div>
                   <div className="form-row split">
                     <div className="form-item">
-                      <div className="form-input small">
-                        <label htmlFor="account-recovery-email">
-                          Twitch kanalınızın linki
-                        </label>
-                        <input
-                          onFocus={(e) => {
-                            activeInp(e);
-                          }}
-                          onBlur={(e) => {
-                            passiveInp(e);
-                          }}
-                          type="text"
-                          id="account-recovery-email"
-                          name="account_recovery_email"
-                        />
-                      </div>
+                      <Input label="Twitch kanalınızın linki" />
                     </div>
                     <div className="form-item">
-                      <div className="form-input small">
-                        <label htmlFor="account-recovery-phone">
-                          Youtube kanalınızın linki
-                        </label>
-                        <input
-                          onFocus={(e) => {
-                            activeInp(e);
-                          }}
-                          onBlur={(e) => {
-                            passiveInp(e);
-                          }}
-                          type="text"
-                          id="account-recovery-phone"
-                          name="account_recovery_phone"
-                        />
-                      </div>
+                      <Input label=" Youtube kanalınızın linki" />
                     </div>
                     <div className="form-item">
-                      <div className="form-input small">
-                        <label htmlFor="account-recovery-phone">
-                          Linkedin linkiniz
-                        </label>
-                        <input
-                          onFocus={(e) => {
-                            activeInp(e);
-                          }}
-                          onBlur={(e) => {
-                            passiveInp(e);
-                          }}
-                          type="text"
-                          id="account-recovery-phone"
-                          name="account_recovery_phone"
-                        />
-                      </div>
+                      <Input label="Linkedin linkiniz" />
                     </div>
                   </div>
                 </form>
@@ -311,58 +220,13 @@ export default function AccountHub() {
                 <form className="form">
                   <div className="form-row split">
                     <div className="form-item">
-                      <div className="form-input small">
-                        <label htmlFor="account-recovery-email">
-                          Hazırki şifrəniz
-                        </label>
-                        <input
-                          onFocus={(e) => {
-                            activeInp(e);
-                          }}
-                          onBlur={(e) => {
-                            passiveInp(e);
-                          }}
-                          type="Password"
-                          id="account-recovery-email"
-                          name="account_recovery_email"
-                        />
-                      </div>
+                      <Input label=" Hazırki şifrəniz" />
                     </div>
                     <div className="form-item">
-                      <div className="form-input small">
-                        <label htmlFor="account-recovery-phone">
-                          Yeni şifrəniz
-                        </label>
-                        <input
-                          onFocus={(e) => {
-                            activeInp(e);
-                          }}
-                          onBlur={(e) => {
-                            passiveInp(e);
-                          }}
-                          type="Password"
-                          id="account-recovery-phone"
-                          name="account_recovery_phone"
-                        />
-                      </div>
+                      <Input label="Yeni şifrəniz" />
                     </div>
                     <div className="form-item">
-                      <div className="form-input small">
-                        <label htmlFor="account-recovery-phone">
-                          Yeni şifrənin təkrarı
-                        </label>
-                        <input
-                          onFocus={(e) => {
-                            activeInp(e);
-                          }}
-                          onBlur={(e) => {
-                            passiveInp(e);
-                          }}
-                          type="Password"
-                          id="account-recovery-phone"
-                          name="account_recovery_phone"
-                        />
-                      </div>
+                      <Input label="Yeni şifrənin təkrarı" />
                     </div>
                   </div>
                 </form>

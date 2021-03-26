@@ -4,10 +4,6 @@ import Postheader from "./Postheader";
 import Postoptionsdot from "./Postoptionsdot";
 import Comments from "../Postmodels/Comments";
 export default function Gifpost() {
-  const [commentVis, setcommentVis] = useState(false);
-  const handlecmmnt = () => {
-    setcommentVis(!commentVis);
-  };
   return (
     <div className="widget-box no-padding">
       <Postoptionsdot
@@ -109,8 +105,7 @@ export default function Gifpost() {
           </div>
         </div>
       </div>
-      <Postoption commentVis={commentVis} handlecmmnt={handlecmmnt} />
-      {commentVis ? <Comments /> : null}
+      <Postoption />
     </div>
   );
 }

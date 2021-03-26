@@ -2,8 +2,9 @@ import React, { useState, useContext, useEffect } from "react";
 import { Scrollbars } from "react-custom-scrollbars";
 import { ReactComponent as Backarrow } from "../icons/backarrow.svg";
 import { menuContext } from "../context";
+import Avatar from "./Avatar";
 export default function MobileNavbar() {
-  const { MmenuVisible ,setMmenuVisible} = useContext(menuContext);
+  const { MmenuVisible, setMmenuVisible } = useContext(menuContext);
   const handlemobileNav = () => {
     if (MmenuVisible === false) {
       return "navigation-widget navigation-widget-mobile sidebar left hidden";
@@ -18,41 +19,18 @@ export default function MobileNavbar() {
       data-simplebar
     >
       <Scrollbars>
-        <div className="navigation-widget-close-button"
-        onClick={()=>{
-            setMmenuVisible(!MmenuVisible)
-        }}
+        <div
+          className="navigation-widget-close-button"
+          onClick={() => {
+            setMmenuVisible(!MmenuVisible);
+          }}
         >
-
           <Backarrow className="navigation-widget-close-button-icon icon-back-arrow" />
         </div>
         <div className="navigation-widget-info-wrap">
           <div className="navigation-widget-info">
-            <a
-              className="user-avatar small no-outline"
-              href="profile-timeline.html"
-            >
-              <div className="user-avatar-content">
-                <div
-                  className="hexagon-image-30-32"
-                  data-src="img/avatar/01.jpg"
-                />
-              </div>
-              <div className="user-avatar-progress">
-                <div className="hexagon-progress-40-44" />
-              </div>
-              <div className="user-avatar-progress-border">
-                <div className="hexagon-border-40-44" />
-              </div>
-              <div className="user-avatar-badge">
-                <div className="user-avatar-badge-border">
-                  <div className="hexagon-22-24" />
-                </div>
-                <div className="user-avatar-badge-content">
-                  <div className="hexagon-dark-16-18" />
-                </div>
-                <p className="user-avatar-badge-text">24</p>
-              </div>
+            <a className="user-avatar small no-outline">
+              <Avatar size={1} />{" "}
             </a>
             <p className="navigation-widget-info-title">
               <a href="profile-timeline.html">Marina Valentine</a>

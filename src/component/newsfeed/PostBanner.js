@@ -7,6 +7,7 @@ import { ReactComponent as Codesolid } from "../../icons/code-solid.svg";
 import { ReactComponent as Closeicn } from "../../icons/times-circle-solid.svg";
 import { ReactComponent as PostSts } from "../../icons/PostSts.svg";
 import { ReactComponent as Cameraicn } from "../../icons/Cameraicn.svg";
+import Checkbox from "../Checkbox";
 export default function PostBanner() {
   const div = useRef(null);
   const [tab1, settab1] = useState("option-item active");
@@ -20,7 +21,8 @@ export default function PostBanner() {
   const [rndm, setrndm] = useState(0);
 
   const executeScroll = () => {
-    document.getElementById("inpcontainer").scrollTop += 5;
+    const a = document.getElementById("inpcontainer").scrollY;
+    console.log(a);
   };
 
   const itemvis = () => {
@@ -276,19 +278,21 @@ export default function PostBanner() {
                 </div>
                 <div className="postBtns">
                   <div className={setparmVisible()}>
-                    <div className="parmsitem">
-                      <input type="checkbox" id="1" />
-                      <label htmlFor="1" className="section-banner-text chktxt">
-                        İnsanların birdən çox cavab əlavə etmsinnə icazə ver
-                      </label>
-                    </div>
+                    <Checkbox
+                      id="chk1"
+                      parm="İnsanların birdən çox cavab əlavə etmsinnə icazə ver"
+                    />
+                    <Checkbox
+                      id="chk2"
+                      parm=" Hərkəsin şık əlavə etməsinə icazə ver"
+                    />
 
-                    <div className="parmsitem">
+                    {/* <div className="parmsitem">
                       <input type="checkbox" id="2" />
                       <label htmlFor="2" className="section-banner-text chktxt">
                         Hərkəsin şık əlavə etməsinə icazə ver
                       </label>
-                    </div>
+                    </div> */}
                   </div>
 
                   <p

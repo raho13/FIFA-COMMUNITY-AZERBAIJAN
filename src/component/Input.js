@@ -6,6 +6,7 @@ export default function Input({ label }) {
     <div className={divclass}>
       <label htmlFor="account-full-name">{label}</label>
       <input
+        autoComplete="off"
         onFocus={() => {
           setdivclass("form-input small active");
         }}

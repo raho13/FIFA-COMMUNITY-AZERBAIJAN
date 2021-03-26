@@ -3,6 +3,7 @@ import img from "../img/badge/bronze-b.png";
 import { ReactComponent as Plus } from "../icons/plus.svg";
 import Banner from "../component/Banner";
 import bnnrimg from "../img/banner/badges-icon.png";
+import Checkbox from "../component/Checkbox";
 export default function Futcoins() {
   const activeInp = (e) => {
     e.target.parentNode.setAttribute("class", "form-input small active");
@@ -95,11 +96,12 @@ export default function Futcoins() {
           </button>
         </div>
       </div>
-      
+
       <div className="widget-box mrg">
         <p className="widget-box-title">Köçürmə haqqında</p>
         <div className="widget-box-content padding">
           <div className="switch-option">
+            <Checkbox id="chk3" parm="text"/>
             <p className="switch-option-text">
               My main stream is Saturday at 9PM but I also make "Let's Play"
               streams on weekdays. In addition I make special morning streams at
@@ -172,7 +174,7 @@ export default function Futcoins() {
                 />
               </div>
               <button id="inpwidt" className="button small secondary bdginpbtn">
-              Sifariş yerləşdir
+                Sifariş yerləşdir
               </button>
             </div>
           </div>
