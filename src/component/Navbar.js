@@ -20,6 +20,18 @@ import Avatar from "./Avatar";
 import warrior from "../img/badge/warrior-s.png";
 import blank from "../img/badge/blank-s.png";
 export default function Navbar() {
+  const [activeMenuIndex, setactiveMenuIndex] = useState(
+    localStorage.getItem("index")
+  );
+  useEffect(() => {
+    const a = parseInt(localStorage.getItem("index"));
+    if (a > 0) {
+      console.log(typeof a);
+      setactiveMenuIndex(a);
+    } else {
+      setactiveMenuIndex(1);
+    }
+  });
   const { menuVisible } = useContext(menuContext);
   const [smallmenu, setsmallmenu] = useState(
     "navigation-widget navigation-widget-desktop closed sidebar left delayed"
@@ -28,6 +40,14 @@ export default function Navbar() {
     "navigation-widget navigation-widget-desktop sidebar left hidden"
   );
 
+  const ActiveitemHandler = (i) => {
+    localStorage.setItem("index", activeMenuIndex);
+    if (i === activeMenuIndex) {
+      return "menu-item active";
+    } else {
+      return "menu-item";
+    }
+  };
   useEffect(() => {
     if (menuVisible === true) {
       setsmallmenu(
@@ -159,29 +179,16 @@ export default function Navbar() {
         </Scrollbars>
       </nav>
       <nav id="navigation-widget-small" className={smallmenu}>
-        <Link className="user-avatar small no-outline online" to="/">
+        <Link className="user-avatar small no-outline online" to="/profil">
           <Avatar size={1} />
-          {/* <div className="user-avatar-content">
-            <div className="hexagon-image-30-32" data-src="img/avatar/01.jpg" />
-          </div>
-          <div className="user-avatar-progress">
-            <div className="hexagon-progress-40-44" />
-          </div>
-          <div className="user-avatar-progress-border">
-            <div className="hexagon-border-40-44" />
-          </div>
-          <div className="user-avatar-badge">
-            <div className="user-avatar-badge-border">
-              <div className="hexagon-22-24" />
-            </div>
-            <div className="user-avatar-badge-content">
-              <div className="hexagon-dark-16-18" />
-            </div>
-            <p className="user-avatar-badge-text">24</p>
-          </div> */}
         </Link>
         <ul className="menu small">
-          <li className="menu-item">
+          <li
+            onClick={() => {
+              setactiveMenuIndex(1);
+            }}
+            className={ActiveitemHandler(1)}
+          >
             <Link
               className="menu-item-link text-tooltip-tfr"
               to="/"
@@ -190,7 +197,12 @@ export default function Navbar() {
               <Newsfeed className="menu-item-link-icon icon-newsfeed" />
             </Link>
           </li>
-          <li className="menu-item">
+          <li
+            onClick={() => {
+              setactiveMenuIndex(2);
+            }}
+            className={ActiveitemHandler(2)}
+          >
             <Link
               className="menu-item-link text-tooltip-tfr"
               to="/streams"
@@ -199,7 +211,12 @@ export default function Navbar() {
               <Overview className="menu-item-link-icon icon-overview" />
             </Link>
           </li>
-          <li className="menu-item">
+          <li
+            onClick={() => {
+              setactiveMenuIndex(3);
+            }}
+            className={ActiveitemHandler(3)}
+          >
             <Link
               className="menu-item-link text-tooltip-tfr"
               to="/Fut-reyting"
@@ -208,7 +225,12 @@ export default function Navbar() {
               <Group className="menu-item-link-icon icon-group" />
             </Link>
           </li>
-          <li className="menu-item">
+          <li
+            onClick={() => {
+              setactiveMenuIndex(4);
+            }}
+            className={ActiveitemHandler(4)}
+          >
             <Link
               className="menu-item-link text-tooltip-tfr"
               to="/Members"
@@ -217,7 +239,12 @@ export default function Navbar() {
               <Members className="menu-item-link-icon icon-members" />
             </Link>
           </li>
-          <li className="menu-item">
+          <li
+            onClick={() => {
+              setactiveMenuIndex(5);
+            }}
+            className={ActiveitemHandler(5)}
+          >
             <Link
               className="menu-item-link text-tooltip-tfr"
               to="/Futcoins"
@@ -226,7 +253,12 @@ export default function Navbar() {
               <Badges className="menu-item-link-icon icon-badges" />
             </Link>
           </li>
-          <li className="menu-item">
+          <li
+            onClick={() => {
+              setactiveMenuIndex(6);
+            }}
+            className={ActiveitemHandler(6)}
+          >
             <Link
               className="menu-item-link text-tooltip-tfr"
               to="/Accounthub"
@@ -235,8 +267,12 @@ export default function Navbar() {
               <Quests className="menu-item-link-icon icon-quests" />
             </Link>
           </li>
-
-          <li className="menu-item">
+          <li
+            onClick={() => {
+              setactiveMenuIndex(7);
+            }}
+            className={ActiveitemHandler(7)}
+          >
             <Link
               className="menu-item-link text-tooltip-tfr"
               to="/FutTournaments"

@@ -43,7 +43,7 @@ export default function MobileNavbar() {
         </div>
         <p className="navigation-widget-section-title">Sections</p>
         <ul className="menu">
-          <li className="menu-item active">
+          <li className="menu-item">
             {" "}
             <a className="menu-item-link" href="newsfeed.html">
               {" "}
@@ -53,7 +53,7 @@ export default function MobileNavbar() {
               Newsfeed{" "}
             </a>{" "}
           </li>
-          <li className="menu-item">
+          <li className="menu-item active">
             {" "}
             <a className="menu-item-link" href="overview.html">
               {" "}
@@ -63,87 +63,7 @@ export default function MobileNavbar() {
               Overview{" "}
             </a>{" "}
           </li>
-          <li className="menu-item">
-            {" "}
-            <a className="menu-item-link" href="groups.html">
-              {" "}
-              <svg className="menu-item-link-icon icon-group">
-                <use xlinkHref="#svg-group" />
-              </svg>{" "}
-              Groups{" "}
-            </a>{" "}
-          </li>
-          <li className="menu-item">
-            {" "}
-            <a className="menu-item-link" href="members.html">
-              {" "}
-              <svg className="menu-item-link-icon icon-members">
-                <use xlinkHref="#svg-members" />
-              </svg>{" "}
-              Members{" "}
-            </a>{" "}
-          </li>
-          <li className="menu-item">
-            {" "}
-            <a className="menu-item-link" href="badges.html">
-              {" "}
-              <svg className="menu-item-link-icon icon-badges">
-                <use xlinkHref="#svg-badges" />
-              </svg>{" "}
-              Badges{" "}
-            </a>{" "}
-          </li>
-          <li className="menu-item">
-            {" "}
-            <a className="menu-item-link" href="quests.html">
-              {" "}
-              <svg className="menu-item-link-icon icon-quests">
-                <use xlinkHref="#svg-quests" />
-              </svg>{" "}
-              Quests{" "}
-            </a>{" "}
-          </li>
-          <li className="menu-item">
-            {" "}
-            <a className="menu-item-link" href="streams.html">
-              {" "}
-              <svg className="menu-item-link-icon icon-streams">
-                <use xlinkHref="#svg-streams" />
-              </svg>{" "}
-              Streams{" "}
-            </a>{" "}
-          </li>
-          <li className="menu-item">
-            {" "}
-            <a className="menu-item-link" href="events.html">
-              {" "}
-              <svg className="menu-item-link-icon icon-events">
-                <use xlinkHref="#svg-events" />
-              </svg>{" "}
-              Events{" "}
-            </a>{" "}
-          </li>
-          <li className="menu-item">
-            {" "}
-            <a className="menu-item-link" href="forums.html">
-              {" "}
-              <svg className="menu-item-link-icon icon-forums">
-                <use xlinkHref="#svg-forums" />
-              </svg>{" "}
-              Forums{" "}
-            </a>{" "}
-          </li>
-          <li className="menu-item">
-            {" "}
-            <a className="menu-item-link" href="marketplace.html">
-              {" "}
-              <svg className="menu-item-link-icon icon-marketplace">
-                <use xlinkHref="#svg-marketplace" />
-              </svg>{" "}
-              Marketplace{" "}
-            </a>{" "}
-          </li>
-        </ul>
+      </ul>
         <p className="navigation-widget-section-title">My Profile</p>
         <a
           className="navigation-widget-section-link"
