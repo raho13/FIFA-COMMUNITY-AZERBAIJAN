@@ -3156,8 +3156,8 @@
 
 .imadiv {
   z-index: -1;
-  width: 77px;
-  height: 77px;
+  width: 75px;
+  height: 75px;
   clip-path: polygon(2% 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
   position: absolute;
   margin-left: 61px;
@@ -10100,7 +10100,7 @@ figure > img {
   color: #4ff461; }
 
 .form-box {
-  width: 484px;
+  width: 884px;
   padding: 64px;
   border-radius: 12px;
   background-color: #1d2333;
@@ -10135,6 +10135,7 @@ figure > img {
 .landing {
   width: 100%;
   height: 100%;
+  background: url(img/landing/landing-background.jpg);
   background-size: cover;
   position: fixed;
   top: 0;
@@ -10192,35 +10193,20 @@ figure > img {
   margin-top: 90px; }
 
 .landing-form {
-  width: 484px;
   height: 100%;
   position: absolute;
   top: 0;
-  right: 13%; }
+  right: 70%; }
 
 .landing-form .form-box {
   position: absolute;
-  top: 50%;
-  left: 0; }
+  top: 50%; }
 
 .landing-form .form-box:first-child {
   margin-top: -313px; }
 
 .landing-form .form-box:last-child {
   margin-top: -370px; }
-
-@media screen and (min-width: 2560px) {
-  .landing-info {
-    top: 25%; }
-  .landing-form {
-    right: 20%; } }
-
-@media screen and (min-width: 3840px) {
-  .landing-info {
-    top: 35%;
-    left: 18%; }
-  .landing-form {
-    right: 25%; } }
 
 @media screen and (max-width: 1500px) {
   .landing .landing-decoration {
@@ -10232,7 +10218,7 @@ figure > img {
   .landing-info .tab-switch {
     margin-top: 40px; }
   .landing-form {
-    right: 80px; } }
+    right: 80%; } }
 
 @media screen and (max-width: 1365px) {
   .landing {
@@ -16478,7 +16464,7 @@ textarea {
   align-items: center;
   justify-content: space-around; }
 
-#inpwidt {
+.inpwidt {
   width: 23%; }
 
 .bdginpbtn {
@@ -16494,8 +16480,14 @@ textarea {
 .chckX {
   width: 12px;
   height: 12px;
-  margin-left: 0.5px;
-  margin-top: 0.5px; }
+  margin-left: 0.7px; }
+
+#entrybtns {
+  display: flex;
+  flex-direction: row; }
+
+#entrybtns button {
+  margin-right: 15px; }
 
 .widget-box {
   padding: 32px 28px;
@@ -17557,7 +17549,8 @@ textarea {
   margin-top: 5px; }
 
 .bnm:hover {
-  background-color: #40d04f !important; }
+  background-color: #40d04f !important;
+  border: 1px solid #40d04f; }
 
 .cardstart {
   display: flex;

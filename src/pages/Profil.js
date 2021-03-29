@@ -305,13 +305,6 @@ export default function Profil() {
       </div>
       <nav className="section-navigation" id="profnav">
         <div className="tns-outer" id="section-navigation-slider-ow">
-          <div
-            className="tns-liveregion tns-visually-hidden"
-            aria-live="polite"
-            aria-atomic="true"
-          >
-            slide <span className="current">1 to 4</span> of 11
-          </div>
           <div id="section-navigation-slider-mw" className="tns-ovh">
             <div className="tns-inner" id="section-navigation-slider-iw">
               <div

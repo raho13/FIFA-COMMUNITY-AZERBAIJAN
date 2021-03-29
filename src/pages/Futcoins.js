@@ -4,13 +4,8 @@ import { ReactComponent as Plus } from "../icons/plus.svg";
 import Banner from "../component/Banner";
 import bnnrimg from "../img/banner/badges-icon.png";
 import Checkbox from "../component/Checkbox";
+import Input from "../component/Input";
 export default function Futcoins() {
-  const activeInp = (e) => {
-    e.target.parentNode.setAttribute("class", "form-input small active");
-  };
-  const passiveInp = (e) => {
-    e.target.parentNode.setAttribute("class", "form-input small");
-  };
   return (
     <>
       <Banner
@@ -101,7 +96,7 @@ export default function Futcoins() {
         <p className="widget-box-title">Köçürmə haqqında</p>
         <div className="widget-box-content padding">
           <div className="switch-option">
-            <Checkbox id="chk3" parm="text"/>
+            <Checkbox id="chk3" parm="text" />
             <p className="switch-option-text">
               My main stream is Saturday at 9PM but I also make "Let's Play"
               streams on weekdays. In addition I make special morning streams at
@@ -129,51 +124,16 @@ export default function Futcoins() {
         <div className="widget-box-content padding">
           <div className="switch-option">
             <div className="form-item" id="inpcnt2">
-              <div id="inpwidt" className="form-input small">
-                <label htmlFor="profile-name">
-                  Playstation hesbınızın E-mail adresi
-                </label>
-                <input
-                  onFocus={(e) => {
-                    activeInp(e);
-                  }}
-                  onBlur={(e) => {
-                    passiveInp(e);
-                  }}
-                  type="text"
-                  id="profile-name"
-                  name="profile_name"
-                />
+              <div className="form-input small inpwidt">
+                <Input label="Playstation hesbınızın E-mail adresi" />
               </div>
-              <div id="inpwidt" className="form-input small">
-                <label htmlFor="profile-name">Hesabınızın şifrəsi</label>
-                <input
-                  onFocus={(e) => {
-                    activeInp(e);
-                  }}
-                  onBlur={(e) => {
-                    passiveInp(e);
-                  }}
-                  type="password"
-                  id="profile-name"
-                  name="profile_name"
-                />
+              <div className="form-input small inpwidt">
+                <Input label="Hesabınızın şifrəsi" />
               </div>
-              <div id="inpwidt" className="form-input small">
-                <label htmlFor="profile-name">Əlaqə nömrəsi</label>
-                <input
-                  onFocus={(e) => {
-                    activeInp(e);
-                  }}
-                  onBlur={(e) => {
-                    passiveInp(e);
-                  }}
-                  type="text"
-                  id="profile-name"
-                  name="profile_name"
-                />
+              <div className="form-input small inpwidt">
+                <Input label="Əlaqə nömrəsi" />
               </div>
-              <button id="inpwidt" className="button small secondary bdginpbtn">
+              <button className="inpwidt button small secondary bdginpbtn">
                 Sifariş yerləşdir
               </button>
             </div>

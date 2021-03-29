@@ -870,7 +870,7 @@ $col-6_9: ($col-6-width / $grid-width_9) * 100%;
   align-items: center;
   justify-content: space-around;
 }
-#inpwidt {
+.inpwidt {
   width: 23%;
 }
 .bdginpbtn {
@@ -886,7 +886,13 @@ $col-6_9: ($col-6-width / $grid-width_9) * 100%;
 .chckX {
   width: 12px;
   height: 12px;
-  margin-left: 0.5px;
-  margin-top: 0.5px;
+  margin-left: 0.7px;
 }
 
+#entrybtns {
+  display: flex;
+  flex-direction: row;
+}
+#entrybtns button {
+  margin-right: 15px;
+}

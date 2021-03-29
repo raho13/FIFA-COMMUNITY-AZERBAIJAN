@@ -26,7 +26,6 @@ export default function Navbar() {
   useEffect(() => {
     const a = parseInt(localStorage.getItem("index"));
     if (a > 0) {
-      console.log(typeof a);
       setactiveMenuIndex(a);
     } else {
       setactiveMenuIndex(1);

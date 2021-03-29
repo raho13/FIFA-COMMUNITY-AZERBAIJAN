@@ -30,7 +30,11 @@ export default function Postoptionsdot(props) {
         />
         <div className={vis(1)}>
           {parms.map((item) => {
-            return <p className="simple-dropdown-link">{item}</p>;
+            return (
+              <p key={item} className="simple-dropdown-link">
+                {item}
+              </p>
+            );
           })}
         </div>
       </div>

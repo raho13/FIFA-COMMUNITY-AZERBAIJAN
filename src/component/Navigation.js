@@ -10,6 +10,7 @@ import Futcoins from "../pages/Futcoins";
 import FutTournaments from "../pages/FutTournaments";
 import Profil from "../pages/Profil";
 import { Switch, Route } from "react-router-dom";
+import Register from "../pages/Register";
 export default function Navigation() {
   const { menuVisible, msgWidget } = useContext(menuContext);
 
@@ -30,7 +31,7 @@ export default function Navigation() {
   return (
     <div className={gridPosition()}>
       <Switch>
-        <Route path="/" exact component={Newsfeed} />
+        <Route exact path="/" component={Newsfeed} />
       </Switch>
       <Switch>
         <Route path="/streams" component={Streams} />

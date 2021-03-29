@@ -6,6 +6,7 @@ import { ReactComponent as Setting } from "../icons/Setting.svg";
 import { ReactComponent as Shopping } from "../icons/Shopping.svg";
 import { ReactComponent as Addfriend } from "../icons/Add-friend.svg";
 import { ReactComponent as Removefriend } from "../icons/Removefriend.svg";
+import { ReactComponent as Logswitch } from "../icons/Logswitch.svg";
 import { ReactComponent as Searcicon } from "../icons/Searcicon.svg";
 import { ReactComponent as SearchX } from "../icons/searcX.svg";
 import { ReactComponent as Notification } from "../icons/Notifications Icon.svg";
@@ -15,9 +16,6 @@ import avatar from "../icons/logo.png";
 import Avatar from "./Avatar";
 
 export default function Header() {
-  useEffect(() => {
-    // diplaynone();
-  });
   const {
     menuVisible,
     setmenuVisible,
@@ -27,6 +25,7 @@ export default function Header() {
   const [srchEvent, setsrchEvent] = useState(false);
   const [index, setIndex] = useState(0);
   const [inputValue, setinputValue] = useState("");
+  const [isLogin, setisLogin] = useState(false);
   const [shpclass, setShpclass] = useState(
     "dropdown-box  header-dropdown passiveShp no-padding-bottom"
   );
@@ -39,18 +38,638 @@ export default function Header() {
   const [setclass, setSetclass] = useState(
     "dropdown-navigation header-settings-dropdown passiveSet"
   );
-  const diplaynone = () => {
-    if (!srchEvent) {
-      setTimeout(() => {
-        const a = document.getElementById("drp");
-        a.setAttribute(
-          "class",
-          "disnone dropdown-box padding-bottom-small header-search-dropdown passiveSrcdrp"
-        );
-      }, 400);
+
+  const actionHandler = () => {
+    if (isLogin) {
+      return (
+        <>
+          <div
+            onClick={() => {
+              setisLogin(!isLogin);
+            }}
+            className="header-actions"
+          >
+            <div className="progress-stat">
+              <div className="bar-progress-wrap">
+                <p className="bar-progress-info">
+                  Next: <span className="bar-progress-text">38</span>
+                </p>
+              </div>
+              <div className="cntrbar">
+                <div className="probar"></div>
+              </div>
+            </div>
+          </div>
+
+          <div className="header-actions">
+            <div className="action-list dark">
+              <div className="action-list-item-wrap">
+                <div className="action-list-item header-dropdown-trigger">
+                  <Shopping
+                    className="action-list-item-icon icon-shopping-bag"
+                    onClick={() => {
+                      dropVisiblity(1);
+                    }}
+                  />
+                </div>
+                <div className={shpclass}>
+                  <div className="dropdown-box-header">
+                    <p className="dropdown-box-header-title">
+                      Shopping Cart <span className="highlighted">3</span>
+                    </p>
+                  </div>
+                  <div
+                    className="dropdown-box-list scroll-small no-hover"
+                    data-simplebar
+                  >
+                    <Scrollbars>
+                      <div className="dropdown-box-list-item">
+                        <div className="cart-item-preview">
+                          <a
+                            className="cart-item-preview-image"
+                            href="marketplace-product.html"
+                          >
+                            <figure className="picture medium round liquid">
+                              <img src={img} alt="item-01" />
+                            </figure>
+                          </a>
+                          <p className="cart-item-preview-title">
+                            <a href="marketplace-product.html">
+                              Twitch Stream UI Pack
+                            </a>
+                          </p>
+                          <p className="cart-item-preview-text">
+                            Regular License
+                          </p>
+                          <p className="cart-item-preview-price">
+                            <span className="highlighted">$</span> 12.00 x 1
+                          </p>
+                          <div className="cart-item-preview-action">
+                            <svg className="icon-delete">
+                              <use xlinkHref="#svg-delete" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="dropdown-box-list-item">
+                        <div className="cart-item-preview">
+                          <a
+                            className="cart-item-preview-image"
+                            href="marketplace-product.html"
+                          >
+                            <figure className="picture medium round liquid">
+                              <img src={img} alt="item-11" />
+                            </figure>
+                          </a>
+                          <p className="cart-item-preview-title">
+                            <a href="marketplace-product.html">
+                              Gaming Coin Badges Pack
+                            </a>
+                          </p>
+                          <p className="cart-item-preview-text">
+                            Regular License
+                          </p>
+                          <p className="cart-item-preview-price">
+                            <span className="highlighted">$</span> 6.00 x 1
+                          </p>
+                          <div className="cart-item-preview-action">
+                            <svg className="icon-delete">
+                              <use xlinkHref="#svg-delete" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="dropdown-box-list-item">
+                        <div className="cart-item-preview">
+                          <a
+                            className="cart-item-preview-image"
+                            href="marketplace-product.html"
+                          >
+                            <figure className="picture medium round liquid">
+                              <img src={img} alt="item-10" />
+                            </figure>
+                          </a>
+                          <p className="cart-item-preview-title">
+                            <a href="marketplace-product.html">
+                              Twitch Stream UI Pack
+                            </a>
+                          </p>
+                          <p className="cart-item-preview-text">
+                            Regular License
+                          </p>
+                          <p className="cart-item-preview-price">
+                            <span className="highlighted">$</span> 26.00 x 1
+                          </p>
+                          <div className="cart-item-preview-action">
+                            <svg className="icon-delete">
+                              <use xlinkHref="#svg-delete" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="dropdown-box-list-item">
+                        <div className="cart-item-preview">
+                          <a
+                            className="cart-item-preview-image"
+                            href="marketplace-product.html"
+                          >
+                            <figure className="picture medium round liquid">
+                              <img src={img} alt="item-04" />
+                            </figure>
+                          </a>
+                          <p className="cart-item-preview-title">
+                            <a href="marketplace-product.html">
+                              Generic Joystick Pack
+                            </a>
+                          </p>
+                          <p className="cart-item-preview-text">
+                            Regular License
+                          </p>
+                          <p className="cart-item-preview-price">
+                            <span className="highlighted">$</span> 16.00 x 1
+                          </p>
+                          <div className="cart-item-preview-action">
+                            {" "}
+                            <svg className="icon-delete">
+                              <use xlinkHref="#svg-delete" />
+                            </svg>{" "}
+                          </div>
+                        </div>
+                      </div>
+                    </Scrollbars>
+                  </div>
+                  <div className="cart-preview-total">
+                    <p className="cart-preview-total-title">Total:</p>
+                    <p className="cart-preview-total-text">
+                      <span className="highlighted">$</span> 60.00
+                    </p>
+                  </div>
+                  <div className="dropdown-box-actions">
+                    <div className="dropdown-box-action">
+                      <a
+                        className="button secondary"
+                        href="marketplace-cart.html"
+                      >
+                        Shopping Cart
+                      </a>
+                    </div>
+                    <div className="dropdown-box-action">
+                      <a
+                        className="button primary"
+                        href="marketplace-checkout.html"
+                      >
+                        Go to Checkout
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="action-list-item-wrap">
+                <div className="action-list-item header-dropdown-trigger">
+                  <Friend
+                    className="action-list-item-icon icon-shopping-bag"
+                    onClick={() => {
+                      dropVisiblity(2);
+                    }}
+                  />
+                </div>
+                <div className={friclass}>
+                  <div className="dropdown-box-header">
+                    <p className="dropdown-box-header-title">Friend Requests</p>
+                    <div className="dropdown-box-header-actions">
+                      <p className="dropdown-box-header-action">Find Friends</p>
+                      <p className="dropdown-box-header-action">Settings</p>
+                    </div>
+                  </div>
+                  <div className="dropdown-box-list no-hover" data-simplebar>
+                    <div className="dropdown-box-list-item">
+                      <div className="user-status request">
+                        <a
+                          className="user-status-avatar"
+                          href="profile-timeline.html"
+                        >
+                          <div className="user-avatar small no-outline">
+                            <Avatar size={1} />
+                          </div>
+                        </a>
+                        <p className="user-status-title">
+                          <a className="bold" href="profile-timeline.html">
+                            Ginny Danvers
+                          </a>
+                        </p>
+                        <p className="user-status-text">6 friends in common</p>
+                        <div className="action-request-list">
+                          <div className="action-request accept">
+                            <Addfriend className="action-request-icon icon-add-friend" />
+                          </div>
+                          <div className="action-request decline">
+                            <Removefriend className="action-request-icon icon-remove-friend" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="dropdown-box-list-item">
+                      <div className="user-status request">
+                        <a
+                          className="user-status-avatar"
+                          href="profile-timeline.html"
+                        >
+                          <div className="user-avatar small no-outline">
+                            <Avatar size={1} />
+                          </div>
+                        </a>
+                        <p className="user-status-title">
+                          <a className="bold" href="profile-timeline.html">
+                            Ginny Danvers
+                          </a>
+                        </p>
+                        <p className="user-status-text">6 friends in common</p>
+                        <div className="action-request-list">
+                          <div className="action-request accept">
+                            <Addfriend className="action-request-icon icon-add-friend" />
+                          </div>
+                          <div className="action-request decline">
+                            <Removefriend className="action-request-icon icon-remove-friend" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <a
+                    className="dropdown-box-button secondary"
+                    href="hub-profile-requests.html"
+                  >
+                    View all Requests
+                  </a>
+                </div>
+              </div>
+              <div className="action-list-item-wrap">
+                <div className="action-list-item unread header-dropdown-trigger">
+                  <Notification
+                    onClick={() => {
+                      dropVisiblity(3);
+                    }}
+                    className="action-list-item-icon icon-notification"
+                  />
+                </div>
+                <div className={notclass}>
+                  <div className="dropdown-box-header">
+                    <p className="dropdown-box-header-title">Notifications</p>
+                    <div className="dropdown-box-header-actions">
+                      <p className="dropdown-box-header-action">
+                        Mark all as Read
+                      </p>
+                      <p className="dropdown-box-header-action">Settings</p>
+                    </div>
+                  </div>
+                  <div className="dropdown-box-list" data-simplebar>
+                    <Scrollbars>
+                      <div className="dropdown-box-list-item unread">
+                        <div className="user-status notification">
+                          <a
+                            className="user-status-avatar"
+                            href="profile-timeline.html"
+                          >
+                            <div className="user-avatar small no-outline">
+                              <Avatar size={1} />
+                            </div>
+                          </a>
+                          <p className="user-status-title">
+                            <a className="bold" href="profile-timeline.html">
+                              Nick Grissom
+                            </a>
+                            posted a comment on your
+                            <a
+                              className="highlighted"
+                              href="profile-timeline.html"
+                            >
+                              status update
+                            </a>
+                          </p>
+                          <p className="user-status-timestamp">2 minutes ago</p>
+                          <div className="user-status-icon">
+                            <svg className="icon-comment">
+                              <use xlinkHref="#svg-comment" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="dropdown-box-list-item">
+                        <div className="user-status notification">
+                          <a
+                            className="user-status-avatar"
+                            href="profile-timeline.html"
+                          >
+                            <div className="user-avatar small no-outline">
+                              <Avatar size={1} />
+                            </div>
+                          </a>
+                          <p className="user-status-title">
+                            <a className="bold" href="profile-timeline.html">
+                              Sarah Diamond
+                            </a>
+                            left a like
+                            <img
+                              className="reaction"
+                              src="img/reaction/like.png"
+                              alt="reaction-like"
+                            />
+                            reaction on your
+                            <a
+                              className="highlighted"
+                              href="profile-timeline.html"
+                            >
+                              status update
+                            </a>
+                          </p>
+                          <p className="user-status-timestamp">
+                            17 minutes ago
+                          </p>
+                          <div className="user-status-icon">
+                            <svg className="icon-thumbs-up">
+                              <use xlinkHref="#svg-thumbs-up" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="dropdown-box-list-item">
+                        <div className="user-status notification">
+                          <a
+                            className="user-status-avatar"
+                            href="profile-timeline.html"
+                          >
+                            <div className="user-avatar small no-outline">
+                              <Avatar size={1} />
+                            </div>
+                          </a>
+                          <p className="user-status-title">
+                            <a className="bold" href="profile-timeline.html">
+                              Destroy Dex
+                            </a>
+                            posted a comment on your
+                            <a
+                              className="highlighted"
+                              href="profile-photos.html"
+                            >
+                              photo
+                            </a>
+                          </p>
+                          <p className="user-status-timestamp">
+                            31 minutes ago
+                          </p>
+                          <div className="user-status-icon">
+                            <svg className="icon-comment">
+                              <use xlinkHref="#svg-comment" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="dropdown-box-list-item">
+                        <div className="user-status notification">
+                          <a
+                            className="user-status-avatar"
+                            href="profile-timeline.html"
+                          >
+                            <div className="user-avatar small no-outline">
+                              <Avatar size={1} />
+                            </div>
+                          </a>
+                          <p className="user-status-title">
+                            <a className="bold" href="profile-timeline.html">
+                              The Green Goo
+                            </a>
+                            left a love
+                            <img
+                              className="reaction"
+                              src="img/reaction/love.png"
+                              alt="reaction-love"
+                            />
+                            reaction on your
+                            <a
+                              className="highlighted"
+                              href="profile-timeline.html"
+                            >
+                              status update
+                            </a>
+                          </p>
+                          <p className="user-status-timestamp">2 hours ago</p>
+                          <div className="user-status-icon">
+                            <svg className="icon-thumbs-up">
+                              <use xlinkHref="#svg-thumbs-up" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="dropdown-box-list-item">
+                        <div className="user-status notification">
+                          <a
+                            className="user-status-avatar"
+                            href="profile-timeline.html"
+                          >
+                            <div className="user-avatar small no-outline">
+                              <Avatar size={1} />
+                            </div>
+                          </a>
+                          <p className="user-status-title">
+                            <a className="bold" href="profile-timeline.html">
+                              Neko Bebop
+                            </a>
+                            posted a comment on your
+                            <a
+                              className="highlighted"
+                              href="profile-timeline.html"
+                            >
+                              status update
+                            </a>
+                          </p>
+                          <p className="user-status-timestamp">3 hours ago</p>
+                          <div className="user-status-icon">
+                            <svg className="icon-comment">
+                              <use xlinkHref="#svg-comment" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </Scrollbars>
+                  </div>
+                  <a
+                    className="dropdown-box-button secondary"
+                    href="hub-profile-notifications.html"
+                  >
+                    View all Notifications
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="action-item-wrap">
+              <div className="action-item dark header-settings-dropdown-trigger">
+                <Setting
+                  className="action-item-icon icon-settings"
+                  onClick={() => {
+                    dropVisiblity(4);
+                  }}
+                />
+              </div>
+              <div className={setclass}>
+                <div className="dropdown-navigation-header">
+                  <div className="user-status">
+                    <a
+                      className="user-status-avatar"
+                      href="profile-timeline.html"
+                    >
+                      <div className="user-avatar small no-outline">
+                        <Avatar size={1} />
+                      </div>
+                    </a>
+                    <p className="user-status-title">
+                      <span className="bold">Hi Marina!</span>
+                    </p>
+                    <p className="user-status-text small">
+                      <a href="profile-timeline.html">@marinavalentine</a>
+                    </p>
+                  </div>
+                </div>
+                <p className="dropdown-navigation-category">My Profile</p>
+                <a
+                  className="dropdown-navigation-link"
+                  href="hub-profile-info.html"
+                >
+                  Profile Info
+                </a>
+                <a
+                  className="dropdown-navigation-link"
+                  href="hub-profile-social.html"
+                >
+                  Social &amp; Stream
+                </a>
+                <a
+                  className="dropdown-navigation-link"
+                  href="hub-profile-notifications.html"
+                >
+                  Notifications
+                </a>
+                <a
+                  className="dropdown-navigation-link"
+                  href="hub-profile-messages.html"
+                >
+                  Messages
+                </a>
+                <a
+                  className="dropdown-navigation-link"
+                  href="hub-profile-requests.html"
+                >
+                  Friend Requests
+                </a>
+                <p className="dropdown-navigation-category">Account</p>
+                <a
+                  className="dropdown-navigation-link"
+                  href="hub-account-info.html"
+                >
+                  Account Info
+                </a>
+                <a
+                  className="dropdown-navigation-link"
+                  href="hub-account-password.html"
+                >
+                  Change Password
+                </a>
+                <a
+                  className="dropdown-navigation-link"
+                  href="hub-account-settings.html"
+                >
+                  General Settings
+                </a>
+                <p className="dropdown-navigation-category">Groups</p>
+                <a
+                  className="dropdown-navigation-link"
+                  href="hub-group-management.html"
+                >
+                  Manage Groups
+                </a>
+                <a
+                  className="dropdown-navigation-link"
+                  href="hub-group-invitations.html"
+                >
+                  Invitations
+                </a>
+                <p className="dropdown-navigation-category">My Store</p>
+                <a
+                  className="dropdown-navigation-link"
+                  href="hub-store-account.html"
+                >
+                  My Account <span className="highlighted">$250,32</span>
+                </a>
+                <a
+                  className="dropdown-navigation-link"
+                  href="hub-store-statement.html"
+                >
+                  Sales Statement
+                </a>
+                <a
+                  className="dropdown-navigation-link"
+                  href="hub-store-items.html"
+                >
+                  Manage Items
+                </a>
+                <a
+                  className="dropdown-navigation-link"
+                  href="hub-store-downloads.html"
+                >
+                  Downloads
+                </a>
+                <p className="dropdown-navigation-button button small secondary">
+                  Logout
+                </p>
+              </div>
+            </div>
+          </div>
+        </>
+      );
     } else {
+      return (
+        <div className="header-actions">
+          <form className="login-form">
+            <div className="form-row split">
+              <div className="form-item">
+                <div className="form-input dark">
+                  <input
+                    type="text"
+                    id="login-user-email"
+                    name="login_user_email"
+                    placeholder="Your Email"
+                  />
+                </div>
+              </div>
+              <div className="form-item">
+                <div className="form-input dark">
+                  <input
+                    type="password"
+                    id="login-user-password"
+                    name="login_user_password"
+                    placeholder="Your Password"
+                  />
+                </div>
+              </div>
+              <div id="entrybtns">
+                <button
+                  onClick={() => {
+                    setisLogin(!isLogin);
+                  }}
+                  className="button primary with-only-icon"
+                >
+                  <Logswitch className="icon-login" />
+                </button>
+                <button className="button primary with-only-icon">
+                  <Logswitch className="icon-login" />
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      );
     }
   };
+
   const inputHandle = (e) => {
     setinputValue(e.target.value);
     if (e.target.value.split(" ").join("").length > 0) {
@@ -333,544 +952,7 @@ export default function Header() {
           </div>
         </div>
       </div>
-
-      <div className="header-actions">
-        <div className="progress-stat">
-          <div className="bar-progress-wrap">
-            <p className="bar-progress-info">
-              Next: <span className="bar-progress-text">38</span>
-            </p>
-          </div>
-          <div className="cntrbar">
-            <div className="probar"></div>
-          </div>
-        </div>
-      </div>
-
-      <div className="header-actions">
-        <div className="action-list dark">
-          <div className="action-list-item-wrap">
-            <div className="action-list-item header-dropdown-trigger">
-              <Shopping
-                className="action-list-item-icon icon-shopping-bag"
-                onClick={() => {
-                  dropVisiblity(1);
-                }}
-              />
-            </div>
-            <div className={shpclass}>
-              <div className="dropdown-box-header">
-                <p className="dropdown-box-header-title">
-                  Shopping Cart <span className="highlighted">3</span>
-                </p>
-              </div>
-              <div
-                className="dropdown-box-list scroll-small no-hover"
-                data-simplebar
-              >
-                <Scrollbars>
-                  <div className="dropdown-box-list-item">
-                    <div className="cart-item-preview">
-                      <a
-                        className="cart-item-preview-image"
-                        href="marketplace-product.html"
-                      >
-                        <figure className="picture medium round liquid">
-                          <img src={img} alt="item-01" />
-                        </figure>
-                      </a>
-                      <p className="cart-item-preview-title">
-                        <a href="marketplace-product.html">
-                          Twitch Stream UI Pack
-                        </a>
-                      </p>
-                      <p className="cart-item-preview-text">Regular License</p>
-                      <p className="cart-item-preview-price">
-                        <span className="highlighted">$</span> 12.00 x 1
-                      </p>
-                      <div className="cart-item-preview-action">
-                        <svg className="icon-delete">
-                          <use xlinkHref="#svg-delete" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="dropdown-box-list-item">
-                    <div className="cart-item-preview">
-                      <a
-                        className="cart-item-preview-image"
-                        href="marketplace-product.html"
-                      >
-                        <figure className="picture medium round liquid">
-                          <img src={img} alt="item-11" />
-                        </figure>
-                      </a>
-                      <p className="cart-item-preview-title">
-                        <a href="marketplace-product.html">
-                          Gaming Coin Badges Pack
-                        </a>
-                      </p>
-                      <p className="cart-item-preview-text">Regular License</p>
-                      <p className="cart-item-preview-price">
-                        <span className="highlighted">$</span> 6.00 x 1
-                      </p>
-                      <div className="cart-item-preview-action">
-                        <svg className="icon-delete">
-                          <use xlinkHref="#svg-delete" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="dropdown-box-list-item">
-                    <div className="cart-item-preview">
-                      <a
-                        className="cart-item-preview-image"
-                        href="marketplace-product.html"
-                      >
-                        <figure className="picture medium round liquid">
-                          <img src={img} alt="item-10" />
-                        </figure>
-                      </a>
-                      <p className="cart-item-preview-title">
-                        <a href="marketplace-product.html">
-                          Twitch Stream UI Pack
-                        </a>
-                      </p>
-                      <p className="cart-item-preview-text">Regular License</p>
-                      <p className="cart-item-preview-price">
-                        <span className="highlighted">$</span> 26.00 x 1
-                      </p>
-                      <div className="cart-item-preview-action">
-                        <svg className="icon-delete">
-                          <use xlinkHref="#svg-delete" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="dropdown-box-list-item">
-                    <div className="cart-item-preview">
-                      <a
-                        className="cart-item-preview-image"
-                        href="marketplace-product.html"
-                      >
-                        <figure className="picture medium round liquid">
-                          <img src={img} alt="item-04" />
-                        </figure>
-                      </a>
-                      <p className="cart-item-preview-title">
-                        <a href="marketplace-product.html">
-                          Generic Joystick Pack
-                        </a>
-                      </p>
-                      <p className="cart-item-preview-text">Regular License</p>
-                      <p className="cart-item-preview-price">
-                        <span className="highlighted">$</span> 16.00 x 1
-                      </p>
-                      <div className="cart-item-preview-action">
-                        {" "}
-                        <svg className="icon-delete">
-                          <use xlinkHref="#svg-delete" />
-                        </svg>{" "}
-                      </div>
-                    </div>
-                  </div>
-                </Scrollbars>
-              </div>
-              <div className="cart-preview-total">
-                <p className="cart-preview-total-title">Total:</p>
-                <p className="cart-preview-total-text">
-                  <span className="highlighted">$</span> 60.00
-                </p>
-              </div>
-              <div className="dropdown-box-actions">
-                <div className="dropdown-box-action">
-                  <a className="button secondary" href="marketplace-cart.html">
-                    Shopping Cart
-                  </a>
-                </div>
-                <div className="dropdown-box-action">
-                  <a
-                    className="button primary"
-                    href="marketplace-checkout.html"
-                  >
-                    Go to Checkout
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="action-list-item-wrap">
-            <div className="action-list-item header-dropdown-trigger">
-              <Friend
-                className="action-list-item-icon icon-shopping-bag"
-                onClick={() => {
-                  dropVisiblity(2);
-                }}
-              />
-            </div>
-            <div className={friclass}>
-              <div className="dropdown-box-header">
-                <p className="dropdown-box-header-title">Friend Requests</p>
-                <div className="dropdown-box-header-actions">
-                  <p className="dropdown-box-header-action">Find Friends</p>
-                  <p className="dropdown-box-header-action">Settings</p>
-                </div>
-              </div>
-              <div className="dropdown-box-list no-hover" data-simplebar>
-                <div className="dropdown-box-list-item">
-                  <div className="user-status request">
-                    <a
-                      className="user-status-avatar"
-                      href="profile-timeline.html"
-                    >
-                      <div className="user-avatar small no-outline">
-                        <Avatar size={1} />
-                      </div>
-                    </a>
-                    <p className="user-status-title">
-                      <a className="bold" href="profile-timeline.html">
-                        Ginny Danvers
-                      </a>
-                    </p>
-                    <p className="user-status-text">6 friends in common</p>
-                    <div className="action-request-list">
-                      <div className="action-request accept">
-                        <Addfriend className="action-request-icon icon-add-friend" />
-                      </div>
-                      <div className="action-request decline">
-                        <Removefriend className="action-request-icon icon-remove-friend" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="dropdown-box-list-item">
-                  <div className="user-status request">
-                    <a
-                      className="user-status-avatar"
-                      href="profile-timeline.html"
-                    >
-                      <div className="user-avatar small no-outline">
-                        <Avatar size={1} />
-                      </div>
-                    </a>
-                    <p className="user-status-title">
-                      <a className="bold" href="profile-timeline.html">
-                        Ginny Danvers
-                      </a>
-                    </p>
-                    <p className="user-status-text">6 friends in common</p>
-                    <div className="action-request-list">
-                      <div className="action-request accept">
-                        <Addfriend className="action-request-icon icon-add-friend" />
-                      </div>
-                      <div className="action-request decline">
-                        <Removefriend className="action-request-icon icon-remove-friend" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <a
-                className="dropdown-box-button secondary"
-                href="hub-profile-requests.html"
-              >
-                View all Requests
-              </a>
-            </div>
-          </div>
-          <div className="action-list-item-wrap">
-            <div className="action-list-item unread header-dropdown-trigger">
-              <Notification
-                onClick={() => {
-                  dropVisiblity(3);
-                }}
-                className="action-list-item-icon icon-notification"
-              />
-            </div>
-            <div className={notclass}>
-              <div className="dropdown-box-header">
-                <p className="dropdown-box-header-title">Notifications</p>
-                <div className="dropdown-box-header-actions">
-                  <p className="dropdown-box-header-action">Mark all as Read</p>
-                  <p className="dropdown-box-header-action">Settings</p>
-                </div>
-              </div>
-              <div className="dropdown-box-list" data-simplebar>
-                <Scrollbars>
-                  <div className="dropdown-box-list-item unread">
-                    <div className="user-status notification">
-                      <a
-                        className="user-status-avatar"
-                        href="profile-timeline.html"
-                      >
-                        <div className="user-avatar small no-outline">
-                          <Avatar size={1} />
-                        </div>
-                      </a>
-                      <p className="user-status-title">
-                        <a className="bold" href="profile-timeline.html">
-                          Nick Grissom
-                        </a>
-                        posted a comment on your
-                        <a className="highlighted" href="profile-timeline.html">
-                          status update
-                        </a>
-                      </p>
-                      <p className="user-status-timestamp">2 minutes ago</p>
-                      <div className="user-status-icon">
-                        <svg className="icon-comment">
-                          <use xlinkHref="#svg-comment" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="dropdown-box-list-item">
-                    <div className="user-status notification">
-                      <a
-                        className="user-status-avatar"
-                        href="profile-timeline.html"
-                      >
-                        <div className="user-avatar small no-outline">
-                          <Avatar size={1} />
-                        </div>
-                      </a>
-                      <p className="user-status-title">
-                        <a className="bold" href="profile-timeline.html">
-                          Sarah Diamond
-                        </a>
-                        left a like
-                        <img
-                          className="reaction"
-                          src="img/reaction/like.png"
-                          alt="reaction-like"
-                        />
-                        reaction on your
-                        <a className="highlighted" href="profile-timeline.html">
-                          status update
-                        </a>
-                      </p>
-                      <p className="user-status-timestamp">17 minutes ago</p>
-                      <div className="user-status-icon">
-                        <svg className="icon-thumbs-up">
-                          <use xlinkHref="#svg-thumbs-up" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="dropdown-box-list-item">
-                    <div className="user-status notification">
-                      <a
-                        className="user-status-avatar"
-                        href="profile-timeline.html"
-                      >
-                        <div className="user-avatar small no-outline">
-                          <Avatar size={1} />
-                        </div>
-                      </a>
-                      <p className="user-status-title">
-                        <a className="bold" href="profile-timeline.html">
-                          Destroy Dex
-                        </a>
-                        posted a comment on your
-                        <a className="highlighted" href="profile-photos.html">
-                          photo
-                        </a>
-                      </p>
-                      <p className="user-status-timestamp">31 minutes ago</p>
-                      <div className="user-status-icon">
-                        <svg className="icon-comment">
-                          <use xlinkHref="#svg-comment" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="dropdown-box-list-item">
-                    <div className="user-status notification">
-                      <a
-                        className="user-status-avatar"
-                        href="profile-timeline.html"
-                      >
-                        <div className="user-avatar small no-outline">
-                          <Avatar size={1} />
-                        </div>
-                      </a>
-                      <p className="user-status-title">
-                        <a className="bold" href="profile-timeline.html">
-                          The Green Goo
-                        </a>
-                        left a love
-                        <img
-                          className="reaction"
-                          src="img/reaction/love.png"
-                          alt="reaction-love"
-                        />
-                        reaction on your
-                        <a className="highlighted" href="profile-timeline.html">
-                          status update
-                        </a>
-                      </p>
-                      <p className="user-status-timestamp">2 hours ago</p>
-                      <div className="user-status-icon">
-                        <svg className="icon-thumbs-up">
-                          <use xlinkHref="#svg-thumbs-up" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="dropdown-box-list-item">
-                    <div className="user-status notification">
-                      <a
-                        className="user-status-avatar"
-                        href="profile-timeline.html"
-                      >
-                        <div className="user-avatar small no-outline">
-                          <Avatar size={1} />
-                        </div>
-                      </a>
-                      <p className="user-status-title">
-                        <a className="bold" href="profile-timeline.html">
-                          Neko Bebop
-                        </a>
-                        posted a comment on your
-                        <a className="highlighted" href="profile-timeline.html">
-                          status update
-                        </a>
-                      </p>
-                      <p className="user-status-timestamp">3 hours ago</p>
-                      <div className="user-status-icon">
-                        <svg className="icon-comment">
-                          <use xlinkHref="#svg-comment" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </Scrollbars>
-              </div>
-              <a
-                className="dropdown-box-button secondary"
-                href="hub-profile-notifications.html"
-              >
-                View all Notifications
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="action-item-wrap">
-          <div className="action-item dark header-settings-dropdown-trigger">
-            <Setting
-              className="action-item-icon icon-settings"
-              onClick={() => {
-                dropVisiblity(4);
-              }}
-            />
-          </div>
-          <div className={setclass}>
-            <div className="dropdown-navigation-header">
-              <div className="user-status">
-                <a className="user-status-avatar" href="profile-timeline.html">
-                  <div className="user-avatar small no-outline">
-                    <Avatar size={1} />
-                  </div>
-                </a>
-                <p className="user-status-title">
-                  <span className="bold">Hi Marina!</span>
-                </p>
-                <p className="user-status-text small">
-                  <a href="profile-timeline.html">@marinavalentine</a>
-                </p>
-              </div>
-            </div>
-            <p className="dropdown-navigation-category">My Profile</p>
-            <a
-              className="dropdown-navigation-link"
-              href="hub-profile-info.html"
-            >
-              Profile Info
-            </a>
-            <a
-              className="dropdown-navigation-link"
-              href="hub-profile-social.html"
-            >
-              Social &amp; Stream
-            </a>
-            <a
-              className="dropdown-navigation-link"
-              href="hub-profile-notifications.html"
-            >
-              Notifications
-            </a>
-            <a
-              className="dropdown-navigation-link"
-              href="hub-profile-messages.html"
-            >
-              Messages
-            </a>
-            <a
-              className="dropdown-navigation-link"
-              href="hub-profile-requests.html"
-            >
-              Friend Requests
-            </a>
-            <p className="dropdown-navigation-category">Account</p>
-            <a
-              className="dropdown-navigation-link"
-              href="hub-account-info.html"
-            >
-              Account Info
-            </a>
-            <a
-              className="dropdown-navigation-link"
-              href="hub-account-password.html"
-            >
-              Change Password
-            </a>
-            <a
-              className="dropdown-navigation-link"
-              href="hub-account-settings.html"
-            >
-              General Settings
-            </a>
-            <p className="dropdown-navigation-category">Groups</p>
-            <a
-              className="dropdown-navigation-link"
-              href="hub-group-management.html"
-            >
-              Manage Groups
-            </a>
-            <a
-              className="dropdown-navigation-link"
-              href="hub-group-invitations.html"
-            >
-              Invitations
-            </a>
-            <p className="dropdown-navigation-category">My Store</p>
-            <a
-              className="dropdown-navigation-link"
-              href="hub-store-account.html"
-            >
-              My Account <span className="highlighted">$250,32</span>
-            </a>
-            <a
-              className="dropdown-navigation-link"
-              href="hub-store-statement.html"
-            >
-              Sales Statement
-            </a>
-            <a className="dropdown-navigation-link" href="hub-store-items.html">
-              Manage Items
-            </a>
-            <a
-              className="dropdown-navigation-link"
-              href="hub-store-downloads.html"
-            >
-              Downloads
-            </a>
-            <p className="dropdown-navigation-button button small secondary">
-              Logout
-            </p>
-          </div>
-        </div>
-      </div>
+      {actionHandler()}
     </div>
   );
 }

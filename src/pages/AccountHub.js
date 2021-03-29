@@ -106,9 +106,6 @@ export default function AccountHub() {
                               Azərbaycan
                             </option>
                           </select>
-                          <svg className="form-select-icon icon-small-arrow">
-                            <use xlinkHref="#svg-small-arrow" />
-                          </svg>
                         </div>
                       </div>
                       <div className="form-item birth-input">
@@ -185,6 +182,7 @@ export default function AccountHub() {
                 </form>
               </div>
             </div>
+
             <div className="widget-box">
               <p className="widget-box-title">Sosial Media Məlumatlarınız</p>
               <div className="widget-box-content">

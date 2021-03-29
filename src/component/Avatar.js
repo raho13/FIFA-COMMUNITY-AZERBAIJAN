@@ -69,7 +69,7 @@ export default function Avatar({ size }) {
     const ctx1 = canvas.current.getContext("2d");
     ctx1.beginPath();
     ctx1.strokeStyle = gradient;
-    ctx1.lineWidth = 7;
+    ctx1.lineWidth = 10;
     ctx1.lineJoin = "round";
     ctx1.moveTo(100, 47);
     ctx1.lineTo(139, 65);
@@ -83,7 +83,7 @@ export default function Avatar({ size }) {
     const ctx2 = canvas2.current.getContext("2d");
     ctx2.beginPath();
     ctx2.strokeStyle = "#1d2333";
-    ctx2.lineWidth = 3;
+    ctx2.lineWidth = 5;
     ctx2.lineJoin = "round";
     ctx2.moveTo(100, 50);
     ctx2.lineTo(137, 67);
