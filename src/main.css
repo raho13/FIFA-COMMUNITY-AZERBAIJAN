@@ -17351,6 +17351,12 @@ textarea {
   transform: translate(0px, 16px);
   transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s; }
 
+.stsinpvalue {
+  color: #8f91ac;
+  position: relative;
+  bottom: 2px;
+  left: 10px; }
+
 @media only screen and (max-width: 500px) {
   .card {
     width: 150px;

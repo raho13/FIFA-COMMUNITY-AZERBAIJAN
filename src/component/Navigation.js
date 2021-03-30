@@ -57,6 +57,9 @@ export default function Navigation() {
       <Switch>
         <Route path="/FutTournaments" component={FutTournaments} />
       </Switch>
+      <Switch>
+        <Route path="/*" component={Newsfeed} />
+      </Switch>
     </div>
   );
 }

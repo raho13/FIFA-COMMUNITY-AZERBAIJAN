@@ -7,14 +7,10 @@ import FloatyBar from "./FloatyBar";
 import MobileNavbar from "./MobileNavbar";
 import Navigation from "./Navigation";
 import Imagepopup from "../component/newsfeed/Imagepopup";
-
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import Register from "../pages/Register";
 
 export default function Layout() {
-  useEffect(() => {
-    console.log(window.location.pathname);
-  });
   const templaterender = () => {
     if (
       window.location.pathname == "/register" ||

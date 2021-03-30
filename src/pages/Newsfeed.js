@@ -14,24 +14,12 @@ import Sharepost from "../component/Postmodels/Sharepost";
 import Gifpost from "../component/Postmodels/Gifpost";
 import Votepost from "../component/Postmodels/Votepost";
 export default function Newsfeed() {
-  const [tab1, settab1] = useState("simple-tab-item active");
-  const [tab2, settab2] = useState("simple-tab-item");
-  const [tab3, settab3] = useState("simple-tab-item");
+  const [tabIndex, settabIndex] = useState(1);
   const handleTabs = (i) => {
-    if (i === 1) {
-      settab1("simple-tab-item active");
-      settab2("simple-tab-item");
-      settab3("simple-tab-item");
-    }
-    if (i === 2) {
-      settab1("simple-tab-item");
-      settab2("simple-tab-item active");
-      settab3("simple-tab-item");
-    }
-    if (i === 3) {
-      settab1("simple-tab-item");
-      settab2("simple-tab-item");
-      settab3("simple-tab-item active");
+    if (i === tabIndex) {
+      return "simple-tab-item active";
+    } else {
+      return "simple-tab-item";
     }
   };
 
@@ -65,33 +53,30 @@ export default function Newsfeed() {
                   <option value={0}>Bütün paylaşımlar</option>
                   <option value={1}>FİFA Community Azerbaijan</option>
                   <option value={2}>İzlədiklərim</option>
-                </select>{" "}
-                <svg className="form-select-icon icon-small-arrow">
-                  <use xlinkHref="#svg-small-arrow" />
-                </svg>
+                </select>
               </div>
             </form>
             <p
               onClick={() => {
-                handleTabs(1);
+                settabIndex(1);
               }}
-              className={tab1}
+              className={handleTabs(1)}
             >
               Bütün paylaşımlar
             </p>
             <p
               onClick={() => {
-                handleTabs(2);
+                settabIndex(2);
               }}
-              className={tab2}
+              className={handleTabs(2)}
             >
               FİFA Community Azerbaijan
             </p>
             <p
               onClick={() => {
-                handleTabs(3);
+                settabIndex(3);
               }}
-              className={tab3}
+              className={handleTabs(3)}
             >
               İzlədiklərim
             </p>
@@ -103,7 +88,7 @@ export default function Newsfeed() {
           <Simpletxtmodel />
           <Pollmodel />
           <Videopost />
-  
+
           <div className="loader-bars">
             <div className="loader-bar" />
             <div className="loader-bar" />

@@ -10,16 +10,13 @@ import { ReactComponent as Cameraicn } from "../../icons/Cameraicn.svg";
 import Checkbox from "../Checkbox";
 export default function PostBanner() {
   const div = useRef(null);
-  const [tab1, settab1] = useState("option-item active");
+  const [tabIndex, settabIndex] = useState(1);
   const [Videoposttype, setVideoposttype] = useState(true);
   const [embedinp, setembedinp] = useState(false);
   const [parmsVisible, setparmsVisible] = useState(false);
-  const [tab2, settab2] = useState("option-item");
-  const [tab3, settab3] = useState("option-item");
-  const [activeTab, setactiveTab] = useState(1);
   const [lists, setLists] = useState([]);
   const [rndm, setrndm] = useState(0);
-
+  const [stsinpVal, setstsinpVal] = useState("");
   const executeScroll = () => {
     const a = document.getElementById("inpcontainer").scrollY;
     console.log(a);
@@ -37,7 +34,7 @@ export default function PostBanner() {
     setLists(delele);
   };
   const setparmVisible = () => {
-    if (parmsVisible && activeTab === 3) {
+    if (parmsVisible && tabIndex === 3) {
       return "parms";
     } else {
       return "prmsnone";
@@ -61,7 +58,7 @@ export default function PostBanner() {
     }
   };
   const ActiveTab = () => {
-    if (activeTab === 1) {
+    if (tabIndex === 1) {
       return (
         <form className="form">
           <div className="form-row">
@@ -77,7 +74,7 @@ export default function PostBanner() {
           </div>
         </form>
       );
-    } else if (activeTab === 2) {
+    } else if (tabIndex === 2) {
       return (
         <form className="form">
           <div className="form-row">
@@ -341,18 +338,10 @@ export default function PostBanner() {
     }
   };
   const handleTab = (i) => {
-    if (i === 1) {
-      settab1("option-item active");
-      settab2("option-item");
-      settab3("option-item");
-    } else if (i === 2) {
-      settab1("option-item");
-      settab2("option-item active");
-      settab3("option-item");
+    if (i === tabIndex) {
+      return "option-item active";
     } else {
-      settab1("option-item");
-      settab2("option-item");
-      settab3("option-item active");
+      return "option-item";
     }
   };
   return (
@@ -361,30 +350,27 @@ export default function PostBanner() {
         <div className="option-items">
           <div
             onClick={() => {
-              handleTab(1);
-              setactiveTab(1);
+              settabIndex(1);
             }}
-            className={tab1}
+            className={handleTab(1)}
           >
             <PostSts className="option-item-icon icon-status" />
             <p className="option-item-title d">Status</p>
           </div>
           <div
             onClick={() => {
-              handleTab(2);
-              setactiveTab(2);
+              settabIndex(2);
             }}
-            className={tab2}
+            className={handleTab(2)}
           >
             <Blogpost className="option-item-icon icon-blog-posts" />
             <p className="option-item-title d">Video Post</p>
           </div>
           <div
             onClick={() => {
-              handleTab(3);
-              setactiveTab(3);
+              settabIndex(3);
             }}
-            className={tab3}
+            className={handleTab(3)}
           >
             <Poll className="option-item-icon icon-poll" />
             <p className="option-item-title d">Anket</p>
@@ -394,7 +380,7 @@ export default function PostBanner() {
       <div className="quick-post-body">{ActiveTab()}</div>
       <div className="quick-post-footer">
         <div className="quick-post-footer-actions">
-          {activeTab === 1 ? (
+          {tabIndex === 1 ? (
             <div
               className="quick-post-footer-action text-tooltip-tft-medium"
               data-title="Insert Photo"
@@ -404,9 +390,15 @@ export default function PostBanner() {
                 type="file"
                 className="fileExp"
                 placeholder="upload"
+                onChange={(e) => {
+                  if (e.target.files.length > 0) {
+                    setstsinpVal(e.target.files[0].name);
+                  }
+                }}
               ></input>
+              <span className="stsinpvalue">{stsinpVal}</span>
             </div>
-          ) : activeTab === 2 ? (
+          ) : tabIndex === 2 ? (
             <div className="psticncontainer">
               <div
                 onClick={() => {
