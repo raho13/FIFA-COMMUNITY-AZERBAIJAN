@@ -34,7 +34,7 @@ export default function Navigation() {
         <Route exact path="/" component={Newsfeed} />
       </Switch>
       <Switch>
-        <Route path="/streams" component={Streams} />
+        <Route path="/Streams" component={Streams} />
       </Switch>
       <Switch>
         <Route path="/Lessons" component={Lessons} />
@@ -57,9 +57,9 @@ export default function Navigation() {
       <Switch>
         <Route path="/FutTournaments" component={FutTournaments} />
       </Switch>
-      <Switch>
+      {/* <Switch>
         <Route path="/*" component={Newsfeed} />
-      </Switch>
+      </Switch> */}
     </div>
   );
 }

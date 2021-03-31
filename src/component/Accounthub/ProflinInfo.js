@@ -6,31 +6,31 @@ import { ReactComponent as Market } from "../../icons/Market.svg";
 import { ReactComponent as Minus } from "../../icons/minus.svg";
 
 export default function ProflinInfo() {
-  const [item1, setitem1] = useState(false);
-  const [item2, setitem2] = useState(false);
-  const [item3, setitem3] = useState(false);
+  const [tabIndex, settabIndex] = useState(0);
 
   const handleitem = (i) => {
-    if (i === 1) {
-      if (item1) {
-        return "ActiveMenuitem";
-      } else {
-        return "PassiveMenuitem";
-      }
+    if (tabIndex === i) {
+      return "ActiveMenuitem";
+    } else {
+      return "PassiveMenuitem";
     }
-    if (i === 2) {
-      if (item2) {
-        return "ActiveMenuitem2";
-      } else {
-        return "PassiveMenuitem";
-      }
+  };
+  const indexHandler = (j) => {
+    if (j === tabIndex) {
+      settabIndex(0);
+    } else {
+      settabIndex(j);
     }
-    if (i === 3) {
-      if (item3) {
-        return "ActiveMenuitem";
-      } else {
-        return "PassiveMenuitem";
-      }
+  };
+  const plusminus = (a) => {
+    if (a === tabIndex) {
+      return (
+        <Minus className="sidebar-menu-header-control-icon-closed icon-plus-small" />
+      );
+    } else {
+      return (
+        <Plus className="sidebar-menu-header-control-icon-closed icon-plus-small" />
+      );
     }
   };
   return (
@@ -39,19 +39,13 @@ export default function ProflinInfo() {
         <div className="sidebar-menu-item">
           <div
             onClick={() => {
-              setitem1(!item1);
-              setitem2(false);
-              setitem3(false);
+              indexHandler(1);
             }}
             className="sidebar-menu-header accordion-trigger-linked"
           >
             <Contacticn className="sidebar-menu-header-icon icon-profile" />
             <div className="sidebar-menu-header-control-icon">
-              {item1 ? (
-                <Minus className="sidebar-menu-header-control-icon-closed icon-plus-small" />
-              ) : (
-                <Plus className="sidebar-menu-header-control-icon-closed icon-plus-small" />
-              )}
+              {plusminus(1)}
             </div>
             <p className="sidebar-menu-header-title">Hesab məlumatları</p>
             <p className="sidebar-menu-header-text mnk">
@@ -71,19 +65,13 @@ export default function ProflinInfo() {
         <div className="sidebar-menu-item">
           <div
             onClick={() => {
-              setitem2(!item2);
-              setitem1(false);
-              setitem3(false);
+              indexHandler(2);
             }}
             className="sidebar-menu-header accordion-trigger-linked"
           >
             <Group className="sidebar-menu-header-icon icon-profile" />
             <div className="sidebar-menu-header-control-icon">
-              {item2 ? (
-                <Minus className="sidebar-menu-header-control-icon-closed icon-plus-small" />
-              ) : (
-                <Plus className="sidebar-menu-header-control-icon-closed icon-plus-small" />
-              )}
+              {plusminus(2)}
             </div>
             <p className="sidebar-menu-header-title">Xüsusi məlumatlar</p>
             <p className="sidebar-menu-header-text mnk">
@@ -100,19 +88,13 @@ export default function ProflinInfo() {
         <div className="sidebar-menu-item">
           <div
             onClick={() => {
-              setitem3(!item3);
-              setitem2(false);
-              setitem1(false);
+              indexHandler(3);
             }}
             className="sidebar-menu-header accordion-trigger-linked"
           >
             <Market className="sidebar-menu-header-icon icon-store" />
             <div className="sidebar-menu-header-control-icon">
-              {item3 ? (
-                <Minus className="sidebar-menu-header-control-icon-closed icon-plus-small" />
-              ) : (
-                <Plus className="sidebar-menu-header-control-icon-closed icon-plus-small" />
-              )}
+              {plusminus(3)}
             </div>
             <p className="sidebar-menu-header-title">Mağaza məlumatları</p>
             <p className="sidebar-menu-header-text mnk">

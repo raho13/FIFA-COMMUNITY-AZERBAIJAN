@@ -1,16 +1,11 @@
 .ActiveMenuitem {
   overflow: hidden;
-  height: 160px;
-  transition: all 0.3s ease-in-out 0s;
-}
-.ActiveMenuitem2 {
-  overflow: hidden;
-  height: 90px;
+  max-height: 200px;
   transition: all 0.3s ease-in-out 0s;
 }
 .PassiveMenuitem {
   overflow: hidden;
-  height: 0px;
+  max-height: 0;
   transition: all 0.3s ease-in-out 0s;
 }
 * {
@@ -117,9 +112,9 @@
 .h-50 {
   height: 125px !important;
 }
-#ghj{
+#ghj {
   text-shadow: none !important;
 }
-.mnk{
+.mnk {
   font-size: 11px !important;
 }

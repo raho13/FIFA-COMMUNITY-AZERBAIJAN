@@ -121,7 +121,7 @@ export default function Navbar() {
               </Link>
             </li>
             <li className="menu-item">
-              <Link className="menu-item-link" to="/streams">
+              <Link className="menu-item-link" to="/Streams">
                 <Overview className="menu-item-link-icon icon-overview" />
                 Overview
               </Link>
