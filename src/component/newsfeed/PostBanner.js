@@ -40,11 +40,20 @@ export default function PostBanner() {
       return "prmsnone";
     }
   };
+  function timeOut(s) {
+    setTimeout(() => {
+      const a = document.querySelector("#inpcontainer>div>div");
+      console.log(a);
+      a.scrollTop = a.scrollHeight + 1050;
+    }, s);
+  }
+
   const Addinput = () => {
     const copyList = [...lists];
     copyList.push(rndm);
     setLists(copyList);
     setrndm(rndm + 1);
+    timeOut(0.1);
   };
   const inputFocus = (e) => {
     e.target.parentNode.setAttribute(

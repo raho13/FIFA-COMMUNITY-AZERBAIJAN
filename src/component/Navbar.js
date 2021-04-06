@@ -113,68 +113,7 @@ export default function Navbar() {
               <p className="user-stat-text">visits</p>
             </div>
           </div>
-          <ul className="menu">
-            <li className="menu-item">
-              <Link className="menu-item-link" to="/">
-                <Newsfeed className="menu-item-link-icon icon-newsfeed" />
-                Newsfeed
-              </Link>
-            </li>
-            <li className="menu-item">
-              <Link className="menu-item-link" to="/Streams">
-                <Overview className="menu-item-link-icon icon-overview" />
-                Overview
-              </Link>
-            </li>
-            <li className="menu-item">
-              <Link className="menu-item-link" to="/Fut-reyting">
-                <Group className="menu-item-link-icon icon-group" />
-                Groups
-              </Link>
-            </li>
-            <li className="menu-item">
-              <Link className="menu-item-link" to="/Accounthub">
-                <Members className="menu-item-link-icon icon-members" />
-                Members
-              </Link>
-            </li>
-            <li className="menu-item">
-              <Link className="menu-item-link" to="/FutTournaments">
-                <Badges className="menu-item-link-icon icon-badges" />
-                Badges
-              </Link>
-            </li>
-            <li className="menu-item">
-              <a className="menu-item-link" href="quests.html">
-                <Quests className="menu-item-link-icon icon-quests" />
-                Quests
-              </a>
-            </li>
-            <li className="menu-item">
-              <a className="menu-item-link" href="streams.html">
-                <Streams className="menu-item-link-icon icon-streams" />
-                Streams
-              </a>
-            </li>
-            <li className="menu-item">
-              <a className="menu-item-link" href="events.html">
-                <Events className="menu-item-link-icon icon-events" />
-                Events
-              </a>
-            </li>
-            <li className="menu-item active">
-              <a className="menu-item-link" href="forums.html">
-                <Forums className="menu-item-link-icon icon-forums" />
-                Forums
-              </a>
-            </li>
-            <li className="menu-item">
-              <a className="menu-item-link" href="marketplace.html">
-                <Marketplace className="menu-item-link-icon icon-marketplace" />
-                Marketplace
-              </a>
-            </li>
-          </ul>
+          <Menuitems />
         </Scrollbars>
       </nav>
       <nav id="navigation-widget-small" className={smallmenu}>
@@ -204,7 +143,7 @@ export default function Navbar() {
           >
             <Link
               className="menu-item-link text-tooltip-tfr"
-              to="/streams"
+              to="/Streams"
               data-title="Overview"
             >
               <Overview className="menu-item-link-icon icon-overview" />
@@ -337,5 +276,71 @@ export default function Navbar() {
         </ul>
       </nav>
     </div>
+  );
+}
+export function Menuitems() {
+  return (
+    <ul className="menu">
+      <li className="menu-item">
+        <Link className="menu-item-link" to="/">
+          <Newsfeed className="menu-item-link-icon icon-newsfeed" />
+          Newsfeed
+        </Link>
+      </li>
+      <li className="menu-item">
+        <Link className="menu-item-link" to="/Streams">
+          <Overview className="menu-item-link-icon icon-overview" />
+          Overview
+        </Link>
+      </li>
+      <li className="menu-item">
+        <Link className="menu-item-link" to="/Fut-reyting">
+          <Group className="menu-item-link-icon icon-group" />
+          Groups
+        </Link>
+      </li>
+      <li className="menu-item">
+        <Link className="menu-item-link" to="/Accounthub">
+          <Members className="menu-item-link-icon icon-members" />
+          Members
+        </Link>
+      </li>
+      <li className="menu-item">
+        <Link className="menu-item-link" to="/FutTournaments">
+          <Badges className="menu-item-link-icon icon-badges" />
+          Badges
+        </Link>
+      </li>
+      <li className="menu-item">
+        <a className="menu-item-link" href="quests.html">
+          <Quests className="menu-item-link-icon icon-quests" />
+          Quests
+        </a>
+      </li>
+      <li className="menu-item">
+        <a className="menu-item-link" href="streams.html">
+          <Streams className="menu-item-link-icon icon-streams" />
+          Streams
+        </a>
+      </li>
+      <li className="menu-item">
+        <a className="menu-item-link" href="events.html">
+          <Events className="menu-item-link-icon icon-events" />
+          Events
+        </a>
+      </li>
+      <li className="menu-item active">
+        <a className="menu-item-link" href="forums.html">
+          <Forums className="menu-item-link-icon icon-forums" />
+          Forums
+        </a>
+      </li>
+      <li className="menu-item">
+        <a className="menu-item-link" to="/Marketplace">
+          <Marketplace className="menu-item-link-icon icon-marketplace" />
+          Marketplace
+        </a>
+      </li>
+    </ul>
   );
 }

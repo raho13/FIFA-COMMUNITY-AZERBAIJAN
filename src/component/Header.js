@@ -224,6 +224,7 @@ export default function Header() {
                   </div>
                 </div>
               </div>
+              
               <div className="action-list-item-wrap">
                 <div className="action-list-item header-dropdown-trigger">
                   <Friend
@@ -303,6 +304,7 @@ export default function Header() {
                   </a>
                 </div>
               </div>
+             
               <div className="action-list-item-wrap">
                 <div className="action-list-item unread header-dropdown-trigger">
                   <Notification

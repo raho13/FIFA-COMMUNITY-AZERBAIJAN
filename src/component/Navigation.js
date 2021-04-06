@@ -10,7 +10,7 @@ import Futcoins from "../pages/Futcoins";
 import FutTournaments from "../pages/FutTournaments";
 import Profil from "../pages/Profil";
 import { Switch, Route } from "react-router-dom";
-import Register from "../pages/Register";
+import Marketplace from "../pages/Marketplace";
 export default function Navigation() {
   const { menuVisible, msgWidget } = useContext(menuContext);
 
@@ -57,9 +57,9 @@ export default function Navigation() {
       <Switch>
         <Route path="/FutTournaments" component={FutTournaments} />
       </Switch>
-      {/* <Switch>
-        <Route path="/*" component={Newsfeed} />
-      </Switch> */}
+      <Switch>
+        <Route path="/Marketplace" component={Marketplace} />
+      </Switch>
     </div>
   );
 }

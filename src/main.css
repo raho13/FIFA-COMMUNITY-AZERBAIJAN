@@ -16399,6 +16399,28 @@ textarea {
     grid-template-areas: "header" "contentsidebar" "sidebar" "content"; } }
 
 @media screen and (max-width: 680px) {
+  .opsbar {
+    top: 0;
+    display: block !important;
+    overflow-x: auto;
+    visibility: visible;
+    width: 100%;
+    background-color: #1d2333;
+    position: absolute;
+    transform: translate(0, 0);
+    z-index: 9;
+    transition: all 1s; }
+  .opsbar-hidden {
+    display: block !important;
+    overflow-x: auto;
+    visibility: visible;
+    width: 100%;
+    top: 0;
+    background-color: #1d2333;
+    position: absolute;
+    transform: translate(100%, 0);
+    transition: all 1s;
+    z-index: 9; }
   .content-grid {
     width: 95%;
     padding: 92px 0 200px; }
@@ -16488,6 +16510,32 @@ textarea {
 
 #entrybtns button {
   margin-right: 15px; }
+
+.opsbar {
+  display: none;
+  position: fixed; }
+
+.opsbar-hidden {
+  display: none; }
+
+.opsbody {
+  width: 100% !important;
+  margin-top: 100px;
+  height: auto !important; }
+
+.opsmain {
+  max-height: 400px !important; }
+
+.opsmain1 {
+  max-height: 80% !important; }
+
+.dwnarrw {
+  width: 9px; }
+
+#opscnt {
+  overflow: hidden;
+  position: relative;
+  max-width: 100vw; }
 
 .widget-box {
   padding: 32px 28px;
