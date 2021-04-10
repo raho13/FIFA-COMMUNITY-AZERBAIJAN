@@ -11,6 +11,7 @@ import FutTournaments from "../pages/FutTournaments";
 import Profil from "../pages/Profil";
 import { Switch, Route } from "react-router-dom";
 import Marketplace from "../pages/Marketplace";
+import FifaTournaments from "../pages/FifaTournaments";
 export default function Navigation() {
   const { menuVisible, msgWidget } = useContext(menuContext);
 
@@ -59,6 +60,9 @@ export default function Navigation() {
       </Switch>
       <Switch>
         <Route path="/Marketplace" component={Marketplace} />
+      </Switch>
+      <Switch>
+        <Route path="/fifaTournaments" component={FifaTournaments} />
       </Switch>
     </div>
   );

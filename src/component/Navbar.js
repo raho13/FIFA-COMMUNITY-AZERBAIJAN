@@ -219,6 +219,20 @@ export default function Navbar() {
               <Newsfeed className="menu-item-link-icon icon-newsfeed" />
             </Link>
           </li>
+          <li
+            onClick={() => {
+              setactiveMenuIndex(8);
+            }}
+            className={ActiveitemHandler(8)}
+          >
+            <Link
+              className="menu-item-link text-tooltip-tfr"
+              to="/fifaTournaments"
+              data-title="Newsfeed"
+            >
+              <Newsfeed className="menu-item-link-icon icon-newsfeed" />
+            </Link>
+          </li>
 
           {/*         
     <li className="menu-item">

@@ -16403,6 +16403,7 @@ textarea {
     top: 0;
     display: block !important;
     overflow-x: auto;
+    position: fixed;
     visibility: visible;
     width: 100%;
     background-color: #1d2333;
@@ -16415,6 +16416,7 @@ textarea {
     overflow-x: auto;
     visibility: visible;
     width: 100%;
+    position: fixed;
     top: 0;
     background-color: #1d2333;
     position: absolute;
@@ -16512,8 +16514,7 @@ textarea {
   margin-right: 15px; }
 
 .opsbar {
-  display: none;
-  position: fixed; }
+  display: none; }
 
 .opsbar-hidden {
   display: none; }
@@ -17115,6 +17116,86 @@ textarea {
       bottom: 80px; }
     .sidebar.chat-widget .chat-widget-button {
       bottom: 0; }
+
+.fifaMatch {
+  display: flex;
+  flex-direction: row;
+  height: 90px;
+  background-color: #21283b;
+  border-radius: 10px; }
+
+.fristPlayer {
+  width: 40%; }
+
+.secondPlayer {
+  width: 40%; }
+
+.fifaResult {
+  width: 20%; }
+
+.playerAvatar {
+  margin-top: 27px;
+  width: 50px;
+  height: 50px; }
+
+.secondPlayer {
+  display: flex;
+  flex-direction: row-reverse; }
+
+@media screen and (max-width: 445px) {
+  .playerinfo1 {
+    left: -10px;
+    text-align: end;
+    top: 26px !important;
+    position: relative; }
+  .spMobile {
+    border-color: "red";
+    width: 115%;
+    margin-left: -7.5%; }
+  .frplayerName {
+    font-size: 12px !important;
+    position: relative; }
+  .playerFlag {
+    font-size: 10px !important;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase; }
+  .fifaResult {
+    color: white;
+    font-weight: bold;
+    font-size: 20px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center; } }
+
+.frplayerName {
+  font-size: 15px;
+  font-weight: bold; }
+
+.fifaResult {
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.playerFlag {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase; }
+
+.playerinfo {
+  left: 60px;
+  top: -50px;
+  position: relative; }
+
+.playerinfo1 {
+  left: -10px;
+  text-align: end;
+  top: 30px;
+  position: relative; }
 
 .bnnr {
   background: url("img/banner/banner-bg.png") no-repeat 50%; }

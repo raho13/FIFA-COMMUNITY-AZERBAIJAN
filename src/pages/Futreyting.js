@@ -34,9 +34,8 @@ export default function Futreyting() {
             </figure>
             <div className="user-preview-info">
               <div className="user-short-description landscape tiny">
-                <a className="user-short-description-avatar user-avatar small"
-                href='lhjk'>
-                <Avatar size={1} />
+                <a className="user-short-description-avatar user-avatar small">
+                  <Avatar size={1} />
                 </a>
                 <p className="user-short-description-title">
                   <a href="profile-timeline.html">Cavid Qurbanov</a>
