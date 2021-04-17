@@ -1,3 +1,4 @@
+//  FifaTournaments
 .fifaMatch {
   display: flex;
   flex-direction: row;
@@ -14,6 +15,9 @@
 }
 .fifaResult {
   width: 20%;
+}
+#tourID {
+  margin-top: 20px;
 }
 .playerAvatar {
   margin-top: 27px;

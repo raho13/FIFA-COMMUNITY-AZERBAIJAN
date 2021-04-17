@@ -21,11 +21,13 @@ export default function Header() {
     setmenuVisible,
     MmenuVisible,
     setMmenuVisible,
+    isLogin,
+    setisLogin,
   } = useContext(menuContext);
   const [srchEvent, setsrchEvent] = useState(false);
   const [index, setIndex] = useState(0);
   const [inputValue, setinputValue] = useState("");
-  const [isLogin, setisLogin] = useState(false);
+
   const [shpclass, setShpclass] = useState(
     "dropdown-box  header-dropdown passiveShp no-padding-bottom"
   );
@@ -39,7 +41,7 @@ export default function Header() {
     "dropdown-navigation header-settings-dropdown passiveSet"
   );
 
-  const actionHandler = () => {
+  const loginpHandler = () => {
     if (isLogin) {
       return (
         <>
@@ -224,7 +226,7 @@ export default function Header() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="action-list-item-wrap">
                 <div className="action-list-item header-dropdown-trigger">
                   <Friend
@@ -304,7 +306,7 @@ export default function Header() {
                   </a>
                 </div>
               </div>
-             
+
               <div className="action-list-item-wrap">
                 <div className="action-list-item unread header-dropdown-trigger">
                   <Notification
@@ -629,9 +631,9 @@ export default function Header() {
       );
     } else {
       return (
-        <div className="header-actions">
+        <div className="header-actions logvis">
           <form className="login-form">
-            <div className="form-row split">
+            <div className="form-row split" id="logcnt">
               <div className="form-item">
                 <div className="form-input dark">
                   <input
@@ -954,7 +956,8 @@ export default function Header() {
           </div>
         </div>
       </div>
-      {actionHandler()}
+      <div></div>
+      {loginpHandler()}
     </div>
   );
 }

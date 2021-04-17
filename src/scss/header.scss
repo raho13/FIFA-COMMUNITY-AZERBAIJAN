@@ -187,7 +187,7 @@
 .icon-join-group,
 .icon-leave-group,
 .icon-plus,
-.icon-login path{
+.icon-login path {
   fill: $white;
   width: 20px;
   height: 20px;
@@ -196,22 +196,22 @@
   width: 14px;
   height: 10px;
 }
-.icon-small-arrow path{
+.icon-small-arrow path {
   fill: $color-icon;
   width: 6px;
   height: 8px;
 }
-.icon-big-arrow path{
+.icon-big-arrow path {
   fill: $black;
   width: 8px;
   height: 12px;
 }
-.icon-more-dots path{
+.icon-more-dots path {
   fill: $white;
   width: 22px;
   height: 6px;
 }
-.icon-star path{
+.icon-star path {
   fill: $gray-lighter;
   width: 9px;
   height: 8px;
@@ -220,18 +220,18 @@
     height: 12px;
   }
 }
-.icon-play path{
+.icon-play path {
   fill: $white;
   width: 12px;
   height: 14px;
 }
 .icon-plus-small,
-.icon-minus-small path{
+.icon-minus-small path {
   fill: $black;
   width: 8px;
   height: 8px;
 }
-.icon-quote path{
+.icon-quote path {
   fill: $black;
   width: 32px;
   height: 22px;
@@ -240,6 +240,14 @@
   width: 12px;
   height: 9px;
 }
-.demo-icon path{
+.demo-icon path {
   fill: $color-icon-bold;
+}
+//edits
+
+@media screen and (max-width: 960px) {
+  #logcnt {
+    display: flex !important;
+    margin-top: 30px;
+  }
 }

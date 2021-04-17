@@ -4,13 +4,6 @@ import bannerimg from "../img/banner/streams-icon.png";
 import Avatar from "../component/Avatar";
 import { ReactComponent as Flag } from "../icons/azerbaijan.svg";
 export default function FifaTournaments() {
-  //const a = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-  //   const func = () => {
-  //     a.map((i) => {
-  //       console.log(i.index);
-  //     });
-  //   };
-
   return (
     <>
       <Banner
@@ -25,7 +18,7 @@ export default function FifaTournaments() {
         </div>
       </div>
 
-      <div className="grid grid-3-9 medium-space">
+      <div id="tourID">
         <div className="widget-box">
           <div className="widget-box-content">
             <div className="form">
@@ -84,7 +77,62 @@ export default function FifaTournaments() {
                     </div>
                   </div>
                 </div>
-             
+              </div>
+              <div className="form-row split spMobile">
+                <div className="form-item">
+                  <div className="form-input small fifaMatch">
+                    <div className="fristPlayer">
+                      <div className="playerAvatar">
+                        <Avatar size={1} />
+                      </div>
+                      <div className="playerinfo">
+                        <p className="frplayerName">Cavid Qurbanov</p>
+                        <p className="playerFlag">
+                          <Flag className="Reyflacicn" /> Azerbaijan
+                        </p>
+                      </div>
+                    </div>
+                    <div className="fifaResult">6-0</div>
+                    <div className="secondPlayer">
+                      <div className="playerAvatar">
+                        <Avatar size={1} />
+                      </div>
+                      <div className="playerinfo1">
+                        <p className="frplayerName">Rahib Rzayev</p>
+                        <p className="playerFlag">
+                          <Flag className="Reyflacicn" /> Azerbaijan
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="form-item">
+                  <div className="form-input small fifaMatch">
+                    <div className="fristPlayer">
+                      <div className="playerAvatar">
+                        <Avatar size={1} />
+                      </div>
+                      <div className="playerinfo">
+                        <p className="frplayerName">Cavid Qurbanov</p>
+                        <p className="playerFlag">
+                          <Flag className="Reyflacicn" /> Azerbaijan
+                        </p>
+                      </div>
+                    </div>
+                    <div className="fifaResult">6-0</div>
+                    <div className="secondPlayer">
+                      <div className="playerAvatar">
+                        <Avatar size={1} />
+                      </div>
+                      <div className="playerinfo1">
+                        <p className="frplayerName">Rahib Rzayev</p>
+                        <p className="playerFlag">
+                          <Flag className="Reyflacicn" /> Azerbaijan
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

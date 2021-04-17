@@ -3404,6 +3404,11 @@
 .demo-icon path {
   fill: #fff; }
 
+@media screen and (max-width: 960px) {
+  #logcnt {
+    display: flex !important;
+    margin-top: 30px; } }
+
 *, ::after, ::before {
   margin: 0;
   padding: 0;
@@ -15939,6 +15944,24 @@ textarea {
   height: 10px;
   float: left; }
 
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  transform: translate(0px, 0px);
+  transition: transform 0.4s ease-in-out 0s; }
+
+.container1 {
+  transform: translate(110px, 0px);
+  transition: transform 0.4s ease-in-out 0s;
+  margin-left: auto;
+  margin-right: auto; }
+
+.container2 {
+  transform: translate(-110px, 0px);
+  transition: transform 0.4s ease-in-out 0s;
+  margin-left: auto;
+  margin-right: auto; }
+
 .cntrbar {
   width: 120px;
   height: 4px;
@@ -16522,13 +16545,10 @@ textarea {
 .opsbody {
   width: 100% !important;
   margin-top: 100px;
-  height: auto !important; }
+  height: calc(100vh - 160px) !important; }
 
 .opsmain {
-  max-height: 400px !important; }
-
-.opsmain1 {
-  max-height: 80% !important; }
+  height: calc(100vh - 285px) !important; }
 
 .dwnarrw {
   width: 9px; }
@@ -16537,6 +16557,21 @@ textarea {
   overflow: hidden;
   position: relative;
   max-width: 100vw; }
+
+.mobile-login {
+  margin-top: 30px;
+  height: 110px;
+  left: -10px; }
+
+.clsmobilemenu {
+  fill: #616a82;
+  position: absolute;
+  left: 90%;
+  z-index: 2; }
+
+#containeropacity {
+  opacity: 0.03;
+  transition: all 0.1s; }
 
 .widget-box {
   padding: 32px 28px;
@@ -17133,6 +17168,9 @@ textarea {
 .fifaResult {
   width: 20%; }
 
+#tourID {
+  margin-top: 20px; }
+
 .playerAvatar {
   margin-top: 27px;
   width: 50px;
@@ -17199,24 +17237,6 @@ textarea {
 
 .bnnr {
   background: url("img/banner/banner-bg.png") no-repeat 50%; }
-
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  transform: translate(0px, 0px);
-  transition: transform 0.4s ease-in-out 0s; }
-
-.container1 {
-  transform: translate(110px, 0px);
-  transition: transform 0.4s ease-in-out 0s;
-  margin-left: auto;
-  margin-right: auto; }
-
-.container2 {
-  transform: translate(-110px, 0px);
-  transition: transform 0.4s ease-in-out 0s;
-  margin-left: auto;
-  margin-right: auto; }
 
 .passivePostop {
   position: absolute;

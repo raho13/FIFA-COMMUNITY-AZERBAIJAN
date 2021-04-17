@@ -1,3 +1,21 @@
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  transform: translate(0px, 0px);
+  transition: transform 0.4s ease-in-out 0s;
+}
+.container1 {
+  transform: translate(110px, 0px);
+  transition: transform 0.4s ease-in-out 0s;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container2 {
+  transform: translate(-110px, 0px);
+  transition: transform 0.4s ease-in-out 0s;
+  margin-left: auto;
+  margin-right: auto;
+}
 .cntrbar {
   width: 120px;
   height: 4px;
@@ -792,7 +810,6 @@ $col-6_9: ($col-6-width / $grid-width_9) * 100%;
     display: block !important;
     overflow-x: auto;
     position: fixed;
-
     visibility: visible;
     width: 100%;
     background-color: $color-box-background;
@@ -927,26 +944,37 @@ $col-6_9: ($col-6-width / $grid-width_9) * 100%;
 .opsbar {
   display: none;
 }
-.opsbar-hidden { 
+.opsbar-hidden {
   display: none;
-  
 }
 .opsbody {
   width: 100% !important;
   margin-top: 100px;
-  height: auto !important;
+  height: calc(100vh - 160px) !important;
 }
 .opsmain {
-  max-height: 400px !important;
-}
-.opsmain1 {
-  max-height: 80% !important;
+  height: calc(100vh - 285px) !important;
 }
 .dwnarrw {
   width: 9px;
 }
-#opscnt{
+#opscnt {
   overflow: hidden;
   position: relative;
   max-width: 100vw;
+}
+.mobile-login {
+  margin-top: 30px;
+  height: 110px;
+  left: -10px;
+}
+.clsmobilemenu {
+  fill: $color-icon;
+  position: absolute;
+  left: 90%;
+  z-index: 2;
+}
+#containeropacity {
+  opacity: 0.03;
+  transition: all 0.1s;
 }

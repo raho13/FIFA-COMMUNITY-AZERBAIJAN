@@ -31,7 +31,7 @@ export default function Navbar() {
       setactiveMenuIndex(1);
     }
   });
-  const { menuVisible } = useContext(menuContext);
+  const { menuVisible, setMmenuVisible } = useContext(menuContext);
   const [smallmenu, setsmallmenu] = useState(
     "navigation-widget navigation-widget-desktop closed sidebar left delayed"
   );
@@ -293,51 +293,52 @@ export default function Navbar() {
   );
 }
 export function Menuitems() {
+  const { setMmenuVisible } = useContext(menuContext);
   return (
     <ul className="menu">
-      <li className="menu-item">
+      <li className="menu-item" onClick={() => setMmenuVisible(false)}>
         <Link className="menu-item-link" to="/">
           <Newsfeed className="menu-item-link-icon icon-newsfeed" />
           Newsfeed
         </Link>
       </li>
-      <li className="menu-item">
+      <li className="menu-item" onClick={() => setMmenuVisible(false)}>
         <Link className="menu-item-link" to="/Streams">
           <Overview className="menu-item-link-icon icon-overview" />
           Overview
         </Link>
       </li>
-      <li className="menu-item">
+      <li className="menu-item" onClick={() => setMmenuVisible(false)}>
         <Link className="menu-item-link" to="/Fut-reyting">
           <Group className="menu-item-link-icon icon-group" />
           Groups
         </Link>
       </li>
-      <li className="menu-item">
+      <li className="menu-item" onClick={() => setMmenuVisible(false)}>
         <Link className="menu-item-link" to="/Accounthub">
           <Members className="menu-item-link-icon icon-members" />
           Members
         </Link>
       </li>
-      <li className="menu-item">
+      <li className="menu-item" onClick={() => setMmenuVisible(false)}>
         <Link className="menu-item-link" to="/FutTournaments">
           <Badges className="menu-item-link-icon icon-badges" />
           Badges
         </Link>
       </li>
-      <li className="menu-item">
+      <li className="menu-item" onClick={() => setMmenuVisible(false)}>
         <a className="menu-item-link" href="quests.html">
           <Quests className="menu-item-link-icon icon-quests" />
           Quests
         </a>
       </li>
-      <li className="menu-item">
+      <li className="menu-item" onClick={() => setMmenuVisible(false)}>
         <a className="menu-item-link" href="streams.html">
           <Streams className="menu-item-link-icon icon-streams" />
           Streams
         </a>
       </li>
-      <li className="menu-item">
+      <li className="menu-item" onClick={() => setMmenuVisible(false)}>
         <a className="menu-item-link" href="events.html">
           <Events className="menu-item-link-icon icon-events" />
           Events

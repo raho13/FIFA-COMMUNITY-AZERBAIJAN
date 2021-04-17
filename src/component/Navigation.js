@@ -29,6 +29,7 @@ export default function Navigation() {
       return "content-grid container2";
     }
   };
+
   return (
     <div className={gridPosition()}>
       <Switch>

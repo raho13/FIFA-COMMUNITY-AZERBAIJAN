@@ -6,6 +6,9 @@ import { ReactComponent as Friend } from "../icons/Friends Icon.svg";
 import Optionbar from "./Optionbar";
 export default function FloatyBar() {
   const [menuIndex, setmenuIndex] = useState(0);
+  const menuCloser = () => {
+    setmenuIndex(0);
+  };
   return (
     <>
       <aside className="floaty-bar">
@@ -43,6 +46,7 @@ export default function FloatyBar() {
             >
               <Friend className="action-list-item-icon icon-friend" />
             </a>
+
             <a
               className="action-list-item unread"
               onClick={() => {
@@ -54,18 +58,27 @@ export default function FloatyBar() {
             >
               <Notification className="action-list-item-icon icon-notification" />
             </a>
+            <a
+              onClick={() => {
+                setmenuIndex(4);
+                if (menuIndex === 4) {
+                  setmenuIndex(0);
+                }
+              }}
+              className="action-item-wrap"
+            >
+              <div className="action-item dark">
+                <Setting className="action-item-icon icon-settings" />
+              </div>
+            </a>
           </div>
-          <a className="action-item-wrap" href="hub-profile-info.html">
-            <div className="action-item dark">
-              <Setting className="action-item-icon icon-settings" />
-            </div>
-          </a>
         </div>
       </aside>
       <div className="opscnt">
-        <Optionbar a={1} i={menuIndex} />
-        <Optionbar a={2} i={menuIndex} />
-        <Optionbar a={3} i={menuIndex} />
+        <Optionbar a={1} i={menuIndex} method={menuCloser} />
+        <Optionbar a={2} i={menuIndex} method={menuCloser} />
+        <Optionbar a={3} i={menuIndex} method={menuCloser} />
+        <Optionbar a={4} i={menuIndex} method={menuCloser} />
       </div>
     </>
   );

@@ -11,6 +11,14 @@ import { BrowserRouter as Router } from "react-router-dom";
 import Register from "../pages/Register";
 
 export default function Layout() {
+  const { popup, MmenuVisible } = useContext(menuContext);
+  const Containeropacity = () => {
+    if (MmenuVisible) {
+      return "containeropacity";
+    } else {
+      return null;
+    }
+  };
   const templaterender = () => {
     if (
       window.location.pathname == "/register" ||
@@ -21,17 +29,19 @@ export default function Layout() {
       return (
         <Router>
           {popuphandler()}
-          <Navigation />
           <Navbar />
-          <Header />
           <Chatwidget />
-          <FloatyBar />
+          <div id={Containeropacity()}>
+            <Navigation />
+            <Header />
+            <FloatyBar />
+          </div>
           <MobileNavbar />
         </Router>
       );
     }
   };
-  const { popup } = useContext(menuContext);
+
   const popuphandler = () => {
     if (popup.vis) {
       return <Imagepopup />;

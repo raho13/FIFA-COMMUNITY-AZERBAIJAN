@@ -1,24 +1,7 @@
 .bnnr {
   background: url("img/banner/banner-bg.png") no-repeat 50%;
 }
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  transform: translate(0px, 0px);
-  transition: transform 0.4s ease-in-out 0s;
-}
-.container1 {
-  transform: translate(110px, 0px);
-  transition: transform 0.4s ease-in-out 0s;
-  margin-left: auto;
-  margin-right: auto;
-}
-.container2 {
-  transform: translate(-110px, 0px);
-  transition: transform 0.4s ease-in-out 0s;
-  margin-left: auto;
-  margin-right: auto;
-}
+
 .passivePostop {
   position: absolute;
   z-index: 9999;
