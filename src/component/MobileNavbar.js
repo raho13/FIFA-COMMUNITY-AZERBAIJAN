@@ -57,6 +57,7 @@ export default function MobileNavbar() {
           </div>
         )}
         <Menuitems />
+        <Menuitems />
       </Scrollbars>
     </nav>
   );
