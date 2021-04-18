@@ -53,7 +53,7 @@
   transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s,
     visibility 0.4s ease-in-out 0s;
 }
-#wsx {
+.wsx {
   align-items: center;
   display: flex;
   justify-content: center;
@@ -876,14 +876,7 @@ $col-6_9: ($col-6-width / $grid-width_9) * 100%;
   display: block;
   margin: 30px auto 0 auto;
 }
-.scmdicns {
-  display: flex;
-  justify-content: space-around;
-  overflow: auto;
-}
-.scmdicns div:nth-child(1) {
-  margin-left: 15px !important;
-}
+
 .nopdng {
   padding: 0 !important;
 }
@@ -897,6 +890,9 @@ $col-6_9: ($col-6-width / $grid-width_9) * 100%;
 .asd {
   cursor: pointer;
 }
+.active .section-menu-item-icon {
+  fill: $color-primary;
+}
 #ptfnavcnt {
   display: flex;
   justify-content: center;
@@ -907,15 +903,7 @@ $col-6_9: ($col-6-width / $grid-width_9) * 100%;
 .mrg {
   margin-top: 30px;
 }
-#inpcnt2 {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
-}
-.inpwidt {
-  width: 23%;
-}
+
 .bdginpbtn {
   margin-top: 0 !important;
 }
@@ -923,8 +911,7 @@ $col-6_9: ($col-6-width / $grid-width_9) * 100%;
   margin-left: 10%;
 }
 .section-menu .section-menu-item.active {
-  border-bottom: 4px solid #4ff461;
-  fill: red;
+  border-bottom: 4px solid $color-primary;
 }
 .chckX {
   width: 12px;
@@ -932,11 +919,11 @@ $col-6_9: ($col-6-width / $grid-width_9) * 100%;
   margin-left: 0.7px;
 }
 
-#entrybtns {
+.entrybtns {
   display: flex;
   flex-direction: row;
 }
-#entrybtns button {
+.entrybtns button {
   margin-right: 15px;
 }
 .opsbar {
@@ -963,14 +950,15 @@ $col-6_9: ($col-6-width / $grid-width_9) * 100%;
 }
 .mobile-login {
   margin-top: 30px;
-  height: 110px;
   left: -10px;
 }
 .clsmobilemenu {
   fill: $color-icon;
   position: absolute;
-  left: 90%;
+  left: 25px;
+  margin-top: -10px;
   z-index: 2;
+  transform: rotate(0.5turn);
 }
 #containeropacity {
   opacity: 0.03;

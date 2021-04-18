@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect } from "react";
 import { Scrollbars } from "react-custom-scrollbars";
 import { Menuitems } from "./Navbar";
 import { ReactComponent as Backarrow } from "../icons/backarrow.svg";
+import { ReactComponent as Logswitch } from "../icons/Logswitch.svg";
 import { menuContext } from "../context";
 import Avatar from "./Avatar";
 import Input from "./Input";
@@ -50,6 +51,14 @@ export default function MobileNavbar() {
                   </div>
                   <div className="form-item">
                     <Input label="Şifrəniz" type="psw" />
+                  </div>
+                  <div className="entrybtns">
+                    <button class="button primary with-only-icon">
+                      <Logswitch className="icon-login" />
+                    </button>
+                    <button class="button primary with-only-icon">
+                      <Logswitch className="icon-login" />
+                    </button>
                   </div>
                 </div>
               </form>

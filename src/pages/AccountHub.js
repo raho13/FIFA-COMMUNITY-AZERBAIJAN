@@ -34,26 +34,26 @@ export default function AccountHub() {
         <div className="account-hub-content">
           <div className="grid-column content-main">
             <div id="jjk" className="account-info-set">
-              <div className="account-logo log-first">
+              <div className="account-logo log-first n">
                 <a className="user-avatar small no-outline online account-avatar">
                   <Avatar size={1} />
                 </a>
               </div>
-              <div className="account-logo ml-2">
+              <div className="account-logo ml-2 n">
                 <img src={Userimg} className="user-icon" />
                 <div className="account-text">
                   <h1>Profil şəklini dəyiş</h1>
                   <p>Minimal ölçü 110x110px</p>
                 </div>
               </div>
-              <div className="account-logo ml-2">
+              <div className="account-logo ml-2 n">
                 <img src={convert} className="user-icon" />
                 <div className="account-text">
                   <h1>Kover şəklini dəyiş</h1>
                   <p>Minimal ölçü 1184x300px</p>
                 </div>
               </div>
-              <div className="account-logo ml-2">
+              <div className="account-logo ml-2 n">
                 <div className="account-balance">
                   <h2 id="ghj">1275 AZN</h2>
                   <h1>Balansını artır</h1>
@@ -61,6 +61,7 @@ export default function AccountHub() {
                 </div>
               </div>
             </div>
+
             <div className="widget-box">
               <p className="widget-box-title">Şəxsi Məlumatlarınız</p>
               <div className="widget-box-content">

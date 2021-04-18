@@ -123,19 +123,25 @@ export default function Futcoins() {
         <p className="widget-box-title">Köçürmə haqqında</p>
         <div className="widget-box-content padding">
           <div className="switch-option">
-            <div className="form-item" id="inpcnt2">
-              <div className="form-input small inpwidt">
-                <Input label="Playstation hesbınızın E-mail adresi" />
-              </div>
-              <div className="form-input small inpwidt">
-                <Input label="Hesabınızın şifrəsi" />
-              </div>
-              <div className="form-input small inpwidt">
-                <Input label="Əlaqə nömrəsi" />
-              </div>
-              <button className="inpwidt button small secondary bdginpbtn">
-                Sifariş yerləşdir
-              </button>
+            <div className="widget-box-content">
+              <form className="form">
+                <div className="form-row split">
+                  <div className="form-item">
+                    <Input label="Playstation hesbınızın E-mail adresi" />
+                  </div>
+                  <div className="form-item">
+                    <Input label="Hesabınızın şifrəsi" />
+                  </div>
+                  <div className="form-item">
+                    <Input label="Əlaqə nömrəsi" />
+                  </div>
+                  <div className="form-item">
+                    <button className="inpwidt button small secondary bdginpbtn">
+                      Sifariş yerləşdir
+                    </button>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
           <div className="switch-option mrg">

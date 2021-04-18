@@ -15994,7 +15994,7 @@ textarea {
   transform: translate(0px, 0px);
   transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s, visibility 0.4s ease-in-out 0s; }
 
-#wsx {
+.wsx {
   align-items: center;
   display: flex;
   justify-content: center; }
@@ -16473,14 +16473,6 @@ textarea {
   display: block;
   margin: 30px auto 0 auto; }
 
-.scmdicns {
-  display: flex;
-  justify-content: space-around;
-  overflow: auto; }
-
-.scmdicns div:nth-child(1) {
-  margin-left: 15px !important; }
-
 .nopdng {
   padding: 0 !important; }
 
@@ -16494,6 +16486,9 @@ textarea {
 .asd {
   cursor: pointer; }
 
+.active .section-menu-item-icon {
+  fill: #4ff461; }
+
 #ptfnavcnt {
   display: flex;
   justify-content: center; }
@@ -16504,15 +16499,6 @@ textarea {
 .mrg {
   margin-top: 30px; }
 
-#inpcnt2 {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around; }
-
-.inpwidt {
-  width: 23%; }
-
 .bdginpbtn {
   margin-top: 0 !important; }
 
@@ -16520,19 +16506,18 @@ textarea {
   margin-left: 10%; }
 
 .section-menu .section-menu-item.active {
-  border-bottom: 4px solid #4ff461;
-  fill: red; }
+  border-bottom: 4px solid #4ff461; }
 
 .chckX {
   width: 12px;
   height: 12px;
   margin-left: 0.7px; }
 
-#entrybtns {
+.entrybtns {
   display: flex;
   flex-direction: row; }
 
-#entrybtns button {
+.entrybtns button {
   margin-right: 15px; }
 
 .opsbar {
@@ -16559,14 +16544,15 @@ textarea {
 
 .mobile-login {
   margin-top: 30px;
-  height: 110px;
   left: -10px; }
 
 .clsmobilemenu {
   fill: #616a82;
   position: absolute;
-  left: 90%;
-  z-index: 2; }
+  left: 25px;
+  margin-top: -10px;
+  z-index: 2;
+  transform: rotate(0.5turn); }
 
 #containeropacity {
   opacity: 0.03;
@@ -17196,14 +17182,16 @@ textarea {
     font-size: 10px !important;
     display: flex;
     align-items: center;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-family: Regular !important; }
   .fifaResult {
     color: white;
     font-weight: bold;
     font-size: 20px !important;
     display: flex;
     justify-content: center;
-    align-items: center; } }
+    align-items: center;
+    font-family: Regular !important; } }
 
 .frplayerName {
   font-size: 15px;
@@ -17215,13 +17203,15 @@ textarea {
   font-size: 30px;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  font-family: Regular !important; }
 
 .playerFlag {
   font-size: 14px;
   display: flex;
   align-items: center;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-family: Regular !important; }
 
 .playerinfo {
   left: 60px;
@@ -17233,6 +17223,18 @@ textarea {
   text-align: end;
   top: 30px;
   position: relative; }
+
+.scmdicns {
+  display: flex;
+  justify-content: space-around;
+  overflow: auto; }
+
+.scmdicns div:nth-child(1) {
+  margin-left: 15px !important; }
+
+@media screen and (max-width: 480px) {
+  #profile-header-social-links-slider-iw {
+    width: auto !important; } }
 
 .bnnr {
   background: url("img/banner/banner-bg.png") no-repeat 50%; }
@@ -17871,6 +17873,16 @@ textarea {
 #jjk {
   display: flex;
   justify-content: space-between; }
+
+@media screen and (max-width: 660px) {
+  .n {
+    width: 45% !important;
+    margin-bottom: 20px; }
+  #jjk {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap; } }
 
 #jjk .ml-2 {
   cursor: pointer; }

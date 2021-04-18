@@ -4,6 +4,7 @@ import { ReactComponent as Friend } from "../icons/Friends Icon.svg";
 import { ReactComponent as Twitter } from "../icons/Twitter.svg";
 import { ReactComponent as Photo } from "../icons/Photo.svg";
 import { ReactComponent as Video } from "../icons/Video.svg";
+import { ReactComponent as Flag } from "../icons/azerbaijan.svg";
 import flag from "../img/flag/usa.png";
 import cover1 from "../img/cover/01.jpg";
 import { ReactComponent as Badges } from "../icons/Badges Icon.svg";
@@ -83,11 +84,14 @@ export default function Profil() {
             <p className="user-short-description-title">
               <a href="profile-timeline.html">Marina Valentine</a>
             </p>
-            <p className="user-short-description-text">
-              <a href="#">www.gamehuntress.com</a>
-            </p>
+            <p className="user-short-description-text wsx">
+            <Flag className="Reyflacicn" /> Azerbaijan
+          </p>
           </div>
-          <div className="profile-header-social-links-wrap">
+          <div
+            className="profile-header-social-links-wrap"
+            id="profile-header-social-links-slider-iw"
+          >
             <div
               className="tns-outer"
               id="profile-header-social-links-slider-ow"
@@ -103,10 +107,7 @@ export default function Profil() {
                 id="profile-header-social-links-slider-mw"
                 className="tns-ovh"
               >
-                <div
-                  className="tns-inner"
-                  id="profile-header-social-links-slider-iw"
-                >
+                <div className="tns-inner">
                   <div
                     id="profile-header-social-links-slider"
                     className="profile-header-social-links tns-slider tns-carousel tns-subpixel tns-calc tns-horizontal scmdicns"
@@ -248,35 +249,6 @@ export default function Profil() {
                 </div>
               </div>
             </div>
-            <div
-              id="profile-header-social-links-slider-controls"
-              className="slider-controls"
-              aria-label="Carousel Navigation"
-              tabIndex={0}
-            >
-              <div
-                className="slider-control left"
-                aria-controls="profile-header-social-links-slider"
-                tabIndex={-1}
-                data-controls="prev"
-                aria-disabled="false"
-              >
-                <svg className="slider-control-icon icon-small-arrow">
-                  <use xlinkHref="#svg-small-arrow" />{" "}
-                </svg>
-              </div>
-              <div
-                className="slider-control right"
-                aria-controls="profile-header-social-links-slider"
-                tabIndex={-1}
-                data-controls="next"
-                aria-disabled="true"
-              >
-                <svg className="slider-control-icon icon-small-arrow">
-                  <use xlinkHref="#svg-small-arrow" />{" "}
-                </svg>
-              </div>
-            </div>
           </div>
           <div className="user-stats">
             <div className="user-stat big">
@@ -298,7 +270,7 @@ export default function Profil() {
           </div>
           <div className="profile-header-info-actions">
             <p className="profile-header-info-action button secondary">
-              <span className="hide-text-mobile">Follow</span>
+              Follow
             </p>
           </div>
         </div>

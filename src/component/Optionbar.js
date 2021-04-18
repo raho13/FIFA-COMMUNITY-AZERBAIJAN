@@ -911,13 +911,13 @@ export default function Optionbar({ a, i, method }) {
       return (
         <div className={handleClass(4)}>
           <div className="action-item-wrap">
+            <Backarrow
+              onClick={() => {
+                method(0);
+              }}
+              className="navigation-widget-close-button-icon icon-back-arrow clsmobilemenu"
+            />
             <div className="dropdown-navigation header-settings-dropdown opsbody">
-              <Backarrow
-                onClick={() => {
-                  method(0);
-                }}
-                className="navigation-widget-close-button-icon icon-back-arrow clsmobilemenu"
-              />
               <div className="dropdown-navigation-header">
                 <div className="user-status">
                   <a

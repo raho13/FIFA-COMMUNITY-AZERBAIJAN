@@ -654,7 +654,7 @@ export default function Header() {
                   />
                 </div>
               </div>
-              <div id="entrybtns">
+              <div className="entrybtns">
                 <button
                   onClick={() => {
                     setisLogin(!isLogin);

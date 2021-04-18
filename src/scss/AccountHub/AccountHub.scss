@@ -102,6 +102,19 @@
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 660px) {
+  .n {
+    width: 45% !important;
+    margin-bottom: 20px;
+  }
+  #jjk {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
 #jjk .ml-2 {
   cursor: pointer;
 }

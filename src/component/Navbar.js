@@ -295,7 +295,7 @@ export default function Navbar() {
 export function Menuitems() {
   const { setMmenuVisible } = useContext(menuContext);
   return (
-    <ul className="menu">
+    <ul className="menu" style={{ marginTop: 0 }}>
       <li className="menu-item" onClick={() => setMmenuVisible(false)}>
         <Link className="menu-item-link" to="/">
           <Newsfeed className="menu-item-link-icon icon-newsfeed" />

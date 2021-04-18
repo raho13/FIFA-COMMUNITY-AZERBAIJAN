@@ -52,7 +52,7 @@ export default function Memitem() {
           <p className="user-short-description-title">
             <Link to="/profil">NekoBebop</Link>
           </p>
-          <p className="user-short-description-text" id="wsx">
+          <p className="user-short-description-text wsx">
             <Flag className="Reyflacicn" /> Azerbaijan
           </p>
         </div>
