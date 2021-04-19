@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 
-export default function Avatar({ size }) {
+export default function Avatar({ size, txt }) {
   const canvas = useRef(null);
   const canvas1 = useRef(null);
   const canvas2 = useRef(null);
@@ -101,7 +101,7 @@ export default function Avatar({ size }) {
           <div className="mainav1">
             <div className="imadiv1"></div>
             <div className="avatarbadge1">
-              <div>25</div>
+              {txt ? <div>{txt}</div> : <div>25</div>}
             </div>
             <canvas
               ref={canvas}

@@ -213,8 +213,7 @@
   background-color: rgb(25, 23, 39);
   height: 100%;
 }
-#imgwarp {
-}
+
 #popup-close-button {
   right: 90px;
   top: 50px;
@@ -284,4 +283,24 @@
   position: relative;
   bottom: 2px;
   left: 10px;
+}
+#mobilestory {
+  display: none;
+}
+@media screen and (max-width: 680px) {
+  #nwsnone {
+    display: none;
+  }
+  #mobilestory {
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    overflow: scroll;
+  }
+  .storyitem {
+    margin-top: 5px;
+    margin-right: 40px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+  }
 }

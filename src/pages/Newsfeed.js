@@ -13,6 +13,7 @@ import Imagespost from "../component/Postmodels/Imagespost";
 import Sharepost from "../component/Postmodels/Sharepost";
 import Gifpost from "../component/Postmodels/Gifpost";
 import Votepost from "../component/Postmodels/Votepost";
+import Avatar from "../component/Avatar";
 export default function Newsfeed() {
   const [tabIndex, settabIndex] = useState(1);
   const handleTabs = (i) => {
@@ -25,13 +26,74 @@ export default function Newsfeed() {
 
   return (
     <>
-      <Banner
-        header="Newsfeed"
-        img={bannerimg}
-        des=" Check what your friends have been up to!"
-      />
+      <div id="nwsnone">
+        <Banner
+          header="Newsfeed"
+          img={bannerimg}
+          des=" Check what your friends have been up to!"
+        />
+      </div>
+      <div id="mobilestory">
+        <div className="storyitem">
+          <Avatar size={1} txt="+" />
+        </div>
+        <div className="storyitem">
+          <Avatar size={1} />
+        </div>
+        <div className="storyitem">
+          <Avatar size={1} />
+        </div>
+        <div className="storyitem">
+          <Avatar size={1} />
+        </div>
+        <div className="storyitem">
+          <Avatar size={1} />
+        </div>
+        <div className="storyitem">
+          <Avatar size={1} />
+        </div>
+        <div className="storyitem">
+          <Avatar size={1} />
+        </div>
+        <div className="storyitem">
+          <Avatar size={1} />
+        </div>
+        <div className="storyitem">
+          <Avatar size={1} />
+        </div>
+        <div className="storyitem">
+          <Avatar size={1} />
+        </div>
+        <div className="storyitem">
+          <Avatar size={1} />
+        </div>
+        <div className="storyitem">
+          <Avatar size={1} />
+        </div>
+        <div className="storyitem">
+          <Avatar size={1} />
+        </div>
+        <div className="storyitem">
+          <Avatar size={1} />
+        </div>
+        <div className="storyitem">
+          <Avatar size={1} />
+        </div>
+        <div className="storyitem">
+          <Avatar size={1} />
+        </div>
+        <div className="storyitem">
+          <Avatar size={1} />
+        </div>
+        <div className="storyitem">
+          <Avatar size={1} />
+        </div>
+        <div className="storyitem">
+          <Avatar size={1} />
+        </div>
+      </div>
       <div className="grid grid-3-6-3 mobile-prefer-content">
-        <div className="grid-column sticky">
+        <div className="grid-column">
           <a
             className="banner-promo"
             href="https://themeforest.net/user/odin_design"
@@ -100,7 +162,7 @@ export default function Newsfeed() {
             <div className="loader-bar" />
           </div>
         </div>
-        <div className="grid-column sticky">
+        <div className="grid-column">
           <img className="promoimg" src={promo} />
           <img className="promoimg" src={promo1} />
           <img className="promoimg" src={promo} />

@@ -3144,7 +3144,7 @@
   height: 16px;
   text-align: center;
   color: white;
-  font-size: 9px;
+  font-size: 11px;
   font-family: Bold; }
 
 .can1 {
@@ -16146,7 +16146,8 @@ textarea {
 
 .sticky {
   top: 100px;
-  position: sticky; }
+  position: fixed;
+  display: block; }
 
 .pstdots path {
   fill: #616a82 !important; }
@@ -17506,6 +17507,23 @@ textarea {
   position: relative;
   bottom: 2px;
   left: 10px; }
+
+#mobilestory {
+  display: none; }
+
+@media screen and (max-width: 680px) {
+  #nwsnone {
+    display: none; }
+  #mobilestory {
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    overflow: scroll; }
+  .storyitem {
+    margin-top: 5px;
+    margin-right: 40px;
+    margin-left: 20px;
+    margin-bottom: 5px; } }
 
 @media only screen and (max-width: 500px) {
   .card {
