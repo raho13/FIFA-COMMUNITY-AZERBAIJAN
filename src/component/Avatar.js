@@ -4,6 +4,18 @@ export default function Avatar({ size, txt }) {
   const canvas = useRef(null);
   const canvas1 = useRef(null);
   const canvas2 = useRef(null);
+
+// test
+// test
+// test
+// test
+// test
+// test
+// test
+// test
+
+
+
   useEffect(() => {
     if (size === 1) {
       Mid();
