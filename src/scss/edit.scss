@@ -227,9 +227,7 @@
 }
 .sticky {
   top: 100px;
-  position: fixed;
-  display: block;
- 
+  position: sticky;
 }
 
 .pstdots path {

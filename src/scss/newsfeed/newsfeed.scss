@@ -291,16 +291,26 @@
   #nwsnone {
     display: none;
   }
+  .mystory {
+    position: relative;
+    margin-right: 60px;
+    margin-left: 70px;
+    bottom: 25px;
+  }
+
   #mobilestory {
-    height: 55px;
+    height: 115px;
+    width: 110%;
+    margin-left: -5%;
     display: flex;
     flex-direction: row;
     overflow: scroll;
+    // background-color: red;
   }
   .storyitem {
-    margin-top: 5px;
-    margin-right: 40px;
-    margin-left: 20px;
-    margin-bottom: 5px;
+    position: relative;
+    margin-right: 60px;
+    margin-left: 50px;
+    bottom: 25px;
   }
 }

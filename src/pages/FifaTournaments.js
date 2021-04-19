@@ -20,10 +20,10 @@ export default function FifaTournaments() {
       </div>
 
       <div id="tourID">
-        <div className="widget-box">
+        <div className="">
           <div className="widget-box-content">
             <div className="form">
-              <div className="form-row split spMobile">
+              <div className="form-row split">
                 <div className="form-item">
                   <div className="form-input small fifaMatch">
                     <div className="fristPlayer">
@@ -79,7 +79,7 @@ export default function FifaTournaments() {
                   </div>
                 </div>
               </div>
-              <div className="form-row split spMobile">
+              <div className="form-row split">
                 <div className="form-item">
                   <div className="form-input small fifaMatch">
                     <div className="fristPlayer">
@@ -135,7 +135,7 @@ export default function FifaTournaments() {
                   </div>
                 </div>
               </div>
-              <div className="form-row split spMobile">
+              <div className="form-row split">
                 <div className="form-item">
                   <div className="form-input small fifaMatch">
                     <div className="fristPlayer">
@@ -191,7 +191,7 @@ export default function FifaTournaments() {
                   </div>
                 </div>
               </div>
-              <div className="form-row split spMobile">
+              <div className="form-row split">
                 <div className="form-item">
                   <div className="form-input small fifaMatch">
                     <div className="fristPlayer">
@@ -259,10 +259,10 @@ export default function FifaTournaments() {
         </div>
       </div>
       <div id="tourID">
-        <div className="widget-box">
+        <div className="">
           <div className="widget-box-content">
             <div className="form">
-              <div className="form-row split spMobile">
+              <div className="form-row split">
                 <div className="form-item">
                   <div className="form-input small fifaMatch">
                     <div className="fristPlayer">
@@ -318,7 +318,7 @@ export default function FifaTournaments() {
                   </div>
                 </div>
               </div>
-              <div className="form-row split spMobile">
+              <div className="form-row split">
                 <div className="form-item">
                   <div className="form-input small fifaMatch">
                     <div className="fristPlayer">
@@ -386,10 +386,10 @@ export default function FifaTournaments() {
         </div>
       </div>
       <div id="tourID">
-        <div className="widget-box">
+        <div className="">
           <div className="widget-box-content">
             <div className="form">
-              <div className="form-row split spMobile">
+              <div className="form-row split">
                 <div className="form-item">
                   <div className="form-input small fifaMatch">
                     <div className="fristPlayer">
@@ -457,12 +457,12 @@ export default function FifaTournaments() {
         </div>
       </div>
       <div id="tourID">
-        <div className="widget-box">
+        <div className="">
           <div className="widget-box-content">
             <div className="form">
-              <div className="form-row split spMobile">
+              <div className="form-row split">
                 <div className="form-item">
-                  <div className="form-input small fifaMatch">
+                  <div className="form-input small fifaMatchFinal">
                     <div className="fristPlayer">
                       <div className="playerAvatar">
                         <Avatar size={1} />
@@ -474,7 +474,7 @@ export default function FifaTournaments() {
                         </p>
                       </div>
                     </div>
-                    <div className="fifaResult">6-0</div>
+                    <div className="fifaResult">2-0</div>
                     <div className="secondPlayer">
                       <div className="playerAvatar">
                         <Avatar size={1} />

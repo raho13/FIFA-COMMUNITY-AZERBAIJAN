@@ -118,7 +118,7 @@ export default function Avatar({ size, txt }) {
           <div className="mainav">
             <div className="imadiv"></div>
             <div className="avatarbadge">
-              <div>25</div>
+            {txt ? <div>{txt}</div> : <div>25</div>}
             </div>
             <canvas
               ref={canvas}

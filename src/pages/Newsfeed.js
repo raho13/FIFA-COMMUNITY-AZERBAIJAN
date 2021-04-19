@@ -34,62 +34,20 @@ export default function Newsfeed() {
         />
       </div>
       <div id="mobilestory">
-        <div className="storyitem">
-          <Avatar size={1} txt="+" />
+        <div className="mystory">
+          <Avatar size={2} txt="+" />
         </div>
         <div className="storyitem">
-          <Avatar size={1} />
+          <Avatar size={2} />
         </div>
         <div className="storyitem">
-          <Avatar size={1} />
+          <Avatar size={2} />
         </div>
         <div className="storyitem">
-          <Avatar size={1} />
+          <Avatar size={2} />
         </div>
         <div className="storyitem">
-          <Avatar size={1} />
-        </div>
-        <div className="storyitem">
-          <Avatar size={1} />
-        </div>
-        <div className="storyitem">
-          <Avatar size={1} />
-        </div>
-        <div className="storyitem">
-          <Avatar size={1} />
-        </div>
-        <div className="storyitem">
-          <Avatar size={1} />
-        </div>
-        <div className="storyitem">
-          <Avatar size={1} />
-        </div>
-        <div className="storyitem">
-          <Avatar size={1} />
-        </div>
-        <div className="storyitem">
-          <Avatar size={1} />
-        </div>
-        <div className="storyitem">
-          <Avatar size={1} />
-        </div>
-        <div className="storyitem">
-          <Avatar size={1} />
-        </div>
-        <div className="storyitem">
-          <Avatar size={1} />
-        </div>
-        <div className="storyitem">
-          <Avatar size={1} />
-        </div>
-        <div className="storyitem">
-          <Avatar size={1} />
-        </div>
-        <div className="storyitem">
-          <Avatar size={1} />
-        </div>
-        <div className="storyitem">
-          <Avatar size={1} />
+          <Avatar size={2} />
         </div>
       </div>
       <div className="grid grid-3-6-3 mobile-prefer-content">

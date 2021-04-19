@@ -16146,8 +16146,7 @@ textarea {
 
 .sticky {
   top: 100px;
-  position: fixed;
-  display: block; }
+  position: sticky; }
 
 .pstdots path {
   fill: #616a82 !important; }
@@ -17145,11 +17144,22 @@ textarea {
   background-color: #21283b;
   border-radius: 10px; }
 
+.fifaMatchFinal {
+  display: flex;
+  flex-direction: row;
+  height: 90px;
+  margin-left: 25%;
+  width: 50%;
+  background-color: #21283b;
+  border-radius: 10px; }
+
 .fristPlayer {
-  width: 40%; }
+  width: 40%;
+  margin-left: 10px; }
 
 .secondPlayer {
-  width: 40%; }
+  width: 40%;
+  margin-right: 10px; }
 
 .fifaResult {
   width: 20%; }
@@ -17166,16 +17176,28 @@ textarea {
   display: flex;
   flex-direction: row-reverse; }
 
+@media screen and (max-width: 860px) {
+  .fifaMatchFinal {
+    display: flex;
+    flex-direction: row;
+    height: 90px;
+    margin-left: 0 !important;
+    width: auto !important;
+    background-color: #21283b;
+    border-radius: 10px; } }
+
 @media screen and (max-width: 445px) {
+  .fristPlayer {
+    width: 40%;
+    margin-left: 2px; }
+  .secondPlayer {
+    width: 40%;
+    margin-right: 2px; }
   .playerinfo1 {
     left: -10px;
     text-align: end;
     top: 26px !important;
     position: relative; }
-  .spMobile {
-    border-color: "red";
-    width: 115%;
-    margin-left: -7.5%; }
   .frplayerName {
     font-size: 12px !important;
     position: relative; }
@@ -17514,16 +17536,23 @@ textarea {
 @media screen and (max-width: 680px) {
   #nwsnone {
     display: none; }
+  .mystory {
+    position: relative;
+    margin-right: 60px;
+    margin-left: 70px;
+    bottom: 25px; }
   #mobilestory {
-    height: 55px;
+    height: 115px;
+    width: 110%;
+    margin-left: -5%;
     display: flex;
     flex-direction: row;
     overflow: scroll; }
   .storyitem {
-    margin-top: 5px;
-    margin-right: 40px;
-    margin-left: 20px;
-    margin-bottom: 5px; } }
+    position: relative;
+    margin-right: 60px;
+    margin-left: 50px;
+    bottom: 25px; } }
 
 @media only screen and (max-width: 500px) {
   .card {
