@@ -72,8 +72,10 @@ export default function Navbar() {
           <figure className="navigation-widget-cover liquid">
             <img src={cover} alt="cover-01" />
           </figure>
-          <Avatar size={2} />
-          <div className="user-short-description">
+          <div style={{ position: "relative", top: "-70px", left: "90px" }}>
+            <Avatar size={2} />
+          </div>
+          <div className="user-short-description osl">
             <p className="user-short-description-title">
               <a href="profile-timeline.html">Rahib Rzayev</a>
             </p>

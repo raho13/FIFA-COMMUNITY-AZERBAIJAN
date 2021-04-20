@@ -1,109 +1,103 @@
-.imadiv1 {
-  z-index: -1;
-  width: 42px;
-  height: 45px;
-  clip-path: polygon(2% 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+//mini
+.Avminiimg {
+  width: 40px;
+  height: 40px;
   position: absolute;
   margin-left: 2px;
-  margin-top: 4px;
-  display: flex;
-  justify-content: center;
-  background-image: url("/src/img/avatar/04.jpg");
+  z-index: 0;
   background-size: cover;
+  clip-path: polygon(5% 25%, 50% 0, 95% 25%, 95% 75%, 50% 95%, 5% 75%);
 }
-.avatarcontainer {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-.avatarcontainer1 {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+
+.Avbordermini {
+  left: -15px;
+  top: -10px;
+  width: 70px;
   position: relative;
-  top: -30px;
+  z-index: 1;
 }
 .avatarbadge {
-  background-color: #1d2333;
-  width: 28px;
-  z-index: 2;
-  top: 90px;
-  right: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 28px;
-  clip-path: polygon(2% 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
-  position: absolute;
-}
-.avatarbadge div {
-  background-color: #7750f8;
-  clip-path: polygon(2% 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  color: white;
-  font-size: 14px;
-  font-family: Bold;
-}
-.avatarbadge1 {
-  background-color: #1d2333;
-  width: 22px;
-  z-index: 2;
-  top: 25px;
+  bottom: 37px;
   left: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 22px;
-  clip-path: polygon(2% 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
-  position: absolute;
-}
-.avatarbadge1 div {
-  background-color: #7750f8;
-  clip-path: polygon(2% 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
-  width: 16px;
-  height: 16px;
+  height: 14px;
+  padding: 0;
+  width: 14px;
+  font-size: 10px;
   text-align: center;
-  color: white;
-  font-size: 11px;
   font-family: Bold;
+  color: white;
+  position: relative;
+  z-index: 1;
 }
-.can1 {
-  position: absolute;
-}
-.can2 {
-  position: absolute;
-  z-index: 0;
-}
-.imadiv {
-  z-index: -1;
-  width: 75px;
-  height: 75px;
-  clip-path: polygon(2% 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
-  position: absolute;
-  margin-left: 61px;
-  margin-top: 49px;
+
+//big
+.avBig {
   display: flex;
+  position: absolute;
   justify-content: center;
-  background-image: url("/src/img/avatar/04.jpg");
+  width: 180px;
+  // background-color: red;
+  height: 180px;
+}
+.Avbigimg {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  margin-top: 30px;
+  margin-left: -62px;
+  z-index: 0;
   background-size: cover;
+  clip-path: polygon(5% 25%, 50% 0, 95% 25%, 95% 75%, 50% 95%, 5% 75%);
 }
-.mainav {
-  background-color: transparent();
-  position: absolute;
-  z-index: 1;
-  display: flex;
+.Avborderbig {
   top: -10px;
-  align-content: center;
+  width: 170px;
+  height: 170px;
+  left: -20px;
+  position: relative;
+  z-index: 2;
 }
-.mainav1 {
-  background-color: transparent();
+.avatarbadgebig {
+  height: 18px;
+  padding: 0;
+  top: 95px;
+  left: -75px;
+  width: 28px;
+  text-align: center;
+  font-family: Bold;
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+//story
+.avstoryimg {
+  width: 60px;
+  top: 5px;
+  height: 60px;
   position: absolute;
-  z-index: 1;
-  margin-top: 33px;
-  margin-left: 5px;
-  display: flex;
+  margin-left: 7px;
+  z-index: 0;
+  background-size: cover;
+  clip-path: polygon(5% 25%, 50% 0, 95% 25%, 95% 75%, 50% 95%, 5% 75%);
+}
+.Avborderstory {
+  left: -15px;
   top: -10px;
-  align-content: center;
+  width: 100px;
+  position: relative;
+  z-index: 1;
+}
+.avatarbadgestory {
+  bottom: 45px;
+  // background-color: red;
+  left: 48px;
+  height: 14px;
+  padding: 0;
+  width: 20px;
+  font-size: 10px;
+  text-align: center;
+  font-family: Bold;
+  color: white;
+  position: relative;
+  z-index: 1;
 }

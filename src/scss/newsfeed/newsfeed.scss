@@ -293,24 +293,26 @@
   }
   .mystory {
     position: relative;
-    margin-right: 60px;
-    margin-left: 70px;
-    bottom: 25px;
+    top: 5px;
   }
 
   #mobilestory {
-    height: 115px;
+    height: 80px;
     width: 110%;
-    margin-left: -5%;
     display: flex;
     flex-direction: row;
     overflow: scroll;
-    // background-color: red;
+  }
+  #mobilestory {
+    -ms-overflow-style: none;
+    scrollbar-width: none; /* Firefox */
+  }
+  #mobilestory::-webkit-scrollbar {
+    display: none;
   }
   .storyitem {
     position: relative;
-    margin-right: 60px;
-    margin-left: 50px;
-    bottom: 25px;
+    margin-left: -25px;
+    top: 5px;
   }
 }

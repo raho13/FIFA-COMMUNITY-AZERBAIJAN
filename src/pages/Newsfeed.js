@@ -35,19 +35,25 @@ export default function Newsfeed() {
       </div>
       <div id="mobilestory">
         <div className="mystory">
-          <Avatar size={2} txt="+" />
+          <Avatar txt="+" />
         </div>
         <div className="storyitem">
-          <Avatar size={2} />
+          <Avatar />
         </div>
         <div className="storyitem">
-          <Avatar size={2} />
+          <Avatar />
         </div>
         <div className="storyitem">
-          <Avatar size={2} />
+          <Avatar />
         </div>
         <div className="storyitem">
-          <Avatar size={2} />
+          <Avatar />
+        </div>
+        <div className="storyitem">
+          <Avatar />
+        </div>
+        <div className="storyitem">
+          <Avatar />
         </div>
       </div>
       <div className="grid grid-3-6-3 mobile-prefer-content">
