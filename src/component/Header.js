@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useRef, useContext } from "react";
 import { Scrollbars } from "react-custom-scrollbars";
 import { menuContext } from "../context";
 import { ReactComponent as Toogle } from "../icons/Toogle Side Menu Icon.svg";
@@ -16,6 +16,13 @@ import avatar from "../icons/logo.png";
 import Avatar from "./Avatar";
 
 export default function Header() {
+  const icon = useRef(0);
+  document.body.addEventListener("click", (b) => {
+    if (icon.current && !icon.current.contains(b.target) && index > 0) {
+      setIndex(0);
+    }
+  });
+
   const {
     menuVisible,
     setmenuVisible,
@@ -27,20 +34,43 @@ export default function Header() {
   const [srchEvent, setsrchEvent] = useState(false);
   const [index, setIndex] = useState(0);
   const [inputValue, setinputValue] = useState("");
-
-  const [shpclass, setShpclass] = useState(
-    "dropdown-box  header-dropdown passiveShp no-padding-bottom"
-  );
-  const [friclass, setFriclass] = useState(
-    "dropdown-box header-dropdown passiveFri"
-  );
-  const [notclass, setNotclass] = useState(
-    "dropdown-box header-dropdown passiveNot"
-  );
-  const [setclass, setSetclass] = useState(
-    "dropdown-navigation header-settings-dropdown passiveSet"
-  );
-
+  const dropdownHandler = (i) => {
+    if (i === 1) {
+      if (i === index) {
+        return "activeShp";
+      } else {
+        return "passiveShp";
+      }
+    }
+    if (i === 2) {
+      if (i === index) {
+        return "activeFri";
+      } else {
+        return "passiveFri";
+      }
+    }
+    if (i === 3) {
+      if (i === index) {
+        return "activeNot";
+      } else {
+        return "passiveNot";
+      }
+    }
+    if (i === 4) {
+      if (i === index) {
+        return "activeSet";
+      } else {
+        return "passiveSet";
+      }
+    }
+  };
+  const dropdownCloser = (a) => {
+    if (a === index) {
+      setIndex(0);
+    } else {
+      setIndex(a);
+    }
+  };
   const loginpHandler = () => {
     if (isLogin) {
       return (
@@ -63,18 +93,23 @@ export default function Header() {
             </div>
           </div>
 
-          <div className="header-actions">
+          <div ref={icon} className="header-actions">
             <div className="action-list dark">
               <div className="action-list-item-wrap">
                 <div className="action-list-item header-dropdown-trigger">
                   <Shopping
                     className="action-list-item-icon icon-shopping-bag"
-                    onClick={() => {
-                      dropVisiblity(1);
+                    onClick={(b) => {
+                      dropdownCloser(1);
                     }}
                   />
                 </div>
-                <div className={shpclass}>
+                <div
+                  className={
+                    `${dropdownHandler(1)}` +
+                    " dropdown-box  header-dropdown no-padding-bottom"
+                  }
+                >
                   <div className="dropdown-box-header">
                     <p className="dropdown-box-header-title">
                       Shopping Cart <span className="highlighted">3</span>
@@ -232,11 +267,15 @@ export default function Header() {
                   <Friend
                     className="action-list-item-icon icon-shopping-bag"
                     onClick={() => {
-                      dropVisiblity(2);
+                      dropdownCloser(2);
                     }}
                   />
                 </div>
-                <div className={friclass}>
+                <div
+                  className={
+                    `${dropdownHandler(2)}` + " dropdown-box header-dropdown"
+                  }
+                >
                   <div className="dropdown-box-header">
                     <p className="dropdown-box-header-title">Friend Requests</p>
                     <div className="dropdown-box-header-actions">
@@ -311,12 +350,16 @@ export default function Header() {
                 <div className="action-list-item unread header-dropdown-trigger">
                   <Notification
                     onClick={() => {
-                      dropVisiblity(3);
+                      dropdownCloser(3);
                     }}
                     className="action-list-item-icon icon-notification"
                   />
                 </div>
-                <div className={notclass}>
+                <div
+                  className={
+                    `${dropdownHandler(3)}` + " dropdown-box header-dropdown"
+                  }
+                >
                   <div className="dropdown-box-header">
                     <p className="dropdown-box-header-title">Notifications</p>
                     <div className="dropdown-box-header-actions">
@@ -510,11 +553,16 @@ export default function Header() {
                 <Setting
                   className="action-item-icon icon-settings"
                   onClick={() => {
-                    dropVisiblity(4);
+                    dropdownCloser(4);
                   }}
                 />
               </div>
-              <div className={setclass}>
+              <div
+                className={
+                  `${dropdownHandler(4)}` +
+                  " dropdown-navigation header-settings-dropdown"
+                }
+              >
                 <div className="dropdown-navigation-header">
                   <div className="user-status">
                     <a
@@ -689,64 +737,7 @@ export default function Header() {
       return "dropdown-box padding-bottom-small header-search-dropdown activeSrcdrp";
     }
   };
-  const dropVisiblity = (i) => {
-    setIndex(i);
-    if (i === 1) {
-      if (index === 1) {
-        setShpclass(
-          "dropdown-box  header-dropdown passiveShp no-padding-bottom"
-        );
-        setIndex(0);
-      } else {
-        setShpclass(
-          "dropdown-box  header-dropdown activeShp no-padding-bottom"
-        );
-        setFriclass("dropdown-box header-dropdown passiveFri");
-        setNotclass("dropdown-box header-dropdown passiveNot");
-        setSetclass("dropdown-navigation header-settings-dropdown passiveSet");
-      }
-    }
-    if (i === 2) {
-      if (index === 2) {
-        setFriclass("dropdown-box header-dropdown passiveFri");
-        setIndex(0);
-      } else {
-        setFriclass("dropdown-box header-dropdown activeFri");
-        setSetclass("dropdown-navigation header-settings-dropdown passiveSet");
-        setNotclass("dropdown-box header-dropdown passiveNot");
-        setShpclass(
-          "dropdown-box  header-dropdown passiveShp no-padding-bottom"
-        );
-      }
-    }
-    if (i === 3) {
-      if (index === 3) {
-        setNotclass("dropdown-box header-dropdown passiveNot");
-        setIndex(0);
-      } else {
-        setNotclass("dropdown-box header-dropdown activeNot");
 
-        setShpclass(
-          "dropdown-box  header-dropdown passiveShp no-padding-bottom"
-        );
-        setFriclass("dropdown-box header-dropdown passiveFri");
-        setSetclass("dropdown-navigation header-settings-dropdown passiveSet");
-      }
-    }
-    if (i === 4) {
-      if (index === 4) {
-        setSetclass("dropdown-navigation header-settings-dropdown passiveSet");
-        setIndex(0);
-      } else {
-        setSetclass("dropdown-navigation header-settings-dropdown activeSet");
-        setNotclass("dropdown-box header-dropdown passiveNot");
-        setFriclass("dropdown-box header-dropdown passiveFri");
-        setShpclass(
-          "dropdown-box  header-dropdown passiveShp no-padding-bottom"
-        );
-      }
-    }
-  };
   return (
     <div className="header">
       <div className="header-actions">

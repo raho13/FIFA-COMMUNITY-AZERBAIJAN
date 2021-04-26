@@ -126,7 +126,7 @@ export default function Newsfeed() {
             <div className="loader-bar" />
           </div>
         </div>
-        <div className="grid-column">
+        <div className="grid-column sticky">
           <img className="promoimg" src={promo} />
           <img className="promoimg" src={promo1} />
           <img className="promoimg" src={promo} />

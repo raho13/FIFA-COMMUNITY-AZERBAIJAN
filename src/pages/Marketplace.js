@@ -37,7 +37,7 @@ export default function Marketplace() {
                   >
                     <div className="simplebar-content" style={{ padding: 0 }}>
                       <div className="table table-cart split-rows">
-                        <div className="table-header">
+                        <div className="table-header marnone">
                           <div className="table-header-column">
                             <p className="table-header-title">Item</p>
                           </div>
@@ -50,6 +50,9 @@ export default function Marketplace() {
                           <div className="table-header-column padded-big-left" />
                         </div>
                         <div className="table-body same-color-rows">
+                          {/* <Marketitem /> */}
+                          <Marketitem />
+                          <Marketitem />
                           <Marketitem />
                           <Marketitem />
                           <Marketitem />

@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useContext, useRef } from "react";
 import { Scrollbars } from "react-custom-scrollbars";
 import { Menuitems } from "./Navbar";
 import { ReactComponent as Backarrow } from "../icons/backarrow.svg";
@@ -7,16 +7,24 @@ import { menuContext } from "../context";
 import Avatar from "./Avatar";
 import Input from "./Input";
 export default function MobileNavbar() {
+ 
+
   const { MmenuVisible, setMmenuVisible, isLogin } = useContext(menuContext);
   const handlemobileNav = () => {
     if (MmenuVisible === false) {
-      return "navigation-widget navigation-widget-mobile sidebar left hidden";
+      return "hidden";
     } else {
-      return "navigation-widget navigation-widget-mobile sidebar left";
+      return null;
     }
   };
   return (
-    <nav className={handlemobileNav()} data-simplebar>
+    <nav
+      className={
+        `${handlemobileNav()} ` +
+        "navigation-widget navigation-widget-mobile sidebar left"
+      }
+      data-simplebar
+    >
       <Scrollbars>
         <div
           className="navigation-widget-close-button"
@@ -33,7 +41,7 @@ export default function MobileNavbar() {
                 <Avatar size={1} />
               </a>
               <p className="navigation-widget-info-title">
-                <a href="profile-timeline.html">Marina Valentine</a>
+                <a>Marina Valentine</a>
               </p>
               <p className="navigation-widget-info-text">Welcome Back!</p>
             </div>
@@ -65,7 +73,6 @@ export default function MobileNavbar() {
             </div>
           </div>
         )}
-        <Menuitems />
         <Menuitems />
       </Scrollbars>
     </nav>

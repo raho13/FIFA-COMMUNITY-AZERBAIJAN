@@ -132,3 +132,35 @@
     width: auto !important;
   }
 }
+
+//marketpleace
+.mobmar {
+  display: none !important;
+}
+@media screen and (max-width: 680px) {
+  .marnone {
+    display: none !important;
+  }
+  .mobmar {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 100px;
+  }
+  .closemar {
+    position: relative;
+    right: 30px;
+    width: 10%;
+  }
+  .mobmarcnt {
+    width: 90% !important;
+  }
+  .sec1 {
+    width: 110%;
+    left: -20px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+}
