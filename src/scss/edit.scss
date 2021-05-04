@@ -38,8 +38,7 @@
   opacity: 0;
   visibility: hidden;
   transform: translate(0px, -40px);
-  transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s,
-    visibility 0.4s ease-in-out 0s;
+  transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s, visibility 0.4s ease-in-out 0s;
 }
 
 .activeShp {
@@ -50,8 +49,7 @@
   opacity: 1;
   visibility: visible;
   transform: translate(0px, 0px);
-  transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s,
-    visibility 0.4s ease-in-out 0s;
+  transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s, visibility 0.4s ease-in-out 0s;
 }
 .wsx {
   align-items: center;
@@ -66,8 +64,7 @@
   opacity: 0;
   visibility: hidden;
   transform: translate(0px, -40px);
-  transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s,
-    visibility 0.4s ease-in-out 0s;
+  transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s, visibility 0.4s ease-in-out 0s;
 }
 
 .activeFri {
@@ -78,8 +75,7 @@
   opacity: 1;
   visibility: visible;
   transform: translate(0px, 0px);
-  transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s,
-    visibility 0.4s ease-in-out 0s;
+  transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s, visibility 0.4s ease-in-out 0s;
 }
 
 .passiveNot {
@@ -90,8 +86,7 @@
   opacity: 0;
   visibility: hidden;
   transform: translate(0px, -40px);
-  transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s,
-    visibility 0.4s ease-in-out 0s;
+  transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s, visibility 0.4s ease-in-out 0s;
 }
 
 .activeNot {
@@ -102,8 +97,7 @@
   opacity: 1;
   visibility: visible;
   transform: translate(0px, 0px);
-  transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s,
-    visibility 0.4s ease-in-out 0s;
+  transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s, visibility 0.4s ease-in-out 0s;
 }
 
 .passiveSet {
@@ -114,8 +108,7 @@
   opacity: 0;
   visibility: hidden;
   transform: translate(0px, -40px);
-  transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s,
-    visibility 0.4s ease-in-out 0s;
+  transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s, visibility 0.4s ease-in-out 0s;
 }
 
 .activeSet {
@@ -126,8 +119,7 @@
   opacity: 1;
   visibility: visible;
   transform: translate(0px, 0px);
-  transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s,
-    visibility 0.4s ease-in-out 0s;
+  transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s, visibility 0.4s ease-in-out 0s;
 }
 
 .menu-item-link-icon path {
@@ -143,8 +135,7 @@
   opacity: 1;
   visibility: visible;
   transform: translate(0px, 0px);
-  transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s,
-    visibility 0.4s ease-in-out 0s;
+  transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s, visibility 0.4s ease-in-out 0s;
 }
 .disnone {
   display: none;
@@ -159,8 +150,7 @@
   opacity: 0;
   visibility: hidden;
   transform: translate(0px, -40px);
-  transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s,
-    visibility 0.4s ease-in-out 0s;
+  transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s, visibility 0.4s ease-in-out 0s;
 }
 @media only screen and (max-width: 460px) {
   .passiveSrcdrp {
@@ -173,8 +163,7 @@
     opacity: 0;
     visibility: hidden;
     transform: translate(0px, -40px);
-    transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s,
-      visibility 0.4s ease-in-out 0s;
+    transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s, visibility 0.4s ease-in-out 0s;
   }
   .activeSrcdrp {
     z-index: 9999;
@@ -185,8 +174,7 @@
     opacity: 1;
     visibility: visible;
     transform: translate(0px, 0px);
-    transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s,
-      visibility 0.4s ease-in-out 0s;
+    transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s, visibility 0.4s ease-in-out 0s;
   }
 }
 // DOTSETTING
@@ -198,8 +186,7 @@
   opacity: 0;
   visibility: hidden;
   transform: translate(0px, -20px);
-  transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s,
-    visibility 0.3s ease-in-out 0s;
+  transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s;
 }
 .activePostsetting {
   position: absolute;
@@ -209,8 +196,7 @@
   opacity: 1;
   visibility: visible;
   transform: translate(0px, 0px);
-  transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s,
-    visibility 0.3s ease-in-out 0s;
+  transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s;
 }
 .d {
   margin-left: 16px;
@@ -227,7 +213,12 @@
 }
 .sticky {
   top: 100px;
-  position: sticky;
+  position: sticky !important;
+}
+
+.sticky1 {
+  top: 100px;
+  position: fixed;
 }
 
 .pstdots path {
@@ -253,8 +244,7 @@
   opacity: 1;
   visibility: visible;
   transform: translate(0px, 0px);
-  transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s,
-    visibility 0.3s ease-in-out 0s;
+  transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s;
 }
 .pssdodsset {
   position: absolute;
@@ -264,8 +254,7 @@
   opacity: 0;
   visibility: hidden;
   transform: translate(0px, -20px);
-  transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s,
-    visibility 0.3s ease-in-out 0s;
+  transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s;
 }
 
 .content-grid {

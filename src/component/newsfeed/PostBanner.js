@@ -43,7 +43,6 @@ export default function PostBanner() {
   function timeOut(s) {
     setTimeout(() => {
       const a = document.querySelector("#inpcontainer>div>div");
-      console.log(a);
       a.scrollTop = a.scrollHeight + 1050;
     }, s);
   }

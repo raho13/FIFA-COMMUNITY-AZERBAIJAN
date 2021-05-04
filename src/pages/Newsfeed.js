@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useEffect, useState } from "react";
 import bannerpromo from "../img/banner/banner-promo.jpg";
 import promo from "../img/test/A4-1024x1024.jpg";
 import promo1 from "../img/test/kompaniya-sayt-ucun (1).jpg";
@@ -15,6 +15,23 @@ import Gifpost from "../component/Postmodels/Gifpost";
 import Votepost from "../component/Postmodels/Votepost";
 import Avatar from "../component/Avatar";
 export default function Newsfeed() {
+  useEffect(() => {
+    window.onscroll = function () {
+      myFunction();
+    };
+
+    const navbar = document.getElementById("stc");
+    const sticky = navbar.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky");
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+  });
+
   const [tabIndex, settabIndex] = useState(1);
   const handleTabs = (i) => {
     if (i === tabIndex) {
@@ -126,7 +143,7 @@ export default function Newsfeed() {
             <div className="loader-bar" />
           </div>
         </div>
-        <div className="grid-column sticky">
+        <div className="grid-column" id="stc">
           <img className="promoimg" src={promo} />
           <img className="promoimg" src={promo1} />
           <img className="promoimg" src={promo} />
