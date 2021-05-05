@@ -953,3 +953,6 @@ $col-6_9: ($col-6-width / $grid-width_9) * 100%;
   opacity: 0.03;
   transition: all 0.1s;
 }
+.Toastify__toast {
+  font-family: Regular !important;
+}

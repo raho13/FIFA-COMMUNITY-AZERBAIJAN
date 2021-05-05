@@ -4,9 +4,11 @@ import Input from "../component/Input";
 import Joi from "joi";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import axios from 'axios'
 import img from "../img/landing/rocket.png";
 export default function Register() {
   const [PlatformOps, setPlatformOps] = useState(0);
+  const [errMessage, seterrMessage] = useState("k");
   const [user, setuser] = useState({
     name: "",
     surname: "",
@@ -21,24 +23,24 @@ export default function Register() {
   const schema = Joi.object({
     name: Joi.string().min(1).max(255).required().messages({
       "string.base": `ad should be a type of 'text'`,
-      "string.empty": `Ad" bölməsi boş qala bilməz`,
-      "string.min": `Ad" minumum {#limit} simvol olmalıdır`,
-      "string.max": `Ad" maximum {#limit} simvol olmalıdır`,
+      "string.empty": `Ad bölməsi boş qala bilməz`,
+      "string.min": `Ad minumum {#limit} simvol olmalıdır`,
+      "string.max": `Ad maximum {#limit} simvol olmalıdır`,
       "any.required": `username" is a required field`,
     }),
     surname: Joi.string().min(1).max(255).required().messages({
-      "string.base": `Soyad" should be a type of 'text'`,
-      "string.empty": `Soyad" bölməsi boş qala bilməz`,
-      "string.min": `Soyad" minumum {#limit} simvol olmalıdır`,
-      "string.max": `Soyad" maximum {#limit} simvol olmalıdır`,
-      "any.required": `surname" is a required field`,
+      "string.base": `Soyad should be a type of 'text'`,
+      "string.empty": `Soyad bölməsi boş qala bilməz`,
+      "string.min": `Soyad minumum {#limit} simvol olmalıdır`,
+      "string.max": `Soyad maximum {#limit} simvol olmalıdır`,
+      "any.required": `surname is a required field`,
     }),
     father_name: Joi.string().min(1).max(255).required().messages({
-      "string.base": `Ata adı" should be a type of 'text'`,
-      "string.empty": `Ata adı" bölməsi boş qala bilməz`,
-      "string.min": `Ata adı" minumum {#limit} simvol olmalıdır`,
-      "string.max": `Ata adı" maximum {#limit} simvol olmalıdır`,
-      "any.required": `"father_name" is a required field`,
+      "string.base": `Ata adı should be a type of 'text'`,
+      "string.empty": `Ata adı bölməsi boş qala bilməz`,
+      "string.min": `Ata adı minumum {#limit} simvol olmalıdır`,
+      "string.max": `Ata adı maximum {#limit} simvol olmalıdır`,
+      "any.required": `"father_name is a required field`,
     }),
     country: Joi.string().min(1).max(255).required().messages({
       "string.base": `Ölkə should be a type of 'text'`,
@@ -48,11 +50,11 @@ export default function Register() {
       "any.required": `Ölkə is a required field`,
     }),
     platform: Joi.string().min(1).max(255).required().messages({
-      "string.base": `platform" should be a type of 'text'`,
-      "string.empty": `platform" bölməsi boş qala bilməz`,
-      "string.min": `platform" minumum {#limit} simvol olmalıdır`,
-      "string.max": `platform" maximum {#limit} simvol olmalıdır`,
-      "any.required": `platform" is a required field`,
+      "string.base": `platform should be a type of 'text'`,
+      "string.empty": `platform bölməsi boş qala bilməz`,
+      "string.min": `platform minumum {#limit} simvol olmalıdır`,
+      "string.max": `platform maximum {#limit} simvol olmalıdır`,
+      "any.required": `platform is a required field`,
     }),
     platform_id: Joi.number().min(1).required().messages({
       "number.base": `platform-id yalnız rəqəm olmalıdır `,
@@ -68,7 +70,7 @@ export default function Register() {
       })
       .messages({
         "email.base": `email should be axx type of 'text'`,
-        "string.empty": `"email bölməsi boş qala bilməz`,
+        "string.empty": `email bölməsi boş qala bilməz`,
         "string.min": `email minumum {#limit} simvol olmalıdır`,
         "string.max": `email" maximum {#limit} simvol olmalıdır`,
         "any.required": `email" is a required field`,
@@ -80,11 +82,11 @@ export default function Register() {
       .pattern(new RegExp("^[a-zA-Z0-9]{3,30}$"))
       .required()
       .messages({
-        "string.base": `"Şifrə" should be a type of 'text'`,
-        "string.empty": `"Şifrə" bölməsi boş qala bilməz`,
-        "string.min": `Şifrə" minimm {#limit} simvoldan ibarət olmalıdır`,
-        "string.max": `Şifrə" maksimum {#limit} simvol olmalıdır`,
-        "any.required": `country" is a required field`,
+        "string.base": `Şifrə should be a type of 'text'`,
+        "string.empty": `Şifrə bölməsi boş qala bilməz`,
+        "string.min": `Şifrə minimm {#limit} simvoldan ibarət olmalıdır`,
+        "string.max": `Şifrə maksimum {#limit} simvol olmalıdır`,
+        "any.required": `password is a required field`,
       }),
     password_confirmation: Joi.any()
       .valid(Joi.ref("password"))
@@ -96,28 +98,14 @@ export default function Register() {
         "string.max": `Şifrə təkrarı" maximum {#limit} simvol olmalıdır`,
         "string.questionHere": "Şifrələr eyni deyil",
         "any.required": `"password_confirmation" is a required field`,
+        "any.only": "Şifrələr uyğun deyil",
       }),
   });
 
-  const myuser = {
-    name: "rahib",
-    surname: "rzayev",
-    father_name: "sjameil",
-    country: "gbfdh",
-    platform: "bfdsbg",
-    platform_id: Number("34"),
-    email: "bfhbgbgfh@hdjf.ru",
-    password: "fjkewhbgkbvw545",
-    password_confirmation: "fjkewhbgkbvw545",
-  };
-
-  const myval = schema.validate(user);
-
-  const notify = (a) => {
-    console.log(schema.object);
-    toast.error(a, {
+  const notify = (b) => {
+    toast.error(b, {
       position: "top-right",
-      autoClose: 2000,
+      autoClose: 122000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
@@ -126,9 +114,30 @@ export default function Register() {
     });
   };
 
-  const PlatformID = (e) => {
-    const numVal = parseInt(e);
-    setuser({ ...user, name: numVal });
+  const ValidateForm = () => {
+    const myval = schema.validate(user);
+    if (myval.error) {
+      notify(myval.error.details[0].message);
+    } else {
+      axios
+        .post("https://fut.az/register", {
+          name: user.name,
+          surname: user.surname,
+          father_name: user.father_name,
+          country: user.country,
+          platform: user.platform,
+          platform_id: user.platform_id,
+          email: user.email,
+          password: user.password,
+          password_confirmation: user.password_confirmation,
+        })
+        .then(function (response) {
+          console.log(response);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    }
   };
   const Handleinput = (i) => {
     if (i == "xbox") {
@@ -274,8 +283,8 @@ export default function Register() {
                 <button
                   onClick={(e) => {
                     e.preventDefault();
-                    console.log(user);
-                    console.log(myval);
+                    ValidateForm();
+                    // notify('ko')
                   }}
                   className="button medium primary"
                 >
