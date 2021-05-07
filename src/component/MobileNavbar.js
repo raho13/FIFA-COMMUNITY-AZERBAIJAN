@@ -6,9 +6,8 @@ import { ReactComponent as Logswitch } from "../icons/Logswitch.svg";
 import { menuContext } from "../context";
 import Avatar from "./Avatar";
 import Input from "./Input";
+import Login from "./Login";
 export default function MobileNavbar() {
- 
-
   const { MmenuVisible, setMmenuVisible, isLogin } = useContext(menuContext);
   const handlemobileNav = () => {
     if (MmenuVisible === false) {
@@ -50,28 +49,7 @@ export default function MobileNavbar() {
             </p>
           </div>
         ) : (
-          <div className="widget-box mobile-login">
-            <div className="widget-box-content">
-              <form className="form">
-                <div className="form-row split">
-                  <div className="form-item">
-                    <Input label="E-mail" />
-                  </div>
-                  <div className="form-item">
-                    <Input label="Şifrəniz" type="psw" />
-                  </div>
-                  <div className="entrybtns">
-                    <button class="button primary with-only-icon">
-                      <Logswitch className="icon-login" />
-                    </button>
-                    <button class="button primary with-only-icon">
-                      <Logswitch className="icon-login" />
-                    </button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
+          <Login />
         )}
         <Menuitems />
       </Scrollbars>

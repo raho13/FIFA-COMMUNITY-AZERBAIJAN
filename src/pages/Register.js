@@ -4,18 +4,17 @@ import Input from "../component/Input";
 import Joi from "joi";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import axios from 'axios'
+import axios from "axios";
 import img from "../img/landing/rocket.png";
 export default function Register() {
   const [PlatformOps, setPlatformOps] = useState(0);
-  const [errMessage, seterrMessage] = useState("k");
   const [user, setuser] = useState({
     name: "",
     surname: "",
     father_name: "",
     country: "",
     platform: "",
-    platform_id: 0,
+    platform_id: "",
     email: "",
     password: "",
     password_confirmation: "",
@@ -56,10 +55,10 @@ export default function Register() {
       "string.max": `platform maximum {#limit} simvol olmalıdır`,
       "any.required": `platform is a required field`,
     }),
-    platform_id: Joi.number().min(1).required().messages({
-      "number.base": `platform-id yalnız rəqəm olmalıdır `,
-      "number.empty": `platform-id bölməsi boş qala bilməz`,
-      "number.min": "platform-id bölməsi boş qala bilməz",
+    platform_id: Joi.string().min(1).max(255).required().messages({
+      "string.base": `platform-id bölməsi boş qala bilməz`,
+      "string.empty": `platform-id bölməsi boş qala bilməz`,
+      "string.min": "platform-id bölməsi boş qala bilməz",
       "any.required": `platform-id is a required field`,
     }),
     email: Joi.string()
@@ -105,7 +104,7 @@ export default function Register() {
   const notify = (b) => {
     toast.error(b, {
       position: "top-right",
-      autoClose: 122000,
+      autoClose: 2000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
@@ -120,7 +119,7 @@ export default function Register() {
       notify(myval.error.details[0].message);
     } else {
       axios
-        .post("https://fut.az/register", {
+        .post("http://fut.az/register", {
           name: user.name,
           surname: user.surname,
           father_name: user.father_name,
@@ -135,7 +134,9 @@ export default function Register() {
           console.log(response);
         })
         .catch(function (error) {
-          console.log(error);
+          if (error.response.status === 422) {
+            notify("bu mail artiq istifadə olunub");
+          }
         });
     }
   };
@@ -143,30 +144,27 @@ export default function Register() {
     if (i == "xbox") {
       return (
         <Input
-          num={1}
           label="Xbox ID"
           method={(e) => {
-            setuser({ ...user, platform_id: Number(e) });
+            setuser({ ...user, platform_id: e });
           }}
         />
       );
     } else if (i == "playstation") {
       return (
         <Input
-          num={1}
           label="PSN ID"
           method={(e) => {
-            setuser({ ...user, platform_id: Number(e) });
+            setuser({ ...user, platform_id: e });
           }}
         />
       );
     } else {
       return (
         <Input
-          num={1}
           label="Orign ID"
           method={(e) => {
-            setuser({ ...user, platform_id: Number(e) });
+            setuser({ ...user, platform_id: e });
           }}
         />
       );

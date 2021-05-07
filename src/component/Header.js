@@ -13,6 +13,7 @@ import { ReactComponent as Notification } from "../icons/Notifications Icon.svg"
 import { ReactComponent as Friend } from "../icons/Friends Icon.svg";
 import img from "../img/marketplace/items/04.jpg";
 import avatar from "../icons/logo.png";
+import Login from "../component/Login";
 import Avatar from "./Avatar";
 
 export default function Header() {
@@ -71,9 +72,234 @@ export default function Header() {
       setIndex(a);
     }
   };
-  const loginpHandler = () => {
-    if (isLogin) {
-      return (
+
+  const inputHandle = (e) => {
+    setinputValue(e.target.value);
+    if (e.target.value.split(" ").join("").length > 0) {
+      setsrchEvent(true);
+    } else {
+      setsrchEvent(false);
+    }
+  };
+  const srcdrpClass = () => {
+    if (srchEvent === false) {
+      return "dropdown-box padding-bottom-small header-search-dropdown passiveSrcdrp";
+    } else {
+      return "dropdown-box padding-bottom-small header-search-dropdown activeSrcdrp";
+    }
+  };
+
+  return (
+    <div className="header">
+      <div className="header-actions">
+        <div className="header-brand">
+          <div className="logo">
+            <img src={avatar} alt="Logo" className="icon-logo-vikinger small" />
+          </div>
+        </div>
+      </div>
+
+      <div className="header-actions">
+        <div
+          onClick={() => {
+            setmenuVisible(!menuVisible);
+          }}
+          className="sidemenu-trigger navigation-widget-trigger"
+        >
+          <Toogle className="icon-grid" />
+        </div>
+        <div
+          onClick={() => {
+            setMmenuVisible(!MmenuVisible);
+          }}
+          className="mobilemenu-trigger navigation-widget-mobile-trigger"
+        >
+          <div className="burger-icon inverted">
+            <div className="burger-icon-bar" />
+            <div className="burger-icon-bar" />
+            <div className="burger-icon-bar" />
+          </div>
+        </div>
+      </div>
+
+      <div className="header-actions search-bar">
+        {srchEvent ? (
+          <div className="interactive-input dark active">
+            <input
+              autoComplete="off"
+              onChange={inputHandle}
+              value={inputValue}
+              type="text"
+              id="search-main"
+              name="search_main"
+              placeholder="Search here for people or groups"
+            />
+            <div
+              onClick={() => {
+                setinputValue("");
+                setsrchEvent(false);
+              }}
+              className="interactive-input-action"
+            >
+              <SearchX className="interactive-input-action-icon icon-cross-thin" />
+            </div>
+          </div>
+        ) : (
+          <div className="interactive-input dark">
+            <input
+              autoComplete="off"
+              onChange={inputHandle}
+              value={inputValue}
+              type="text"
+              id="search-main"
+              name="search_main"
+              placeholder="Search here for people or groups"
+            />
+            <div className="interactive-input-icon-wrap">
+              <Searcicon className="interactive-input-icon icon-magnifying-glass" />
+            </div>
+          </div>
+        )}
+        <div className={srcdrpClass()} id="drp">
+          <div className="dropdown-box-category">
+            <p className="dropdown-box-category-title">Members</p>
+          </div>
+          <div className="dropdown-box-list small no-scroll">
+            <a className="dropdown-box-list-item" href="profile-timeline.html">
+              <div className="user-status notification">
+                <div className="user-status-avatar">
+                  <div className="user-avatar small no-outline">
+                    <div className="user-avatar-content">
+                      <div
+                        className="hexagon-image-30-32"
+                        data-src="img/avatar/05.jpg"
+                      />
+                    </div>
+                    <div className="user-avatar-progress">
+                      <div className="hexagon-progress-40-44" />
+                    </div>
+                    <div className="user-avatar-progress-border">
+                      <div className="hexagon-border-40-44" />
+                    </div>
+                    <div className="user-avatar-badge">
+                      <div className="user-avatar-badge-border">
+                        <div className="hexagon-22-24" />
+                      </div>
+                      <div className="user-avatar-badge-content">
+                        <div className="hexagon-dark-16-18" />
+                      </div>
+                      <p className="user-avatar-badge-text">12</p>
+                    </div>
+                  </div>
+                </div>
+                <p className="user-status-title">
+                  <span className="bold">Neko Bebop</span>
+                </p>
+                <p className="user-status-text">1 friends in common</p>
+                <div className="user-status-icon">
+                  <svg className="icon-friend">
+                    <use xlinkHref="#svg-friend" />
+                  </svg>
+                </div>
+              </div>
+            </a>
+            <a className="dropdown-box-list-item" href="profile-timeline.html">
+              <div className="user-status notification">
+                <div className="user-status-avatar">
+                  <div className="user-avatar small no-outline">
+                    <div className="user-avatar-content">
+                      <div
+                        className="hexagon-image-30-32"
+                        data-src="img/avatar/15.jpg"
+                      />
+                    </div>
+                    <div className="user-avatar-progress">
+                      <div className="hexagon-progress-40-44" />
+                    </div>
+                    <div className="user-avatar-progress-border">
+                      <div className="hexagon-border-40-44" />
+                    </div>
+                    <div className="user-avatar-badge">
+                      <div className="user-avatar-badge-border">
+                        <div className="hexagon-22-24" />
+                      </div>
+                      <div className="user-avatar-badge-content">
+                        <div className="hexagon-dark-16-18" />
+                      </div>
+                      <p className="user-avatar-badge-text">7</p>
+                    </div>
+                  </div>
+                </div>
+                <p className="user-status-title">
+                  <span className="bold">Tim Rogers</span>
+                </p>
+                <p className="user-status-text">4 friends in common</p>
+                <div className="user-status-icon">
+                  <svg className="icon-friend">
+                    <use xlinkHref="#svg-friend" />
+                  </svg>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div className="dropdown-box-category">
+            <p className="dropdown-box-category-title">Groups</p>
+          </div>
+          <div className="dropdown-box-list small no-scroll">
+            <a className="dropdown-box-list-item" href="group-timeline.html">
+              <div className="user-status notification">
+                <div className="user-status-avatar">
+                  <div className="user-avatar small no-border">
+                    <div className="user-avatar-content">
+                      <div
+                        className="hexagon-image-40-44"
+                        data-src="img/avatar/24.jpg"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <p className="user-status-title">
+                  <span className="bold">Cosplayers of the World</span>
+                </p>
+                <p className="user-status-text">139 members</p>
+                <div className="user-status-icon">
+                  <svg className="icon-group">
+                    <use xlinkHref="#svg-group" />
+                  </svg>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div className="dropdown-box-category">
+            <p className="dropdown-box-category-title">Marketplace</p>
+          </div>
+          <div className="dropdown-box-list small no-scroll">
+            <a
+              className="dropdown-box-list-item"
+              href="marketplace-product.html"
+            >
+              <div className="user-status no-padding-top">
+                <div className="user-status-avatar">
+                  <figure className="picture small round liquid">
+                    <img src="img/marketplace/items/07.jpg" alt="item-07" />
+                  </figure>
+                </div>
+                <p className="user-status-title">
+                  <span className="bold">Mercenaries White Frame</span>
+                </p>
+                <p className="user-status-text">By Neko Bebop</p>
+                <div className="user-status-icon">
+                  <svg className="icon-marketplace">
+                    <use xlinkHref="#svg-marketplace" />
+                  </svg>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div></div>
+      {isLogin ? (
         <>
           <div
             onClick={() => {
@@ -676,279 +902,9 @@ export default function Header() {
             </div>
           </div>
         </>
-      );
-    } else {
-      return (
-        <div className="header-actions logvis">
-          <form className="login-form">
-            <div className="form-row split" id="logcnt">
-              <div className="form-item">
-                <div className="form-input dark">
-                  <input
-                    type="text"
-                    id="login-user-email"
-                    name="login_user_email"
-                    placeholder="Your Email"
-                  />
-                </div>
-              </div>
-              <div className="form-item">
-                <div className="form-input dark">
-                  <input
-                    type="password"
-                    id="login-user-password"
-                    name="login_user_password"
-                    placeholder="Your Password"
-                  />
-                </div>
-              </div>
-              <div className="entrybtns">
-                <button
-                  onClick={() => {
-                    setisLogin(!isLogin);
-                  }}
-                  className="button primary with-only-icon"
-                >
-                  <Logswitch className="icon-login" />
-                </button>
-                <button className="button primary with-only-icon">
-                  <Logswitch className="icon-login" />
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      );
-    }
-  };
-
-  const inputHandle = (e) => {
-    setinputValue(e.target.value);
-    if (e.target.value.split(" ").join("").length > 0) {
-      setsrchEvent(true);
-    } else {
-      setsrchEvent(false);
-    }
-  };
-  const srcdrpClass = () => {
-    if (srchEvent === false) {
-      return "dropdown-box padding-bottom-small header-search-dropdown passiveSrcdrp";
-    } else {
-      return "dropdown-box padding-bottom-small header-search-dropdown activeSrcdrp";
-    }
-  };
-
-  return (
-    <div className="header">
-      <div className="header-actions">
-        <div className="header-brand">
-          <div className="logo">
-            <img src={avatar} alt="Logo" className="icon-logo-vikinger small" />
-          </div>
-        </div>
-      </div>
-
-      <div className="header-actions">
-        <div
-          onClick={() => {
-            setmenuVisible(!menuVisible);
-          }}
-          className="sidemenu-trigger navigation-widget-trigger"
-        >
-          <Toogle className="icon-grid" />
-        </div>
-        <div
-          onClick={() => {
-            setMmenuVisible(!MmenuVisible);
-          }}
-          className="mobilemenu-trigger navigation-widget-mobile-trigger"
-        >
-          <div className="burger-icon inverted">
-            <div className="burger-icon-bar" />
-            <div className="burger-icon-bar" />
-            <div className="burger-icon-bar" />
-          </div>
-        </div>
-      </div>
-
-      <div className="header-actions search-bar">
-        {srchEvent ? (
-          <div className="interactive-input dark active">
-            <input
-              autoComplete="off"
-              onChange={inputHandle}
-              value={inputValue}
-              type="text"
-              id="search-main"
-              name="search_main"
-              placeholder="Search here for people or groups"
-            />
-            <div
-              onClick={() => {
-                setinputValue("");
-                setsrchEvent(false);
-              }}
-              className="interactive-input-action"
-            >
-              <SearchX className="interactive-input-action-icon icon-cross-thin" />
-            </div>
-          </div>
-        ) : (
-          <div className="interactive-input dark">
-            <input
-              autoComplete="off"
-              onChange={inputHandle}
-              value={inputValue}
-              type="text"
-              id="search-main"
-              name="search_main"
-              placeholder="Search here for people or groups"
-            />
-            <div className="interactive-input-icon-wrap">
-              <Searcicon className="interactive-input-icon icon-magnifying-glass" />
-            </div>
-          </div>
-        )}
-        <div className={srcdrpClass()} id="drp">
-          <div className="dropdown-box-category">
-            <p className="dropdown-box-category-title">Members</p>
-          </div>
-          <div className="dropdown-box-list small no-scroll">
-            <a className="dropdown-box-list-item" href="profile-timeline.html">
-              <div className="user-status notification">
-                <div className="user-status-avatar">
-                  <div className="user-avatar small no-outline">
-                    <div className="user-avatar-content">
-                      <div
-                        className="hexagon-image-30-32"
-                        data-src="img/avatar/05.jpg"
-                      />
-                    </div>
-                    <div className="user-avatar-progress">
-                      <div className="hexagon-progress-40-44" />
-                    </div>
-                    <div className="user-avatar-progress-border">
-                      <div className="hexagon-border-40-44" />
-                    </div>
-                    <div className="user-avatar-badge">
-                      <div className="user-avatar-badge-border">
-                        <div className="hexagon-22-24" />
-                      </div>
-                      <div className="user-avatar-badge-content">
-                        <div className="hexagon-dark-16-18" />
-                      </div>
-                      <p className="user-avatar-badge-text">12</p>
-                    </div>
-                  </div>
-                </div>
-                <p className="user-status-title">
-                  <span className="bold">Neko Bebop</span>
-                </p>
-                <p className="user-status-text">1 friends in common</p>
-                <div className="user-status-icon">
-                  <svg className="icon-friend">
-                    <use xlinkHref="#svg-friend" />
-                  </svg>
-                </div>
-              </div>
-            </a>
-            <a className="dropdown-box-list-item" href="profile-timeline.html">
-              <div className="user-status notification">
-                <div className="user-status-avatar">
-                  <div className="user-avatar small no-outline">
-                    <div className="user-avatar-content">
-                      <div
-                        className="hexagon-image-30-32"
-                        data-src="img/avatar/15.jpg"
-                      />
-                    </div>
-                    <div className="user-avatar-progress">
-                      <div className="hexagon-progress-40-44" />
-                    </div>
-                    <div className="user-avatar-progress-border">
-                      <div className="hexagon-border-40-44" />
-                    </div>
-                    <div className="user-avatar-badge">
-                      <div className="user-avatar-badge-border">
-                        <div className="hexagon-22-24" />
-                      </div>
-                      <div className="user-avatar-badge-content">
-                        <div className="hexagon-dark-16-18" />
-                      </div>
-                      <p className="user-avatar-badge-text">7</p>
-                    </div>
-                  </div>
-                </div>
-                <p className="user-status-title">
-                  <span className="bold">Tim Rogers</span>
-                </p>
-                <p className="user-status-text">4 friends in common</p>
-                <div className="user-status-icon">
-                  <svg className="icon-friend">
-                    <use xlinkHref="#svg-friend" />
-                  </svg>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div className="dropdown-box-category">
-            <p className="dropdown-box-category-title">Groups</p>
-          </div>
-          <div className="dropdown-box-list small no-scroll">
-            <a className="dropdown-box-list-item" href="group-timeline.html">
-              <div className="user-status notification">
-                <div className="user-status-avatar">
-                  <div className="user-avatar small no-border">
-                    <div className="user-avatar-content">
-                      <div
-                        className="hexagon-image-40-44"
-                        data-src="img/avatar/24.jpg"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <p className="user-status-title">
-                  <span className="bold">Cosplayers of the World</span>
-                </p>
-                <p className="user-status-text">139 members</p>
-                <div className="user-status-icon">
-                  <svg className="icon-group">
-                    <use xlinkHref="#svg-group" />
-                  </svg>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div className="dropdown-box-category">
-            <p className="dropdown-box-category-title">Marketplace</p>
-          </div>
-          <div className="dropdown-box-list small no-scroll">
-            <a
-              className="dropdown-box-list-item"
-              href="marketplace-product.html"
-            >
-              <div className="user-status no-padding-top">
-                <div className="user-status-avatar">
-                  <figure className="picture small round liquid">
-                    <img src="img/marketplace/items/07.jpg" alt="item-07" />
-                  </figure>
-                </div>
-                <p className="user-status-title">
-                  <span className="bold">Mercenaries White Frame</span>
-                </p>
-                <p className="user-status-text">By Neko Bebop</p>
-                <div className="user-status-icon">
-                  <svg className="icon-marketplace">
-                    <use xlinkHref="#svg-marketplace" />
-                  </svg>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div></div>
-      {loginpHandler()}
+      ) : (
+        <Login type="web" />
+      )}
     </div>
   );
 }
