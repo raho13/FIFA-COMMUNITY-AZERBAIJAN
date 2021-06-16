@@ -14,24 +14,24 @@ import Sharepost from "../component/Postmodels/Sharepost";
 import Gifpost from "../component/Postmodels/Gifpost";
 import Votepost from "../component/Postmodels/Votepost";
 import Avatar from "../component/Avatar";
+import axios from "axios";
 export default function Newsfeed() {
   useEffect(() => {
-    window.onscroll = function () {
-      myFunction();
-    };
-
-    const navbar = document.getElementById("stc");
-    const sticky = navbar.offsetTop;
-
-    function myFunction() {
-      if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky");
-      } else {
-        navbar.classList.remove("sticky");
-      }
-    }
+    Fechdata();
   });
 
+  const Fechdata = () => {
+    axios
+      .get("posts")
+      .then((res) => {
+        setposts(res.data.data.data);
+        console.log(res.data.data.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+  const [posts, setposts] = useState([]);
   const [tabIndex, settabIndex] = useState(1);
   const handleTabs = (i) => {
     if (i === tabIndex) {
@@ -124,6 +124,9 @@ export default function Newsfeed() {
               İzlədiklərim
             </p>
           </div>
+          {posts.map((post) => {
+           return <Imagespost />;
+          })}
           <Imagespost />
           <Gifpost />
           <Votepost />

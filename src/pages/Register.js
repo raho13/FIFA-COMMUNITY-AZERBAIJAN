@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import Checkbox from "../component/Checkbox";
 import Input from "../component/Input";
 import Joi from "joi";
+import { menuContext } from "../context";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import img from "../img/landing/rocket.png";
 export default function Register() {
+  const { setisLogin } = useContext(menuContext);
   const [PlatformOps, setPlatformOps] = useState(0);
   const [user, setuser] = useState({
     name: "",
@@ -119,7 +121,7 @@ export default function Register() {
       notify(myval.error.details[0].message);
     } else {
       axios
-        .post("http://fut.az/register", {
+        .post("register", {
           name: user.name,
           surname: user.surname,
           father_name: user.father_name,
@@ -130,11 +132,14 @@ export default function Register() {
           password: user.password,
           password_confirmation: user.password_confirmation,
         })
-        .then(function (response) {
-          console.log(response);
+        .then(function (res) {
+          localStorage.setItem("token", res.data.data);
+          setisLogin(true);
+          window.location = "/";
         })
-        .catch(function (error) {
-          if (error.response.status === 422) {
+        .catch(function (err) {
+          console.log(err);
+          if (err.response.status === 422) {
             notify("bu mail artiq istifadə olunub");
           }
         });
@@ -218,7 +223,6 @@ export default function Register() {
                       setuser({ ...user, country: e.target.value });
                     }}
                     id="account-country"
-                    name="account_country"
                   >
                     <option value="" selected>
                       Yaşadığınız ölkəni seçin
@@ -282,7 +286,6 @@ export default function Register() {
                   onClick={(e) => {
                     e.preventDefault();
                     ValidateForm();
-                    // notify('ko')
                   }}
                   className="button medium primary"
                 >

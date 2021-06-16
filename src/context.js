@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 export const menuContext = createContext();
 
 const Menuprovider = (props) => {
@@ -6,7 +6,7 @@ const Menuprovider = (props) => {
   const [MmenuVisible, setMmenuVisible] = useState(false);
   const [msgWidget, setmsgWidget] = useState(false);
   const [popup, setpopup] = useState({ vis: false });
-  const [isLogin, setisLogin] = useState(false);
+  const [isLogin, setisLogin] = useState(true);
   return (
     <menuContext.Provider
       value={{
