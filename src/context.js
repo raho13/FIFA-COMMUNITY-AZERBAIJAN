@@ -6,7 +6,7 @@ const Menuprovider = (props) => {
   const [MmenuVisible, setMmenuVisible] = useState(false);
   const [msgWidget, setmsgWidget] = useState(false);
   const [popup, setpopup] = useState({ vis: false });
-  const [isLogin, setisLogin] = useState(true);
+  const [isLogin, setisLogin] = useState(false);
   return (
     <menuContext.Provider
       value={{

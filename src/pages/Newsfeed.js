@@ -18,7 +18,7 @@ import axios from "axios";
 export default function Newsfeed() {
   useEffect(() => {
     Fechdata();
-  });
+  },[]);
 
   const Fechdata = () => {
     axios
@@ -125,7 +125,10 @@ export default function Newsfeed() {
             </p>
           </div>
           {posts.map((post) => {
-           return <Imagespost />;
+         if(post.type==='image'){
+           return <Imagespost />
+         }
+        
           })}
           <Imagespost />
           <Gifpost />

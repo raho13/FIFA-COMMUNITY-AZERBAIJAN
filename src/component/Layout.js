@@ -21,8 +21,7 @@ export default function Layout() {
   };
   const templaterender = () => {
     if (
-      window.location.pathname == "/register" ||
-      window.location.pathname == "/Register"
+      window.location.pathname == "/register" 
     ) {
       return <Register />;
     } else {
