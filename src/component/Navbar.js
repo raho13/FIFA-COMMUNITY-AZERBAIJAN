@@ -1,6 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
 import { Scrollbars } from "react-custom-scrollbars";
-import { menuContext } from "../context";
 import { ReactComponent as Newsfeed } from "../icons/Newsfeed Icon.svg";
 import { ReactComponent as Overview } from "../icons/Overview Icon.svg";
 import { ReactComponent as Group } from "../icons/Groups Icon.svg";
@@ -18,6 +17,8 @@ import age from "../img/badge/age-s.png";
 import caffeinated from "../img/badge/caffeinated-s.png";
 import Avatar from "./Avatar";
 import warrior from "../img/badge/warrior-s.png";
+import { useRecoilState } from "recoil";
+import { menuVisibility } from "../Atoms/global";
 import blank from "../img/badge/blank-s.png";
 export default function Navbar() {
   const [activeMenuIndex, setactiveMenuIndex] = useState(
@@ -31,7 +32,7 @@ export default function Navbar() {
       setactiveMenuIndex(1);
     }
   });
-  const { menuVisible, setMmenuVisible } = useContext(menuContext);
+  const [menuVisible] = useRecoilState(menuVisibility);
   const [smallmenu, setsmallmenu] = useState(
     "navigation-widget navigation-widget-desktop closed sidebar left delayed"
   );
@@ -295,7 +296,7 @@ export default function Navbar() {
   );
 }
 export function Menuitems() {
-  const { setMmenuVisible } = useContext(menuContext);
+  const [setMmenuVisible] = useRecoilState(menuVisibility);
   return (
     <ul className="menu" style={{ marginTop: 0 }}>
       <li className="menu-item" onClick={() => setMmenuVisible(false)}>

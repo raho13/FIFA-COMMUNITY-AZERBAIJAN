@@ -1,9 +1,9 @@
-import React, { useContext } from "react";
-import { menuContext } from "../context";
 import { Scrollbars } from "react-custom-scrollbars";
 import Avatar from "../component/Avatar";
+import { useRecoilState } from "recoil";
+import { storyBar } from "../Atoms/global";
 export default function Chatwidget() {
-  const { msgWidget, setmsgWidget } = useContext(menuContext);
+  const [msgWidget, setmsgWidget] = useRecoilState(storyBar);
   const handleWidget = () => {
     if (msgWidget === false) {
       return "chat-widget sidebar right closed";

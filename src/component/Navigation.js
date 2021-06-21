@@ -1,5 +1,3 @@
-import React, { useContext } from "react";
-import { menuContext } from "../context";
 import Newsfeed from "../pages/Newsfeed";
 import Futreyting from "../pages/Futreyting";
 import Streams from "../pages/Streams";
@@ -12,8 +10,11 @@ import Profil from "../pages/Profil";
 import { Switch, Route } from "react-router-dom";
 import Marketplace from "../pages/Marketplace";
 import FifaTournaments from "../pages/FifaTournaments";
+import { useRecoilState } from "recoil";
+import { menuVisibility, storyBar } from "../Atoms/global";
 export default function Navigation() {
-  const { menuVisible, msgWidget } = useContext(menuContext);
+  const [menuVisible] = useRecoilState(menuVisibility);
+  const [msgWidget] = useRecoilState(storyBar);
 
   const gridPosition = () => {
     if (

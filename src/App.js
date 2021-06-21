@@ -1,12 +1,12 @@
 import React from "react";
 import Layout from "./component/Layout";
-import Menuprovider from "./context";
+import { RecoilRoot } from "recoil";
 export default function App() {
   return (
-    <div id='opscnt'>
-      <Menuprovider>
+    <div id="opscnt">
+      <RecoilRoot>
         <Layout />
-      </Menuprovider>
+      </RecoilRoot>
     </div>
   );
 }

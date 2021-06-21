@@ -1,14 +1,14 @@
-import React, { useContext, useRef } from "react";
 import { Scrollbars } from "react-custom-scrollbars";
 import { Menuitems } from "./Navbar";
 import { ReactComponent as Backarrow } from "../icons/backarrow.svg";
 import { ReactComponent as Logswitch } from "../icons/Logswitch.svg";
-import { menuContext } from "../context";
 import Avatar from "./Avatar";
-import Input from "./Input";
+import { useRecoilState } from "recoil";
+import { mobilemenuVisibility, isLoged } from "../Atoms/global";
 import Login from "./Login";
 export default function MobileNavbar() {
-  const { MmenuVisible, setMmenuVisible, isLogin } = useContext(menuContext);
+  const [MmenuVisible, setMmenuVisible] = useRecoilState(mobilemenuVisibility);
+  const [isLogin] = useRecoilState(isLoged);
   const handlemobileNav = () => {
     if (MmenuVisible === false) {
       return "hidden";

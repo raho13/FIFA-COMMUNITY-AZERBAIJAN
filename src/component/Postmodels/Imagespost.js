@@ -1,13 +1,13 @@
-import React, { useContext } from "react";
 import Postoption from "./Postoption";
-import { menuContext } from "../../context";
 import Postoptionsdot from "./Postoptionsdot";
 import img1 from "../../img/cover/10.jpg";
 import img2 from "../../img/cover/16.jpg";
 import Avatar from "../Avatar";
+import { useRecoilState } from "recoil";
+import { imagePopup } from "../../Atoms/global";
 import Postheader from "./Postheader";
 export default function Imagespost() {
-  const { setpopup } = useContext(menuContext);
+  const [popup, setpopup ] = useRecoilState(imagePopup);
   return (
     <div className="widget-box no-padding">
       <Postoptionsdot
@@ -21,7 +21,7 @@ export default function Imagespost() {
       />
       <div className="widget-box-status">
         <div className="widget-box-status-content">
-        <Postheader/>
+          <Postheader />
           <p className="widget-box-status-text">
             Here are some of the photos from my last visit to StreamCon 2019!!
           </p>

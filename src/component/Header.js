@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useRef, useContext } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Scrollbars } from "react-custom-scrollbars";
-import { menuContext } from "../context";
 import { ReactComponent as Toogle } from "../icons/Toogle Side Menu Icon.svg";
 import { ReactComponent as Setting } from "../icons/Setting.svg";
 import { ReactComponent as Shopping } from "../icons/Shopping.svg";
@@ -15,8 +14,16 @@ import img from "../img/marketplace/items/04.jpg";
 import avatar from "../icons/logo.png";
 import Login from "../component/Login";
 import Avatar from "./Avatar";
+import { menuVisibility, mobilemenuVisibility, isLoged } from "../Atoms/global";
+import { useRecoilState } from "recoil";
 
 export default function Header() {
+  const [menuVisible, setmenuVisible] = useRecoilState(menuVisibility);
+  const [MmenuVisible, setMmenuVisible] = useRecoilState(mobilemenuVisibility);
+  const [isLogin, setisLogin] = useRecoilState(isLoged);
+  const [srchEvent, setsrchEvent] = useState(false);
+  const [index, setIndex] = useState(0);
+  const [inputValue, setinputValue] = useState("");
   const icon = useRef(0);
   document.body.addEventListener("click", (b) => {
     if (icon.current && !icon.current.contains(b.target) && index > 0) {
@@ -24,17 +31,6 @@ export default function Header() {
     }
   });
 
-  const {
-    menuVisible,
-    setmenuVisible,
-    MmenuVisible,
-    setMmenuVisible,
-    isLogin,
-    setisLogin,
-  } = useContext(menuContext);
-  const [srchEvent, setsrchEvent] = useState(false);
-  const [index, setIndex] = useState(0);
-  const [inputValue, setinputValue] = useState("");
   const dropdownHandler = (i) => {
     if (i === 1) {
       if (i === index) {

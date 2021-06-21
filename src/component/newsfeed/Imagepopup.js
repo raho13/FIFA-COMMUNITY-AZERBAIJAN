@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import coverimg from "../../img/cover/04.jpg";
 import like from "../../img/reaction/like.png";
 import love from "../../img/reaction/love.png";
@@ -9,13 +9,14 @@ import wow from "../../img/reaction/wow.png";
 import angry from "../../img/reaction/angry.png";
 import sad from "../../img/reaction/sad.png";
 import { ReactComponent as Reaction } from "../../icons/React.svg";
-import { menuContext } from "../../context";
 import { ReactComponent as X } from "../../icons/X.svg";
 import Postoptionsdot from "../../component/Postmodels/Postoptionsdot";
 import { Scrollbars } from "react-custom-scrollbars";
 import { ReactComponent as Comment } from "../../icons/comment.svg";
 import { ReactComponent as Share } from "../../icons/Share.svg";
 import Minipostops from "../Postmodels/Minipostops";
+import { useRecoilState } from "recoil";
+import { imagePopup } from "../../Atoms/global";
 export default function Imagepopup() {
   const [reactclass, setreactclass] = useState(false);
   const reacthandler = () => {
@@ -32,7 +33,7 @@ export default function Imagepopup() {
   const passiveInp = (e) => {
     e.target.parentNode.setAttribute("class", "form-input small");
   };
-  const { popup, setpopup } = useContext(menuContext);
+  const [popup, setpopup] = useRecoilState(imagePopup);
   return (
     <div id="popupmain">
       <div id="popupcnt">

@@ -1,11 +1,12 @@
 import React, { useContext, useState, useEffect } from "react";
 import { ReactComponent as Logswitch } from "../icons/Logswitch.svg";
 import { ReactComponent as Loginicn } from "../icons/Add-friend.svg";
-import { menuContext } from "../context";
 import axios from "axios";
+import { useRecoilState } from "recoil";
+import { isLoged } from "../Atoms/global";
 import Input from "./Input";
 export default function Login({ type }) {
-  const { isLogin, setisLogin } = useContext(menuContext);
+  const [isLogin, setisLogin] = useRecoilState(isLoged);
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
 

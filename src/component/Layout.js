@@ -1,17 +1,18 @@
-import React, { useContext, useEffect } from "react";
 import Header from "./Header";
-import { menuContext } from "../context";
 import Navbar from "./Navbar";
+import { useRecoilState } from "recoil";
 import Chatwidget from "./Chatwidget";
 import FloatyBar from "./FloatyBar";
 import MobileNavbar from "./MobileNavbar";
 import Navigation from "./Navigation";
 import Imagepopup from "../component/newsfeed/Imagepopup";
 import { BrowserRouter as Router } from "react-router-dom";
+import { imagePopup, mobilemenuVisibility } from "../Atoms/global";
 import Register from "../pages/Register";
 
 export default function Layout() {
-  const { popup, MmenuVisible } = useContext(menuContext);
+  const [MmenuVisible, setMmenuVisible] = useRecoilState(mobilemenuVisibility);
+  const [popup, setpopup] = useRecoilState(imagePopup);
   const Containeropacity = () => {
     if (MmenuVisible) {
       return "containeropacity";
@@ -20,9 +21,7 @@ export default function Layout() {
     }
   };
   const templaterender = () => {
-    if (
-      window.location.pathname == "/register" 
-    ) {
+    if (window.location.pathname == "/register") {
       return <Register />;
     } else {
       return (

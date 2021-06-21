@@ -2,13 +2,14 @@ import React, { useState, useContext, useEffect } from "react";
 import Checkbox from "../component/Checkbox";
 import Input from "../component/Input";
 import Joi from "joi";
-import { menuContext } from "../context";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
+import { useRecoilState } from "recoil";
+import { isLoged } from "../Atoms/global";
 import img from "../img/landing/rocket.png";
 export default function Register() {
-  const { setisLogin } = useContext(menuContext);
+  const [ setisLogin ] = useRecoilState(isLoged);
   const [PlatformOps, setPlatformOps] = useState(0);
   const [user, setuser] = useState({
     name: "",
