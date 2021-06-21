@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Banner from "../component/Banner";
 import bannerimg from "../img/banner/streams-icon.png";
 import ProflinInfo from "../component/Accounthub/ProflinInfo";
@@ -6,14 +6,72 @@ import Userimg from "../img/user-icon.png";
 import convert from "../img/cover-photo.png";
 import Avatar from "../component/Avatar";
 import Input from "../component/Input";
+import axios from "axios";
 
 export default function AccountHub() {
-  const activeInp = (e) => {
-    e.target.parentNode.setAttribute("class", "form-input small active");
+  const [arealable, setarealable] = useState(false);
+  const [data, setdata] = useState({});
+  const [user, setuser] = useState({
+    name: "",
+    surname: "",
+    father_name: "",
+    country: "",
+    city: "",
+    about: "",
+    birth: "",
+    city: "",
+    country: "",
+    cover_photo: "",
+    facebook_url: "",
+    father_name: "",
+    instagram_url: "",
+    linkedin_url: "",
+    mobile_number: "",
+    name: "",
+    origin_id: "",
+    passport: "",
+    profile_photo: "",
+    psn_id: "",
+    second_mobile_number: "",
+    surname: "",
+    twitch_url: "",
+    twitter_url: "",
+    xbox_id: "",
+    youtube_url: "",
+  });
+  useEffect(() => {
+    Fechdata();
+  }, []);
+
+  const Fechdata = () => {
+    axios
+      .get("private_room")
+      .then((res) => {
+        setuser(res.data.data);
+        console.log(res.data.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
-  const passiveInp = (e) => {
-    e.target.parentNode.setAttribute("class", "form-input small");
+  const editData = () => {
+    axios
+      .post("private_room", user)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
+  const area = () => {
+    if (arealable || user.about) {
+      return "form-input small active";
+    } else {
+      return "form-input small";
+    }
+  };
+
   return (
     <>
       <Banner
@@ -29,7 +87,7 @@ export default function AccountHub() {
               <h2 className="section-title">ŞƏXSİ OTAQ</h2>
             </div>
           </div>
-          <ProflinInfo />
+          <ProflinInfo submit={editData} />
         </div>
         <div className="account-hub-content">
           <div className="grid-column content-main">
@@ -63,36 +121,58 @@ export default function AccountHub() {
             </div>
 
             <div className="widget-box">
-              <p className="widget-box-title">Şəxsi Məlumatlarınız</p>
+              <p
+                className="widget-box-title"
+                onClick={() => {
+                  console.log(user);
+                }}
+              >
+                Şəxsi Məlumatlarınız
+              </p>
               <div className="widget-box-content">
                 <form className="form">
                   <div className="form-row split">
                     <div className="form-item">
-                      <Input label="Ad" />
+                      <Input
+                        value={user.name}
+                        label="Ad"
+                        method={(e) => setuser({ ...user, name: e })}
+                      />
                     </div>
                     <div className="form-item">
-                      <Input label="Soyad" />
+                      <Input
+                        value={user.surname}
+                        label="Soyad"
+                        method={(e) => setuser({ ...user, surname: e })}
+                      />
                     </div>
                     <div className="form-item">
-                      <Input label="Ata adı" />
+                      <Input
+                        value={user.father_name}
+                        label="Ata adı"
+                        method={(e) => setuser({ ...user, father_name: e })}
+                      />
                     </div>
                   </div>
 
                   <div className="form-row split">
                     <div className="form-item">
-                      <div className="form-input small">
+                      <div className={area()}>
                         <label htmlFor="account-url-username">
                           Haqqınızda məlumat yazın...
                         </label>
                         <textarea
-                          onFocus={(e) => {
-                            activeInp(e);
+                          onChange={(e) =>
+                            setuser({ ...user, about: e.target.value })
+                          }
+                          onFocus={() => {
+                            setarealable(true);
                           }}
-                          onBlur={(e) => {
-                            passiveInp(e);
+                          onBlur={() => {
+                            setarealable(false);
                           }}
                           className="h-50"
-                          defaultValue={""}
+                          defaultValue={user.about}
                         />
                       </div>
                     </div>
@@ -101,26 +181,29 @@ export default function AccountHub() {
                       <div className="form-item">
                         <div className="form-select">
                           <label htmlFor="account-country">Ölkə</label>
-                          <select id="account-country" name="account_country">
-                            <option value={0}>Yaşadığınız ölkəni seçin</option>
-                            <option value={1} selected>
-                              Azərbaycan
+                          <select
+                            onChange={(e) => {
+                              setuser({ ...user, country: e.target.value });
+                            }}
+                            id="account-country"
+                            name="account_country"
+                          >
+                            <option value={user.country} selected>
+                              {user.country}
                             </option>
+                            <option value="Azərbaycan">Azərbaycan</option>
                           </select>
                         </div>
                       </div>
                       <div className="form-item birth-input">
                         <div className="form-input small">
                           <input
-                            onFocus={(e) => {
-                              activeInp(e);
-                            }}
-                            onBlur={(e) => {
-                              passiveInp(e);
+                            value={user.birth}
+                            onChange={(e) => {
+                              setuser({ ...user, birth: e.target.value });
                             }}
                             type="date"
                             id="account-full-name"
-                            name="account_full_name"
                           />
                         </div>
                       </div>
@@ -130,14 +213,20 @@ export default function AccountHub() {
                       <div className="form-item">
                         <div className="form-select">
                           <label htmlFor="account-region">Şəhər</label>
-                          <select id="account-region" name="account_region">
-                            <option value={0}>Yaşadığınız şəhəri seçin</option>
-                            <option value={1} selected>
-                              Bakı
-                            </option>
-                            <option value={1} selected>
-                              Masallı
-                            </option>
+                          <select
+                            onChange={(e) => {
+                              setuser({ ...user, city: e.target.value });
+                            }}
+                          >
+                            {user.city ? (
+                              <option value={user.city} selected>
+                                {user.city}
+                              </option>
+                            ) : (
+                              <option selected>Yaşadiğiniz şəhəri seçin</option>
+                            )}
+
+                            <option value="Masallı">Masallı</option>
                           </select>
                           <svg className="form-select-icon icon-small-arrow">
                             <use xlinkHref="#svg-small-arrow" />
@@ -152,13 +241,25 @@ export default function AccountHub() {
 
                   <div className="form-row split">
                     <div className="form-item">
-                      <Input label="PSN ID" />
+                      <Input
+                        value={user.psn_id}
+                        method={(e) => setuser({ ...user, psn_id: e })}
+                        label="PSN ID"
+                      />
                     </div>
                     <div className="form-item">
-                      <Input label="XBOX ID" />
+                      <Input
+                        value={user.xbox_id}
+                        method={(e) => setuser({ ...user, xbox_id: e })}
+                        label="XBOX ID"
+                      />
                     </div>
                     <div className="form-item">
-                      <Input label="  Origin İstifadəçi adınız" />
+                      <Input
+                        value={user.origin_id}
+                        method={(e) => setuser({ ...user, origin_id: e })}
+                        label="Origin İstifadəçi adınız"
+                      />
                     </div>
                   </div>
                 </form>
@@ -171,13 +272,23 @@ export default function AccountHub() {
                 <form className="form">
                   <div className="form-row split">
                     <div className="form-item">
-                      <Input label=" E-poçt adresiniz" />
+                      <Input label="E-poçt adresiniz" />
                     </div>
                     <div className="form-item">
-                      <Input label="Mobil nömrəniz" />
+                      <Input
+                        value={user.mobile_number}
+                        label="Mobil nömrəniz"
+                        method={(e) => setuser({ ...user, mobile_number: e })}
+                      />
                     </div>
                     <div className="form-item">
-                      <Input label="İkinci əlaqə nömrəniz" />
+                      <Input
+                        value={user.second_mobile_number}
+                        label="İkinci əlaqə nömrəniz"
+                        method={(e) =>
+                          setuser({ ...user, second_mobile_number: e })
+                        }
+                      />
                     </div>
                   </div>
                 </form>
@@ -190,24 +301,48 @@ export default function AccountHub() {
                 <form className="form">
                   <div className="form-row split">
                     <div className="form-item">
-                      <Input label=" Facebook linkiniz" />
+                      <Input
+                        value={user.facebook_url}
+                        label=" Facebook linkiniz"
+                        method={(e) => setuser({ ...user, facebook_url: e })}
+                      />
                     </div>
                     <div className="form-item">
-                      <Input label=" Instagram linkiniz" />
+                      <Input
+                        value={user.instagram_url}
+                        label=" Instagram linkiniz"
+                        method={(e) => setuser({ ...user, instagram_url: e })}
+                      />
                     </div>
                     <div className="form-item">
-                      <Input label="Twitter linkiniz" />
+                      <Input
+                        value={user.twitter_url}
+                        label="Twitter linkiniz"
+                        method={(e) => setuser({ ...user, twitter_url: e })}
+                      />
                     </div>
                   </div>
                   <div className="form-row split">
                     <div className="form-item">
-                      <Input label="Twitch kanalınızın linki" />
+                      <Input
+                        value={user.twitch_url}
+                        label="Twitch kanalınızın linki"
+                        method={(e) => setuser({ ...user, twitch_url: e })}
+                      />
                     </div>
                     <div className="form-item">
-                      <Input label=" Youtube kanalınızın linki" />
+                      <Input
+                        value={user.youtube_url}
+                        label=" Youtube kanalınızın linki"
+                        method={(e) => setuser({ ...user, youtube_url: e })}
+                      />
                     </div>
                     <div className="form-item">
-                      <Input label="Linkedin linkiniz" />
+                      <Input
+                        value={user.linkedin_url}
+                        label="Linkedin linkiniz"
+                        method={(e) => setuser({ ...user, linkedin_url: e })}
+                      />
                     </div>
                   </div>
                 </form>

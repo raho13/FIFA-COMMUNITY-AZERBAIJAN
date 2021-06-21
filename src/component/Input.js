@@ -1,6 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-export default function Input({ label, type, method }) {
+export default function Input({ label, type, method, value }) {
+  useEffect(() => {
+    if (value) {
+      setdivclass("form-input small active");
+      setinpValue(value);
+    }
+  });
   const handleMethod = (e) => {
     if (method) {
       method(e.target.value);
@@ -28,7 +34,6 @@ export default function Input({ label, type, method }) {
             }
           }}
           type="password"
-          
           value={inpValue}
         />
       </div>

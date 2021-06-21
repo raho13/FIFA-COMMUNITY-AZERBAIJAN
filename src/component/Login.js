@@ -11,12 +11,12 @@ export default function Login({ type }) {
 
   const Login = () => {
     axios
-      .post("http://fut.az/login", {
+      .post("login", {
         email: email,
         password: password,
       })
-      .then(function (response) {
-        console.log(response);
+      .then(function (res) {
+        localStorage.setItem("token", res.data.data);
         setisLogin(true);
       })
       .catch(function (error) {

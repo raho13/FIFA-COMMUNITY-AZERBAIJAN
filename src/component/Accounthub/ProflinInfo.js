@@ -5,7 +5,7 @@ import { ReactComponent as Group } from "../../icons/Groups Icon.svg";
 import { ReactComponent as Market } from "../../icons/Market.svg";
 import { ReactComponent as Minus } from "../../icons/minus.svg";
 
-export default function ProflinInfo() {
+export default function ProflinInfo({ submit, reset }) {
   const [tabIndex, settabIndex] = useState(0);
 
   const handleitem = (i) => {
@@ -120,7 +120,14 @@ export default function ProflinInfo() {
         </div>
       </div>
       <div className="sidebar-box-footer">
-        <p className="button white small-space">Dəyişiklikləri yadda saxla</p>
+        <p
+          className="button white small-space"
+          onClick={() => {
+            submit();
+          }}
+        >
+          Dəyişiklikləri yadda saxla
+        </p>
         <p className="button white small-space">Dəyişikliklərdən imtina et</p>
       </div>
     </div>
