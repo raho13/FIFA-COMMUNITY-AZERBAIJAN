@@ -16,8 +16,9 @@ export default function Login({ type }) {
         password: password,
       })
       .then(function (res) {
-        localStorage.setItem("token", res.data.data);
+        localStorage.setItem("fut.az", res.data.data);
         setisLogin(true);
+        document.location.reload();
       })
       .catch(function (error) {
         console.log(error);

@@ -133,7 +133,7 @@ export default function Register() {
           password_confirmation: user.password_confirmation,
         })
         .then(function (res) {
-          localStorage.setItem("token", res.data.data);
+          localStorage.setItem("fut.az", res.data.data);
           setisLogin(true);
           window.location = "/";
         })

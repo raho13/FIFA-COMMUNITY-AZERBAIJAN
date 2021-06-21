@@ -10,9 +10,10 @@ import axios from "axios";
 
 export default function AccountHub() {
   const [arealable, setarealable] = useState(false);
-  const [data, setdata] = useState({});
+  const [countries, setcountries] = useState([]);
   const [user, setuser] = useState({
     name: "",
+    email: "",
     surname: "",
     father_name: "",
     country: "",
@@ -41,6 +42,7 @@ export default function AccountHub() {
   });
   useEffect(() => {
     Fechdata();
+    getCountries();
   }, []);
 
   const Fechdata = () => {
@@ -48,7 +50,16 @@ export default function AccountHub() {
       .get("private_room")
       .then((res) => {
         setuser(res.data.data);
-        console.log(res.data.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+  const getCountries = () => {
+    axios
+      .get("countries")
+      .then((res) => {
+        setcountries(res.data.data);
       })
       .catch((err) => {
         console.log(err);
@@ -186,12 +197,19 @@ export default function AccountHub() {
                               setuser({ ...user, country: e.target.value });
                             }}
                             id="account-country"
-                            name="account_country"
                           >
                             <option value={user.country} selected>
                               {user.country}
                             </option>
-                            <option value="Azərbaycan">Azərbaycan</option>
+                            {!(countries === [])
+                              ? countries.map((item) => {
+                                  return (
+                                    <option value={item.name}>
+                                      {item.name}
+                                    </option>
+                                  );
+                                })
+                              : null}
                           </select>
                         </div>
                       </div>
@@ -211,27 +229,11 @@ export default function AccountHub() {
 
                     <div className="form-item inpitems1">
                       <div className="form-item">
-                        <div className="form-select">
-                          <label htmlFor="account-region">Şəhər</label>
-                          <select
-                            onChange={(e) => {
-                              setuser({ ...user, city: e.target.value });
-                            }}
-                          >
-                            {user.city ? (
-                              <option value={user.city} selected>
-                                {user.city}
-                              </option>
-                            ) : (
-                              <option selected>Yaşadiğiniz şəhəri seçin</option>
-                            )}
-
-                            <option value="Masallı">Masallı</option>
-                          </select>
-                          <svg className="form-select-icon icon-small-arrow">
-                            <use xlinkHref="#svg-small-arrow" />
-                          </svg>
-                        </div>
+                        <Input
+                          value={user.city}
+                          method={(e) => setuser({ ...user, city: e })}
+                          label="Şəhər"
+                        />
                       </div>
                       <div className="form-item">
                         <Input label=" Şəxsiyyət vəsiqəsinin fin kodu" />
@@ -272,7 +274,11 @@ export default function AccountHub() {
                 <form className="form">
                   <div className="form-row split">
                     <div className="form-item">
-                      <Input label="E-poçt adresiniz" />
+                      <Input
+                        label="E-poçt adresiniz"
+                        value={user.email}
+                        method={(e) => setuser({ ...user, email: e })}
+                      />
                     </div>
                     <div className="form-item">
                       <Input
