@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useState } from "react";
 import { ReactComponent as Logswitch } from "../icons/Logswitch.svg";
 import { ReactComponent as Loginicn } from "../icons/Add-friend.svg";
 import axios from "axios";

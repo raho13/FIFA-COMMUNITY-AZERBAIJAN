@@ -17377,7 +17377,7 @@ textarea {
   background-color: #40d04f !important;
   box-shadow: none !important; }
 
-#brwsinp {
+.brwsinp {
   height: 50px;
   z-index: 9999;
   position: relative;

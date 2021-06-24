@@ -3,10 +3,10 @@ import Layout from "./component/Layout";
 import { RecoilRoot } from "recoil";
 export default function App() {
   return (
-    <div id="opscnt">
-      <RecoilRoot>
+    <RecoilRoot>
+      <div id="opscnt">
         <Layout />
-      </RecoilRoot>
-    </div>
+      </div>
+    </RecoilRoot>
   );
 }

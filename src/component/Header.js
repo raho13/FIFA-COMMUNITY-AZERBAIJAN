@@ -5,7 +5,6 @@ import { ReactComponent as Setting } from "../icons/Setting.svg";
 import { ReactComponent as Shopping } from "../icons/Shopping.svg";
 import { ReactComponent as Addfriend } from "../icons/Add-friend.svg";
 import { ReactComponent as Removefriend } from "../icons/Removefriend.svg";
-import { ReactComponent as Logswitch } from "../icons/Logswitch.svg";
 import { ReactComponent as Searcicon } from "../icons/Searcicon.svg";
 import { ReactComponent as SearchX } from "../icons/searcX.svg";
 import { ReactComponent as Notification } from "../icons/Notifications Icon.svg";
@@ -126,8 +125,6 @@ export default function Header() {
               onChange={inputHandle}
               value={inputValue}
               type="text"
-              id="search-main"
-              name="search_main"
               placeholder="Search here for people or groups"
             />
             <div
@@ -147,8 +144,6 @@ export default function Header() {
               onChange={inputHandle}
               value={inputValue}
               type="text"
-              id="search-main"
-              name="search_main"
               placeholder="Search here for people or groups"
             />
             <div className="interactive-input-icon-wrap">

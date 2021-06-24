@@ -19,7 +19,6 @@ export default function PostBanner() {
   const [stsinpVal, setstsinpVal] = useState("");
   const executeScroll = () => {
     const a = document.getElementById("inpcontainer").scrollY;
-    console.log(a);
   };
 
   const itemvis = () => {
@@ -246,7 +245,7 @@ export default function PostBanner() {
                             </button>
                           </div>
                           <input
-                            id="brwsinp"
+                            className="brwsinp"
                             type="file"
                             placeholder="upload"
                           ></input>
@@ -272,7 +271,7 @@ export default function PostBanner() {
                             </button>
                           </div>
                           <input
-                            id="brwsinp"
+                            className="brwsinp"
                             type="file"
                             placeholder="upload"
                           ></input>

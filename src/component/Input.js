@@ -19,7 +19,7 @@ export default function Input({ label, type, method, value }) {
       <div className={divclass}>
         <label htmlFor="account-full-name">{label}</label>
         <input
-          maxlength="255"
+          maxLength="255"
           autoComplete="off"
           onChange={(e) => {
             setinpValue(e.target.value);
@@ -43,7 +43,7 @@ export default function Input({ label, type, method, value }) {
       <div className={divclass}>
         <label htmlFor="account-full-name">{label}</label>
         <input
-          maxlength="255"
+          maxLength="255"
           autoComplete="off"
           onChange={(e) => {
             setinpValue(e.target.value);

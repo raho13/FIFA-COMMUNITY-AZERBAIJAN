@@ -15,6 +15,7 @@ import Gifpost from "../component/Postmodels/Gifpost";
 import Votepost from "../component/Postmodels/Votepost";
 import Avatar from "../component/Avatar";
 import axios from "axios";
+import Voteimgpost from "../component/Postmodels/Voteimgpost";
 export default function Newsfeed() {
   useEffect(() => {
     Fechdata();
@@ -77,7 +78,6 @@ export default function Newsfeed() {
         <div className="grid-column">
           <a
             className="banner-promo"
-            href="https://themeforest.net/user/odin_design"
             target="_blank"
           >
             <img src={bannerpromo} alt="banner-promo" />
@@ -124,19 +124,20 @@ export default function Newsfeed() {
               İzlədiklərim
             </p>
           </div>
-          {posts.map((post) => {
+          {/* {posts.map((post) => {
          if(post.type==='image'){
            return <Imagespost />
          }
         
-          })}
+          })} */}
           <Imagespost />
-          <Gifpost />
+          <Voteimgpost/>
+          {/* <Gifpost />
           <Votepost />
           <Sharepost />
           <Simpletxtmodel />
           <Pollmodel />
-          <Videopost />
+          <Videopost /> */}
 
           <div className="loader-bars">
             <div className="loader-bar" />
