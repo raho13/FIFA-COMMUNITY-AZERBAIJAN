@@ -128,7 +128,7 @@ export default function ProflinInfo({ submit, reset }) {
         >
           Dəyişiklikləri yadda saxla
         </p>
-        <p className="button white small-space">Dəyişikliklərdən imtina et</p>
+        <p className="button white small-space" onClick={()=>reset()}>Dəyişikliklərdən imtina et</p>
       </div>
     </div>
   );

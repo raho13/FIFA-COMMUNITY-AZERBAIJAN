@@ -11,30 +11,27 @@ import axios from "axios";
 export default function AccountHub() {
   const [arealable, setarealable] = useState(false);
   const [countries, setcountries] = useState([]);
+  const [resetData, setresetData] = useState({})
   const [user, setuser] = useState({
     name: "",
     email: "",
     surname: "",
-    father_name: "",
     country: "",
+    id:"",
     city: "",
     about: "",
     birth: "",
-    city: "",
-    country: "",
     cover_photo: "",
     facebook_url: "",
     father_name: "",
     instagram_url: "",
     linkedin_url: "",
     mobile_number: "",
-    name: "",
     origin_id: "",
     passport: "",
     profile_photo: "",
     psn_id: "",
     second_mobile_number: "",
-    surname: "",
     twitch_url: "",
     twitter_url: "",
     xbox_id: "",
@@ -50,6 +47,7 @@ export default function AccountHub() {
       .get("private_room")
       .then((res) => {
         setuser(res.data.data);
+        setresetData(res.data.data)
       })
       .catch((err) => {
         console.log(err);
@@ -67,7 +65,7 @@ export default function AccountHub() {
   };
   const editData = () => {
     axios
-      .post("private_room", user)
+      .put(`private_room/${user.id}`, user)
       .then((res) => {
         console.log(res);
       })
@@ -98,7 +96,7 @@ export default function AccountHub() {
               <h2 className="section-title">ŞƏXSİ OTAQ</h2>
             </div>
           </div>
-          <ProflinInfo submit={editData} />
+          <ProflinInfo submit={editData} reset={()=>setuser(resetData)}/>
         </div>
         <div className="account-hub-content">
           <div className="grid-column content-main">
@@ -202,9 +200,9 @@ export default function AccountHub() {
                               {user.country}
                             </option>
                             {!(countries === [])
-                              ? countries.map((item) => {
+                              ? countries.map((item,index) => {
                                   return (
-                                    <option value={item.name}>
+                                    <option key={index} value={item.name}>
                                       {item.name}
                                     </option>
                                   );
