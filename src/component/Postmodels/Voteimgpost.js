@@ -29,7 +29,9 @@ export default function Voteimgpost() {
           <div className="picture-collage">
             <div className="picture-collage-row medium">
               <div
-                onClick={() => setCheck(0)}
+               onClick={() => {if(Check===0)
+                {   setCheck(2)}else{setCheck(0)}} 
+                  }
                 className="picture-collage-item popup-picture-trigger"
               >
                 <div className="photo-preview">
@@ -55,7 +57,9 @@ export default function Voteimgpost() {
                 </div>
               </div>
               <div
-                onClick={() => setCheck(1)}
+                onClick={() => {if(Check===1)
+                {   setCheck(2)}else{setCheck(1)}} 
+                  }
                 className="picture-collage-item popup-picture-trigger"
               >
                 <div className="photo-preview">

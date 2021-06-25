@@ -191,7 +191,7 @@ export default function Imagespost({ type }) {
               </div>
             </div>
           ) : (
-            <div className="singe_img pstimg">hjjh</div>
+            <div className="singe_img pstimg" style={{backgroundImage:`url(${img1})`}}></div>
           )}
           <div className="content-actions">
             <div className="content-action">
