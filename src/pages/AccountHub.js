@@ -11,13 +11,13 @@ import axios from "axios";
 export default function AccountHub() {
   const [arealable, setarealable] = useState(false);
   const [countries, setcountries] = useState([]);
-  const [resetData, setresetData] = useState({})
+  const [resetData, setresetData] = useState({});
   const [user, setuser] = useState({
     name: "",
     email: "",
     surname: "",
     country: "",
-    id:"",
+    id: "",
     city: "",
     about: "",
     birth: "",
@@ -29,6 +29,9 @@ export default function AccountHub() {
     mobile_number: "",
     origin_id: "",
     passport: "",
+    password: "",
+    password_confirmation: "",
+    old_password: "",
     profile_photo: "",
     psn_id: "",
     second_mobile_number: "",
@@ -47,7 +50,8 @@ export default function AccountHub() {
       .get("private_room")
       .then((res) => {
         setuser(res.data.data);
-        setresetData(res.data.data)
+        setresetData(res.data.data);
+        console.log(res.data.data);
       })
       .catch((err) => {
         console.log(err);
@@ -64,6 +68,7 @@ export default function AccountHub() {
       });
   };
   const editData = () => {
+    console.log(user);
     axios
       .put(`private_room/${user.id}`, user)
       .then((res) => {
@@ -96,7 +101,7 @@ export default function AccountHub() {
               <h2 className="section-title">ŞƏXSİ OTAQ</h2>
             </div>
           </div>
-          <ProflinInfo submit={editData} reset={()=>setuser(resetData)}/>
+          <ProflinInfo submit={editData} reset={() => setuser(resetData)} />
         </div>
         <div className="account-hub-content">
           <div className="grid-column content-main">
@@ -200,7 +205,7 @@ export default function AccountHub() {
                               {user.country}
                             </option>
                             {!(countries === [])
-                              ? countries.map((item,index) => {
+                              ? countries.map((item, index) => {
                                   return (
                                     <option key={index} value={item.name}>
                                       {item.name}
@@ -234,7 +239,10 @@ export default function AccountHub() {
                         />
                       </div>
                       <div className="form-item">
-                        <Input label=" Şəxsiyyət vəsiqəsinin fin kodu" />
+                        <Input
+                          method={(e) => setuser({ ...user, passport: e })}
+                          label=" Şəxsiyyət vəsiqəsinin fin kodu"
+                        />
                       </div>
                     </div>
                   </div>
@@ -358,13 +366,24 @@ export default function AccountHub() {
                 <form className="form">
                   <div className="form-row split">
                     <div className="form-item">
-                      <Input label=" Hazırki şifrəniz" />
+                      <Input
+                        label=" Hazırki şifrəniz"
+                        method={(e) => setuser({ ...user, old_password: e })}
+                      />
                     </div>
                     <div className="form-item">
-                      <Input label="Yeni şifrəniz" />
+                      <Input
+                        label="Yeni şifrəniz"
+                        method={(e) => setuser({ ...user, password: e })}
+                      />
                     </div>
                     <div className="form-item">
-                      <Input label="Yeni şifrənin təkrarı" />
+                      <Input
+                        label="Yeni şifrənin təkrarı"
+                        method={(e) =>
+                          setuser({ ...user, password_confirmation: e })
+                        }
+                      />
                     </div>
                   </div>
                 </form>

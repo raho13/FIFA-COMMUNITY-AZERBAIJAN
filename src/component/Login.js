@@ -18,7 +18,6 @@ export default function Login({ type }) {
       })
       .then(function (res) {
         localStorage.setItem("fut.az", res.data.data);
-        setisLogin(true);
         document.location.reload();
       })
       .catch(function (error) {
@@ -60,13 +59,18 @@ export default function Login({ type }) {
                 onClick={(e) => {
                   e.preventDefault();
                   Login(e);
-                  setisLogin(!isLogin);
                 }}
                 className="button primary with-only-icon"
               >
                 <Logswitch className="icon-login" />
               </button>
-              <button className="button primary with-only-icon">
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  console.log((window.location.pathname = "register"));
+                }}
+                className="button primary with-only-icon"
+              >
                 <Loginicn className="icon-login" />
               </button>
             </div>

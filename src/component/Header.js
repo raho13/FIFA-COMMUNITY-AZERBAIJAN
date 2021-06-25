@@ -292,12 +292,7 @@ export default function Header() {
       <div></div>
       {isLogin ? (
         <>
-          <div
-            onClick={() => {
-              setisLogin(!isLogin);
-            }}
-            className="header-actions"
-          >
+          <div className="header-actions">
             <div className="progress-stat">
               <div className="bar-progress-wrap">
                 <p className="bar-progress-info">
@@ -886,7 +881,14 @@ export default function Header() {
                 >
                   Downloads
                 </a>
-                <p className="dropdown-navigation-button button small secondary">
+                <p
+                  onClick={() => {
+                    localStorage.setItem("fut.az", "");
+                    setisLogin(false);
+                    window.location = "/";
+                  }}
+                  className="dropdown-navigation-button button small secondary"
+                >
                   Logout
                 </p>
               </div>

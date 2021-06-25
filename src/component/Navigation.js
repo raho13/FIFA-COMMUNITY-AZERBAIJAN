@@ -37,31 +37,31 @@ export default function Navigation() {
         <Route exact path="/" component={Newsfeed} />
       </Switch>
       <Switch>
-        <Route path="/Streams" component={Streams} />
+        <Route path="/streams" component={Streams} />
       </Switch>
       <Switch>
-        <Route path="/Lessons" component={Lessons} />
+        <Route path="/lessons" component={Lessons} />
       </Switch>
       <Switch>
-        <Route path="/Fut-reyting" component={Futreyting} />
+        <Route path="/fut-reyting" component={Futreyting} />
       </Switch>
       <Switch>
-        <Route path="/Accounthub" component={AccountHub} />
+        <Route path="/accounthub" component={AccountHub} />
       </Switch>
       <Switch>
-        <Route path="/Profil" component={Profil} />
+        <Route path="/profil" component={Profil} />
       </Switch>
       <Switch>
-        <Route path="/Members" component={Members} />
+        <Route path="/members" component={Members} />
       </Switch>
       <Switch>
-        <Route path="/Futcoins" component={Futcoins} />
+        <Route path="/futcoins" component={Futcoins} />
       </Switch>
       <Switch>
-        <Route path="/FutTournaments" component={FutTournaments} />
+        <Route path="/futTournaments" component={FutTournaments} />
       </Switch>
       <Switch>
-        <Route path="/Marketplace" component={Marketplace} />
+        <Route path="/farketplace" component={Marketplace} />
       </Switch>
       <Switch>
         <Route path="/fifaTournaments" component={FifaTournaments} />

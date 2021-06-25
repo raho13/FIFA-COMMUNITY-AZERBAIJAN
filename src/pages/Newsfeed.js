@@ -19,7 +19,7 @@ import Voteimgpost from "../component/Postmodels/Voteimgpost";
 export default function Newsfeed() {
   useEffect(() => {
     Fechdata();
-  },[]);
+  }, []);
 
   const Fechdata = () => {
     axios
@@ -76,10 +76,7 @@ export default function Newsfeed() {
       </div>
       <div className="grid grid-3-6-3 mobile-prefer-content">
         <div className="grid-column">
-          <a
-            className="banner-promo"
-            target="_blank"
-          >
+          <a className="banner-promo" target="_blank">
             <img src={bannerpromo} alt="banner-promo" />
           </a>
           <Members />
@@ -130,10 +127,10 @@ export default function Newsfeed() {
          }
         
           })} */}
-          <Imagespost />
-          <Voteimgpost/>
-          {/* <Gifpost />
-          <Votepost />
+          <Imagespost type={0} />
+          <Voteimgpost />
+          <Gifpost />
+          {/*  <Votepost />
           <Sharepost />
           <Simpletxtmodel />
           <Pollmodel />

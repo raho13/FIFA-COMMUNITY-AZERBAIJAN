@@ -1,8 +1,13 @@
+import React, { useEffect, useState } from "react";
 import Postheader from "./Postheader";
 import Postoption from "./Postoption";
+import { ReactComponent as Checked } from "../../icons/checked.svg";
 import Postoptionsdot from "./Postoptionsdot";
+import img1 from "../../img/cover/10.jpg";
+import img2 from "../../img/cover/16.jpg";
 
 export default function Voteimgpost() {
+  const [Check, setCheck] = useState(0);
   return (
     <div className="widget-box no-padding">
       <Postoptionsdot
@@ -18,13 +23,65 @@ export default function Voteimgpost() {
       <div className="widget-box-status">
         <div className="widget-box-status-content">
           <Postheader />
-          {/* <p className="widget-box-status-text">
-            Sorry everyone, but from now on, I will only be able to edit and
-            upload one design tutorial per month. This happens because I'm
-            having a lot on my plate right now and recording and editing the
+          <p className="widget-box-status-text">
             tutorials requiere a lot of attention.
-          </p> */}
-          
+          </p>
+          <div className="picture-collage">
+            <div className="picture-collage-row medium">
+              <div
+                onClick={() => setCheck(0)}
+                className="picture-collage-item popup-picture-trigger"
+              >
+                <div className="photo-preview">
+                  <figure className="photo-preview-image liquid">
+                    <img className="pstimg" src={img2} alt="photo-preview-10" />
+                  </figure>
+                </div>
+                <div className="check_bar">
+                  <h3>20%</h3>
+                  <div className="bar_spin">
+                    <div style={{ width: "20%" }}>
+                      <span>.</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="vote_title">
+                  <p className="widget-box-status-text">tutorials.</p>
+                  {Check === 0 ? (
+                    <div className="vote_check">
+                      <Checked />
+                    </div>
+                  ) : null}
+                </div>
+              </div>
+              <div
+                onClick={() => setCheck(1)}
+                className="picture-collage-item popup-picture-trigger"
+              >
+                <div className="photo-preview">
+                  <figure className="photo-preview-image liquid">
+                    <img src={img1} alt="photo-preview-10" className="pstimg" />
+                  </figure>
+                </div>
+                <div className="check_bar">
+                  <h3>80%</h3>
+                  <div className="bar_spin">
+                    <div style={{ width: "80%" }}>
+                      <span>.</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="vote_title">
+                  <p className="widget-box-status-text">tutorials.</p>
+                  {Check === 1 ? (
+                    <div className="vote_check">
+                      <Checked />
+                    </div>
+                  ) : null}
+                </div>
+              </div>
+            </div>
+          </div>
           <div className="content-actions">
             <div className="content-action">
               <div className="meta-line">

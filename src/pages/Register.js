@@ -9,7 +9,7 @@ import { useRecoilState } from "recoil";
 import { isLoged } from "../Atoms/global";
 import img from "../img/landing/rocket.png";
 export default function Register() {
-  const [ setisLogin ] = useRecoilState(isLoged);
+  const [isLogin, setisLogin] = useRecoilState(isLoged);
   const [PlatformOps, setPlatformOps] = useState(0);
   const [user, setuser] = useState({
     name: "",
